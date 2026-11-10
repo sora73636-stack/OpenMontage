@@ -32,6 +32,15 @@ def _check(cid: str, status: str, blocking: bool = True) -> QCResult:
     return QCResult(cid, "video", status, "evidence", blocking=blocking)
 
 
+def _scene(scene_id: str, visual_class: str, start_s: float, end_s: float) -> dict:
+    return {
+        "scene_id": scene_id,
+        "visual_class": visual_class,
+        "time_in": start_s,
+        "time_out": end_s,
+    }
+
+
 def _report(*checks: QCResult) -> QCReport:
     r = QCReport("p")
     r.checks = list(checks)
@@ -142,6 +151,30 @@ def test_soft_not_run_visible_but_can_publish_true_when_visual_passes() -> None:
     assert gd.decision == "WARNING"
     assert gd.can_publish is True
     assert "s1" in gd.not_run_checks
+
+
+def test_release_gate_visual_unknown_class_can_publish_false() -> None:
+    # Unknown visual_class => visual composition BLOCKED => can_publish=False.
+    from lib.final_qc import QCReport, QCResult
+
+    rg = ReleaseGate()
+    vc = check_visual_budget([
+        _scene("S1", "totally_bogus_class", 0.0, 180.0),
+    ])
+    assert vc.status == "BLOCKED"
+    report = QCReport("p")
+    report.checks = [
+        QCResult("ffprobe_streams", "video", "PASS", "ok", blocking=True),
+        QCResult(
+            "visual_composition_budget", "visual", vc.status,
+            vc.problems[0] if vc.problems else "visual budget OK",
+            blocking=True,
+            measured_value=vc.to_dict(),
+        ),
+    ]
+    gd = rg.evaluate(report)
+    assert gd.can_publish is False
+    assert "visual_composition_budget" in gd.required_problems
 
 
 def test_blocking_fail_can_publish_false() -> None:
