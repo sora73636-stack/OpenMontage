@@ -463,7 +463,7 @@ class ImageGenerationEngine:
                 try:
                     prov = self.provider.execute_image(
                         job_id=plan.job_id,
-                        user_approved=True,
+                        user_approved=user_approved,
                         cost_usd=cost_usd,
                     )
                     if prov.state in ("COMPLETED",) and prov.gflow_result:

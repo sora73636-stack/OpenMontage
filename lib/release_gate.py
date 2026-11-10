@@ -15,9 +15,25 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
-from typing import Any
+from typing import Any, Iterable, Optional
 
 from lib.final_qc import QCReport
+
+# Checks whose status must be PASS for the release to be publishable. A
+# REQUIRED check that is missing, NOT_RUN, BLOCKED, FAIL or has an unknown
+# status makes coverage incomplete and forces can_publish=False. SOFT checks
+# (all others) may be NOT_RUN -> WARNING while staying visible in the summary.
+REQUIRED_CHECK_IDS: set[str] = set()
+
+
+def declare_required(*check_ids: str) -> None:
+    """Register check IDs that MUST pass for ``can_publish=True``.
+
+    Callable by pipeline manifests / stage code to declare which QC checks
+    are REQUIRED (vs SOFT). A REQUIRED check that is missing, NOT_RUN,
+    BLOCKED, FAIL or of unknown status forces ``can_publish=False``.
+    """
+    REQUIRED_CHECK_IDS.update(check_ids)
 
 
 @dataclass
@@ -29,6 +45,8 @@ class GateDecision:
     blocking_checks: list[str] = field(default_factory=list)
     warning_checks: list[str] = field(default_factory=list)
     not_run_checks: list[str] = field(default_factory=list)
+    required_problems: list[str] = field(default_factory=list)
+    coverage_complete: bool = True
     summary: dict[str, Any] = field(default_factory=dict)
     evaluated_at: str = field(
         default_factory=lambda: datetime.now(timezone.utc).isoformat()
@@ -45,18 +63,38 @@ class ReleaseGate:
 
     VALID_DECISIONS = ("PASS", "WARNING", "FAIL")
 
-    def __init__(self, *, require_all_blocking_pass: bool = True) -> None:
+    def __init__(
+        self,
+        *,
+        require_all_blocking_pass: bool = True,
+        required_check_ids: Optional[Iterable[str]] = None,
+    ) -> None:
         self.require_all_blocking_pass = require_all_blocking_pass
+        self.required_check_ids: set[str] = set(required_check_ids or [])
+        self.required_check_ids |= set(REQUIRED_CHECK_IDS)
 
     def evaluate(self, report: QCReport) -> GateDecision:
         """Evaluate the report and return a GateDecision.
 
         Logic:
           * FAIL: any blocking check has status FAIL or BLOCKED.
-          * WARNING: no blocking failures, but at least one WARNING-level
-            check exists.
-          * PASS: all blocking checks PASS and no warnings.
+          * REQUIRED check missing / NOT_RUN / BLOCKED / FAIL / unknown or
+            WARNING status => coverage incomplete, can_publish=False.
+          * WARNING: no blocking failures, all REQUIRED checks PASS, but at
+            least one SOFT WARNING-level or NOT_RUN check exists.
+            can_publish=True; the check stays visible in the summary.
+          * PASS: all blocking checks PASS, all REQUIRED checks PASS, no
+            warnings, coverage complete.
         """
+        check_by_id = {c.check_id: c for c in report.checks}
+        required = self.required_check_ids
+        required_problems: list[str] = []
+        for cid in sorted(required):
+            c = check_by_id.get(cid)
+            if c is None or c.status != "PASS":
+                required_problems.append(cid)
+        coverage_complete = not required_problems
+
         blocking_failures = report.blocking_failures
         warnings = report.warnings
         not_run = [c for c in report.checks if c.status == "NOT_RUN"]
@@ -67,6 +105,15 @@ class ReleaseGate:
             reason = (
                 f"{len(blocking_failures)} blocking check(s) failed: "
                 + "; ".join(c.check_id for c in blocking_failures[:5])
+            )
+        elif required_problems:
+            decision = "WARNING"
+            can_publish = False
+            reason = (
+                f"{len(required_problems)} REQUIRED check(s) not PASS "
+                "(missing / NOT_RUN / unknown / WARNING / FAIL): "
+                + "; ".join(required_problems[:5])
+                + f"; coverage complete={coverage_complete}"
             )
         elif warnings:
             decision = "WARNING"
@@ -95,6 +142,8 @@ class ReleaseGate:
             blocking_checks=[c.check_id for c in blocking_failures],
             warning_checks=[c.check_id for c in warnings],
             not_run_checks=[c.check_id for c in not_run],
+            required_problems=required_problems,
+            coverage_complete=coverage_complete,
             summary={
                 "total_checks": len(report.checks),
                 "pass": sum(1 for c in report.checks if c.status == "PASS"),
@@ -104,6 +153,8 @@ class ReleaseGate:
                 "not_run": sum(1 for c in report.checks if c.status == "NOT_RUN"),
                 "blocking_failures": len(blocking_failures),
                 "warnings": len(warnings),
+                "required_problems": len(required_problems),
+                "coverage_complete": coverage_complete,
                 "can_publish": can_publish,
             },
             reason=reason,

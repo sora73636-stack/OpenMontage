@@ -1,0 +1,193 @@
+{
+  "version": "1.0",
+  "asset_count": 12,
+  "assets": [
+    {
+      "asset_id": "V13-AST-01",
+      "file_path": "/workspaces/OpenMontage/tools/kaggle_bridge/jobs/pilot-render/frames_klein/s01_B001.png",
+      "file_name": "s01_B001.png",
+      "sha256": "7b0c3c1190e424cc3fc90ea17ca9644428dadec1445232f4d0abb975dc5cf4b9",
+      "source_type": "existing_ai_frame",
+      "visual_class": "existing_ai_reconstruction",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "disclosure_required": true,
+      "used_in_scenes": [
+        "V13-S01"
+      ],
+      "newly_generated": false
+    },
+    {
+      "asset_id": "V13-AST-02",
+      "file_path": "/workspaces/OpenMontage/tools/kaggle_bridge/jobs/pilot-render/frames_klein/s01_B002.png",
+      "file_name": "s01_B002.png",
+      "sha256": "8af0f0974fbcb8db1d0e922ae39c353c4f4775aa46aad3ba5d6db7b5355894d5",
+      "source_type": "existing_ai_frame",
+      "visual_class": "existing_ai_reconstruction",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "disclosure_required": true,
+      "used_in_scenes": [
+        "V13-S02"
+      ],
+      "newly_generated": false
+    },
+    {
+      "asset_id": "V13-AST-03",
+      "file_path": "/workspaces/OpenMontage/tools/kaggle_bridge/jobs/pilot-render/frames_klein/s01_B003.png",
+      "file_name": "s01_B003.png",
+      "sha256": "01f6803a40d48f6b9457167c98833478a7b2e533dac83659912bec7df3b31d2b",
+      "source_type": "existing_ai_frame",
+      "visual_class": "existing_ai_reconstruction",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "disclosure_required": true,
+      "used_in_scenes": [
+        "V13-S03"
+      ],
+      "newly_generated": false
+    },
+    {
+      "asset_id": "V13-AST-04",
+      "file_path": "/workspaces/OpenMontage/tools/kaggle_bridge/jobs/pilot-render/frames_klein/s01_B004.png",
+      "file_name": "s01_B004.png",
+      "sha256": "5b32c475b54762a3d1805a47472a26e11df1ef72b04e962c1a2a63ecbde6bf1f",
+      "source_type": "existing_ai_frame",
+      "visual_class": "existing_ai_reconstruction",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "disclosure_required": true,
+      "used_in_scenes": [
+        "V13-S04"
+      ],
+      "newly_generated": false
+    },
+    {
+      "asset_id": "V13-AST-05",
+      "file_path": "/workspaces/OpenMontage/tools/kaggle_bridge/jobs/pilot-render/frames_klein/s01_B005.png",
+      "file_name": "s01_B005.png",
+      "sha256": "37139eb6c8af25309c4661c3e539907a41c16967e0cbbc1c0b4cde432f258c95",
+      "source_type": "existing_ai_frame",
+      "visual_class": "existing_ai_reconstruction",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "disclosure_required": true,
+      "used_in_scenes": [
+        "V13-S05"
+      ],
+      "newly_generated": false
+    },
+    {
+      "asset_id": "V13-AST-06",
+      "file_path": "/workspaces/OpenMontage/tools/kaggle_bridge/jobs/pilot-render/frames_klein/s01_B006.png",
+      "file_name": "s01_B006.png",
+      "sha256": "003b3941934d9a787c949d8b68f1cd8ba33ce71f6c438bb5496e3a0f70766fff",
+      "source_type": "existing_ai_frame",
+      "visual_class": "existing_ai_reconstruction",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "disclosure_required": true,
+      "used_in_scenes": [
+        "V13-S06"
+      ],
+      "newly_generated": false
+    },
+    {
+      "asset_id": "V13-AST-07",
+      "file_path": "/workspaces/OpenMontage/tools/kaggle_bridge/jobs/pilot-render/frames_klein/s02_B001.png",
+      "file_name": "s02_B001.png",
+      "sha256": "e03b2f43214771de422836c27ee1e6252efbc11784f0a396599ce878c3f6367e",
+      "source_type": "existing_ai_frame",
+      "visual_class": "existing_ai_reconstruction",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "disclosure_required": true,
+      "used_in_scenes": [
+        "V13-S07"
+      ],
+      "newly_generated": false
+    },
+    {
+      "asset_id": "V13-AST-08",
+      "file_path": "/workspaces/OpenMontage/tools/kaggle_bridge/jobs/pilot-render/frames_klein/s02_B002.png",
+      "file_name": "s02_B002.png",
+      "sha256": "7bf5c97451d31df2be4efa16f97995901e2ee173b8a4066646d89eeeb9de6354",
+      "source_type": "existing_ai_frame",
+      "visual_class": "existing_ai_reconstruction",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "disclosure_required": true,
+      "used_in_scenes": [
+        "V13-S08"
+      ],
+      "newly_generated": false
+    },
+    {
+      "asset_id": "V13-AST-09",
+      "file_path": "/workspaces/OpenMontage/tools/kaggle_bridge/jobs/pilot-render/frames_klein/s02_B003.png",
+      "file_name": "s02_B003.png",
+      "sha256": "18a33b95d41ea31dbc0d88772ea4619e3210a46cd61ab48a44d1f853d933174a",
+      "source_type": "existing_ai_frame",
+      "visual_class": "existing_ai_reconstruction",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "disclosure_required": true,
+      "used_in_scenes": [
+        "V13-S09"
+      ],
+      "newly_generated": false
+    },
+    {
+      "asset_id": "V13-AST-10",
+      "file_path": "/workspaces/OpenMontage/tools/kaggle_bridge/jobs/pilot-render/frames_klein/s02_B004.png",
+      "file_name": "s02_B004.png",
+      "sha256": "ea75ee37c74598b0a5d109fc9548b8f0a0bac4d86643f4d25aa2ad13e0a54c8f",
+      "source_type": "existing_ai_frame",
+      "visual_class": "existing_ai_reconstruction",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "disclosure_required": true,
+      "used_in_scenes": [
+        "V13-S10"
+      ],
+      "newly_generated": false
+    },
+    {
+      "asset_id": "V13-AST-11",
+      "file_path": "/workspaces/OpenMontage/tools/kaggle_bridge/jobs/pilot-render/frames_klein/s02_B005.png",
+      "file_name": "s02_B005.png",
+      "sha256": "94c3532812c9896fb0ebebfc176603ab54d3a9655d2366d3a0055cdcdb6f7818",
+      "source_type": "existing_ai_frame",
+      "visual_class": "existing_ai_reconstruction",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "disclosure_required": true,
+      "used_in_scenes": [
+        "V13-S11"
+      ],
+      "newly_generated": false
+    },
+    {
+      "asset_id": "V13-AST-12",
+      "file_path": "/workspaces/OpenMontage/tools/kaggle_bridge/jobs/pilot-render/frames_klein/s02_B006.png",
+      "file_name": "s02_B006.png",
+      "sha256": "801adef39a6908074a6f960fae03d67937ac04bcf9bed13809a7d1be40a69490",
+      "source_type": "existing_ai_frame",
+      "visual_class": "existing_ai_reconstruction",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "disclosure_required": true,
+      "used_in_scenes": [
+        "V13-S12"
+      ],
+      "newly_generated": false
+    }
+  ],
+  "music": {
+    "asset_id": "V13-MUS-01",
+    "file_path": "assets/music/ardune_red_moon.mp3",
+    "rights_status": "public_domain_per_budget_guard_fallback",
+    "attribution": "assets/music/README.md + manifest.json",
+    "used": true
+  }
+}

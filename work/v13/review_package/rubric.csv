@@ -1,0 +1,11 @@
+criterion,weight,status,evidence
+"1. Hook","12","N/A","Голос BLOCKED (Kokoro af_heart не установлен); хук не проинспектирован"
+"2. Научная достоверность","18","REVIEW","Черновик claims_v13.json с claim_id/источниками; требует утверждения владельцем"
+"3. Драматургия","12","REVIEW","EDL: 12 циклов вопрос→доказательство→вывод (ниже цели 24-32)"
+"4. Соответствие кадра тексту","12","REVIEW","why_this_image заполнено; визуал — существующие AI-кадры пилота"
+"5. Движение и темп","10","PASS","slow_zoompan на каждой сцене; нет статики >15с (QC frozen_segments PASS)"
+"6. Голос","7","BLOCKED","Kokoro af_heart пакет/веса не установлены; placeholder WAV не создан"
+"7. Звук и музыка","7","REVIEW","ardune_red_moon.mp3 (public domain); loudness цель не применима к превью"
+"8. Текст на экране","7","NOT_RUN","Субтитры не созданы (SRT absent)"
+"9. Права и происхождение","8","REVIEW","rights_ledger_v13.json; 100% существующие AI-кадры (превышают лимит 0-15%)"
+"10. Технический QC","9","PASS","ffprobe/decode/frame-count/AV-sync/хэш PASS; см. v13_qc.json"

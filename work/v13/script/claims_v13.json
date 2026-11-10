@@ -1,0 +1,84 @@
+{
+  "claims": [
+    {
+      "claim_id": "EUR-01",
+      "claim": "Europa holds a global saltwater ocean beneath a frozen crust",
+      "status": "MEASURED",
+      "source": "NASA/JPL Galileo / Europa Clipper science",
+      "uncertainty": "ocean extent and composition constrained, not directly sampled"
+    },
+    {
+      "claim_id": "EUR-02",
+      "claim": "Europa's ice shell is tens of km thick",
+      "status": "ESTIMATE",
+      "source": "Levin et al., Nature Astronomy 10, 84-91 (2026), DOI 10.1038/s41550-025-02718-0",
+      "uncertainty": "~29 ± 10 km refers to a cold conducting layer assuming pure water ice in one region, not the full shell thickness"
+    },
+    {
+      "claim_id": "ENCE-01",
+      "claim": "Enceladus erupts water-rich plumes from its south pole",
+      "status": "MEASURED",
+      "source": "NASA/JPL Cassini mission",
+      "uncertainty": "plume composition and source geometry still being refined"
+    },
+    {
+      "claim_id": "ENCE-02",
+      "claim": "Phosphates detected in Enceladus ice particles",
+      "status": "MEASURED",
+      "source": "Postberg et al., Nature 618, 489-493 (2023), DOI 10.1038/s41586-023-05987-9",
+      "uncertainty": "ocean phosphorus concentration is an inference of the authors, not a detection of life"
+    },
+    {
+      "claim_id": "ENER-01",
+      "claim": "Tidal heating and hydrothermal vents can supply energy and chemistry",
+      "status": "ESTIMATE",
+      "source": "NASA/JPL ocean-worlds research",
+      "uncertainty": "whether fluxes are sufficient for life is unknown"
+    },
+    {
+      "claim_id": "UNK-01",
+      "claim": "Whether either ocean supports life",
+      "status": "UNKNOWN",
+      "source": "no direct evidence",
+      "uncertainty": "no life-detection claim is made"
+    }
+  ],
+  "scene_claim_map": {
+    "V13-S01": [
+      "EUR-01"
+    ],
+    "V13-S02": [
+      "EUR-02"
+    ],
+    "V13-S03": [
+      "ENCE-01"
+    ],
+    "V13-S04": [
+      "ENCE-02"
+    ],
+    "V13-S05": [
+      "ENER-01"
+    ],
+    "V13-S06": [
+      "UNK-01"
+    ],
+    "V13-S07": [
+      "EUR-01"
+    ],
+    "V13-S08": [
+      "EUR-02"
+    ],
+    "V13-S09": [
+      "ENCE-01"
+    ],
+    "V13-S10": [
+      "ENCE-02"
+    ],
+    "V13-S11": [
+      "ENER-01"
+    ],
+    "V13-S12": [
+      "UNK-01"
+    ]
+  }
+}

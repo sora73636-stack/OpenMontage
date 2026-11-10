@@ -30,8 +30,8 @@ FRAME_TOLERANCE_S = 1.0 / 30.0
 
 # Default thresholds (owner may tune; these are INITIAL GUESSES).
 DEFAULT_THRESHOLDS = {
-    "lufs_target": -14.0,
-    "lufs_tolerance": 2.0,
+    "lufs_target": -16.0,
+    "lufs_tolerance": 1.5,
     "true_peak_max": -1.5,
     "peak_clipping_max": 0.98,
     "silence_ratio_max": 0.10,

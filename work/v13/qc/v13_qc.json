@@ -1,0 +1,197 @@
+{
+  "run_id": "v13-maintenance",
+  "video": "/workspaces/OpenMontage/work/v13/render/v13_preview.mp4",
+  "sha256": "991223b683234b7a38ee8309e4323d7a259a1e339d0c7b226f92d02bdac2c192",
+  "created_at": "2026-11-10T12:21:14.073037+00:00",
+  "overall_status": "WARNING",
+  "checks": [
+    {
+      "check_id": "ffprobe",
+      "category": "video",
+      "status": "PASS",
+      "evidence": "video+audio; 1920x1080@30/1; sar= dar=; 178.733s; 24.48 MB",
+      "measured_value": {
+        "w": 1920,
+        "h": 1080,
+        "fps": "30/1",
+        "codec_v": "h264",
+        "codec_a": "aac",
+        "sar": "",
+        "dar": "",
+        "duration": 178.733333,
+        "size_mb": 24.48
+      },
+      "threshold": null,
+      "blocking": true,
+      "timestamp": "2026-11-10T12:18:05.064417+00:00"
+    },
+    {
+      "check_id": "full_decode",
+      "category": "video",
+      "status": "PASS",
+      "evidence": "full decode: no errors",
+      "measured_value": {
+        "bytes": 25665530
+      },
+      "threshold": null,
+      "blocking": true,
+      "timestamp": "2026-11-10T12:18:43.641782+00:00"
+    },
+    {
+      "check_id": "audio_loudness",
+      "category": "audio",
+      "status": "WARNING",
+      "evidence": "music-only preview: I=-70.00 LUFS, TP=None dBTP (narration loudness target not applicable)",
+      "measured_value": {
+        "lufs": -70.0,
+        "true_peak": null
+      },
+      "threshold": "I=-16.0±1.5 LUFS, TP<=-1.5 dBTP",
+      "blocking": false,
+      "timestamp": "2026-11-10T12:19:04.877763+00:00"
+    },
+    {
+      "check_id": "black_frames",
+      "category": "video",
+      "status": "PASS",
+      "evidence": "no black segments",
+      "measured_value": {
+        "count": 0,
+        "ratio": 0.0
+      },
+      "threshold": 0.05,
+      "blocking": true,
+      "timestamp": "2026-11-10T12:19:35.275460+00:00"
+    },
+    {
+      "check_id": "audio_silence",
+      "category": "audio",
+      "status": "PASS",
+      "evidence": "silence ratio 0.000, longest run 0.00s",
+      "measured_value": {
+        "ratio": 0.0,
+        "longest_run_s": 0.0
+      },
+      "threshold": "ratio<=0.10, run<=3s",
+      "blocking": true,
+      "timestamp": "2026-11-10T12:19:57.768163+00:00"
+    },
+    {
+      "check_id": "frozen_segments",
+      "category": "video",
+      "status": "PASS",
+      "evidence": "no frozen segments",
+      "measured_value": {
+        "count": 0
+      },
+      "threshold": "max 2s",
+      "blocking": true,
+      "timestamp": "2026-11-10T12:20:21.803188+00:00"
+    },
+    {
+      "check_id": "scene_cuts",
+      "category": "video",
+      "status": "NOT_RUN",
+      "evidence": "scdet did not emit NBSCENES; sampled-frame proxy used",
+      "measured_value": {
+        "sampled_frames_1fps": 179
+      },
+      "threshold": null,
+      "blocking": false,
+      "timestamp": "2026-11-10T12:21:13.289664+00:00"
+    },
+    {
+      "check_id": "frame_count",
+      "category": "video",
+      "status": "PASS",
+      "evidence": "decoded 5362 frames vs expected 5362",
+      "measured_value": {
+        "decoded": 5362,
+        "expected": 5362,
+        "drift": 0
+      },
+      "threshold": null,
+      "blocking": true,
+      "timestamp": "2026-11-10T12:21:13.289706+00:00"
+    },
+    {
+      "check_id": "av_sync",
+      "category": "audio",
+      "status": "PASS",
+      "evidence": "audio 178.731s vs video 178.733s, delta 0.003s",
+      "measured_value": {
+        "audio_dur": 178.73066666666668,
+        "video_dur": 178.733333,
+        "delta_s": 0.0026663333333090122
+      },
+      "threshold": "<=0.10s",
+      "blocking": true,
+      "timestamp": "2026-11-10T12:21:14.025085+00:00"
+    },
+    {
+      "check_id": "subtitles",
+      "category": "visual",
+      "status": "NOT_RUN",
+      "evidence": "no burned-in subtitles in this preview (narration BLOCKED; SRT not produced)",
+      "measured_value": {
+        "burned": false
+      },
+      "threshold": null,
+      "blocking": false,
+      "timestamp": "2026-11-10T12:21:14.025120+00:00"
+    },
+    {
+      "check_id": "integrity_hash",
+      "category": "structural",
+      "status": "PASS",
+      "evidence": "SHA256=991223b683234b7a38ee8309e4323d7a259a1e339d0c7b226f92d02bdac2c192; sampled 10 frame aHashes recorded",
+      "measured_value": {
+        "sha256": "991223b683234b7a38ee8309e4323d7a259a1e339d0c7b226f92d02bdac2c192",
+        "frame_ahash_sample": [
+          "00f0fc0fffdf6000",
+          "00f0fc0fffdf6400",
+          "00f0fc0fffdf6400",
+          "00f0fc0fff9b6400",
+          "00f0fc0fff9b6400"
+        ]
+      },
+      "threshold": null,
+      "blocking": true,
+      "timestamp": "2026-11-10T12:21:14.072486+00:00"
+    },
+    {
+      "check_id": "scene_count_match",
+      "category": "structural",
+      "status": "PASS",
+      "evidence": "EDL scenes=12 = render scenes=12 = storyboard scenes=12",
+      "measured_value": {
+        "edl": 12,
+        "render": 12,
+        "storyboard": 12
+      },
+      "threshold": null,
+      "blocking": true,
+      "timestamp": "2026-11-10T12:21:14.073013+00:00"
+    }
+  ],
+  "summary": {
+    "total": 12,
+    "pass": 9,
+    "warning": 1,
+    "fail": 0,
+    "blocked": 0,
+    "not_run": 2,
+    "blocking_failures": 0,
+    "warnings": 1
+  },
+  "expected_duration_s": 178.733,
+  "target_duration_s": [
+    170,
+    190
+  ],
+  "fps": 30,
+  "resolution": "1920x1080",
+  "codec_video": "h264",
+  "codec_audio": "aac",
+  "note": "PREVIEW ONLY: music bed, no narration (Kokoro af_heart BLOCKED), 100% existing AI frames (exceeds 0-15% AI cap). Not a compliant V13 master."
+}

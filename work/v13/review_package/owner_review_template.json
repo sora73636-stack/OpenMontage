@@ -1,0 +1,47 @@
+{
+  "review_id": "v13-preview-owner-review",
+  "created_at": "2026-11-10T12:22:21.880727+00:00",
+  "master_path": "/workspaces/OpenMontage/work/v13/render/v13_preview.mp4",
+  "master_sha256": "991223b683234b7a38ee8309e4323d7a259a1e339d0c7b226f92d02bdac2c192",
+  "status_requested": "PARTIAL",
+  "decision": null,
+  "owner_name": null,
+  "reviewed_at": null,
+  "items": [
+    {
+      "id": "narrative_framing",
+      "question": "Approve script/story framing (script_v13.md, claims_v13.json)?",
+      "decision": null
+    },
+    {
+      "id": "storyboard",
+      "question": "Approve storyboard/EDL (12 scenes, 178.7s)?",
+      "decision": null
+    },
+    {
+      "id": "assets_rights",
+      "question": "Confirm asset rights & approve replacing AI frames with archive/original diagrams?",
+      "decision": null
+    },
+    {
+      "id": "voice",
+      "question": "Authorize Kokoro af_heart installation and narration synthesis?",
+      "decision": null
+    },
+    {
+      "id": "music",
+      "question": "Confirm music ardune_red_moon.mp3 (public domain) or supply a licensed track?",
+      "decision": null
+    },
+    {
+      "id": "publish_episode",
+      "question": "Proceed to a full 7-9 minute public episode after pilot acceptance?",
+      "decision": null
+    }
+  ],
+  "blockers": [
+    "Kokoro af_heart package/weights missing -> narration BLOCKED",
+    "Visual budget: 100% existing AI frames exceeds 0-15% cap"
+  ],
+  "notes": "Agent cannot set OWNER_APPROVED. Owner records decision here."
+}

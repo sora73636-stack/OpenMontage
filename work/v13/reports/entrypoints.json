@@ -1,0 +1,61 @@
+{
+  "run_id": "v13-maintenance",
+  "repo_root": "/workspaces/OpenMontage",
+  "branch": "kilo/mega-100",
+  "head": "1717fc20c0f27c9eedfe30ac9503108f60523e41",
+  "created_at": "2026-11-10T11:49:00Z",
+  "note": "Read-only call-graph / entrypoint analysis. No branch switch, no reset. run_factory.py selected as canonical production orchestrator; run_episode.py kept as a test-covered alternative (its real Kokoro toolchain venv /tmp/kilo/z1_venv is missing, tests use fake stages). assemble_pilot_final.py remains the low-level FFmpeg renderer helper invoked by run_factory's render stage.",
+  "entrypoints": [
+    {
+      "path": "scripts/run_factory.py",
+      "intended_role": "Single public production orchestrator (canonical). 13 fail-closed, checkpointed, resumable stages: zero_cost_gate -> ... -> package_draft. Uses lib.zero_cost_gate + lib.checkpoint. Declares strict zero-cost routes.",
+      "called_by": ["CLI: python3 scripts/run_factory.py --topic <id>"],
+      "calls": [
+        "lib.zero_cost_gate (ToolFacts/evaluate_call/assert_zero_cost)",
+        "lib.checkpoint (init_project/write_checkpoint/read_checkpoint/get_completed_stages/get_next_stage)",
+        "scripts.assemble_pilot_final.py (render stage, subprocess)",
+        "lib.pipeline_loader"
+      ],
+      "tests": [],
+      "status": "canonical_candidate_complete_untested",
+      "source_verified": true
+    },
+    {
+      "path": "scripts/assemble_pilot_final.py",
+      "intended_role": "Low-level FFmpeg assembly renderer helper (internal, not a public orchestrator). Builds per-bit zoompan clips, concat, burns subtitles -> MP4. Called by run_factory render stage.",
+      "called_by": ["scripts/run_factory.py (cmd_render)"],
+      "calls": ["ffmpeg (subprocess)", "json"],
+      "tests": ["tests/test_render_kenburns_lavfi.py"],
+      "status": "renderer_helper",
+      "source_verified": true
+    },
+    {
+      "path": "scripts/run_episode.py",
+      "intended_role": "Alternative episode pipeline (Milestone Z3). Same stage family as run_factory. Tested with fake stages; real Kokoro toolchain requires missing venv /tmp/kilo/z1_venv/bin/python.",
+      "called_by": ["tests/test_run_episode.py", "tests/test_run_episode_gates.py", "tests/test_run_episode_narration.py", "CLI: python3 scripts/run_episode.py <topic_id>"],
+      "calls": ["STAGE_REGISTRY (pluggable stages)", "venv Kokoro/toolchain (missing in this env)"],
+      "tests": [
+        "tests/test_run_episode.py",
+        "tests/test_run_episode_gates.py",
+        "tests/test_run_episode_narration.py",
+        "tests/test_run_chapters.py",
+        "tests/test_run_episode_integration_lavfi.py",
+        "tests/test_edl_generic.py",
+        "tests/test_bullet_script_narration.py"
+      ],
+      "status": "test-covered_alternative_venv_missing",
+      "source_verified": true
+    }
+  ],
+  "decision": "canonical = scripts/run_factory.py. run_episode.py is NOT converted to a wrapper in this change because that would risk its passing test suite; it remains a maintained alternative entrypoint sharing the same stage contract. assemble_pilot_final.py stays the internal FFmpeg renderer helper.",
+  "zero_cost_routes_declared": [
+    {"tool": "ffmpeg", "operation": "render", "runtime": "local", "route": "ffmpeg:h264+aac", "cost_usd": 0.0},
+    {"tool": "kokoro_tts", "operation": "synthesize", "runtime": "local", "route": "local:kokoro-82m-cpu", "cost_usd": 0.0},
+    {"tool": "kaggle_bridge", "operation": "image_batch", "runtime": "api", "route": "kaggle:forts845/openmontage-runner", "cost_usd": 0.0}
+  ],
+  "env_gaps": [
+    "kokoro package and weights NOT installed -> voice stage BLOCKED (S4.3)",
+    "faster_whisper NOT installed -> ASR/WER gate BLOCKED (S4.3)",
+    "soundfile NOT installed -> kokoro_tts module and test_audio_production_engine fail to collect (pre-existing, not caused by this change)"
+  ]
+}

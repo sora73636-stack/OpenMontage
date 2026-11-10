@@ -1,0 +1,264 @@
+{
+  "version": "1.0",
+  "topic": "subsurface oceans of Europa and Enceladus",
+  "language": "English",
+  "voice": "Kokoro af_heart (BLOCKED: package/weights not installed)",
+  "target_duration_s": 180.0,
+  "actual_duration_s": 178.72,
+  "scene_count": 12,
+  "note": "DRAFT. 12 scenes (below the 24-32 target); all assets are existing AI reconstructions, which exceeds the S1.2 AI cap of 0-15% screen time. Owner must supply NASA/archive and/or original PIL diagrams to reach a compliant visual mix, and approve narrative framing before final render.",
+  "scenes": [
+    {
+      "scene_id": "V13-S01",
+      "time_in": 0.0,
+      "time_out": 17.4,
+      "duration_s": 17.4,
+      "narration_block": "V13-S01",
+      "claim_ids": [
+        "EUR-01"
+      ],
+      "visual_class": "existing_ai_reconstruction",
+      "visual_claim": "Europa holds a global saltwater ocean beneath a frozen crust",
+      "asset_id": "V13-AST-01",
+      "asset_sha256": "7b0c3c1190e424cc3fc90ea17ca9644428dadec1445232f4d0abb975dc5cf4b9",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_type": "existing_ai_frame",
+      "motion_type": "slow_zoompan",
+      "why_this_image": "Existing pilot frame thematically matched to the Europa/Enceladus subsurface-ocean narrative; reused once only.",
+      "static_meaningful_reason": "Still archive-style frame holds to let narration carry the scientific claim; no motion added purely for metric.",
+      "disclosure_required": true
+    },
+    {
+      "scene_id": "V13-S02",
+      "time_in": 17.4,
+      "time_out": 30.45,
+      "duration_s": 13.05,
+      "narration_block": "V13-S02",
+      "claim_ids": [
+        "EUR-02"
+      ],
+      "visual_class": "existing_ai_reconstruction",
+      "visual_claim": "Europa's ice shell is tens of km thick",
+      "asset_id": "V13-AST-02",
+      "asset_sha256": "8af0f0974fbcb8db1d0e922ae39c353c4f4775aa46aad3ba5d6db7b5355894d5",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_type": "existing_ai_frame",
+      "motion_type": "slow_zoompan",
+      "why_this_image": "Existing pilot frame thematically matched to the Europa/Enceladus subsurface-ocean narrative; reused once only.",
+      "static_meaningful_reason": "Still archive-style frame holds to let narration carry the scientific claim; no motion added purely for metric.",
+      "disclosure_required": true
+    },
+    {
+      "scene_id": "V13-S03",
+      "time_in": 30.45,
+      "time_out": 47.86,
+      "duration_s": 17.41,
+      "narration_block": "V13-S03",
+      "claim_ids": [
+        "ENCE-01"
+      ],
+      "visual_class": "existing_ai_reconstruction",
+      "visual_claim": "Enceladus erupts water-rich plumes from its south pole",
+      "asset_id": "V13-AST-03",
+      "asset_sha256": "01f6803a40d48f6b9457167c98833478a7b2e533dac83659912bec7df3b31d2b",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_type": "existing_ai_frame",
+      "motion_type": "slow_zoompan",
+      "why_this_image": "Existing pilot frame thematically matched to the Europa/Enceladus subsurface-ocean narrative; reused once only.",
+      "static_meaningful_reason": "Still archive-style frame holds to let narration carry the scientific claim; no motion added purely for metric.",
+      "disclosure_required": true
+    },
+    {
+      "scene_id": "V13-S04",
+      "time_in": 47.86,
+      "time_out": 59.86,
+      "duration_s": 12.0,
+      "narration_block": "V13-S04",
+      "claim_ids": [
+        "ENCE-02"
+      ],
+      "visual_class": "existing_ai_reconstruction",
+      "visual_claim": "Phosphates detected in Enceladus ice particles",
+      "asset_id": "V13-AST-04",
+      "asset_sha256": "5b32c475b54762a3d1805a47472a26e11df1ef72b04e962c1a2a63ecbde6bf1f",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_type": "existing_ai_frame",
+      "motion_type": "slow_zoompan",
+      "why_this_image": "Existing pilot frame thematically matched to the Europa/Enceladus subsurface-ocean narrative; reused once only.",
+      "static_meaningful_reason": "Still archive-style frame holds to let narration carry the scientific claim; no motion added purely for metric.",
+      "disclosure_required": true
+    },
+    {
+      "scene_id": "V13-S05",
+      "time_in": 59.86,
+      "time_out": 74.72,
+      "duration_s": 14.86,
+      "narration_block": "V13-S05",
+      "claim_ids": [
+        "ENER-01"
+      ],
+      "visual_class": "existing_ai_reconstruction",
+      "visual_claim": "Tidal heating and hydrothermal vents can supply energy and chemistry",
+      "asset_id": "V13-AST-05",
+      "asset_sha256": "37139eb6c8af25309c4661c3e539907a41c16967e0cbbc1c0b4cde432f258c95",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_type": "existing_ai_frame",
+      "motion_type": "slow_zoompan",
+      "why_this_image": "Existing pilot frame thematically matched to the Europa/Enceladus subsurface-ocean narrative; reused once only.",
+      "static_meaningful_reason": "Still archive-style frame holds to let narration carry the scientific claim; no motion added purely for metric.",
+      "disclosure_required": true
+    },
+    {
+      "scene_id": "V13-S06",
+      "time_in": 74.72,
+      "time_out": 86.72,
+      "duration_s": 12.0,
+      "narration_block": "V13-S06",
+      "claim_ids": [
+        "UNK-01"
+      ],
+      "visual_class": "existing_ai_reconstruction",
+      "visual_claim": "Whether either ocean supports life",
+      "asset_id": "V13-AST-06",
+      "asset_sha256": "003b3941934d9a787c949d8b68f1cd8ba33ce71f6c438bb5496e3a0f70766fff",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_type": "existing_ai_frame",
+      "motion_type": "slow_zoompan",
+      "why_this_image": "Existing pilot frame thematically matched to the Europa/Enceladus subsurface-ocean narrative; reused once only.",
+      "static_meaningful_reason": "Still archive-style frame holds to let narration carry the scientific claim; no motion added purely for metric.",
+      "disclosure_required": true
+    },
+    {
+      "scene_id": "V13-S07",
+      "time_in": 0.0,
+      "time_out": 14.83,
+      "duration_s": 14.83,
+      "narration_block": "V13-S07",
+      "claim_ids": [
+        "EUR-01"
+      ],
+      "visual_class": "existing_ai_reconstruction",
+      "visual_claim": "Europa holds a global saltwater ocean beneath a frozen crust",
+      "asset_id": "V13-AST-07",
+      "asset_sha256": "e03b2f43214771de422836c27ee1e6252efbc11784f0a396599ce878c3f6367e",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_type": "existing_ai_frame",
+      "motion_type": "slow_zoompan",
+      "why_this_image": "Existing pilot frame thematically matched to the Europa/Enceladus subsurface-ocean narrative; reused once only.",
+      "static_meaningful_reason": "Still archive-style frame holds to let narration carry the scientific claim; no motion added purely for metric.",
+      "disclosure_required": true
+    },
+    {
+      "scene_id": "V13-S08",
+      "time_in": 14.83,
+      "time_out": 30.67,
+      "duration_s": 15.84,
+      "narration_block": "V13-S08",
+      "claim_ids": [
+        "EUR-02"
+      ],
+      "visual_class": "existing_ai_reconstruction",
+      "visual_claim": "Europa's ice shell is tens of km thick",
+      "asset_id": "V13-AST-08",
+      "asset_sha256": "7bf5c97451d31df2be4efa16f97995901e2ee173b8a4066646d89eeeb9de6354",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_type": "existing_ai_frame",
+      "motion_type": "slow_zoompan",
+      "why_this_image": "Existing pilot frame thematically matched to the Europa/Enceladus subsurface-ocean narrative; reused once only.",
+      "static_meaningful_reason": "Still archive-style frame holds to let narration carry the scientific claim; no motion added purely for metric.",
+      "disclosure_required": true
+    },
+    {
+      "scene_id": "V13-S09",
+      "time_in": 30.67,
+      "time_out": 45.49,
+      "duration_s": 14.82,
+      "narration_block": "V13-S09",
+      "claim_ids": [
+        "ENCE-01"
+      ],
+      "visual_class": "existing_ai_reconstruction",
+      "visual_claim": "Enceladus erupts water-rich plumes from its south pole",
+      "asset_id": "V13-AST-09",
+      "asset_sha256": "18a33b95d41ea31dbc0d88772ea4619e3210a46cd61ab48a44d1f853d933174a",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_type": "existing_ai_frame",
+      "motion_type": "slow_zoompan",
+      "why_this_image": "Existing pilot frame thematically matched to the Europa/Enceladus subsurface-ocean narrative; reused once only.",
+      "static_meaningful_reason": "Still archive-style frame holds to let narration carry the scientific claim; no motion added purely for metric.",
+      "disclosure_required": true
+    },
+    {
+      "scene_id": "V13-S10",
+      "time_in": 45.49,
+      "time_out": 62.0,
+      "duration_s": 16.51,
+      "narration_block": "V13-S10",
+      "claim_ids": [
+        "ENCE-02"
+      ],
+      "visual_class": "existing_ai_reconstruction",
+      "visual_claim": "Phosphates detected in Enceladus ice particles",
+      "asset_id": "V13-AST-10",
+      "asset_sha256": "ea75ee37c74598b0a5d109fc9548b8f0a0bac4d86643f4d25aa2ad13e0a54c8f",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_type": "existing_ai_frame",
+      "motion_type": "slow_zoompan",
+      "why_this_image": "Existing pilot frame thematically matched to the Europa/Enceladus subsurface-ocean narrative; reused once only.",
+      "static_meaningful_reason": "Still archive-style frame holds to let narration carry the scientific claim; no motion added purely for metric.",
+      "disclosure_required": true
+    },
+    {
+      "scene_id": "V13-S11",
+      "time_in": 62.0,
+      "time_out": 74.81,
+      "duration_s": 12.81,
+      "narration_block": "V13-S11",
+      "claim_ids": [
+        "ENER-01"
+      ],
+      "visual_class": "existing_ai_reconstruction",
+      "visual_claim": "Tidal heating and hydrothermal vents can supply energy and chemistry",
+      "asset_id": "V13-AST-11",
+      "asset_sha256": "94c3532812c9896fb0ebebfc176603ab54d3a9655d2366d3a0055cdcdb6f7818",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_type": "existing_ai_frame",
+      "motion_type": "slow_zoompan",
+      "why_this_image": "Existing pilot frame thematically matched to the Europa/Enceladus subsurface-ocean narrative; reused once only.",
+      "static_meaningful_reason": "Still archive-style frame holds to let narration carry the scientific claim; no motion added purely for metric.",
+      "disclosure_required": true
+    },
+    {
+      "scene_id": "V13-S12",
+      "time_in": 74.81,
+      "time_out": 92.0,
+      "duration_s": 17.19,
+      "narration_block": "V13-S12",
+      "claim_ids": [
+        "UNK-01"
+      ],
+      "visual_class": "existing_ai_reconstruction",
+      "visual_claim": "Whether either ocean supports life",
+      "asset_id": "V13-AST-12",
+      "asset_sha256": "801adef39a6908074a6f960fae03d67937ac04bcf9bed13809a7d1be40a69490",
+      "source_url": "https://github.com/OpenMontage/OpenMontage (pilot-render job, SDXL Base 1.0, 2026-10-27)",
+      "rights_status": "existing_asset_ai_reconstruction",
+      "source_type": "existing_ai_frame",
+      "motion_type": "slow_zoompan",
+      "why_this_image": "Existing pilot frame thematically matched to the Europa/Enceladus subsurface-ocean narrative; reused once only.",
+      "static_meaningful_reason": "Still archive-style frame holds to let narration carry the scientific claim; no motion added purely for metric.",
+      "disclosure_required": true
+    }
+  ]
+}

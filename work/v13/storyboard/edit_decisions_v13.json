@@ -1,0 +1,185 @@
+{
+  "version": "1.0",
+  "topic": "subsurface oceans of Europa and Enceladus",
+  "total_cuts": 12,
+  "total_duration_s": 178.72,
+  "resolution": "1920x1080",
+  "fps": 30,
+  "codec": "h264",
+  "audio_codec": "aac",
+  "audio_sample_rate": 48000,
+  "loudness_target_lufs": -16.0,
+  "loudness_tolerance": 1.5,
+  "true_peak_max_dbtp": -1.5,
+  "cuts": [
+    {
+      "cut_id": "C001",
+      "scene_id": "V13-S01",
+      "start_s": 0.0,
+      "end_s": 17.4,
+      "duration_s": 17.4,
+      "asset_id": "V13-AST-01",
+      "frame_file": "s01_B001.png",
+      "motion_type": "slow_zoompan",
+      "claim_ids": [
+        "EUR-01"
+      ],
+      "static_by_design": true
+    },
+    {
+      "cut_id": "C002",
+      "scene_id": "V13-S02",
+      "start_s": 17.4,
+      "end_s": 30.45,
+      "duration_s": 13.05,
+      "asset_id": "V13-AST-02",
+      "frame_file": "s01_B002.png",
+      "motion_type": "slow_zoompan",
+      "claim_ids": [
+        "EUR-02"
+      ],
+      "static_by_design": true
+    },
+    {
+      "cut_id": "C003",
+      "scene_id": "V13-S03",
+      "start_s": 30.45,
+      "end_s": 47.86,
+      "duration_s": 17.41,
+      "asset_id": "V13-AST-03",
+      "frame_file": "s01_B003.png",
+      "motion_type": "slow_zoompan",
+      "claim_ids": [
+        "ENCE-01"
+      ],
+      "static_by_design": true
+    },
+    {
+      "cut_id": "C004",
+      "scene_id": "V13-S04",
+      "start_s": 47.86,
+      "end_s": 59.86,
+      "duration_s": 12.0,
+      "asset_id": "V13-AST-04",
+      "frame_file": "s01_B004.png",
+      "motion_type": "slow_zoompan",
+      "claim_ids": [
+        "ENCE-02"
+      ],
+      "static_by_design": true
+    },
+    {
+      "cut_id": "C005",
+      "scene_id": "V13-S05",
+      "start_s": 59.86,
+      "end_s": 74.72,
+      "duration_s": 14.86,
+      "asset_id": "V13-AST-05",
+      "frame_file": "s01_B005.png",
+      "motion_type": "slow_zoompan",
+      "claim_ids": [
+        "ENER-01"
+      ],
+      "static_by_design": true
+    },
+    {
+      "cut_id": "C006",
+      "scene_id": "V13-S06",
+      "start_s": 74.72,
+      "end_s": 86.72,
+      "duration_s": 12.0,
+      "asset_id": "V13-AST-06",
+      "frame_file": "s01_B006.png",
+      "motion_type": "slow_zoompan",
+      "claim_ids": [
+        "UNK-01"
+      ],
+      "static_by_design": true
+    },
+    {
+      "cut_id": "C007",
+      "scene_id": "V13-S07",
+      "start_s": 0.0,
+      "end_s": 14.83,
+      "duration_s": 14.83,
+      "asset_id": "V13-AST-07",
+      "frame_file": "s02_B001.png",
+      "motion_type": "slow_zoompan",
+      "claim_ids": [
+        "EUR-01"
+      ],
+      "static_by_design": true
+    },
+    {
+      "cut_id": "C008",
+      "scene_id": "V13-S08",
+      "start_s": 14.83,
+      "end_s": 30.67,
+      "duration_s": 15.84,
+      "asset_id": "V13-AST-08",
+      "frame_file": "s02_B002.png",
+      "motion_type": "slow_zoompan",
+      "claim_ids": [
+        "EUR-02"
+      ],
+      "static_by_design": true
+    },
+    {
+      "cut_id": "C009",
+      "scene_id": "V13-S09",
+      "start_s": 30.67,
+      "end_s": 45.49,
+      "duration_s": 14.82,
+      "asset_id": "V13-AST-09",
+      "frame_file": "s02_B003.png",
+      "motion_type": "slow_zoompan",
+      "claim_ids": [
+        "ENCE-01"
+      ],
+      "static_by_design": true
+    },
+    {
+      "cut_id": "C010",
+      "scene_id": "V13-S10",
+      "start_s": 45.49,
+      "end_s": 62.0,
+      "duration_s": 16.51,
+      "asset_id": "V13-AST-10",
+      "frame_file": "s02_B004.png",
+      "motion_type": "slow_zoompan",
+      "claim_ids": [
+        "ENCE-02"
+      ],
+      "static_by_design": true
+    },
+    {
+      "cut_id": "C011",
+      "scene_id": "V13-S11",
+      "start_s": 62.0,
+      "end_s": 74.81,
+      "duration_s": 12.81,
+      "asset_id": "V13-AST-11",
+      "frame_file": "s02_B005.png",
+      "motion_type": "slow_zoompan",
+      "claim_ids": [
+        "ENER-01"
+      ],
+      "static_by_design": true
+    },
+    {
+      "cut_id": "C012",
+      "scene_id": "V13-S12",
+      "start_s": 74.81,
+      "end_s": 92.0,
+      "duration_s": 17.19,
+      "asset_id": "V13-AST-12",
+      "frame_file": "s02_B006.png",
+      "motion_type": "slow_zoompan",
+      "claim_ids": [
+        "UNK-01"
+      ],
+      "static_by_design": true
+    }
+  ],
+  "visual_budget_note": "Preview uses 100% existing AI frames; final must be ~40-50% archive, ~30-40% original diagrams, 0-15% AI."
+}

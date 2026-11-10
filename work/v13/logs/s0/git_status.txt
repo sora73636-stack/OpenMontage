@@ -1,0 +1,22 @@
+## kilo/mega-100...origin/kilo/mega-100 [ahead 13, behind 5]
+ M work/v12/qc_raw/final_v12_qc_baseline.json
+ M work/v12/render/final_v12.mp4
+?? docs/OPENCODE_GLOBAL_SKILLS_AUDIT.md
+?? docs/OPENMONTAGE_FINAL_INTEGRATION_REPORT.md
+?? docs/OPENMONTAGE_LLM_SKILLS_EVALUATION.md
+?? docs/OPENMONTAGE_SKILLS_BENCHMARK.md
+?? docs/OPENMONTAGE_SKILLS_INTEGRATION.md
+?? docs/skill-integration-backup-20261109/
+?? narration_master_norm.wav
+?? prompts.json
+?? prompts_regenerate.json
+?? remotion-composer/node_modules/
+?? remotion-composer/public/S001.png
+?? remotion-composer/public/narration_master_norm.wav
+?? scripts/flow_cdp_diag.py
+?? scripts/flow_cdp_diag2.py
+?? tasks/
+?? work/v12/render/final_v12_rebuilt.mp4
+?? work/v12/render/narration_master_norm.wav
+?? work/v13/
+?? work/v14/

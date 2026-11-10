@@ -20,7 +20,7 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
-from typing import Any
+from typing import Any, Optional
 
 BUDGET_USD = 0.0  # hard ceiling: never spend
 
@@ -50,12 +50,29 @@ class BudgetGuard:
         self.budget_usd = budget_usd
         self.spent_usd = 0.0
 
-    def guard(self, spending_kind: str, estimated_usd: float = 0.0) -> BudgetDecision:
+    def guard(self, spending_kind: str, estimated_usd: Optional[float] = None) -> BudgetDecision:
         """Decide whether ``spending_kind`` may proceed.
 
-        Always returns ``fallback_used`` (budget is $0) with a concrete
-        free alternative, never ``success`` for a spending operation.
+        Unknown cost (``estimated_usd is None``) is never treated as free:
+        it returns a blocked/fallback decision. Only an explicit
+        ``estimated_usd == 0.0`` for a known free route is allowed.
+        Always returns a dict-like :class:`BudgetDecision`; never raises,
+        never spends.
         """
+        # Unknown cost => BLOCK, never FREE (S3.2 zero-cost enforcement).
+        if estimated_usd is None:
+            fallback = _fallback_for(spending_kind)
+            return BudgetDecision(
+                allowed=False,
+                spent_usd=self.spent_usd,
+                remaining_usd=self.budget_usd - self.spent_usd,
+                status="fallback_used",
+                fallback=fallback,
+                reason=(
+                    f"{spending_kind}: estimated cost is None (unknown) — "
+                    "BLOCKED, not free"
+                ),
+            )
         if self.spent_usd + estimated_usd > self.budget_usd:
             fallback = _fallback_for(spending_kind)
             return BudgetDecision(
@@ -99,6 +116,9 @@ def _fallback_for(kind: str) -> str:
 default_guard = BudgetGuard()
 
 
-def guard(spending_kind: str, estimated_usd: float = 0.0) -> dict[str, Any]:
-    """Module-level convenience: single budget check for any layer."""
+def guard(spending_kind: str, estimated_usd: Optional[float] = None) -> dict[str, Any]:
+    """Module-level convenience: single budget check for any layer.
+
+    Unknown cost (``estimated_usd is None``) is blocked, never treated as free.
+    """
     return default_guard.guard(spending_kind, estimated_usd).to_dict()

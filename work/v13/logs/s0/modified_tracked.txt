@@ -1,0 +1,2 @@
+work/v12/qc_raw/final_v12_qc_baseline.json
+work/v12/render/final_v12.mp4
