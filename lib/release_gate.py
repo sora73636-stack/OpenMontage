@@ -25,6 +25,12 @@ from lib.final_qc import QCReport
 # (all others) may be NOT_RUN -> WARNING while staying visible in the summary.
 REQUIRED_CHECK_IDS: set[str] = set()
 
+# Default REQUIRED checks enforced by every ReleaseGate unless overridden.
+# The visual composition budget (C1.2) is a hard gate: the visual mix must
+# satisfy the archival / original-diagram / AI-reconstruction share targets
+# before a release may be published.
+DEFAULT_REQUIRED_CHECK_IDS: frozenset[str] = frozenset({"visual_composition_budget"})
+
 
 def declare_required(*check_ids: str) -> None:
     """Register check IDs that MUST pass for ``can_publish=True``.
@@ -72,6 +78,7 @@ class ReleaseGate:
         self.require_all_blocking_pass = require_all_blocking_pass
         self.required_check_ids: set[str] = set(required_check_ids or [])
         self.required_check_ids |= set(REQUIRED_CHECK_IDS)
+        self.required_check_ids |= set(DEFAULT_REQUIRED_CHECK_IDS)
 
     def evaluate(self, report: QCReport) -> GateDecision:
         """Evaluate the report and return a GateDecision.
