@@ -260,6 +260,104 @@ If the folder has tracks, the proposal and asset stages should present them as o
 
 > **Beta pipelines** have not been fully audited. They work, but expect rough edges. Mention this when the user selects one.
 
+## Google Flow — Image Generation via CDP
+
+Google Flow (Nano Banana 2.1) is used for AI-generated illustration images when archive/NASA materials are insufficient. The `gflow` CLI does **not** work reliably because the Flow UI is in Russian while gflow's UI locators expect English. Use the CDP automation script instead.
+
+### Script
+
+`scripts/flow_cdp_image.py` — connects to Chrome with the gflow profile via DevTools WebSocket, dismisses Russian consent dialogs, creates a project, types the prompt via `Input.insertText`, submits via `Input.dispatchKeyEvent Enter`, waits for new images (tracks `data-media-id` before send), downloads full-resolution images via `fetch()` in page context, discards duplicates (pixel hash) and black frames (>50% black), converts to PNG via PIL (no resize), writes `manifests/ai_images.json`.
+
+### Prerequisites
+
+1. **Chrome with gflow profile** running with remote debugging port:
+   ```bash
+   export DISPLAY=:99
+   export GFLOW_CHROME_PATH=/opt/google/chrome/chrome
+   nohup /opt/google/chrome/chrome \
+     --user-data-dir=/workspaces/OpenMontage/.gflow/profiles/default \
+     --remote-debugging-port=0 \
+     --remote-allow-origins=* \
+     --no-first-run \
+     --no-default-browser-check \
+     --disable-blink-features=AutomationControlled \
+     --lang=en-US \
+     --accept-lang=en-US \
+     https://flow.google.com \
+     > /tmp/chrome_debug.log 2>&1 &
+   ```
+2. **Get DevTools port**: `cat /workspaces/OpenMontage/.gflow/profiles/default/DevToolsActivePort`
+3. **Get page ID**: `curl -s http://127.0.0.1:<PORT>/json/list | grep flow.google.com`
+4. **Xvfb** must be running: `Xvfb :99 -screen 0 1280x800x24 &`
+
+### Usage
+
+Single image:
+```bash
+python scripts/flow_cdp_image.py \
+  --prompt "photorealistic, cinematic documentary still, deep teal shadows, warm highlights, no text, no logos: <description>" \
+  --ratio 16:9 \
+  --out work/flow_images/<theme>_1.png \
+  --ws-port <PORT> \
+  --page-id <PAGE-ID> \
+  --timeout 120
+```
+
+Batch mode (recommended):
+```bash
+# prompts.json: JSON array of prompt strings
+python scripts/flow_cdp_image.py \
+  --prompts-file prompts.json \
+  --out-dir work/flow_images \
+  --ws-port <PORT> \
+  --page-id <PAGE-ID> \
+  --timeout 120 \
+  --delay 25
+```
+
+### Output
+
+Images are saved to `work/flow_images/<theme>_<n>.png` (PNG, 1376×768, RGB).  
+Manifest: `manifests/ai_images.json` — each entry has `asset_id`, `prompt`, `model` (`Nano Banana 2.1`), `source_type` (`newly_generated`), `file_path`, `file_size_bytes`, `sha256`, `phash`, `display_width`, `display_height`, `visual_class` (`AI_RECONSTRUCTION`), `visual_claim` (`AI_RECONSTRUCTION`), `disclosure_required` (true), `created_at`, `labels` (`["AI-generated visualization"]`).
+
+### Limits
+
+- **Max 8 generations per run** (hidden daily quota on Flow images)
+- **Max 12 prompts per `--prompts-file`**
+- **Delay 20–30s between prompts**
+- **Veo/video not used** — images only
+- **No publishing** — only the owner publishes
+
+### Style template for prompts
+
+```
+photorealistic, cinematic documentary still, deep teal shadows, warm highlights, no text, no logos: <subject description>
+```
+
+### Rights and labelling
+
+All generated images are marked `AI_RECONSTRUCTION` / `AI-generated visualization` and require YouTube AI disclosure. Do not present AI-generated frames as real footage.
+
+### Troubleshooting
+
+| Problem | Fix |
+|---------|-----|
+| `gflow image` fails with "login required" | Flow UI is in Russian; use CDP script instead |
+| `new project` button not found | Already in a project — script skips this step automatically |
+| No new images after submit | Flow may be rate-limited; wait and retry once |
+| Black frame (>50% black pixels) | Discarded automatically |
+| Duplicate pixel hash | Discarded automatically |
+| Chrome session lost | Re-login via VNC (port 6081, private): `https://${CODESPACE_NAME}-6081.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}/vnc.html?autoconnect=1&resize=scale` |
+
+### Stop services after use
+
+```bash
+pkill -f "chrome.*gflow/profiles/default" 2>/dev/null || true
+pkill -f "Xvfb :99" 2>/dev/null || true
+pkill -f "x11vnc -display :99" 2>/dev/null || true
+pkill -f "websockify.*6081" 2>/dev/null || true
+```
+
 ## Mandatory Preflight
 
 Do this before any creative work. **Use `provider_menu_summary()` first — it's the human-ready rollup.** The raw `support_envelope()` dump is a firehose (megabytes of JSON on a well-configured machine); pasting it into chat will bury the user.
