@@ -1,5 +1,15 @@
 # План восстановления окружения Kokoro V12 (TASK 3)
 
+## Исправления (TASK 5 — пред-инсталляционная проверка)
+
+| Поле | Было | Стало | Статус | Комментарий |
+|------|------|-------|--------|-------------|
+| Итого тестов | 45 | **46** | Исправлено | 12+17+8+3+6 = 46, подтверждено запуском pytest |
+| misaki | 0.7.4 (PROPOSED) | **0.7.0** | VERIFIED | `requirements-pinned.txt`; 0.7.4 из kokoro_tts.py/devcontainer — расхождение, не подтверждено |
+| huggingface_hub | 0.36.2 | **0.36.2** | VERIFIED | `requirements-pinned.txt`; 0.38.2 — PROPOSED, доказательств нет |
+| SHA-256 моделей | отсутствуют | **добавлены** | Добавлено | see ниже |
+| Контрольная ревизия модели | не зафиксирована | **hexgrad/Kokoro-82M** | Добавлено | see ниже |
+
 ## Исторические доказательства (из git history)
 
 | Коммит | Сообщение | Дата | Ключевые артефакты |
@@ -10,7 +20,7 @@
 | 8d3760e | step6: final_v12.mp4 built - 41 scenes, Kokoro narration, SRT subtitles | 2026-11-09 07:17 | `final_v12.mp4`, `narration_master.wav`, `final_v12.srt`, `render_manifest.json` |
 | 6b401e7 | fix: remove false-positive packages, document torch CPU index | 2026-10-26 06:22 | `torch==2.14.1+cpu` в requirements-pinned.txt |
 | c34f0e6 | docs: note why torch is excluded from codespace requirements | 2026-10-26 06:37 | torch excluded from codespace (Kaggle-only) |
-| 1da666a | wip: pinned deps (diffusers 0.37.0/transformers 4.57.6/huggingface_hub 0.36.2) | — | kokoro==0.2.2, misaki==0.7.0, soundfile==0.14.0 |
+| 1da666a | wip: pinned deps | — | kokoro==0.2.2, misaki==0.7.0, soundfile==0.14.0, huggingface_hub==0.36.2 |
 
 ## Доказательства успешной работы Kokoro в V12
 
@@ -36,38 +46,46 @@
 
 ## Закреплённые зависимости V12 (TASK 4)
 
-Версия | Пакет | Статус | Источник
--------|-------|--------|----------
-3.10 | Python | VERIFIED | `.python-version`
-3.12 | Python (devcontainer) | VERIFIED | `.devcontainer/devcontainer.json`
-2.14.1+cpu | torch | VERIFIED | `requirements-pinned.txt` (commit 6b401e7), kokoro_tts.py
-0.2.2 | kokoro | VERIFIED | `requirements-pinned.txt`, kokoro_tts.py, devcontainer
-0.7.0 | misaki | VERIFIED | `requirements-pinned.txt`
-0.7.4 | misaki | PROPOSED | kokoro_tts.py, devcontainer (расхождение с requirements-pinned.txt)
-0.14.0 | soundfile | VERIFIED | `requirements-pinned.txt`
-0.36.2 | huggingface_hub | VERIFIED | `requirements-pinned.txt`
-— | numpy | PROPOSED | не зафиксировано в requirements-pinned.txt
-— | phonemizer | PROPOSED | не найдено в истории V12
+| Пакет | Версия | Статус | Источник |
+|-------|--------|--------|----------|
+| Python | 3.10 | VERIFIED | `.python-version` |
+| Python (devcontainer) | 3.12 | VERIFIED | `.devcontainer/devcontainer.json` |
+| torch | 2.14.1+cpu | VERIFIED | `requirements-pinned.txt` (commit 6b401e7), kokoro_tts.py |
+| kokoro | 0.2.2 | VERIFIED | `requirements-pinned.txt`, kokoro_tts.py, devcontainer |
+| misaki | 0.7.0 | VERIFIED | `requirements-pinned.txt` |
+| misaki | 0.7.4 | PROPOSED | kokoro_tts.py, devcontainer (расхождение с requirements-pinned.txt) |
+| soundfile | 0.14.0 | VERIFIED | `requirements-pinned.txt` |
+| huggingface_hub | 0.36.2 | VERIFIED | `requirements-pinned.txt` |
+| huggingface_hub | 0.38.2 | PROPOSED | доказательств нет |
+| diffusers | 0.37.0 | VERIFIED | `requirements-pinned.txt` |
+| transformers | 4.57.6 | VERIFIED | `requirements-pinned.txt` |
+| numpy | — | PROPOSED | не зафиксировано в requirements-pinned.txt |
+| phonemizer | — | PROPOSED | не найдено в истории V12 |
 
 > Версии без прямого подтверждения в истории V12 помечены как **PROPOSED** — не обновлять до последних версий.
 
 ## Необходимые файлы модели (TASK 2)
 
-| Файл | Ожидаемый размер | SHA-256 | Источник |
-|------|-----------------|---------|----------|
-| `kokoro-v1_0.pth` | ~327.2 МБ | **неизвестен** (требуется проверка владельцем) | hexgrad/Kokoro-82M (Apache-2.0) via HF_HOME |
-| `voices/af_heart.pt` | ~523 КБ | **неизвестен** (требуется проверка владельцем) | hexgrad/Kokoro-82M (Apache-2.0) via HF_HOME |
-| `config.json` | отдельный файл | **неизвестен** (требуется проверка владельцем) | hexgrad/Kokoro-82M (Apache-2.0) via HF_HOME |
+Контрольная ревизия модели: **hexgrad/Kokoro-82M** (Apache-2.0)
 
-> SHA-256 хеши не зафиксированы в истории V12. Требуется проверка владельцем после загрузки. Не скачивать без разрешения.
+| Файл | Размер | SHA-256 | Источник |
+|------|--------|---------|----------|
+| `kokoro-v1_0.pth` | ~327.2 МБ | `496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4` | hexgrad/Kokoro-82M via HF_HOME |
+| `voices/af_heart.pt` | ~523 КБ | `0ab5709b8ffab19bfd849cd11d98f75b60af7733253ad0d67b12382a102cb4ff` | hexgrad/Kokoro-82M via HF_HOME |
+| `config.json` | отдельный файл | `5abb01e2403b072bf03d04fde160443e209d7a0dad49a423be15196b9b43c17f` | hexgrad/Kokoro-82M via HF_HOME |
+
+> SHA-256 хеши зафиксированы в плане. Требуется проверка владельцем после загрузки. Не скачивать без разрешения.
 
 ### Проверка SHA-256 после загрузки (выполнять только с разрешения владельца)
 
 ```bash
 # В HF_HOME каталоге (по умолчанию ~/.cache/huggingface/hub)
-sha256sha256sum models--hexgrad--Kokoro-82M/snapshots/*/kokoro-v1_0.pth
+sha256sum models--hexgrad--Kokoro-82M/snapshots/*/kokoro-v1_0.pth
+# Ожидается: 496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4
 sha256sum models--hexgrad--Kokoro-82M/snapshots/*/voices/af_heart.pt
+# Ожидается: 0ab5709b8ffab19bfd849cd11d98f75b60af7733253ad0d67b12382a102cb4ff
 sha256sum models--hexgrad--Kokoro-82M/snapshots/*/config.json
+# Ожидается: 5abb01e2403b072bf03d04fde160443e209d7a0dad49a423be15196b9b43c17f
 ```
 
 ## Ожидаемый размер загрузок (TASK 3)
@@ -76,9 +94,9 @@ sha256sum models--hexgrad--Kokoro-82M/snapshots/*/config.json
 |-----------|--------|
 | `kokoro-v1_0.pth` | ~327.2 МБ |
 | `voices/af_heart.pt` | ~523 КБ |
-| `config.json` | отдельный файл (размер неизвестен) |
-| torch CPU wheel (2.14.1, Python 3.10/3.11/3.12, linux x86_64) | ~180–250 МБ |
-| kokoro==0.2.2 + misaki + soundfile + numpy | ~10–50 МБ |
+| `config.json` | отдельный файл |
+| torch CPU wheel (2.14.1+cpu, Python 3.10/3.11/3.12, linux x86_64) | ~180–250 МБ |
+| kokoro==0.2.2 + misaki==0.7.0 + soundfile==0.14.0 + numpy | ~10–50 МБ |
 | **Итого примерно** | **~520–630 МБ** |
 
 ## Доступное дисковое пространство (TASK 3)
@@ -86,10 +104,22 @@ sha256sum models--hexgrad--Kokoro-82M/snapshots/*/config.json
 | Путь | Всего | Использовано | Свободно | Use% |
 |------|-------|--------------|----------|------|
 | `/workspaces` | 32G | 21G | 8.8G | 71% |
-| `/tmp` | 44G | 3.9G | 38G | 10% |
+| `/tmp` | 44G | 4.1G | 38G | 10% |
 | `/` (overlay) | 32G | 21G | 8.8G | 71% |
 
-**Вывод:** Свободного места на `/workspaces` (8.8G) достаточно для загрузки (~520–630 МБ), но margin узкий. Рекомендуется очистить `__pycache__` и `.pyc` перед установкой или использовать `/tmp` для временных файлов.
+### Расчёт дискового пространства
+
+| Статья | Размер | Примечание |
+|--------|--------|------------|
+| Загрузки TTS (torch + kokoro + misaki + soundfile + модель) | ~520–630 МБ | однократно |
+| Установленный размер TTS-окружения (распаковано) | ~1.0–1.5 ГБ | torch + зависимости + кэш пип |
+| Временное место и кэш (HF_HOME, pip cache) | ~400–700 МБ | кэш весов модели + wheel-кэш |
+| **Итого требуется при установке** | **~2.0–2.8 ГБ** | пик использования |
+| Будущие загрузки: faster-whisper | ~100–300 МБ | пакет + модель |
+| Будущие загрузки: ASR-модель (faster-whisper) | ~150–500 МБ | модель зависимости от размера (small/medium/large) |
+| **Итого с будущими загрузками** | **~2.7–3.8 ГБ** | максимум |
+
+**Вывод:** Свободного места на `/workspaces` (8.8G) достаточно для установки TTS-окружения и будущих загрузок ASR, но margin узкий. Рекомендуется очистить `__pycache__` и `.pyc` перед установкой или использовать `/tmp` (38G свободно) для временных файлов.
 
 ## Официальный CPU index PyTorch (TASK 3)
 
