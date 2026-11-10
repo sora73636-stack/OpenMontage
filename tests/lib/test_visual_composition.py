@@ -4,6 +4,10 @@ The visual budget is measured by scene *duration*, not file count. Categories
 are mutually exclusive: every scene maps to exactly one of archival /
 original_diagram / ai_reconstruction. Unknown visual_class or missing
 duration blocks the gate (fail-closed).
+
+Legacy alias: ``existing_ai_reconstruction`` (used by the V12/V13 pilot
+storyboard for existing AI frames) maps to ``ai_reconstruction`` and counts
+toward the AI share. It is NOT treated as unknown.
 """
 
 from __future__ import annotations
@@ -15,7 +19,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 import pytest  # noqa: E402
 
-from lib.release_gate import ReleaseGate  # noqa: E402
 from lib.visual_composition import (  # noqa: E402
     ARCHIVAL,
     AI_RECONSTRUCTION,
@@ -25,6 +28,7 @@ from lib.visual_composition import (  # noqa: E402
     check_visual_budget,
     gate_decision,
 )
+from lib.release_gate import ReleaseGate  # noqa: E402
 
 
 def _scene(scene_id: str, visual_class: str, start_s: float, end_s: float) -> dict:
@@ -42,9 +46,9 @@ def _scene(scene_id: str, visual_class: str, start_s: float, end_s: float) -> di
 
 
 def test_category_mapping_is_mutually_exclusive() -> None:
-    """Each visual_class maps to exactly one budget category, and the set of
-    budget categories is exactly three (archival / original_diagram /
-    ai_reconstruction) — mutually exclusive, no scene can fall in two."""
+    """Each visual_class maps to exactly one budget category; the three
+    budget categories (archival / original_diagram / ai_reconstruction) are
+    mutually exclusive — a scene belongs to exactly one of them."""
     expected = {
         "REAL_ARCHIVE": ARCHIVAL,
         "DATA_VISUALIZATION": ORIGINAL_DIAGRAM,
@@ -55,28 +59,31 @@ def test_category_mapping_is_mutually_exclusive() -> None:
     }
     for vc, cat in expected.items():
         assert category_for_visual_class(vc) == cat
-    # Deterministic: same input -> same output, exactly one category.
+    # Deterministic: same input -> same single output category.
     for vc in expected:
         assert category_for_visual_class(vc) is not UNKNOWN
-    # The three budget categories are mutually exclusive (a scene belongs to
-    # exactly one of them).
     assert {ARCHIVAL, ORIGINAL_DIAGRAM, AI_RECONSTRUCTION} == set(expected.values())
     assert len({ARCHIVAL, ORIGINAL_DIAGRAM, AI_RECONSTRUCTION}) == 3
 
 
+def test_legacy_alias_maps_to_ai_reconstruction() -> None:
+    # The pilot storyboard uses ``existing_ai_reconstruction`` for existing
+    # AI frames; it must map to ai_reconstruction, NOT to unknown.
+    assert category_for_visual_class("existing_ai_reconstruction") == AI_RECONSTRUCTION
+
+
 def test_unknown_visual_class_maps_to_unknown() -> None:
     assert category_for_visual_class(None) is UNKNOWN
-    assert category_for_visual_class("existing_ai_reconstruction") is UNKNOWN
     assert category_for_visual_class("") is UNKNOWN
     assert category_for_visual_class("NOT_A_CLASS") is UNKNOWN
 
 
 # ---------------------------------------------------------------------------
-# check_visual_budget — happy path
+# check_visual_budget — happy path (sum of shares == 100%)
 # ---------------------------------------------------------------------------
 
 
-def test_all_within_target_passes() -> None:
+def test_all_within_target_passes_and_sums_to_100() -> None:
     scenes = [
         _scene("S1", "REAL_ARCHIVE", 0.0, 45.0),      # 45% archival
         _scene("S2", "DATA_VISUALIZATION", 45.0, 85.0),  # 40% orig diagram
@@ -89,6 +96,26 @@ def test_all_within_target_passes() -> None:
     assert 0.40 <= shares[ARCHIVAL] <= 0.50
     assert 0.30 <= shares[ORIGINAL_DIAGRAM] <= 0.40
     assert shares[AI_RECONSTRUCTION] <= 0.15
+    # Sum of category shares == 1.0 (100%).
+    assert abs(sum(shares.values()) - 1.0) < 1e-9
+
+
+# ---------------------------------------------------------------------------
+# check_visual_budget — 100% AI -> FAIL (current preview situation)
+# ---------------------------------------------------------------------------
+
+
+def test_one_hundred_percent_ai_fails() -> None:
+    scenes = [
+        _scene("S1", "existing_ai_reconstruction", 0.0, 90.0),
+        _scene("S2", "existing_ai_reconstruction", 90.0, 180.0),
+    ]
+    report = check_visual_budget(scenes)
+    assert report.status == "FAIL", report.problems
+    by_cat = {s.category: s.share for s in report.shares}
+    assert by_cat[AI_RECONSTRUCTION] == 1.0
+    assert by_cat[ARCHIVAL] == 0.0
+    assert by_cat[ORIGINAL_DIAGRAM] == 0.0
 
 
 # ---------------------------------------------------------------------------
@@ -147,11 +174,13 @@ def test_empty_scenes_blocked() -> None:
 def test_unknown_visual_class_blocks() -> None:
     scenes = [
         _scene("S1", "REAL_ARCHIVE", 0.0, 40.0),
-        _scene("S2", "existing_ai_reconstruction", 40.0, 100.0),  # unknown class
+        _scene("S2", "existing_ai_reconstruction", 40.0, 100.0),  # known alias
+        _scene("S3", "totally_bogus_class", 40.0, 100.0),  # truly unknown
     ]
     report = check_visual_budget(scenes)
     assert report.status == "BLOCKED"
-    assert "S2" in report.unknown_scenes
+    assert "S3" in report.unknown_scenes
+    assert "S2" not in report.unknown_scenes  # legacy alias is known
 
 
 def test_missing_duration_blocks() -> None:
@@ -231,16 +260,14 @@ def test_release_gate_missing_visual_check_can_publish_false() -> None:
     assert gd.coverage_complete is False
 
 
-def test_release_gate_visual_check_pass_can_publish_true() -> None:
+def test_release_gate_visual_check_fail_can_publish_false() -> None:
     from lib.final_qc import QCReport, QCResult
 
     rg = ReleaseGate()
     vc = check_visual_budget([
-        _scene("S1", "REAL_ARCHIVE", 0.0, 45.0),
-        _scene("S2", "DATA_VISUALIZATION", 45.0, 85.0),
-        _scene("S3", "SCIENTIFIC_RECONSTRUCTION", 85.0, 100.0),
+        _scene("S1", "existing_ai_reconstruction", 0.0, 180.0),
     ])
-    assert vc.status == "PASS"
+    assert vc.status == "FAIL"
     report = QCReport("p")
     report.checks = [
         QCResult("ffprobe_streams", "video", "PASS", "ok", blocking=True),
@@ -252,5 +279,5 @@ def test_release_gate_visual_check_pass_can_publish_true() -> None:
         ),
     ]
     gd = rg.evaluate(report)
-    assert gd.can_publish is True, gd.reason
-    assert gd.coverage_complete is True
+    assert gd.can_publish is False
+    assert "visual_composition_budget" in gd.required_problems

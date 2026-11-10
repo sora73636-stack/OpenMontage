@@ -45,6 +45,10 @@ _CATEGORY_OF_CLASS: Mapping[str, str] = {
     "SCIENTIFIC_RECONSTRUCTION": AI_RECONSTRUCTION,
     "HYPOTHETICAL_RECONSTRUCTION": AI_RECONSTRUCTION,
     "ARTISTIC_METAPHOR": AI_RECONSTRUCTION,
+    # Legacy alias used by the V12/V13 pilot storyboard: existing AI frames
+    # that were generated in a previous pilot run (not newly generated in V13).
+    # They count toward the AI share; they are NOT newly generated.
+    "existing_ai_reconstruction": AI_RECONSTRUCTION,
 }
 
 # Target shares (fraction of total duration), per V13 S1.2.
