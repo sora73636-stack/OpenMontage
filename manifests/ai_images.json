@@ -1,0 +1,216 @@
+{
+  "generated_at": "2026-11-10T02:48:02.814310+00:00",
+  "total_images": 10,
+  "images": [
+    {
+      "asset_id": "9212436bb4fdddaf",
+      "prompt": "photorealistic, cinematic documentary still, deep teal shadows, warm highlights, no text, no logos: Enceladus south pole plume venting into space",
+      "model": "Nano Banana 2.1",
+      "source_type": "newly_generated",
+      "asset_origin": "newly_generated",
+      "provider": "google-flow",
+      "file_path": "work/flow_images/enceladus_plume_1.png",
+      "file_size_bytes": 1306004,
+      "sha256": "9212436bb4fdddafa6fd54d9ce00981bb7cadd3934400d8bba311b01ffdf7305",
+      "phash": "59d3e9727067",
+      "display_width": 1376,
+      "display_height": 768,
+      "visual_class": "AI_RECONSTRUCTION",
+      "visual_claim": "AI_RECONSTRUCTION",
+      "disclosure_required": true,
+      "created_at": "2026-11-10T02:48:02.814217+00:00",
+      "labels": [
+        "AI-generated visualization"
+      ]
+    },
+    {
+      "asset_id": "79a6486f872deef7",
+      "prompt": "photorealistic, cinematic documentary still, deep teal shadows, warm highlights, no text, no logos: Enceladus icy surface",
+      "model": "Nano Banana 2.1",
+      "source_type": "newly_generated",
+      "asset_origin": "newly_generated",
+      "provider": "google-flow",
+      "file_path": "work/flow_images/enceladus_surface_1.png",
+      "file_size_bytes": 1173376,
+      "sha256": "79a6486f872deef7e055b70803dced5306e8f569ef50ee87b560a9b356f724f6",
+      "phash": "12cfc0522bdd",
+      "display_width": 1376,
+      "display_height": 768,
+      "visual_class": "AI_RECONSTRUCTION",
+      "visual_claim": "AI_RECONSTRUCTION",
+      "disclosure_required": true,
+      "created_at": "2026-11-10T02:48:02.814247+00:00",
+      "labels": [
+        "AI-generated visualization"
+      ]
+    },
+    {
+      "asset_id": "85c49de8236c72a0",
+      "prompt": "photorealistic, cinematic documentary still, deep teal shadows, warm highlights, no text, no logos: Enceladus icy surface with tiger stripe fractures",
+      "model": "Nano Banana 2.1",
+      "source_type": "newly_generated",
+      "asset_origin": "newly_generated",
+      "provider": "google-flow",
+      "file_path": "work/flow_images/enceladus_tiger_stripes_1.png",
+      "file_size_bytes": 925289,
+      "sha256": "85c49de8236c72a093f54d76370d4d4f9b3fd1bf4a17bed11b757a45e673aaf9",
+      "phash": "9074469def35",
+      "display_width": 1376,
+      "display_height": 768,
+      "visual_class": "AI_RECONSTRUCTION",
+      "visual_claim": "AI_RECONSTRUCTION",
+      "disclosure_required": true,
+      "created_at": "2026-11-10T02:48:02.814256+00:00",
+      "labels": [
+        "AI-generated visualization"
+      ]
+    },
+    {
+      "asset_id": "ac8b38500eb7cc2e",
+      "prompt": "photorealistic, cinematic documentary still, deep teal shadows, warm highlights, no text, no logos: water vapor plume rising from Enceladus",
+      "model": "Nano Banana 2.1",
+      "source_type": "newly_generated",
+      "asset_origin": "newly_generated",
+      "provider": "google-flow",
+      "file_path": "work/flow_images/enceladus_water_vapor_1.png",
+      "file_size_bytes": 782744,
+      "sha256": "ac8b38500eb7cc2ebd2523f103d328d6d818cb54f5db92bd51fa5dc62ae7cded",
+      "phash": "af8610932c14",
+      "display_width": 1376,
+      "display_height": 768,
+      "visual_class": "AI_RECONSTRUCTION",
+      "visual_claim": "AI_RECONSTRUCTION",
+      "disclosure_required": true,
+      "created_at": "2026-11-10T02:48:02.814261+00:00",
+      "labels": [
+        "AI-generated visualization"
+      ]
+    },
+    {
+      "asset_id": "29a0f5816a39b7a7",
+      "prompt": "photorealistic, cinematic documentary still, deep teal shadows, warm highlights, no text, no logos: water vapor plume rising from Enceladus",
+      "model": "Nano Banana 2.1",
+      "source_type": "newly_generated",
+      "asset_origin": "newly_generated",
+      "provider": "google-flow",
+      "file_path": "work/flow_images/enceladus_water_vapor_2.png",
+      "file_size_bytes": 979039,
+      "sha256": "29a0f5816a39b7a76a5f0863110faf87189c5580ba578874491bebf8d9d6e933",
+      "phash": "9efaf7fdef75",
+      "display_width": 1376,
+      "display_height": 768,
+      "visual_class": "AI_RECONSTRUCTION",
+      "visual_claim": "AI_RECONSTRUCTION",
+      "disclosure_required": true,
+      "created_at": "2026-11-10T02:48:02.814267+00:00",
+      "labels": [
+        "AI-generated visualization"
+      ]
+    },
+    {
+      "asset_id": "f2a971fffde015fc",
+      "prompt": "photorealistic, cinematic documentary still, deep teal shadows, warm highlights, no text, no logos: cross-section of Europa's icy shell revealing subsurface ocean",
+      "model": "Nano Banana 2.1",
+      "source_type": "newly_generated",
+      "asset_origin": "newly_generated",
+      "provider": "google-flow",
+      "file_path": "work/flow_images/europa_cross_section_1.png",
+      "file_size_bytes": 1297278,
+      "sha256": "f2a971fffde015fcfdbb595607a077c3eff88d8a728113c1b85bb1ec6de9628c",
+      "phash": "63cecb9d2848",
+      "display_width": 1376,
+      "display_height": 768,
+      "visual_class": "AI_RECONSTRUCTION",
+      "visual_claim": "AI_RECONSTRUCTION",
+      "disclosure_required": true,
+      "created_at": "2026-11-10T02:48:02.814273+00:00",
+      "labels": [
+        "AI-generated visualization"
+      ]
+    },
+    {
+      "asset_id": "3adf92c7c7b8c062",
+      "prompt": "photorealistic, cinematic documentary still, deep teal shadows, warm highlights, no text, no logos: Europa surface ice cracks and ridges",
+      "model": "Nano Banana 2.1",
+      "source_type": "newly_generated",
+      "asset_origin": "newly_generated",
+      "provider": "google-flow",
+      "file_path": "work/flow_images/europa_surface_1.png",
+      "file_size_bytes": 960190,
+      "sha256": "3adf92c7c7b8c062ef3c4b3cdcae935507e19775c1338e522f8a807eed202570",
+      "phash": "4c1f8a24fe5b",
+      "display_width": 1376,
+      "display_height": 768,
+      "visual_class": "AI_RECONSTRUCTION",
+      "visual_claim": "AI_RECONSTRUCTION",
+      "disclosure_required": true,
+      "created_at": "2026-11-10T02:48:02.814279+00:00",
+      "labels": [
+        "AI-generated visualization"
+      ]
+    },
+    {
+      "asset_id": "e77f01f1717503a4",
+      "prompt": "photorealistic, cinematic documentary still, deep teal shadows, warm highlights, no text, no logos: hydrothermal vent on ocean floor with mineral chimneys",
+      "model": "Nano Banana 2.1",
+      "source_type": "newly_generated",
+      "asset_origin": "newly_generated",
+      "provider": "google-flow",
+      "file_path": "work/flow_images/hydrothermal_vent_1.png",
+      "file_size_bytes": 943455,
+      "sha256": "e77f01f1717503a4068790965f99ff4cea0c6fbf950929581cade0d1929216af",
+      "phash": "fdc82e332406",
+      "display_width": 1376,
+      "display_height": 768,
+      "visual_class": "AI_RECONSTRUCTION",
+      "visual_claim": "AI_RECONSTRUCTION",
+      "disclosure_required": true,
+      "created_at": "2026-11-10T02:48:02.814294+00:00",
+      "labels": [
+        "AI-generated visualization"
+      ]
+    },
+    {
+      "asset_id": "e25bb3b0262de11f",
+      "prompt": "photorealistic, cinematic documentary still, deep teal shadows, warm highlights, no text, no logos: hydrothermal vent on ocean floor with mineral chimneys",
+      "model": "Nano Banana 2.1",
+      "source_type": "newly_generated",
+      "asset_origin": "newly_generated",
+      "provider": "google-flow",
+      "file_path": "work/flow_images/hydrothermal_vent_detail_1.png",
+      "file_size_bytes": 1577912,
+      "sha256": "e25bb3b0262de11f24c7e9c2f28e772c28529c5053f6b7b5036808b18ca61c60",
+      "phash": "ca1f3c3594ed",
+      "display_width": 1376,
+      "display_height": 768,
+      "visual_class": "AI_RECONSTRUCTION",
+      "visual_claim": "AI_RECONSTRUCTION",
+      "disclosure_required": true,
+      "created_at": "2026-11-10T02:48:02.814300+00:00",
+      "labels": [
+        "AI-generated visualization"
+      ]
+    },
+    {
+      "asset_id": "0ff2ff946aace871",
+      "prompt": "photorealistic, cinematic documentary still, deep teal shadows, warm highlights, no text, no logos: hydrothermal vent on ocean floor with mineral chimneys",
+      "model": "Nano Banana 2.1",
+      "source_type": "newly_generated",
+      "asset_origin": "newly_generated",
+      "provider": "google-flow",
+      "file_path": "work/flow_images/hydrothermal_vent_detail_2.png",
+      "file_size_bytes": 1668509,
+      "sha256": "0ff2ff946aace87156a9d031e6c1fecda2f1f2f81a92afb8ca1e36da0f2d22d1",
+      "phash": "16e995513aed",
+      "display_width": 1376,
+      "display_height": 768,
+      "visual_class": "AI_RECONSTRUCTION",
+      "visual_claim": "AI_RECONSTRUCTION",
+      "disclosure_required": true,
+      "created_at": "2026-11-10T02:48:02.814307+00:00",
+      "labels": [
+        "AI-generated visualization"
+      ]
+    }
+  ]
+}
