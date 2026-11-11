@@ -636,3 +636,11 @@
 - **Rights:** music PD Mark 1.0; voice lessac CC-BY-4.0 (attribution); diagrams/rig original; no YouTube downloads, no paid API, no Flow/Veo.
 - **Status:** `PENDING_HUMAN_REVIEW` — no human has watched the exact final file.
 - **Commit:** `bcedcd4` on `kilo/mega-100` (no push, no force, no reset/clean/rebase).
+
+### 2026-11-11 (cont.) — 10of10 source found and aligned
+
+- `OpenMontage_10of10_Four_Factories_OpenCode_Agent_Task_2026-11-11.md` found in `origin/main` @ `2f8f1915`; blob `84aaf471…`; SHA-256 `8d8fe0f0…`; 80,376 bytes. Local `origin/main` was stale; fixed by `git fetch origin`.
+- `OpenMontage_4_Factories_Deep_Research_2026-11-11.md` not present in 726 refs, upstream heads/PR heads+merge, wiki, Actions artifacts, gists, releases, or 100 sampled forks. 10of10 marks it optional and embeds the model lists.
+- Added `COMPETITOR_VIDEO_AUDIT.csv` (20 rows, 5 biology/evolution), `FINAL_HANDOFF.md`, `configs/model_matrix.yaml`, `configs/quality_gates.yaml`, `reports/benchmark_runs/2026-11-11-tts-local/benchmark_result.json`, `reports/end_to_end/MANIFEST.md`.
+- Re-encoded master to 7.98 Mbps video / AAC 48 kHz / 42-char subtitles; QC 16/16 PASS; SHA-256 `b960ee2e…`.
+- Commit: `89f0d4e3` on `kilo/mega-100` (no push).

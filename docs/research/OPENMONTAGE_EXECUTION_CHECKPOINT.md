@@ -1,7 +1,7 @@
 # OpenMontage Execution Checkpoint — 2026-11-11
 
 **Exact stop point:** after E2E demo render + QC (16/16 PASS), before human review.
-**Branch:** `kilo/mega-100` · **HEAD at start:** `3448322` · **Commit:** `bcedcd4` on `kilo/mega-100` (no push).
+**Branch:** `kilo/mega-100` · **HEAD at start:** `3448322` · **Commit:** `89f0d4e3` on `kilo/mega-100` (no push); earlier `bcedcd4`, `f066842`.
 
 ## Completed
 
@@ -17,7 +17,7 @@
 | Decisions | `docs/research/FACTORY_DECISION_REPORT.md` | CORE/FALLBACK/EXPERIMENTAL/BLOCKED |
 | Kaggle preflight | `work/master-run/kaggle/preflight/output/PREFLIGHT.json` | 2×T4, 31GB RAM, 19.5GB disk, CUDA13 |
 | Rig render | `work/master-run/animation/rig_contact_sheet.jpg` | 32/32 frames, lens 32/32 |
-| E2E demo | `work/master-run/e2e/final_demo.mp4` | 65.0s, 1080p30, 8.0 Mbps, 66.9MB, QC 16/16 PASS |
+| E2E demo | `work/master-run/e2e/final_demo.mp4` | 65.0s, 1080p30, 7.98 Mbps, 66.9MB, QC 16/16 PASS |
 | QC | `work/master-run/e2e/qc_report.json` | 16/16 PASS (verdict PASS) |
 | Narration | `work/master-run/e2e/audio/` + `narration.json` | Piper lessac, 160 words, 148 wpm |
 | Subtitles | `work/master-run/e2e/subtitles.srt` | 16 cues |
@@ -41,6 +41,7 @@
 ## Known issues at stop point
 
 - Kaggle Kokoro bench ERROR: `spacy` build on Python 3.13 (documented; local CPU bench used instead).
+- `OpenMontage_4_Factories_Deep_Research_2026-11-11.md` not reachable in any ref; 10of10 marks it optional.
 - Rig `profile`/`three_quarter` identical to `front`.
 - LUFS target conflict (-16 repo vs -14 YouTube).
 - Source documents missing.
