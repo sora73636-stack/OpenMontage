@@ -10,6 +10,7 @@ covered separately and honestly in test_factory_environment.py.
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -87,6 +88,15 @@ def run_chain(workspace: Path):
                     workspace, PROJECT_ID, stage, "awaiting_human", artifacts,
                     pipeline_type=PIPELINE,
                 )
+            # V8 §8.1: a completed checkpoint must carry checksums and a QC pass.
+            artifacts["checksums"] = {
+                name: hashlib.sha256(
+                    json.dumps(payload, sort_keys=True, ensure_ascii=False).encode("utf-8")
+                ).hexdigest()
+                for name, payload in artifacts.items()
+                if name not in ("checksums", "qc_passed")
+            }
+            artifacts["qc_passed"] = True
             write_checkpoint(
                 workspace, PROJECT_ID, stage, "completed", artifacts,
                 pipeline_type=PIPELINE, human_approved=bool(gated),

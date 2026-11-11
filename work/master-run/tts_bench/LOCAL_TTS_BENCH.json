@@ -1,0 +1,206 @@
+{
+  "status": "ok",
+  "timestamp_utc": "2026-11-11T16:14:15Z",
+  "runtime": {
+    "python": "3.12",
+    "torch": "cpu",
+    "kokoro": "0.7.16"
+  },
+  "engines": {
+    "kokoro": {
+      "engine": "kokoro",
+      "voice": "af_heart",
+      "device": "cpu",
+      "load_s": 10.61,
+      "gen_s_total": 47.53,
+      "gen_s_per_utt": [
+        7.934,
+        5.345,
+        4.772,
+        3.077,
+        5.828,
+        3.794,
+        6.805,
+        9.98
+      ],
+      "audio_s_total": 35.85,
+      "audio_s_per_utt": [
+        4.475,
+        4.85,
+        4.025,
+        3.1,
+        4.425,
+        3.975,
+        5.8,
+        5.2
+      ],
+      "rtf": 1.326,
+      "files": [
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/kokoro_01.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/kokoro_02.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/kokoro_03.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/kokoro_04.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/kokoro_05.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/kokoro_06.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/kokoro_07.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/kokoro_08.wav"
+      ]
+    },
+    "piper": {
+      "engine": "piper",
+      "voice": "en_US-lessac-medium",
+      "device": "cpu",
+      "load_s": null,
+      "gen_s_total": 23.74,
+      "gen_s_per_utt": [
+        3.471,
+        2.556,
+        3.559,
+        3.149,
+        2.772,
+        2.365,
+        2.754,
+        3.115
+      ],
+      "audio_s_total": 29.48,
+      "audio_s_per_utt": [
+        3.982,
+        4.423,
+        3.146,
+        2.531,
+        3.425,
+        3.46,
+        4.772,
+        3.738
+      ],
+      "rtf": 0.805,
+      "files": [
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/piper_01.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/piper_02.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/piper_03.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/piper_04.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/piper_05.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/piper_06.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/piper_07.wav",
+        "/workspaces/OpenMontage/work/master-run/tts_bench/audio/piper_08.wav"
+      ]
+    }
+  },
+  "wer": {
+    "kokoro": {
+      "asr_model": "faster-whisper base.en",
+      "load_s": 0.87,
+      "wer_per_utt": [
+        0.0,
+        0.0,
+        0.2222,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "wer_mean": 0.0278,
+      "details": [
+        {
+          "ref": "water expands when it freezes which is why ice floats on a lake",
+          "hyp": "water expands when it freezes which is why ice floats on a lake",
+          "wer": 0.0
+        },
+        {
+          "ref": "a light year is the distance light travels in one year not a measure of time",
+          "hyp": "a light year is the distance light travels in one year not a measure of time",
+          "wer": 0.0
+        },
+        {
+          "ref": "the human body contains about thirty seven trillion cells",
+          "hyp": "the human body contains about 37 trillion cells",
+          "wer": 0.2222
+        },
+        {
+          "ref": "sound cannot travel through the vacuum of space",
+          "hyp": "sound cannot travel through the vacuum of space",
+          "wer": 0.0
+        },
+        {
+          "ref": "photosynthesis converts light energy into chemical energy",
+          "hyp": "photosynthesis converts light energy into chemical energy",
+          "wer": 0.0
+        },
+        {
+          "ref": "the earth s core is roughly as hot as the surface of the sun",
+          "hyp": "the earth s core is roughly as hot as the surface of the sun",
+          "wer": 0.0
+        },
+        {
+          "ref": "antibiotic resistance arises when bacteria evolve under selective pressure",
+          "hyp": "antibiotic resistance arises when bacteria evolve under selective pressure",
+          "wer": 0.0
+        },
+        {
+          "ref": "a black hole s event horizon is the boundary beyond which nothing can escape",
+          "hyp": "a black hole s event horizon is the boundary beyond which nothing can escape",
+          "wer": 0.0
+        }
+      ]
+    },
+    "piper": {
+      "asr_model": "faster-whisper base.en",
+      "load_s": 0.54,
+      "wer_per_utt": [
+        0.0,
+        0.0,
+        0.2222,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "wer_mean": 0.0278,
+      "details": [
+        {
+          "ref": "water expands when it freezes which is why ice floats on a lake",
+          "hyp": "water expands when it freezes which is why ice floats on a lake",
+          "wer": 0.0
+        },
+        {
+          "ref": "a light year is the distance light travels in one year not a measure of time",
+          "hyp": "a light year is the distance light travels in one year not a measure of time",
+          "wer": 0.0
+        },
+        {
+          "ref": "the human body contains about thirty seven trillion cells",
+          "hyp": "the human body contains about 37 trillion cells",
+          "wer": 0.2222
+        },
+        {
+          "ref": "sound cannot travel through the vacuum of space",
+          "hyp": "sound cannot travel through the vacuum of space",
+          "wer": 0.0
+        },
+        {
+          "ref": "photosynthesis converts light energy into chemical energy",
+          "hyp": "photosynthesis converts light energy into chemical energy",
+          "wer": 0.0
+        },
+        {
+          "ref": "the earth s core is roughly as hot as the surface of the sun",
+          "hyp": "the earth s core is roughly as hot as the surface of the sun",
+          "wer": 0.0
+        },
+        {
+          "ref": "antibiotic resistance arises when bacteria evolve under selective pressure",
+          "hyp": "antibiotic resistance arises when bacteria evolve under selective pressure",
+          "wer": 0.0
+        },
+        {
+          "ref": "a black hole s event horizon is the boundary beyond which nothing can escape",
+          "hyp": "a black hole s event horizon is the boundary beyond which nothing can escape",
+          "wer": 0.0
+        }
+      ]
+    }
+  },
+  "errors": []
+}

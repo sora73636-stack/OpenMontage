@@ -1,0 +1,169 @@
+[
+  {
+    "job_id": "",
+    "check_id": "ffprobe_streams",
+    "status": "PASS",
+    "evidence": "video+audio streams present; fields resolved",
+    "measured_value": {
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "duration": "65.000000",
+      "video_streams": 1,
+      "audio_streams": 1
+    },
+    "threshold": "w=1920,h=1080,fps=30.0",
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:15Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "full_decode",
+    "status": "PASS",
+    "evidence": "full decode, no errors",
+    "measured_value": null,
+    "threshold": null,
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:23Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "blackdetect",
+    "status": "PASS",
+    "evidence": "black ratio 0.0000 <= 0.05",
+    "measured_value": 0.0,
+    "threshold": 0.05,
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:32Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "freezedetect",
+    "status": "PASS",
+    "evidence": "no freeze detected (<= 2.0s)",
+    "measured_value": 0.0,
+    "threshold": "2.0s",
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:41Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "silencedetect",
+    "status": "PASS",
+    "evidence": "silence ratio 0.0000 <= 0.1",
+    "measured_value": 0.0,
+    "threshold": 0.1,
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:48Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "ebur128",
+    "status": "PASS",
+    "evidence": "I=-15.8 LUFS (target -16.0 +/- 1.5); TP=-3.8 dBTP (max -1.5)",
+    "measured_value": "I=-15.8, TP=-3.8",
+    "threshold": "I=-16.0 +/- 1.5 LUFS, TP<=-1.5 dBTP",
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:56Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "duration_vs_script",
+    "status": "PASS",
+    "evidence": "duration 65.00s vs script 65.0s (drift 0.00s <= 1.0s)",
+    "measured_value": 0.0,
+    "threshold": "1.0s",
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:56Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "subtitle_sync",
+    "status": "PASS",
+    "evidence": "last cue ends 64.07s <= audio 65.00s (+0.5s tolerance)",
+    "measured_value": 0.0,
+    "threshold": "0.5s",
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:56Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "credits_complete",
+    "status": "PASS",
+    "evidence": "all required credit fields present",
+    "measured_value": null,
+    "threshold": "title, director, production",
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:56Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "claim_ids",
+    "status": "PASS",
+    "evidence": "14/14 sentences have claim_id",
+    "measured_value": 14,
+    "threshold": "100% with claim_id",
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:56Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "claim_ids_resolve",
+    "status": "PASS",
+    "evidence": "14/14 claim_ids resolve and SINGLE_SOURCE claims flagged",
+    "measured_value": 14,
+    "threshold": "all claim_ids resolve + SINGLE_SOURCE flagged",
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:56Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "rights_basis",
+    "status": "PASS",
+    "evidence": "4/4 records: rights_basis + provenance + no rejecting flag",
+    "measured_value": 4,
+    "threshold": "0 records with rights problems",
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:56Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "added_value",
+    "status": "PASS",
+    "evidence": "narration share, graphics density, annotation and still-only limits all met",
+    "measured_value": 55.27,
+    "threshold": "narration>=90%, >=1 graphic/90s, no unannotated clip >20s, still-only<=15s",
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:56Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "ai_illustration_label",
+    "status": "PASS",
+    "evidence": "0 AI cut(s) all labeled Illustration within share",
+    "measured_value": 0,
+    "threshold": "<= 0.15",
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:56Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "motion_variety",
+    "status": "PASS",
+    "evidence": "16 motion cuts, no two identical moves in a row",
+    "measured_value": 16,
+    "threshold": "0 consecutive identical moves",
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:56Z"
+  },
+  {
+    "job_id": "",
+    "check_id": "source_blend_consistency",
+    "status": "PASS",
+    "evidence": "max color delta 7.89 <= 15.0",
+    "measured_value": 7.89,
+    "threshold": 15.0,
+    "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "timestamp": "2026-11-11T16:21:56Z"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "claim_id": "F-01",
+    "text": "Water expands when it freezes, so ice is less dense than liquid water and floats.",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  },
+  {
+    "claim_id": "F-02",
+    "text": "A light-year is the distance light travels in one Julian year (about 9.46 trillion km).",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  },
+  {
+    "claim_id": "F-03",
+    "text": "The adult human body is estimated at about 3.7 x 10^13 cells (Sender, Fuchs & Milo, 2016).",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  },
+  {
+    "claim_id": "F-04",
+    "text": "Sound is a mechanical pressure wave and cannot propagate through a vacuum.",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  },
+  {
+    "claim_id": "F-05",
+    "text": "Photosynthesis converts light energy into chemical energy stored in carbohydrates.",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  },
+  {
+    "claim_id": "F-06",
+    "text": "Earth's inner core is about 5,200 C, comparable to the Sun's surface (~5,500 C).",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  },
+  {
+    "claim_id": "F-07",
+    "text": "Antibiotic resistance evolves when bacterial populations are under selective pressure.",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  },
+  {
+    "claim_id": "F-08",
+    "text": "A black hole's event horizon is the boundary beyond which escape velocity exceeds light speed.",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  },
+  {
+    "claim_id": "F-09",
+    "text": "Honey's low water activity and high sugar content inhibit microbial growth; edible honey has been found in ancient Egyptian tombs.",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  },
+  {
+    "claim_id": "F-10",
+    "text": "Octopuses have three hearts: two branchial hearts pump blood through the gills, one systemic heart serves the body.",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  },
+  {
+    "claim_id": "F-11",
+    "text": "Venus rotates once every ~243 Earth days, longer than its ~225 Earth-day orbit.",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  },
+  {
+    "claim_id": "F-12",
+    "text": "Botanically, bananas are berries; strawberries are aggregate accessory fruits, not berries.",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  },
+  {
+    "claim_id": "F-13",
+    "text": "Sharks first appear in the fossil record ~450 million years ago; the earliest trees ~385 million years ago.",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  },
+  {
+    "claim_id": "F-14",
+    "text": "A teaspoon of neutron-star matter would have a mass of order 10^12 kg (about a billion tons).",
+    "source_flags": "PRIMARY_TEXTBOOK"
+  }
+]

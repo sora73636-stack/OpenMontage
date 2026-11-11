@@ -1,0 +1,10 @@
+# Regenerable intermediates — the final video, QC report and scripts are committed.
+clips/
+scenes/
+audio/
+frames/
+rig/
+narration_track.wav
+audio_mix.wav
+video_noaudio.mp4
+*.wav

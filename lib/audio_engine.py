@@ -29,7 +29,10 @@ from pathlib import Path
 from typing import Any
 
 import soundfile as sf
-from kokoro import KPipeline
+
+# ``kokoro``/``torch`` are imported lazily in ``_get_pipeline`` so that this
+# module can be imported (and its pure helpers unit-tested) on machines where
+# the optional Kokoro runtime is not installed. Fail-closed at use time.
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -199,8 +202,15 @@ class AudioEngine:
     # Pipeline (lazy, cached)
     # ------------------------------------------------------------------
 
-    def _get_pipeline(self) -> KPipeline:
+    def _get_pipeline(self) -> Any:
         if self._pipeline is None:
+            try:
+                from kokoro import KPipeline
+            except ImportError as exc:  # pragma: no cover - exercised by env test
+                raise RuntimeError(
+                    "Kokoro TTS is not installed. Install the pinned CPU runtime: "
+                    "`pip install 'numpy==1.26.4' scipy torch soundfile 'misaki[en]' kokoro`."
+                ) from exc
             self._pipeline = KPipeline(lang_code="a")
         return self._pipeline
 

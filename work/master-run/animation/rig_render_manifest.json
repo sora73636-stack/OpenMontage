@@ -1,0 +1,291 @@
+{
+  "profile": {
+    "rig_id": "RIG-1",
+    "character_id": "om-researcher",
+    "display_name": "Researcher",
+    "proportions": {
+      "head_diameter": 1.0,
+      "torso": 1.6,
+      "upper_arm": 0.7,
+      "forearm": 0.7,
+      "thigh": 0.8,
+      "shin": 0.8,
+      "foot": 0.35,
+      "hand": 0.25
+    },
+    "signature_detail_id": "magnifying_lens",
+    "accent_color": "#2a9d8f",
+    "ink_color": "#1f2320",
+    "min_height_heads": 4.0,
+    "max_height_heads": 4.5,
+    "allowed_poses": [],
+    "allowed_expressions": [
+      "neutral",
+      "curious",
+      "surprised",
+      "determined",
+      "concerned",
+      "happy",
+      "frustrated",
+      "focused"
+    ]
+  },
+  "frames": [
+    {
+      "pose": "idle",
+      "view": "front",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/idle_front.png",
+      "svg_bytes": 2005,
+      "signature_lens": true,
+      "cache_key": "ec8bb2f00ea363ca"
+    },
+    {
+      "pose": "idle",
+      "view": "three_quarter",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/idle_three_quarter.png",
+      "svg_bytes": 2005,
+      "signature_lens": true,
+      "cache_key": "f11699235c716731"
+    },
+    {
+      "pose": "idle",
+      "view": "profile",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/idle_profile.png",
+      "svg_bytes": 2005,
+      "signature_lens": true,
+      "cache_key": "b554616d005c52b6"
+    },
+    {
+      "pose": "idle",
+      "view": "back",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/idle_back.png",
+      "svg_bytes": 2059,
+      "signature_lens": true,
+      "cache_key": "2d456e33f26ea774"
+    },
+    {
+      "pose": "walking",
+      "view": "front",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/walking_front.png",
+      "svg_bytes": 2001,
+      "signature_lens": true,
+      "cache_key": "1d7c5d921881049e"
+    },
+    {
+      "pose": "walking",
+      "view": "three_quarter",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/walking_three_quarter.png",
+      "svg_bytes": 2001,
+      "signature_lens": true,
+      "cache_key": "48bc54cae135b4dd"
+    },
+    {
+      "pose": "walking",
+      "view": "profile",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/walking_profile.png",
+      "svg_bytes": 2001,
+      "signature_lens": true,
+      "cache_key": "9148b66cd52a9465"
+    },
+    {
+      "pose": "walking",
+      "view": "back",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/walking_back.png",
+      "svg_bytes": 2055,
+      "signature_lens": true,
+      "cache_key": "80632d269b4a6dde"
+    },
+    {
+      "pose": "running",
+      "view": "front",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/running_front.png",
+      "svg_bytes": 2001,
+      "signature_lens": true,
+      "cache_key": "5fcddb6f855ccfb2"
+    },
+    {
+      "pose": "running",
+      "view": "three_quarter",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/running_three_quarter.png",
+      "svg_bytes": 2001,
+      "signature_lens": true,
+      "cache_key": "23491b37a4cccbc2"
+    },
+    {
+      "pose": "running",
+      "view": "profile",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/running_profile.png",
+      "svg_bytes": 2001,
+      "signature_lens": true,
+      "cache_key": "e9909b5064b3c2ed"
+    },
+    {
+      "pose": "running",
+      "view": "back",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/running_back.png",
+      "svg_bytes": 2055,
+      "signature_lens": true,
+      "cache_key": "0ec1ef38da0c848d"
+    },
+    {
+      "pose": "pointing",
+      "view": "front",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/pointing_front.png",
+      "svg_bytes": 2005,
+      "signature_lens": true,
+      "cache_key": "09630473aadf2d6c"
+    },
+    {
+      "pose": "pointing",
+      "view": "three_quarter",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/pointing_three_quarter.png",
+      "svg_bytes": 2005,
+      "signature_lens": true,
+      "cache_key": "eacc60e532870b6e"
+    },
+    {
+      "pose": "pointing",
+      "view": "profile",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/pointing_profile.png",
+      "svg_bytes": 2005,
+      "signature_lens": true,
+      "cache_key": "bad4615a17f89dea"
+    },
+    {
+      "pose": "pointing",
+      "view": "back",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/pointing_back.png",
+      "svg_bytes": 2059,
+      "signature_lens": true,
+      "cache_key": "3d92af0e02a0d724"
+    },
+    {
+      "pose": "explaining",
+      "view": "front",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/explaining_front.png",
+      "svg_bytes": 2005,
+      "signature_lens": true,
+      "cache_key": "8da544c4f2dbb222"
+    },
+    {
+      "pose": "explaining",
+      "view": "three_quarter",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/explaining_three_quarter.png",
+      "svg_bytes": 2005,
+      "signature_lens": true,
+      "cache_key": "2f6185f2a66fb747"
+    },
+    {
+      "pose": "explaining",
+      "view": "profile",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/explaining_profile.png",
+      "svg_bytes": 2005,
+      "signature_lens": true,
+      "cache_key": "dd050a583ed81ecf"
+    },
+    {
+      "pose": "explaining",
+      "view": "back",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/explaining_back.png",
+      "svg_bytes": 2059,
+      "signature_lens": true,
+      "cache_key": "8dbcc0a5c2233f7a"
+    },
+    {
+      "pose": "thinking",
+      "view": "front",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/thinking_front.png",
+      "svg_bytes": 2001,
+      "signature_lens": true,
+      "cache_key": "055ba23dd44cce18"
+    },
+    {
+      "pose": "thinking",
+      "view": "three_quarter",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/thinking_three_quarter.png",
+      "svg_bytes": 2001,
+      "signature_lens": true,
+      "cache_key": "a864c5c0f6517d76"
+    },
+    {
+      "pose": "thinking",
+      "view": "profile",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/thinking_profile.png",
+      "svg_bytes": 2001,
+      "signature_lens": true,
+      "cache_key": "ac9e50a0664684b0"
+    },
+    {
+      "pose": "thinking",
+      "view": "back",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/thinking_back.png",
+      "svg_bytes": 2055,
+      "signature_lens": true,
+      "cache_key": "6a0ecd061271db9c"
+    },
+    {
+      "pose": "surprised",
+      "view": "front",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/surprised_front.png",
+      "svg_bytes": 2003,
+      "signature_lens": true,
+      "cache_key": "b88b1ba33a24a6cf"
+    },
+    {
+      "pose": "surprised",
+      "view": "three_quarter",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/surprised_three_quarter.png",
+      "svg_bytes": 2003,
+      "signature_lens": true,
+      "cache_key": "cf0bc2cf0ab19fd2"
+    },
+    {
+      "pose": "surprised",
+      "view": "profile",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/surprised_profile.png",
+      "svg_bytes": 2003,
+      "signature_lens": true,
+      "cache_key": "516fe35586be5657"
+    },
+    {
+      "pose": "surprised",
+      "view": "back",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/surprised_back.png",
+      "svg_bytes": 2057,
+      "signature_lens": true,
+      "cache_key": "fab3022fdefd95b7"
+    },
+    {
+      "pose": "examining",
+      "view": "front",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/examining_front.png",
+      "svg_bytes": 2203,
+      "signature_lens": true,
+      "cache_key": "8715c6c76e744aa4"
+    },
+    {
+      "pose": "examining",
+      "view": "three_quarter",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/examining_three_quarter.png",
+      "svg_bytes": 2203,
+      "signature_lens": true,
+      "cache_key": "64df047f6035a49c"
+    },
+    {
+      "pose": "examining",
+      "view": "profile",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/examining_profile.png",
+      "svg_bytes": 2203,
+      "signature_lens": true,
+      "cache_key": "6a4c85af14f507f7"
+    },
+    {
+      "pose": "examining",
+      "view": "back",
+      "png": "/workspaces/OpenMontage/work/master-run/animation/examining_back.png",
+      "svg_bytes": 2257,
+      "signature_lens": true,
+      "cache_key": "644c254ad147630a"
+    }
+  ]
+}

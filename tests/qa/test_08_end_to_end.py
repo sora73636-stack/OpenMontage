@@ -31,6 +31,18 @@ from tools.cost_tracker import CostTracker, BudgetMode
 from schemas.artifacts import validate_artifact, list_schemas
 from styles.playbook_loader import load_playbook, validate_accessibility
 
+def _completed(artifacts):
+    """V8 §8.1: completed checkpoints must carry checksums + a QC pass."""
+    import hashlib
+    out = dict(artifacts)
+    out["checksums"] = {
+        k: hashlib.sha256(json.dumps(v, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()
+        for k, v in artifacts.items()
+    }
+    out["qc_passed"] = True
+    return out
+
+
 OUT = os.path.join(os.path.dirname(__file__), "output")
 PIPELINE_DIR = Path(OUT) / "e2e_pipeline"
 PROJECT_ID = "qa_e2e_test"
@@ -149,7 +161,7 @@ except Exception as e:
 
 cp_path = write_checkpoint(
     PIPELINE_DIR, PROJECT_ID, "research", "completed",
-    artifacts={"research_brief": research_brief},
+    artifacts=_completed({"research_brief": research_brief}),
     pipeline_type="animated-explainer",
     style_playbook="clean-professional",
 )
@@ -235,7 +247,7 @@ except Exception as e:
 
 cp_path = write_checkpoint(
     PIPELINE_DIR, PROJECT_ID, "proposal", "completed", human_approved=True,
-    artifacts={"proposal_packet": proposal_packet},
+    artifacts=_completed({"proposal_packet": proposal_packet}),
     pipeline_type="animated-explainer",
     style_playbook="clean-professional",
 )
@@ -284,7 +296,7 @@ except Exception as e:
 
 write_checkpoint(
     PIPELINE_DIR, PROJECT_ID, "script", "completed", human_approved=True,
-    artifacts={"script": script},
+    artifacts=_completed({"script": script}),
     pipeline_type="animated-explainer",
 )
 check("Completed stages", get_completed_stages(PIPELINE_DIR, PROJECT_ID) == ["research", "proposal", "script"])  # research, proposal and script in pipeline order
@@ -323,7 +335,7 @@ except Exception as e:
 
 write_checkpoint(
     PIPELINE_DIR, PROJECT_ID, "scene_plan", "completed", human_approved=True,
-    artifacts={"scene_plan": scene_plan},
+    artifacts=_completed({"scene_plan": scene_plan}),
     pipeline_type="animated-explainer",
 )
 
@@ -402,7 +414,7 @@ print(f"  Cost snapshot: {tracker.cost_snapshot()}")
 
 write_checkpoint(
     PIPELINE_DIR, PROJECT_ID, "assets", "completed", human_approved=True,
-    artifacts={"asset_manifest": asset_manifest},
+    artifacts=_completed({"asset_manifest": asset_manifest}),
     pipeline_type="animated-explainer",
     cost_snapshot=tracker.cost_snapshot(),
 )
@@ -456,7 +468,7 @@ except Exception as e:
 
 write_checkpoint(
     PIPELINE_DIR, PROJECT_ID, "edit", "completed",
-    artifacts={"edit_decisions": edit_decisions},
+    artifacts=_completed({"edit_decisions": edit_decisions}),
     pipeline_type="animated-explainer",
 )
 
@@ -574,7 +586,7 @@ except Exception as e:
 
 write_checkpoint(
     PIPELINE_DIR, PROJECT_ID, "compose", "completed",
-    artifacts={"render_report": render_report},
+    artifacts=_completed({"render_report": render_report}),
     pipeline_type="animated-explainer",
     cost_snapshot=tracker.cost_snapshot(),
 )
@@ -616,7 +628,7 @@ except Exception as e:
 
 write_checkpoint(
     PIPELINE_DIR, PROJECT_ID, "publish", "completed", human_approved=True,
-    artifacts={"publish_log": publish_log},
+    artifacts=_completed({"publish_log": publish_log}),
     pipeline_type="animated-explainer",
 )
 

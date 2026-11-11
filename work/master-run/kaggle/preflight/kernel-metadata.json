@@ -1,0 +1,13 @@
+{
+  "id": "forts845/openmontage-preflight",
+  "title": "OpenMontage Preflight",
+  "code_file": "preflight.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

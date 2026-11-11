@@ -1,0 +1,48 @@
+[
+  {
+    "asset_id": "A00",
+    "kind": "graphics",
+    "title": "All scene diagrams",
+    "center": "original",
+    "credit": "OpenMontage original diagrams",
+    "rights_basis": "ai_generated_illustration",
+    "usable": true,
+    "license": "original (project)",
+    "source_url": "",
+    "sha256": ""
+  },
+  {
+    "asset_id": "A01",
+    "kind": "music",
+    "title": "Ardune Ambient - Red Moon Quarry (John Oestmann)",
+    "credit": "John Oestmann / archive.org",
+    "rights_basis": "explicit_license",
+    "usable": true,
+    "license": "Public Domain Mark 1.0",
+    "source_url": "https://archive.org/details/sw-datapedia-ardune-ambient",
+    "sha256": "94b62c5eeeb2e2342022d632f045904ca866eeab938086865b2feda12822c00e"
+  },
+  {
+    "asset_id": "A02",
+    "kind": "voice",
+    "title": "Piper en_US-lessac-medium",
+    "credit": "lessac (CC-BY-4.0) via Piper",
+    "rights_basis": "explicit_license",
+    "usable": true,
+    "license": "CC-BY-4.0",
+    "source_url": "https://huggingface.co/rhasspy/piper-voices",
+    "sha256": "6bcfec58d5fc96977e20bc98897d478b73f6e6e660b0d61fc26c9eae663d2131"
+  },
+  {
+    "asset_id": "A03",
+    "kind": "graphics",
+    "title": "Stickman Rig-1",
+    "center": "original",
+    "credit": "OpenMontage Stickman Rig-1",
+    "rights_basis": "ai_generated_illustration",
+    "usable": true,
+    "license": "original (project)",
+    "source_url": "",
+    "sha256": ""
+  }
+]

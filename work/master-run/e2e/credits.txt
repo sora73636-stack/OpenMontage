@@ -1,0 +1,8 @@
+Title: Fourteen Facts That Sound Wrong (But Are True)
+Director: OpenMontage automated agent
+Production: OpenMontage Factory demo
+Diagrams: original work, generated with PIL for this demo.
+Music: "Ardune Ambient - Red Moon Quarry" by John Oestmann, Public Domain Mark 1.0, via archive.org.
+Voice: lessac (CC-BY-4.0) via Piper.
+Character: OpenMontage Stickman Rig-1 (original).
+No third-party footage. No YouTube downloads. No paid API.

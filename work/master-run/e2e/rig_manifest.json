@@ -1,0 +1,37 @@
+[
+  {
+    "pose": "idle",
+    "mov": "/workspaces/OpenMontage/work/master-run/e2e/rig/idle.mov",
+    "frames": 24,
+    "fps": 12,
+    "alpha_pixels": 1659
+  },
+  {
+    "pose": "explaining",
+    "mov": "/workspaces/OpenMontage/work/master-run/e2e/rig/explaining.mov",
+    "frames": 24,
+    "fps": 12,
+    "alpha_pixels": 2245
+  },
+  {
+    "pose": "pointing",
+    "mov": "/workspaces/OpenMontage/work/master-run/e2e/rig/pointing.mov",
+    "frames": 24,
+    "fps": 12,
+    "alpha_pixels": 2000
+  },
+  {
+    "pose": "thinking",
+    "mov": "/workspaces/OpenMontage/work/master-run/e2e/rig/thinking.mov",
+    "frames": 24,
+    "fps": 12,
+    "alpha_pixels": 1906
+  },
+  {
+    "pose": "examining",
+    "mov": "/workspaces/OpenMontage/work/master-run/e2e/rig/examining.mov",
+    "frames": 24,
+    "fps": 12,
+    "alpha_pixels": 2293
+  }
+]
