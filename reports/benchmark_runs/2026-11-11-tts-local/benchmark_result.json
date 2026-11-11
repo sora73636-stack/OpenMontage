@@ -1,0 +1,62 @@
+{
+  "schema": "openmontage.benchmark_result/v1",
+  "run_id": "2026-11-11-tts-local",
+  "factory": "voice",
+  "stage": "tts_benchmark",
+  "environment": {
+    "host": "GitHub Codespaces",
+    "python": "3.12.3",
+    "torch": "2.15.0+cpu",
+    "numpy": "1.26.4",
+    "gpu": null,
+    "cuda": false,
+    "kaggle_kernel_error": "forts845/openmontage-tts-bench ERROR: spacy build fails on Kaggle Python 3.13"
+  },
+  "input": {
+    "benchmark": "8 English sentences (science facts), same text for every model",
+    "sentences_hash": "see LOCAL_TTS_BENCH.json"
+  },
+  "runs": [
+    {
+      "job_id": "tts-kokoro-01",
+      "model_id": "hexgrad/Kokoro-82M",
+      "revision": "kokoro 0.7.16",
+      "license_status": "COMMERCIAL_CLEAR (Apache-2.0)",
+      "params": {"voice": "af_heart", "device": "cpu", "speed": 1.0, "sample_rate": 24000},
+      "load_s": 10.61,
+      "generation_s_total": 47.53,
+      "audio_s_total": 35.85,
+      "rtf": 1.326,
+      "wer_mean": 0.0278,
+      "output_hash": "ee2a06230f3f013b80c5702affa5cdb929643e3d21595bea4e3a66682d185906",
+      "output_path": "work/master-run/tts_bench/audio/kokoro_01.wav",
+      "peak_vram_mb": null,
+      "peak_ram_mb": null,
+      "status": "PASS",
+      "human_review": "PENDING_HUMAN_REVIEW (naturalness not measured)"
+    },
+    {
+      "job_id": "tts-piper-01",
+      "model_id": "OHF-Voice/piper1-gpl",
+      "revision": "en_US-lessac-medium (downloaded 2026-11-11)",
+      "license_status": "COMMERCIAL_CLEAR_WITH_ATTRIBUTION (GPL-3.0 code; voice CC-BY-4.0)",
+      "params": {"voice": "en_US-lessac-medium", "device": "cpu", "speed": 1.0, "sample_rate": 22050},
+      "load_s": null,
+      "generation_s_total": 23.74,
+      "audio_s_total": 29.48,
+      "rtf": 0.805,
+      "wer_mean": 0.0278,
+      "output_hash": "31daccd1bd67c4e42c52662dfa0f23a37bab4f159ce0cdb34075c7b2e8b9bf9b",
+      "output_path": "work/master-run/tts_bench/audio/piper_01.wav",
+      "peak_vram_mb": null,
+      "peak_ram_mb": null,
+      "status": "PASS",
+      "human_review": "PENDING_HUMAN_REVIEW (naturalness not measured)"
+    }
+  ],
+  "notes": [
+    "Both engines: 7/8 sentences WER 0%; the single 22.2% case is the same 'thirty-seven' -> '37' normalization artifact.",
+    "No GPU VRAM/RAM peak measured locally; Kaggle GPU run blocked by spacy/py3.13.",
+    "Naturalness, expressiveness, pauses and long-form fatigue are not measured."
+  ]
+}

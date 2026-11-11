@@ -1,0 +1,56 @@
+# OpenMontage quality gates — 2026-11-11
+# Thresholds come from config/qc_thresholds.json unless overridden here.
+# Status is the measured result on work/master-run/e2e/final_demo.mp4.
+version: 1
+generated: 2026-11-11
+source_thresholds: config/qc_thresholds.json
+measured_file: work/master-run/e2e/final_demo.mp4
+gates:
+  - id: ffprobe_streams
+    status: PASS
+    evidence: "video+audio; 1920x1080@30; h264+aac 48k stereo"
+  - id: full_decode
+    status: PASS
+    evidence: "full decode, no errors"
+  - id: blackdetect
+    status: PASS
+    evidence: "black ratio 0.0000 <= 0.05"
+  - id: freezedetect
+    status: PASS
+    evidence: "no freeze <= 2.0s"
+  - id: silencedetect
+    status: PASS
+    evidence: "silence ratio 0.0000 <= 0.1"
+  - id: ebur128
+    status: PASS
+    evidence: "I=-15.7 LUFS (target -16 +/- 1.5); TP=-3.8 dBTP (max -1.5)"
+  - id: duration_vs_script
+    status: PASS
+    evidence: "65.00s vs 65.0s, drift 0.00s"
+  - id: subtitle_sync
+    status: PASS
+    evidence: "last cue within 0.5s; max 42 chars/line, 2 lines"
+  - id: credits_complete
+    status: PASS
+    evidence: "title/director/production present"
+  - id: claim_ids
+    status: PASS
+    evidence: "14/14 sentences have claim_id; all resolve"
+  - id: rights_basis
+    status: PASS
+    evidence: "4/4 records explicit license/original graphics"
+  - id: added_value
+    status: PASS
+    evidence: "16 motion cuts, graphics density >=1/90s, still-only<=15s"
+  - id: ai_illustration_label
+    status: PASS
+    evidence: "0 AI cuts; original diagrams labeled"
+  - id: motion_variety
+    status: PASS
+    evidence: "16 motion cuts, no consecutive identical moves"
+  - id: source_blend_consistency
+    status: PASS
+    evidence: "max color delta 7.89 <= 15.0"
+  - id: human_watchthrough
+    status: PENDING_HUMAN_REVIEW
+    evidence: "exact final file not watched by a human; second reviewer not run"

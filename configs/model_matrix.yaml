@@ -1,0 +1,134 @@
+# OpenMontage model matrix — 2026-11-11
+# Status vocabulary from the 10of10 task:
+# CORE | FALLBACK | EXPERIMENTAL | HIGH_END_NOT_T4 | RESEARCH_ONLY | EXCLUDE
+# Sizes are total repository weight size from the HF API (blobs=true), not a promise
+# that one inference variant needs the whole repository.
+version: 1
+generated: 2026-11-11
+models:
+  - id: hexgrad/Kokoro-82M
+    factory: voice
+    task: tts
+    license: apache-2.0
+    size_gb: 0.33
+    status: CORE
+    evidence: local CPU bench WER 2.78%, RTF 1.326; work/master-run/tts_bench/LOCAL_TTS_BENCH.json
+  - id: OHF-Voice/piper1-gpl
+    factory: voice
+    task: tts
+    license: gpl-3.0 (code); voice CC-BY-4.0
+    size_gb: 0.06
+    status: FALLBACK
+    evidence: local CPU bench WER 2.78%, RTF 0.805; voice attribution required
+  - id: inclusionAI/Ming-3.0-tts-0.5B
+    factory: voice
+    task: tts
+    license: mit
+    size_gb: 3.0
+    status: EXPERIMENTAL
+    evidence: HF API license=mit, 3.0 GB repo; not downloaded
+  - id: Qwen/Qwen3-TTS-12Hz-0.6B-Base
+    factory: voice
+    task: tts
+    license: apache-2.0
+    size_gb: 2.52
+    status: EXPERIMENTAL
+    evidence: HF API license=apache-2.0, 2.52 GB repo; not downloaded; VRAM-growth issue reports must be tested empirically
+  - id: FunAudioLLM/Fun-CosyVoice3-0.5B-2512
+    factory: voice
+    task: tts
+    license: apache-2.0
+    size_gb: 9.75
+    status: EXPERIMENTAL
+    evidence: HF API license=apache-2.0, 9.75 GB repo; not downloaded
+  - id: openbmb/VoxCPM2
+    factory: voice
+    task: tts
+    license: apache-2.0
+    size_gb: 4.96
+    status: EXPERIMENTAL
+    evidence: HF API license=apache-2.0, 4.96 GB repo; not downloaded
+  - id: OpenMOSS-Team/MOSS-TTS-Local-Transformer
+    factory: voice
+    task: tts
+    license: apache-2.0
+    size_gb: 6.14
+    status: EXPERIMENTAL
+    evidence: HF API license=apache-2.0, 6.14 GB repo; not downloaded
+  - id: Lightricks/LTX-Video
+    factory: video
+    task: i2v/t2v
+    license: ltxv-open-weights-0.x
+    size_gb: 254.11
+    status: BLOCKED_STORAGE
+    evidence: full repo 254 GB; exact 0.9.6 2B distilled file not isolated; 19.5 GB Kaggle disk; commercial use only <$10M revenue
+  - id: Wan-AI/Wan2.1-T2V-1.3B
+    factory: video
+    task: t2v
+    license: apache-2.0
+    size_gb: null
+    status: EXPERIMENTAL
+    evidence: Apache-2.0; 1.3B fits T4; not downloaded; I2V is a different task
+  - id: Tencent-Hunyuan/HunyuanVideo-1.5
+    factory: video
+    task: i2v
+    license: tencent-community (verify exact)
+    size_gb: 33.0
+    status: HIGH_END_NOT_T4
+    evidence: previous research ~33 GB checkpoint, ~14+ GB VRAM with offload; not tested
+  - id: ACE-Step/Ace-Step1.5
+    factory: audio
+    task: music
+    license: mit
+    size_gb: 10.09
+    status: EXPERIMENTAL
+    evidence: HF API license=mit, 10.09 GB repo; not downloaded
+  - id: OpenMOSS-Team/MOSS-SoundEffect-v2.0
+    factory: audio
+    task: sfx
+    license: apache-2.0
+    size_gb: 11.23
+    status: EXPERIMENTAL
+    evidence: HF API license=apache-2.0, 11.23 GB repo; not downloaded
+  - id: stabilityai/stable-audio-open-small
+    factory: audio
+    task: music/sfx
+    license: stability-community (gated; terms not verified)
+    size_gb: null
+    status: LICENSE_BLOCKED
+    evidence: HF access restricted
+  - id: stabilityai/stable-audio-open-1.0
+    factory: audio
+    task: music/sfx
+    license: cc-by-nc-4.0
+    size_gb: null
+    status: EXCLUDE
+    evidence: non-commercial weights; not for monetized production
+  - id: Rikorose/DeepFilterNet
+    factory: audio
+    task: denoise
+    license: MIT OR Apache-2.0
+    size_gb: null
+    status: EXPERIMENTAL
+    evidence: dual-licensed code+weights; not installed
+  - id: ManimCommunity/manim
+    factory: animation
+    task: diagrams
+    license: MIT
+    size_gb: 0
+    status: EXPERIMENTAL
+    evidence: not installed; no measured test yet
+  - id: blender/blender
+    factory: animation
+    task: 3d
+    license: GPL-3.0
+    size_gb: 0
+    status: HIGH_END_NOT_T4
+    evidence: not installed; heavy
+  - id: FFmpeg 6.1.1
+    factory: render/audio
+    task: media
+    license: GPL-3.0 (Ubuntu build)
+    size_gb: 0
+    status: CORE
+    evidence: installed; used for all renders; full decode PASS

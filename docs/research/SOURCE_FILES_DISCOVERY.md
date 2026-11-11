@@ -1,68 +1,62 @@
-# Source File Discovery — 2026-11-11
+# Source File Discovery — 2026-11-11 (updated after full-branch search)
 
-## Verdict
+## Result
 
-**Both requested documents were NOT found** in the repository, git history, remotes,
-tags, stashes, worktrees, reflog, dangling objects, or the local filesystem.
+| File | Status | Location |
+|---|---|---|
+| `OpenMontage_10of10_Four_Factories_OpenCode_Agent_Task_2026-11-11.md` | **FOUND** | `origin/main` @ `2f8f1915` (root of repo) |
+| `OpenMontage_4_Factories_Deep_Research_2026-11-11.md` | **NOT FOUND** in any reachable ref | — |
 
-| Requested file | Result |
-|---|---|
-| `OpenMontage_4_Factories_Deep_Research_2026-11-11.md` | **NOT FOUND** |
-| `OpenMontage_10of10_Four_Factories_OpenCode_Agent_Task_2026-11-11.md` | **NOT FOUND** |
+### 10of10 — exact evidence
 
-No file was renamed to a matching name. No blob in any reachable commit contains
-`10of10`, `Four Factories`, or `Factories_Deep_Research` (content grep across
-`refs/heads`, `refs/remotes`, `refs/tags`, `refs/stash`).
+- **Path:** `OpenMontage_10of10_Four_Factories_OpenCode_Agent_Task_2026-11-11.md`
+- **Branch:** `origin/main` (repo `sora73636-stack/OpenMontage`)
+- **Commit:** `2f8f1915cc3db296bba081955ae5ba0cf4375af9` — `Add files via upload`, 2026-11-11 19:40:50 +0500
+- **Blob SHA:** `84aaf47136d34aa3a6ca3bb1e90f6b07af58eed8`
+- **File SHA-256:** `8d8fe0f074784fe8d1e18f862804a96d684bfee5c60659031e88575fa27fafd2`
+- **Size:** 80,376 bytes / 1,044 lines
+- **Commit also added:** `CHATGPT_KAGGLE_QUALITY_BRIEF.md` (not requested)
+- **Read:** full document read; local analysis copy at `work/master-run/source/10of10.md`.
 
-## Search performed (observed)
+**Why the first pass missed it:** the local `origin/main` ref was stale. `git fetch
+origin '+refs/heads/*:refs/remotes/origin/*'` updated it to `2f8f1915`, after which
+`git ls-tree -r --name-only origin/main` and the GitHub tree API both returned the file.
 
-Working dir `/workspaces/OpenMontage`, branch `kilo/mega-100`, HEAD `3448322`.
+### 4_Factories — search evidence
 
-1. **Working tree glob** — `**/*Factories*`, `**/*10of10*` → 0 files.
-2. **Every path ever added** — `git log --all --pretty=format: --name-only --diff-filter=A |
-   sort -u | grep -iE 'factories|10of10|deep_research'` → only unrelated
-   `FACTORY_RESEARCH_AND_ARCHITECTURE_AUDIT_V8.md` and `.kilo/skills/...` paths.
-3. **Per-ref tree listing** — `refs/heads/*`, `refs/remotes/*`, `refs/tags/*`,
-   `refs/stash` → 0 matches.
-4. **Content grep** — `git grep -l "10of10"` / `"Four Factories"` across all refs → 0.
-5. **Dangling objects** — `git fsck --lost-found`; dangling commit `2498a6f` is a WIP
-   merge touching only `work/v12/qc_raw/...json` and `work/v12/render/final_v12.mp4`.
-6. **Worktrees** — only `/workspaces/OpenMontage` exists.
-7. **Stash** — `stash@{0}: On flow-tools: flow-tools changes` (no matching paths).
-8. **Filesystem-wide** — `find / -xdev` for `*Factories_Deep_Research*`,
-   `*10of10_Four*`, `*4_Factories*` → 0.
-9. **GitHub REST tree** — `api.github.com` returned 403 (rate limit); the local
-   `origin`/`upstream` refs were already checked exhaustively above.
-10. **Uploaded `.docx` files** — five review/task `.docx` blobs exist in history
-    (`OpenMontage_1000283872_*`, `OpenMontage_V12_Review_Repair_Prompt_v2.docx`,
-    `OpenMontage_V13_Unified_Review_Architecture_and_Agent_Task.docx`). None is a
-    renamed match; they are separate review tasks.
+Searched, with no match:
 
-## Consequence
+1. All local/remote heads, tags, stash, dangling objects, reflog, worktrees.
+2. **726 refs** after fetching every upstream head and every `refs/pull/*/head` and
+   `refs/pull/*/merge` (blob:none fetch).
+3. `git log --all --diff-filter=A --name-only` and `git rev-list --all --objects`.
+4. Per-ref `git ls-tree -r` for every head/PR/merge ref.
+5. GitHub code search (`gh search code`), commit search, Actions artifacts, releases,
+   gists, wiki (`OpenMontage.wiki.git` does not exist).
+6. 100 forks of `OpenMontageInc/OpenMontage` sampled via the default-branch tree
+   (repository has 10,657 forks; a full 10k-fork scan is not feasible here).
 
-Per the task instruction: *"If the file is not found — honestly state this, continue
-with available materials."*
+The 10of10 document itself says the 4_Factories matrix is optional:
 
-The authoritative requirements for this run are therefore:
+> `OpenMontage_4_Factories_Deep_Research_2026-11-11.md` — previous research matrix
+> (`if available in the project; otherwise use the model/checkpoint lists embedded above`).
 
-1. The user's execution task text (preserved verbatim below in
-   `TASK_STATEMENT_RECONSTRUCTED.md`, with SHA-256).
-2. `docs/OPENMONTAGE_FACTORY_MASTER_PLAN_RU (1).md` v1.0 (retained for history; v3.2
-   supersedes it for milestone ordering).
-3. Repository reality: `AGENT_GUIDE.md`, `PROJECT_CONTEXT.md`, pipeline manifests,
-   schemas, tools, tests, and existing pilots.
-
-## Available related documents (context, not the missing files)
-
-- `docs/OPENMONTAGE_FACTORY_MASTER_PLAN_RU (1).md` — master plan (superseded by v3.2).
-- `docs/OPENMONTAGE_RESUME.md` — last factory session state (2026-10-16).
-- `docs/OPENMONTAGE_WORK_LOG.md` — dated work history through 2026-11-04.
-- `docs/FACTORY_IMPLEMENTATION_ROADMAP.md`, `docs/FACTORY_TECHNICAL_AUDIT.md`.
-- `docs/STICKMAN_RIG_ARCHITECTURE.md`, `docs/STICKMAN_RIG_IMPLEMENTATION.md`.
-- `work/v12`, `work/v13`, `work/v14` — existing render/QC artifacts.
+The embedded model/checkpoint lists in the 10of10 file were used as the fallback.
 
 ## Integrity
 
-No source file was modified, deleted, renamed, or rewritten during the search.
-No branch was switched; no `reset`, `clean`, `rebase`, `force-push`, or `stash`
-operation was performed.
+No source file was modified, deleted, renamed, or rewritten. No branch switch, no
+`reset`, `clean`, `rebase`, `force-push`, or `stash` operation was performed. The 10of10
+file remains in `origin/main` at commit `2f8f1915`; only a read-only copy was placed in
+`work/master-run/source/10of10.md`.
+
+## What this changes for the run
+
+The 10of10 document is now the authoritative task. It requires:
+
+- `COMPETITOR_VIDEO_AUDIT.csv` (done; 20 rows, 5 biology/evolution).
+- Official YouTube baseline separated from house targets (done; `YOUTUBE_QUALITY_STANDARD.md`).
+- `configs/model_matrix.yaml` and `configs/quality_gates.yaml` (done).
+- `benchmark_result.json` per run (done for the local TTS benchmark).
+- `FINAL_HANDOFF.md` (pending).
+- Manim test, I2V/T2V tests, ACE-Step/SFX tests, human watch-through (not done; blockers documented).

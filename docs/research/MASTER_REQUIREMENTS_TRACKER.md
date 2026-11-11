@@ -6,14 +6,14 @@ reconstructed from the user task + master plan + repo reality).
 
 | ID | Requirement | Status | Evidence | Next step |
 |---|---|---|---|---|
-| S1 | Locate both source documents | DONE | `SOURCE_FILES_DISCOVERY.md`; exhaustive git/fs search, 0 hits | owner to supply if they exist outside the repo |
+| S1 | Locate both source documents | DONE | 10of10 FOUND in origin/main @ 2f8f1915 (SHA-256 `8d8fe0f0…`); 4_Factories NOT FOUND after 726 refs + GitHub search | owner to supply 4_Factories if it exists locally |
 | S2 | Reconstruct requirements honestly | DONE | `TASK_STATEMENT_RECONSTRUCTED.md` + SHA-256 | none |
 | A | Audit Voice/Video/Animation/Audio/QC/pilots/Kaggle | DONE | `BASELINE_AUDIT.md`; 3,075 tests collect; 138 factory pass | owner review |
-| B | 15 science YouTube videos | DONE (metadata only) | `COMPETITOR_VIDEO_AUDIT.md`; 15 unique channels; 0 frames viewed | human frame-level viewing |
+| B | 15 science YouTube videos | DONE (metadata only) | `COMPETITOR_VIDEO_AUDIT.md` + `.csv`; 20 videos, 5 biology/evolution; 0 frames viewed | human frame-level viewing |
 | C | Kaggle preflight | DONE | 2× T4 14.56 GB, 31.35 GB RAM, 19.5 GB disk, CUDA 13, torch 2.11, internet 200 | model tests |
 | D1 | Voice: Kokoro | DONE (local CPU) | Apache-2.0; WER 2.78%, RTF 1.326; Kaggle ERROR (spacy py3.13) | human listening |
 | D2 | Voice: Piper | DONE (local CPU) | GPL-3.0 code / CC-BY voice; WER 2.78%, RTF 0.805; E2E narration rendered | human listening |
-| D3 | Voice: CosyVoice3 / VoxCPM2 / MOSS / Ming | NOT_DONE | license matrix only; not downloaded | optional next kernels |
+| D3 | Voice: CosyVoice3 / VoxCPM2 / MOSS / Ming / Qwen | NOT_TESTED | exact sizes recorded (Ming 3.0 GB, Qwen 2.52 GB, CosyVoice3 9.75 GB, VoxCPM2 4.96 GB, MOSS-Local 6.14 GB); not downloaded | next kernels |
 | D4 | Voice: Qwen3-TTS | BLOCKED | paid API only | do not use under $0 |
 | E1 | Video: FFmpeg/Ken Burns | DONE | 16 clips, full decode, QC PASS | none |
 | E2 | Video: LTX-Video T2V | NOT_DONE | license reviewed; 19.5 GB disk | optional kernel |
@@ -30,9 +30,10 @@ reconstructed from the user task + master plan + repo reality).
 | I3 | Real tests: video model | NOT_DONE | resource/license decision deferred | optional |
 | J1 | Integration: fix failing tests | DONE | 138 factory pass; 3,075 collect; QA 38/38 | none |
 | J2 | Integration: missing workers/configs/manifests | PARTIAL | no new worker needed for demo; QC artifacts added | owner decides scope |
-| K | E2E 60–90 s science video | DONE | `work/master-run/e2e/final_demo.mp4` 63.9 s, 1080p30, 10.1 MB, QC 16/16 PASS | human review |
+| K | E2E 60–90 s science video | DONE | `work/master-run/e2e/final_demo.mp4` 65.0 s, 1080p30, 8.0 Mbps, 66.9 MB, QC 16/16 PASS | human review |
 | Q | 10/10 quality claim | **PENDING_HUMAN_REVIEW** | no human watched the exact file | H-1/H-2 |
-| R | Reports (9 files) | DONE | `docs/research/*` | owner review |
+| R | Reports (10 files + CSV) | DONE | `docs/research/*` incl. `COMPETITOR_VIDEO_AUDIT.csv`, `FINAL_HANDOFF.md` | owner review |
+| S3 | 10of10 configs / benchmark manifests | DONE | `configs/model_matrix.yaml`, `configs/quality_gates.yaml`, `reports/benchmark_runs/.../benchmark_result.json`, `reports/end_to_end/MANIFEST.md` | owner review |
 
 ## Phase detail
 

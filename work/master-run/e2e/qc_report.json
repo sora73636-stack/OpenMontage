@@ -14,7 +14,7 @@
     },
     "threshold": "w=1920,h=1080,fps=30.0",
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:15Z"
+    "timestamp": "2026-11-11T16:55:38Z"
   },
   {
     "job_id": "",
@@ -24,7 +24,7 @@
     "measured_value": null,
     "threshold": null,
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:23Z"
+    "timestamp": "2026-11-11T16:55:47Z"
   },
   {
     "job_id": "",
@@ -34,7 +34,7 @@
     "measured_value": 0.0,
     "threshold": 0.05,
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:32Z"
+    "timestamp": "2026-11-11T16:55:59Z"
   },
   {
     "job_id": "",
@@ -44,7 +44,7 @@
     "measured_value": 0.0,
     "threshold": "2.0s",
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:41Z"
+    "timestamp": "2026-11-11T16:56:09Z"
   },
   {
     "job_id": "",
@@ -54,17 +54,17 @@
     "measured_value": 0.0,
     "threshold": 0.1,
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:48Z"
+    "timestamp": "2026-11-11T16:56:18Z"
   },
   {
     "job_id": "",
     "check_id": "ebur128",
     "status": "PASS",
-    "evidence": "I=-15.8 LUFS (target -16.0 +/- 1.5); TP=-3.8 dBTP (max -1.5)",
-    "measured_value": "I=-15.8, TP=-3.8",
+    "evidence": "I=-15.8 LUFS (target -16.0 +/- 1.5); TP=-3.9 dBTP (max -1.5)",
+    "measured_value": "I=-15.8, TP=-3.9",
     "threshold": "I=-16.0 +/- 1.5 LUFS, TP<=-1.5 dBTP",
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:56Z"
+    "timestamp": "2026-11-11T16:56:28Z"
   },
   {
     "job_id": "",
@@ -74,7 +74,7 @@
     "measured_value": 0.0,
     "threshold": "1.0s",
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:56Z"
+    "timestamp": "2026-11-11T16:56:28Z"
   },
   {
     "job_id": "",
@@ -84,7 +84,7 @@
     "measured_value": 0.0,
     "threshold": "0.5s",
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:56Z"
+    "timestamp": "2026-11-11T16:56:28Z"
   },
   {
     "job_id": "",
@@ -94,7 +94,7 @@
     "measured_value": null,
     "threshold": "title, director, production",
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:56Z"
+    "timestamp": "2026-11-11T16:56:28Z"
   },
   {
     "job_id": "",
@@ -104,7 +104,7 @@
     "measured_value": 14,
     "threshold": "100% with claim_id",
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:56Z"
+    "timestamp": "2026-11-11T16:56:28Z"
   },
   {
     "job_id": "",
@@ -114,7 +114,7 @@
     "measured_value": 14,
     "threshold": "all claim_ids resolve + SINGLE_SOURCE flagged",
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:56Z"
+    "timestamp": "2026-11-11T16:56:28Z"
   },
   {
     "job_id": "",
@@ -124,7 +124,7 @@
     "measured_value": 4,
     "threshold": "0 records with rights problems",
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:56Z"
+    "timestamp": "2026-11-11T16:56:28Z"
   },
   {
     "job_id": "",
@@ -134,7 +134,7 @@
     "measured_value": 55.27,
     "threshold": "narration>=90%, >=1 graphic/90s, no unannotated clip >20s, still-only<=15s",
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:56Z"
+    "timestamp": "2026-11-11T16:56:28Z"
   },
   {
     "job_id": "",
@@ -144,7 +144,7 @@
     "measured_value": 0,
     "threshold": "<= 0.15",
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:56Z"
+    "timestamp": "2026-11-11T16:56:28Z"
   },
   {
     "job_id": "",
@@ -154,7 +154,7 @@
     "measured_value": 16,
     "threshold": "0 consecutive identical moves",
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:56Z"
+    "timestamp": "2026-11-11T16:56:28Z"
   },
   {
     "job_id": "",
@@ -164,6 +164,6 @@
     "measured_value": 7.89,
     "threshold": 15.0,
     "tool_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
-    "timestamp": "2026-11-11T16:21:56Z"
+    "timestamp": "2026-11-11T16:56:28Z"
   }
 ]

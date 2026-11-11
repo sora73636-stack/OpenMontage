@@ -1,81 +1,86 @@
-# YouTube Quality Standard — derived, with evidence labels
+# YouTube Quality Standard — official baseline vs OpenMontage house targets
 
-**Status:** PROPOSED. Thresholds marked `GATE` are enforceable in `tools/qa/qc.py`;
-thresholds marked `STANDARD` are editorial targets for human review.
-**Evidence basis:** public metadata from 15 science videos (`COMPETITOR_VIDEO_AUDIT.md`),
-the existing `config/qc_thresholds.json`, and the repo's delivery target
-(1920×1080, 30 fps, H.264, AAC, ~-14 LUFS). No competitor frames were observed.
+**Date:** 2026-11-11 · **Source task:** `OpenMontage_10of10_Four_Factories_OpenCode_Agent_Task_2026-11-11.md` Part D.
+**Rule:** official YouTube upload requirements and OpenMontage house targets are kept
+separate. House targets are not YouTube mandates.
 
-## 1. Hook (first 10 seconds)
+## 1. Official YouTube baseline (D1)
 
-| Rule | Target | Class | Evidence |
+Source: https://support.google.com/youtube/answer/1722171
+
+| Item | Requirement |
+|---|---|
+| Container | MP4, `moov atom` at start (Fast Start), no edit lists that degrade processing |
+| Video codec | H.264 High Profile, progressive, 4:2:0, closed GOP, no interlacing |
+| Audio | AAC-LC or Opus, 48 kHz, stereo |
+| Frame rate | Keep source frame rate; do not inflate FPS |
+| Color | BT.709 SDR for an SDR master |
+| Reference bitrate, SDR 1080p 24/25/30 | **8 Mbps** |
+| Reference bitrate, SDR 1080p 48/50/60 | 12 Mbps |
+| Reference bitrate, SDR 1440p 24/25/30 | 16 Mbps |
+| Reference bitrate, 4K 24/25/30 | 35–45 Mbps |
+| Reference audio bitrate, stereo | **384 kbps** |
+
+## 2. OpenMontage house targets (D2) — not YouTube mandates
+
+| Item | Target |
+|---|---|
+| Integrated loudness | **-16 LUFS ±1 LU** |
+| True peak | **≤ -1.0 dBTP** |
+| Narration intelligibility | voice not masked by music/SFX |
+| Subtitle sidecar | SRT or VTT; max 2 lines; ≤42 chars/line; ≤20 chars/s |
+| Captions safe area | must not cover diagrams/labels |
+| Text contrast | WCAG AA where applicable |
+| Pauses | allowed when motivated; do not fill every second with music |
+
+## 3. Script and retention rules (D3)
+
+- 0–15 s: concrete visual/story hook; no long logo/intro.
+- By 30 s: clear promise of the question the viewer will get answered.
+- One central idea/question per release; 1–3 learning outcomes.
+- Chapters usually 2–5 min; each answers a sub-question and advances the story.
+- Narration pacing ~125–155 wpm for English explainer; slow down for complex passages.
+- Target 15–20+ min only when the topic supports it; do not pad.
+- Each chapter promises the next answer/discovery.
+- No "Today we are going to explore…"; no unresolved cliffhanger.
+- Per release: `hook_variants.md` with ≥3 variants + thumbnail/title concept options.
+
+## 4. Internal 10/10 rubric (D4)
+
+| Criterion | Weight |
+|---|---:|
+| Hook / packaging fulfillment | 12% |
+| Scientific accuracy / claim integrity | 18% |
+| Story arc / pacing / payoff | 12% |
+| Visual relevance and clarity | 12% |
+| Motion and visual pacing | 10% |
+| Narration / audio mix / sound design | 10% |
+| Captions / labels / accessibility | 8% |
+| Visual consistency / art direction | 8% |
+| Originality / authenticity | 5% |
+| Rights / provenance / source quality | 5% |
+
+**Hard gates:** no unresolved science or rights FAIL; no incorrect critical scientific
+visualization; exact master watched end-to-end; all mandatory QC gates PASS; a second
+reviewer confirms. The average score does not override a hard gate.
+
+## 5. Measured status of the current demo
+
+File: `work/master-run/e2e/final_demo.mp4` (65.0 s)
+
+| Metric | Measured | Target | Status |
 |---|---|---|---|
-| H1 | A concrete anomaly/object/claim appears within 0–5 s | STANDARD | inferred from top titles; not frame-verified |
-| H2 | The title names a specific object or test, not a topic | STANDARD | 15/15 public titles |
-| H3 | No logo sting or slow fade before the hook | STANDARD | inference |
-| H4 | First spoken sentence < 15 words | STANDARD | editorial rule |
+| Container / Fast Start | MP4, `+faststart` | MP4 Fast Start | PASS |
+| Video | H.264 High, 1920×1080, 30 fps, progressive, yuv420p | 1080p SDR | PASS |
+| Video bitrate | **7.98 Mbps** | 8 Mbps reference | PASS (at reference) |
+| Audio | AAC-LC, 48 kHz, stereo, **250 kbps** | 384 kbps reference | REVIEW (below reference, not a YouTube hard fail) |
+| Loudness | **-15.7 LUFS** | -16 ±1 LUFS | PASS |
+| True peak | **-3.8 dBTP** | ≤ -1.0 dBTP | PASS |
+| Subtitles | max 42 chars/line, 2 lines | ≤42 chars, ≤2 lines | PASS |
+| QC | 16/16 PASS | all gates | PASS |
+| Human watch-through | not done | required for 10/10 | **PENDING_HUMAN_REVIEW** |
 
-## 2. Script / information density
-
-| Rule | Target | Class |
-|---|---|---|
-| S1 | One claim/idea per 20–30 s | STANDARD |
-| S2 | Every factual claim has a source id in the evidence ledger | GATE (repo contract) |
-| S3 | No claim marked `needs_verification` in a released cut | GATE |
-| S4 | Narration 140–160 wpm (English documentary) | STANDARD |
-| S5 | Spoken numbers written out or shown on screen | STANDARD |
-
-## 3. Visual / animation
-
-| Rule | Target | Class | Evidence |
-|---|---|---|---|
-| V1 | Visual change (cut, motion, or overlay) every 2–4 s | STANDARD | inferred channel formats |
-| V2 | No static frame > 2 s outside an intentional `static_by_design` segment | GATE (`freezedetect`, `static_segments` exemption) |
-| V3 | No black segment > 0.5 s | GATE (`blackdetect`) |
-| V4 | Diagrams carry claim ids / source labels | GATE (repo QC `claim_ids`) |
-| V5 | Character rig signature detail present in every shot | GATE (rig QC) |
-
-## 4. Audio
-
-| Rule | Target | Class |
-|---|---|---|
-| A1 | Integrated loudness -14 ± 2 LUFS | GATE (`ebur128`) |
-| A2 | True peak ≤ -1.5 dBTP | GATE |
-| A3 | No silence run > 3 s; silence ratio ≤ 10% | GATE (`silencedetect`) |
-| A4 | Narration ≥ 6 dB above music | STANDARD |
-| A5 | Music license recorded before use | GATE (rights manifest) |
-| A6 | No clipping (`max_volume` ≤ -0.1 dB) | GATE |
-
-## 5. Edit / structure
-
-| Rule | Target | Class |
-|---|---|---|
-| E1 | Cold open; no title card before the hook | STANDARD |
-| E2 | Chapter/beat changes align with sentence boundaries | STANDARD |
-| E3 | Subtitle sync drift ≤ 0.5 s | GATE (`subtitle_sync`) |
-| E4 | Duration within ±5% of script estimate | GATE (`duration_vs_script`) |
-| E5 | No unintended frozen/black/gap segments | GATE |
-
-## 6. Rights / provenance
-
-| Rule | Target | Class |
-|---|---|---|
-| R1 | Every asset has source URL, author, license URL, retrieval date, SHA-256 | GATE |
-| R2 | Unknown license = quarantined, not released | GATE |
-| R3 | No YouTube-downloaded stock footage | GATE (policy) |
-| R4 | Music/voice/model licenses checked separately for commercial use | GATE |
-
-## 7. Human gate
-
-| Rule | Target | Class |
-|---|---|---|
-| H-1 | A human watches the **exact final file** end-to-end | GATE (cannot be automated) |
-| H-2 | Independent reviewer (not the producer) scores 1–10 | GATE |
-| H-3 | No "10/10" claim without H-1 + H-2 | GATE |
-
-## Status of this standard
-
-- Implemented as code: V2, V3, A1–A3, A6, E3–E5, R1 (partially), R2 (partially).
-- Not implemented: H1–H4, S1, S4, V1, A4, R3 (policy only), H-1..H-3.
-- **This document is a proposal.** It does not change `config/qc_thresholds.json`; changing
-  production thresholds requires an owner decision.
+**Conclusion:** the demo meets the technical baseline and house loudness targets, but
+cannot be called 10/10 until a human watches the exact master and a second reviewer scores
+it. The AAC bitrate is below the 384 kbps reference; YouTube re-encodes audio, so this is
+a review item, not a release blocker.

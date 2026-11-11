@@ -1,54 +1,67 @@
 1
 00:00:00,350 --> 00:00:03,032
-Fourteen facts that sound wrong, but are true.
+Fourteen facts that sound wrong, but are
+true.
 
 2
 00:00:03,782 --> 00:00:07,555
-Water expands when it freezes, which is why ice floats on a lake.
+Water expands when it freezes, which is
+why ice floats on a lake.
 
 3
 00:00:08,105 --> 00:00:12,494
-A light-year is the distance light travels in one year, not a measure of time.
+A light-year is the distance light travels
+in one year, not a measure of time.
 
 4
 00:00:13,044 --> 00:00:16,260
-The human body contains about thirty-seven trillion cells.
+The human body contains about thirty-seven
+trillion cells.
 
 5
 00:00:16,810 --> 00:00:19,225
-Sound cannot travel through the vacuum of space.
+Sound cannot travel through the vacuum of
+space.
 
 6
 00:00:19,775 --> 00:00:23,177
-Photosynthesis converts light energy into chemical energy.
+Photosynthesis converts light energy into
+chemical energy.
 
 7
 00:00:23,727 --> 00:00:27,291
-The Earth's core is roughly as hot as the surface of the Sun.
+The Earth's core is roughly as hot as the
+surface of the Sun.
 
 8
 00:00:27,841 --> 00:00:32,833
-Antibiotic resistance arises when bacteria evolve under selective pressure.
+Antibiotic resistance arises when bacteria
+evolve under selective pressure.
 
 9
 00:00:33,383 --> 00:00:37,179
-A black hole's event horizon is the boundary beyond which nothing can escape.
+A black hole's event horizon is the
+boundary beyond which nothing can escape.
 
 10
 00:00:37,729 --> 00:00:42,791
-Honey never spoils; edible honey has been found in three-thousand-year-old Egyptian tombs.
+Honey never spoils; edible honey has been
+found in three-thousand-year-old Egyptian
 
 11
 00:00:43,341 --> 00:00:45,849
-Octopuses have three hearts and blue blood.
+Octopuses have three hearts and blue
+blood.
 
 12
 00:00:46,399 --> 00:00:49,127
-A day on Venus is longer than a year on Venus.
+A day on Venus is longer than a year on
+Venus.
 
 13
 00:00:49,677 --> 00:00:52,254
-Bananas are berries, but strawberries are not.
+Bananas are berries, but strawberries are
+not.
 
 14
 00:00:52,804 --> 00:00:54,754
@@ -56,9 +69,11 @@ Sharks existed before trees.
 
 15
 00:00:55,304 --> 00:00:59,054
-A teaspoon of neutron star material would weigh billions of tons.
+A teaspoon of neutron star material would
+weigh billions of tons.
 
 16
 00:00:59,604 --> 00:01:04,074
-Which one surprised you? Tell me in the comments, and follow for more science.
+Which one surprised you? Tell me in the
+comments, and follow for more science.
 
