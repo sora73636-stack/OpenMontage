@@ -622,3 +622,17 @@
 - **Docs:** `docs/EXTERNAL_TOOLING_INTEGRATION.md`, updated `FIRST_VIDEO_MASTER_PLAN.md` (раздел 8.1), `docs/FACTORY_IMPLEMENTATION_ROADMAP.md` (Phase 7).
 - **Tests:** `tests/tools/test_youtube_competitor_research.py` — 4 passed.
 - **Remaining:** Manim+texlive не установлены; ytstudio-cli интеграция требует OAuth/согласования; Remotion node_modules пуст.
+
+---
+
+### 2026-11-11 — Master execution: audit, TTS benchmark, 65 s E2E demo
+
+- **Source docs:** both requested files absent from every git ref, stash, dangling object, worktree and the filesystem; logged in `docs/research/SOURCE_FILES_DISCOVERY.md`. Requirements reconstructed from the user task + master plan; `TASK_STATEMENT_RECONSTRUCTED.md` saved with SHA-256.
+- **Baseline:** 876 py files, 233 test files, 143 tools, 3,075 tests collect (exit 0). `tests/factory`: 138 passed, 23 skipped. Fixed 3 blockers: lazy Kokoro import (`lib/audio_engine.py`), V8 `checksums`/`qc_passed` in `test_dry_run_chain.py`, same contract in `tests/qa/test_08_end_to_end.py`. No production validation weakened.
+- **Kaggle preflight:** kernel `forts845/openmontage-preflight` COMPLETE — 2× Tesla T4 14.56 GB, 31.35 GB RAM, 19.5 GB disk, CUDA 13.0, torch 2.11.0+cu130, HF/PyPI/GitHub 200. Output: `work/master-run/kaggle/preflight/output/PREFLIGHT.json`.
+- **TTS benchmark (local CPU, Python 3.12):** Kokoro-82M af_heart — load 10.61 s, 8 utterances 47.53 s, audio 35.85 s, RTF 1.326, WER 2.78%. Piper lessac-medium — 8 utterances 23.74 s, audio 29.48 s, RTF 0.805, WER 2.78%. Both 7/8 sentences at 0% WER; the 22.2% case is the same "thirty-seven" → "37" normalization artifact. Naturalness NOT measured. Kaggle GPU TTS failed: `spacy` has no build for Kaggle Python 3.13 (`TTS_BENCH.json` status=error).
+- **Rig:** 32/32 frames rendered (8 poses × 4 views), signature lens 32/32. Real gap: `profile`/`three_quarter` are byte-identical to `front`; only `back` flips.
+- **E2E demo:** `work/master-run/e2e/final_demo.mp4` — 65.0 s, 1920×1080@30, h264+aac 48 kHz, 10.2 MB, 160 words, 148 wpm, 16 original PIL scenes, animated rig overlay, PD music (PD Mark 1.0), burned subtitles. QC `tools/qa/qc.py`: **16/16 PASS, verdict PASS**. SHA-256 in `work/master-run/logs/deliverables_final.sha256`.
+- **Rights:** music PD Mark 1.0; voice lessac CC-BY-4.0 (attribution); diagrams/rig original; no YouTube downloads, no paid API, no Flow/Veo.
+- **Status:** `PENDING_HUMAN_REVIEW` — no human has watched the exact final file.
+- **Commit:** `bcedcd4` on `kilo/mega-100` (no push, no force, no reset/clean/rebase).
