@@ -1,6 +1,6 @@
 # OpenMontage Factory — Session Resume State
 
-**Last Updated:** 2026-11-11
+**Last Updated:** 2026-11-12
 **Git Branch:** `factory/business-documentary-pilot` (working branch; `main` untouched)
 **Last Commit:** `40f1910` — feat(business-documentary): 12-stage evidence-first factory pipeline
 **Remote:** pushed and confirmed to `origin/factory/business-documentary-pilot`

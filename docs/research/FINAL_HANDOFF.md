@@ -1,6 +1,6 @@
 # Final Handoff — 2026-11-11
 
-**Branch:** `kilo/mega-100` · **HEAD:** `f066842` (docs checkpoint) after `bcedcd4`
+**Branch:** `kilo/mega-100` · **HEAD:** `b5475740` (latest); history: `bcedcd4` → `f066842` → `89f0d4e3` → `20126bd1` → `c00eca2e` → `dfad4d48` → `b5475740`
 **Working tree:** dirty only in pre-existing user files (`flow_audit/flow_audit.log`,
 `work/v12/qc_raw/final_v12_qc_baseline.json`, `work/v12/render/final_v12.mp4`); no user
 work was overwritten.
