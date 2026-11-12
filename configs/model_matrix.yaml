@@ -25,36 +25,36 @@ models:
     task: tts
     license: mit
     size_gb: 3.0
-    status: EXPERIMENTAL
-    evidence: HF API license=mit, 3.0 GB repo; not downloaded
+    status: BLOCKED_INTEGRATION
+    evidence: MIT, 3.0 GB repo; requires cloning inclusionAI/Ming-3.0-tts; not attempted
   - id: Qwen/Qwen3-TTS-12Hz-0.6B-Base
     factory: voice
     task: tts
     license: apache-2.0
     size_gb: 2.52
     status: EXPERIMENTAL
-    evidence: HF API license=apache-2.0, 2.52 GB repo; not downloaded; VRAM-growth issue reports must be tested empirically
+    evidence: tested on Kaggle T4 — 74.56 s audio, normalized WER 1.0%, peak VRAM 3.35 GB, 10-chunk VRAM flat; slower than realtime
   - id: FunAudioLLM/Fun-CosyVoice3-0.5B-2512
     factory: voice
     task: tts
     license: apache-2.0
     size_gb: 9.75
-    status: EXPERIMENTAL
-    evidence: HF API license=apache-2.0, 9.75 GB repo; not downloaded
+    status: BLOCKED_TIME
+    evidence: Apache-2.0, 9.75 GB repo; fits disk; integration not done
   - id: openbmb/VoxCPM2
     factory: voice
     task: tts
     license: apache-2.0
     size_gb: 4.96
-    status: EXPERIMENTAL
-    evidence: HF API license=apache-2.0, 4.96 GB repo; not downloaded
+    status: BLOCKED_TIME
+    evidence: Apache-2.0, 4.96 GB repo; fits disk; integration not done
   - id: OpenMOSS-Team/MOSS-TTS-Local-Transformer
     factory: voice
     task: tts
     license: apache-2.0
     size_gb: 6.14
-    status: EXPERIMENTAL
-    evidence: HF API license=apache-2.0, 6.14 GB repo; not downloaded
+    status: BLOCKED_TIME
+    evidence: Apache-2.0, 6.14 GB repo; fits disk; custom integration not done
   - id: Lightricks/LTX-Video
     factory: video
     task: i2v/t2v

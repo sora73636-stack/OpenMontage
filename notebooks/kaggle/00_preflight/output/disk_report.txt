@@ -1,0 +1,12 @@
+/kaggle/working: {'free_gb': 19.5, 'total_gb': 19.52}
+/kaggle/temp: {'error': "FileNotFoundError(2, 'No such file or directory')"}
+/kaggle/input: {'free_gb': 19.5, 'total_gb': 19.52}
+
+Filesystem        Size  Used Avail Use% Mounted on
+overlay           8.0T  7.1T  967G  89% /
+tmpfs              64M     0   64M   0% /dev
+shm                14G     0   14G   0% /dev/shm
+/dev/sda1         122G  5.0G  117G   5% /opt/bin
+/dev/loop2         20G  148K   20G   1% /kaggle/lib
+/dev/mapper/snap  8.0T  7.1T  967G  89% /etc/hosts
+tmpfs             4.0K     0  4.0K   0% /proc/acpi

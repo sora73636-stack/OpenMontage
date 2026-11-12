@@ -1,0 +1,85 @@
+{
+  "status": "ok",
+  "timestamp_utc": "2026-11-12T04:43:56Z",
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+  "cpu_count": 4,
+  "ram_gb": 31.35,
+  "disk": {
+    "/kaggle/working": {
+      "free_gb": 19.5,
+      "total_gb": 19.52
+    },
+    "/kaggle/temp": {
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    },
+    "/kaggle/input": {
+      "free_gb": 19.5,
+      "total_gb": 19.52
+    }
+  },
+  "gpu": [
+    {
+      "name": "Tesla T4",
+      "vram": "14.56 GiB"
+    },
+    {
+      "name": "Tesla T4",
+      "vram": "14.56 GiB"
+    }
+  ],
+  "cuda": {
+    "nvcc": "Build cuda_13.0.r13.0/compiler.36424714_0"
+  },
+  "torch": {
+    "version": "2.11.0+cu130",
+    "cuda_available": true,
+    "cuda_version": "13.0",
+    "device_count": 2,
+    "capabilities": [
+      [
+        7,
+        5
+      ],
+      [
+        7,
+        5
+      ]
+    ],
+    "devices": [
+      {
+        "index": 0,
+        "name": "Tesla T4",
+        "vram_gb": 14.56
+      },
+      {
+        "index": 1,
+        "name": "Tesla T4",
+        "vram_gb": 14.56
+      }
+    ]
+  },
+  "internet": {
+    "huggingface": "200",
+    "pypi": "200",
+    "github": "200"
+  },
+  "packages": {
+    "transformers": "5.20.2",
+    "diffusers": "0.42.0",
+    "kokoro": "missing (ModuleNotFoundError)",
+    "misaki": "missing (ModuleNotFoundError)",
+    "soundfile": "0.14.0",
+    "librosa": "0.11.0",
+    "manim": "missing (ModuleNotFoundError)",
+    "cv2": "4.14.0",
+    "yt_dlp": "missing (ModuleNotFoundError)"
+  },
+  "attention": {
+    "sdpa": true,
+    "flash_sdp_enabled": true,
+    "mem_efficient_sdp_enabled": true
+  },
+  "errors": [],
+  "gpu_note": "parsed from torch (nvidia-smi line parser missed the table in v1)"
+}

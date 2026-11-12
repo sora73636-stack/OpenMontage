@@ -662,3 +662,13 @@
 - Kokoro/Piper recomputed with number normalization: both **0.0% WER**.
 - DeepFilterNet3: RTF 0.055; no measurable WER gain on synthetic noise.
 - E2E v3 final: 76.07 s, Manim + 16 scenes + SFX + stems, QC 16/16 PASS.
+
+### 2026-11-12 (cont.) — remaining 10of10 blockers recorded
+
+- Preflight artifact set completed: real Kaggle quota 30h GPU (29.99h left), GPU parsed from torch, all required files saved under `notebooks/kaggle/00_preflight/output/`.
+- Qwen3-TTS 0.6B Base: technical PASS (normalized WER 1.0%, VRAM 3.35 GB, no leak); naturalness pending human listening.
+- Ming-3.0-tts-0.5B: BLOCKED_INTEGRATION (requires GitHub repo; 3.0 GB fits disk).
+- CosyVoice3 (9.75 GB), VoxCPM2 (4.96 GB), MOSS-TTS-Local (6.14 GB): BLOCKED_TIME (fit disk, integration not done).
+- Wan2.1 (17.57 GB) and LTX 0.9.6 (>25 GB): BLOCKED_STORAGE on 19.5 GB Kaggle disk.
+- ACE-Step1.5 (10.09 GB) and MOSS-SoundEffect v2.0 (11.23 GB): not downloaded; BLOCKED_TIME/INTEGRATION.
+- Blender: not installed; desktop/manual.

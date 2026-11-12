@@ -45,12 +45,11 @@ for path in ("/kaggle/working", "/kaggle/temp", "/kaggle/input"):
 
 rc, out, err = sh(["nvidia-smi"])
 w("nvidia_smi.txt", out + ("\nSTDERR\n" + err if err else ""))
-if rc == 0:
-    for line in out.splitlines():
-        if line.strip().startswith("N/A") or not line.strip():
-            continue
+rc2, q, _ = sh(["nvidia-smi", "--query-gpu=name,memory.total,driver_version", "--format=csv,noheader"])
+if rc2 == 0 and q:
+    for line in q.splitlines():
         parts = [p.strip() for p in line.split(",")]
-        if len(parts) >= 2 and "MiB" in parts[1]:
+        if len(parts) >= 2:
             R["gpu"].append({"name": parts[0], "vram": parts[1], "driver": parts[2] if len(parts) > 2 else None})
 
 rc, out, err = sh(["nvcc", "--version"])

@@ -1,0 +1,4 @@
+Observed on the controller (Codespaces), 2026-11-12:
+GPU total 30.00h, used 0.01h, remaining 29.99h, refresh 2026-11-14T00:00:00Z
+TPU total 20.00h, used 0.00h, remaining 20.00h
+Source: kaggle quota (CLI 2.2.5).
