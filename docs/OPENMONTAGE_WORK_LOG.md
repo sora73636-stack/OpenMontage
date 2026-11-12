@@ -654,3 +654,11 @@
 - DeepFilterNet3: installed (torch 2.5.1/torchaudio 2.5.1), RTF 0.055; extreme synthetic noise WER 69.2%→69.2% (no gain), mild 0%→0%.
 - Video models: Wan2.1-T2V-1.3B 17.57 GB and LTX 0.9.6 distilled 6.34 GB + T5 ~19.3 GB → BLOCKED_STORAGE on 19.5 GB disk; no download.
 - E2E v3: 76.07 s, Manim + 16 PIL scenes + rig + PD music + 3 original SFX + stems; 7.98 Mbps; QC 16/16 PASS; SHA-256 2b22174d…
+
+### 2026-11-12 (cont.) — Qwen3-TTS T4 benchmark PASS
+
+- Kernel `forts845/om-10-voice-qwen` v5 COMPLETE. 3 sections, 74.56 s audio, load 22.51 s, RTF 2.50–3.08, peak VRAM 3347 MB, 10-chunk VRAM flat (no leak).
+- Raw WER 6.47% (number-formatting artifact in section C); number-normalized WER **1.0%** (A 0%, B 0%, C 2.99%).
+- Kokoro/Piper recomputed with number normalization: both **0.0% WER**.
+- DeepFilterNet3: RTF 0.055; no measurable WER gain on synthetic noise.
+- E2E v3 final: 76.07 s, Manim + 16 scenes + SFX + stems, QC 16/16 PASS.

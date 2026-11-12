@@ -7,9 +7,9 @@ No paid API, no GPU rental, no Flow/Veo credits.
 
 | Factory | Candidate | Environment | Result |
 |---|---|---|---|
-| Voice | Kokoro-82M af_heart | local CPU py3.12 | WER **2.78%**, RTF **1.326**, load 10.61 s |
-| Voice | Piper lessac-medium | local CPU py3.12 | WER **2.78%**, RTF **0.805**, 8 utts 23.74 s |
-| Voice | Qwen3-TTS-12Hz-0.6B-Base | Kaggle T4 | kernel `om-10-voice-qwen` running; earlier runs failed on dataset mount, fixed with embedded reference |
+| Voice | Kokoro-82M af_heart | local CPU py3.12 | raw WER 2.78%, normalized WER **0.0%**, RTF **1.326**, load 10.61 s |
+| Voice | Piper lessac-medium | local CPU py3.12 | raw WER 2.78%, normalized WER **0.0%**, RTF **0.805**, 8 utts 23.74 s |
+| Voice | Qwen3-TTS-12Hz-0.6B-Base | Kaggle T4 | 3 sections, 74.56 s audio, RTF 2.50–3.08, VRAM 3.35 GB, 10-chunk VRAM flat, raw WER 6.47% / normalized 1.0% |
 | Animation | Manim CE 0.22.1 | Codespaces CPU | 11.07 s, 1920×1080, 13 animations, render PASS |
 | Animation | Stickman Rig-1 | Codespaces CPU | 32/32 frames, lens 32/32, view projection gap |
 | Audio | DeepFilterNet3 | Codespaces CPU | RTF 0.055; extreme noise WER 69.2%→69.2% (no gain); mild 0%→0% |
@@ -20,15 +20,15 @@ No paid API, no GPU rental, no Flow/Veo credits.
 ## Voice
 
 ### CORE — Kokoro-82M (`hexgrad/Kokoro-82M`, af_heart)
-Apache-2.0 code+weights; 82M; CPU-capable; measured WER 2.78%, RTF 1.326.
+Apache-2.0 code+weights; 82M; CPU-capable; normalized WER 0.0%, RTF 1.326.
 Used for the E2E narration reference and the first demo.
 
 ### FALLBACK — Piper `en_US-lessac-medium`
-GPL-3.0 code; CC-BY-4.0 voice (attribution required); measured WER 2.78%, RTF 0.805.
+GPL-3.0 code; CC-BY-4.0 voice (attribution required); normalized WER 0.0%, RTF 0.805.
 Used for the 76 s E2E narration (reliable CPU path).
 
 ### EXPERIMENTAL / NOT TESTED
-- Qwen3-TTS-12Hz-0.6B-Base — Apache-2.0, 2.52 GB; P0 kernel in progress. Earlier failures were **our** dataset-mount and missing `qwen-tts` install, not model quality. VRAM-growth issue must be tested with 10 sequential chunks.
+- Qwen3-TTS-12Hz-0.6B-Base — Apache-2.0, 2.52 GB; tested on T4. 3 sections, 74.56 s audio, normalized WER 1.0%, peak VRAM 3.35 GB, 10-chunk VRAM flat. Slower than realtime (RTF 2.50–3.08); naturalness not measured.
 - Ming-3.0-tts-0.5B — MIT, 3.0 GB; requires the `Ming-3.0-tts` GitHub repo; not downloaded.
 - CosyVoice3-0.5B (9.75 GB), VoxCPM2 (4.96 GB), MOSS-TTS-Local (6.14 GB) — not downloaded; disk fits but integration time not spent.
 

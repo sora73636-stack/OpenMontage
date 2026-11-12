@@ -45,16 +45,16 @@ ref; the 10of10 document marks it optional and embeds the model lists.
 
 | Factory | CORE | FALLBACK | EXPERIMENTAL / BLOCKED |
 |---|---|---|---|
-| Voice | Kokoro-82M `af_heart` (Apache-2.0; WER 2.78%, RTF 1.326) | Piper `en_US-lessac-medium` (GPL code / CC-BY voice; WER 2.78%, RTF 0.805) | Ming-3.0-tts-0.5B (MIT, 3.0 GB, not run), Qwen3-TTS 12Hz 0.6B Base (Apache, 2.52 GB, not run), CosyVoice3 (9.75 GB), VoxCPM2 (4.96 GB), MOSS-TTS-Local (6.14 GB); Qwen paid API BLOCKED |
+| Voice | Kokoro-82M `af_heart` (Apache-2.0; normalized WER 0.0%, RTF 1.326) | Piper `en_US-lessac-medium` (GPL code / CC-BY voice; normalized WER 0.0%, RTF 0.805); Qwen3-TTS 0.6B Base tested (normalized WER 1.0%, VRAM 3.35 GB) | Ming-3.0-tts-0.5B (MIT, 3.0 GB, not run), CosyVoice3 (9.75 GB), VoxCPM2 (4.96 GB), MOSS-TTS-Local (6.14 GB); Qwen paid API BLOCKED |
 | Video | FFmpeg 6.1.1 + Ken Burns + PIL | Wan2.1-T2V-1.3B (Apache; not run) | LTX-Video BLOCKED_STORAGE (repo 254 GB; 19.5 GB disk), HunyuanVideo-1.5 HIGH_END_NOT_T4 (~33 GB), I2V NOT TESTED |
 | Animation | Stickman Rig-1 + PIL/SVG + FFmpeg | — | Manim not installed; Blender not installed |
 | Audio | PD music + FFmpeg loudnorm/limiter | — | ACE-Step1.5 (MIT, 10.09 GB, not run), MOSS-SoundEffect v2.0 (Apache, 11.23 GB, not run), Stable Audio NC/gated BLOCKED, DeepFilterNet not installed |
 
 ## Metrics / hashes
 
-- E2E: `work/master-run/e2e/final_demo.mp4` — 65.0 s, 1920×1080@30, H.264 High,
-  AAC-LC 48 kHz stereo, 7.98 Mbps video, 66.9 MB.
-  SHA-256 `b960ee2e6aa2338f237b506fd351b09f99df2b577fbc2ac436cf65c065af3790`.
+- E2E: `work/master-run/e2e/final_demo.mp4` — 76.07 s, 1920×1080@30, H.264 High,
+  AAC-LC 48 kHz stereo, 7.98 Mbps video, 79.1 MB.
+  SHA-256 `2b22174dcc264a412bd26517368ae6e64db8a00ad23a25888e1d182bb599cb01`.
 - QC: 16/16 PASS; loudness -15.7 LUFS, TP -3.8 dBTP; black 0; freeze 0; silence 0.
 - TTS: `work/master-run/tts_bench/LOCAL_TTS_BENCH.json`; per-run
   `reports/benchmark_runs/2026-11-11-tts-local/benchmark_result.json`.

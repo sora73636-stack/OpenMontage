@@ -11,18 +11,18 @@ reconstructed from the user task + master plan + repo reality).
 | A | Audit Voice/Video/Animation/Audio/QC/pilots/Kaggle | DONE | `BASELINE_AUDIT.md`; 3,075 tests collect; 138 factory pass | owner review |
 | B | 15 science YouTube videos | DONE (metadata only) | `COMPETITOR_VIDEO_AUDIT.md` + `.csv`; 20 videos, 5 biology/evolution; 0 frames viewed | human frame-level viewing |
 | C | Kaggle preflight | DONE | 2× T4 14.56 GB, 31.35 GB RAM, 19.5 GB disk, CUDA 13, torch 2.11, internet 200 | model tests |
-| D1 | Voice: Kokoro | DONE (local CPU) | Apache-2.0; WER 2.78%, RTF 1.326; Kaggle ERROR (spacy py3.13) | human listening |
-| D2 | Voice: Piper | DONE (local CPU) | GPL-3.0 code / CC-BY voice; WER 2.78%, RTF 0.805; E2E narration rendered | human listening |
-| D3 | Voice: CosyVoice3 / VoxCPM2 / MOSS / Ming / Qwen | NOT_TESTED | exact sizes recorded (Ming 3.0 GB, Qwen 2.52 GB, CosyVoice3 9.75 GB, VoxCPM2 4.96 GB, MOSS-Local 6.14 GB); not downloaded | next kernels |
+| D1 | Voice: Kokoro | DONE (local CPU) | Apache-2.0; normalized WER 0.0%, RTF 1.326; Kaggle ERROR (spacy py3.13) | human listening |
+| D2 | Voice: Piper | DONE (local CPU) | GPL-3.0 code / CC-BY voice; normalized WER 0.0%, RTF 0.805; E2E narration rendered | human listening |
+| D3 | Voice: CosyVoice3 / VoxCPM2 / MOSS / Ming / Qwen | PARTIAL | Qwen3-TTS tested on T4: 74.56 s, normalized WER 1.0%, VRAM 3.35 GB, no leak; Ming/Cosy/Vox/MOSS not downloaded | next kernels |
 | D4 | Voice: Qwen3-TTS | BLOCKED | paid API only | do not use under $0 |
 | E1 | Video: FFmpeg/Ken Burns | DONE | 16 clips, full decode, QC PASS | none |
-| E2 | Video: LTX-Video T2V | NOT_DONE | license reviewed; 19.5 GB disk | optional kernel |
-| E3 | Video: Wan2.1 T2V | NOT_DONE | Apache-2.0; 1.3B fits T4 | optional kernel |
+| E2 | Video: LTX-Video T2V | BLOCKED_STORAGE | distilled 6.34 GB + T5 ~19.3 GB + VAE > 25 GB; 19.5 GB disk | high-end GPU |
+| E3 | Video: Wan2.1 T2V | BLOCKED_STORAGE | repo 17.57 GB > 75% of 19.5 GB; policy forbids download | high-end GPU |
 | E4 | Video: I2V | NOT_DONE | no verified local pipeline | defer until T2V proven |
 | F | Animation: Stickman Rig-1 | DONE | 32/32 frames, lens 32/32; **view projection gap** | fix profile/3-4 projection |
 | F2 | Animation: Manim/Blender | NOT_DONE | not installed; no measured need | defer |
 | G1 | Audio: PD music + FFmpeg | DONE | PD Mark 1.0, 212 s; loudnorm PASS | none |
-| G2 | Audio: ACE-Step / MOSS-SFX / DeepFilterNet | NOT_DONE | license matrix; not installed | optional |
+| G2 | Audio: ACE-Step / MOSS-SFX / DeepFilterNet | PARTIAL | DeepFilterNet tested (RTF 0.055, no WER gain); ACE 10.09 GB / MOSS 11.23 GB not downloaded | optional |
 | G3 | Audio: Stable Audio | BLOCKED | NC / gated | do not use in monetized production |
 | H | License matrix (code/weights/data/voice/commercial) | DONE | `MODEL_LICENSE_MATRIX.csv` (16 rows) | owner legal review |
 | I1 | Real tests: preflight | DONE | `PREFLIGHT.json` | none |

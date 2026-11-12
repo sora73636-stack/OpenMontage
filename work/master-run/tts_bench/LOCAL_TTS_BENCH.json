@@ -142,7 +142,8 @@
           "hyp": "a black hole s event horizon is the boundary beyond which nothing can escape",
           "wer": 0.0
         }
-      ]
+      ],
+      "wer_mean_number_normalized": 0.0
     },
     "piper": {
       "asr_model": "faster-whisper base.en",
@@ -199,7 +200,8 @@
           "hyp": "a black hole s event horizon is the boundary beyond which nothing can escape",
           "wer": 0.0
         }
-      ]
+      ],
+      "wer_mean_number_normalized": 0.0
     }
   },
   "errors": []

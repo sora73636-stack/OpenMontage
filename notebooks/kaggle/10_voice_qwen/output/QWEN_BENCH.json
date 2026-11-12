@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-11-12T05:02:43Z",
+  "model": "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+  "sections": {
+    "A_hook": {
+      "text": "What if the ice beneath your feet could remember the temperature of the entire ocean? In the polar night, seawater freezes slowly, and the ice that forms is not quite frozen water. It is a sponge: a lattice of crystals with pockets of brine trapped inside. As the ice thickens, it pushes that brine out, and the ocean below becomes saltier, colder, and dense enough to sink. That sinking water drives a global conveyor belt that can take a thousand years to complete one loop.",
+      "words": 85,
+      "file": "notebooks/kaggle/10_voice_qwen/output/audio/qwen_A_hook.wav",
+      "gen_s": 83.2,
+      "audio_s": 27.04,
+      "rtf": 3.077,
+      "sample_rate": 24000,
+      "peak_vram_mb": 3347.5
+    },
+    "B_dense": {
+      "text": "The physics is surprisingly simple. Water expands when it freezes because hydrogen bonds lock into an open hexagonal lattice. That lattice is less dense than liquid water, so ice floats. The same principle explains why lakes freeze from the top down, why ice sheets can insulate the ocean below, and why a warming climate can change the timing of polar mixing. When the ice melts, it releases fresh water, which is less dense and can cap the surface, slowing the overturning circulation.",
+      "words": 82,
+      "file": "notebooks/kaggle/10_voice_qwen/output/audio/qwen_B_dense.wav",
+      "gen_s": 65.55,
+      "audio_s": 26.24,
+      "rtf": 2.498,
+      "sample_rate": 24000,
+      "peak_vram_mb": 3347.4
+    },
+    "C_numbers": {
+      "text": "Consider the numbers. Earth's inner core is about five thousand two hundred degrees Celsius. A light-year is about nine point four six trillion kilometers. The human body contains roughly thirty-seven trillion cells. The Mariana Trench is nearly eleven kilometers deep. Voyager 1 is more than twenty-four billion kilometers from Earth. And a teaspoon of neutron star material would weigh about a billion tons.",
+      "words": 63,
+      "file": "notebooks/kaggle/10_voice_qwen/output/audio/qwen_C_numbers.wav",
+      "gen_s": 53.57,
+      "audio_s": 21.28,
+      "rtf": 2.517,
+      "sample_rate": 24000,
+      "peak_vram_mb": 3347.3
+    }
+  },
+  "vram_growth": [
+    3347.3,
+    3347.3,
+    3347.3,
+    3347.3,
+    3347.3,
+    3347.3,
+    3347.3,
+    3347.3,
+    3347.3,
+    3347.3
+  ],
+  "wer": {
+    "asr_model": "faster-whisper base.en",
+    "per_section": {
+      "A_hook": {
+        "wer": 0.0,
+        "hyp": "what if the ice beneath your feet could remember the temperature of the entire ocean in the polar night seawater freezes slowly and the ice that forms is not quite frozen water it is a sponge a lattice of crystals with pockets of brine trapped inside as the ice thickens it pushes that brine out and the ocean below becomes saltier colder and dense enough to sink that sinking water drives a global conveyor belt that can take a thousand years to complete one loop"
+      },
+      "B_dense": {
+        "wer": 0.0,
+        "hyp": "the physics is surprisingly simple water expands when it freezes because hydrogen bonds lock into an open hexagonal lattice that lattice is less dense than liquid water so ice floats the same principle explains why lakes freeze from the top down why ice sheets can insulate the ocean below and why a warming climate can change the timing of polar mixing when the ice melts it releases fresh water which is less dense and can cap the surface slowing the overturning circulation"
+      },
+      "C_numbers": {
+        "wer": 0.194,
+        "hyp": "consider the numbers earth s inner core is about 5 200 degrees celsius a light year is about 9 46 trillion kilometers the human body contains roughly 37 trillion cells the mariana trench is nearly 11 kilometers deep voyager 1 is more than 24 billion kilometers from earth and a teaspoon of neutron star material would weigh about a billion tons"
+      }
+    },
+    "wer_mean": 0.0647,
+    "wer_mean_number_normalized": 0.01
+  },
+  "errors": [
+    "Traceback (most recent call last):\n  File \"/kaggle/src/script.py\", line 105, in <module>\n    from faster_whisper import WhisperModel\nModuleNotFoundError: No module named 'faster_whisper'\n"
+  ],
+  "load_s": 22.51,
+  "device": "Tesla T4",
+  "vram_total_gb": 14.56,
+  "notes": [
+    "Qwen3-TTS 0.6B Base generated all 3 sections on T4; peak VRAM 3347 MB; 10-chunk VRAM growth flat (no leak).",
+    "WER computed locally from downloaded WAVs (kernel lacked faster-whisper).",
+    "Naturalness/expressiveness not measured; human listening required."
+  ]
+}

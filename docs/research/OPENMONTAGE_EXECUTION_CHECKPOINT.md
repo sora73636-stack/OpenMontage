@@ -41,6 +41,8 @@
 ## Known issues at stop point
 
 - Kaggle Kokoro bench ERROR: `spacy` build on Python 3.13 (documented; local CPU bench used instead).
+- Qwen3-TTS T4 bench PASS: normalized WER 1.0%, VRAM 3.35 GB, no leak; naturalness pending.
+- Manim 0.22.1 installed and rendered; DeepFilterNet tested (no WER gain).
 - `OpenMontage_4_Factories_Deep_Research_2026-11-11.md` not reachable in any ref; 10of10 marks it optional.
 - Rig `profile`/`three_quarter` identical to `front`.
 - LUFS target conflict (-16 repo vs -14 YouTube).

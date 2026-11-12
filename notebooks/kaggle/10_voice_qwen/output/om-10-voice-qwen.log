@@ -1,0 +1,109 @@
+[{"stream_name":"stderr","time":28.988828391,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":28.988866364,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":28.988871845,"data":"diffusers 0.42.0 requires huggingface-hub\u003c3.0,\u003e=1.32.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":59.533813331,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":59.533838361,"data":"I0000 00:00:1794459794.213488       7 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\n"}
+,{"stream_name":"stdout","time":64.144561006,"data":"\n"}
+,{"stream_name":"stdout","time":64.144600605,"data":"********\n"}
+,{"stream_name":"stdout","time":64.144609613,"data":"Warning: flash-attn is not installed. Will only run the manual PyTorch version. Please install flash-attn for faster inference.\n"}
+,{"stream_name":"stdout","time":64.144617813,"data":"********\n"}
+,{"stream_name":"stdout","time":64.144620697,"data":" \n"}
+,{"stream_name":"stderr","time":64.147112096,"data":"/bin/sh: 1: sox: not found\n"}
+,{"stream_name":"stderr","time":64.147415723,"data":"WARNING:sox:SoX could not be found!\n"}
+,{"stream_name":"stderr","time":64.147430978,"data":"\n"}
+,{"stream_name":"stderr","time":64.147436027,"data":"    If you do not have SoX, proceed here:\n"}
+,{"stream_name":"stderr","time":64.1474408,"data":"     - - - http://sox.sourceforge.net/ - - -\n"}
+,{"stream_name":"stderr","time":64.147445605,"data":"\n"}
+,{"stream_name":"stderr","time":64.147449769,"data":"    If you do (or think that you should) have SoX, double-check your\n"}
+,{"stream_name":"stderr","time":64.147454185,"data":"    path variables.\n"}
+,{"stream_name":"stderr","time":64.147458443,"data":"    \n"}
+,{"stream_name":"stderr","time":82.752337211,"data":"\rFetching 4 files:   0%|          | 0/4 [00:00\u003c?, ?it/s]\rFetching 4 files:  25%|██▌       | 1/4 [00:00\u003c00:00,  4.39it/s]\rFetching 4 files:  75%|███████▌  | 3/4 [00:02\u003c00:00,  1.32it/s]\rFetching 4 files: 100%|██████████| 4/4 [00:02\u003c00:00,  1.89it/s]\n"}
+,{"stream_name":"stderr","time":103.861349864,"data":"Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.\n"}
+,{"stream_name":"stdout","time":172.220864085,"data":"A_hook {'text': 'What if the ice beneath your feet could remember the temperature of the entire ocean? In the polar night, seawater freezes slowly, and the ice that forms is not quite frozen water. It is a sponge: a lattice of crystals with pockets of brine trapped inside. As the ice thickens, it pushes that brine out, and the ocean below becomes saltier, colder, and dense enough to sink. That sinking water drives a global conveyor belt that can take a thousand years to complete one loop.', 'words': 85, 'file': '/kaggle/working/audio/qwen_A_hook.wav', 'gen_s': 83.2, 'audio_s': 27.04, 'rtf': 3.077, 'sample_rate': 24000, 'peak_vram_mb': 3347.5}\n"}
+,{"stream_name":"stderr","time":172.297442505,"data":"Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.\n"}
+,{"stream_name":"stdout","time":237.912322115,"data":"B_dense {'text': 'The physics is surprisingly simple. Water expands when it freezes because hydrogen bonds lock into an open hexagonal lattice. That lattice is less dense than liquid water, so ice floats. The same principle explains why lakes freeze from the top down, why ice sheets can insulate the ocean below, and why a warming climate can change the timing of polar mixing. When the ice melts, it releases fresh water, which is less dense and can cap the surface, slowing the overturning circulation.', 'words': 82, 'file': '/kaggle/working/audio/qwen_B_dense.wav', 'gen_s': 65.55, 'audio_s': 26.24, 'rtf': 2.498, 'sample_rate': 24000, 'peak_vram_mb': 3347.4}\n"}
+,{"stream_name":"stderr","time":237.982996006,"data":"Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.\n"}
+,{"stream_name":"stdout","time":291.619298643,"data":"C_numbers {'text': \"Consider the numbers. Earth's inner core is about five thousand two hundred degrees Celsius. A light-year is about nine point four six trillion kilometers. The human body contains roughly thirty-seven trillion cells. The Mariana Trench is nearly eleven kilometers deep. Voyager 1 is more than twenty-four billion kilometers from Earth. And a teaspoon of neutron star material would weigh about a billion tons.\", 'words': 63, 'file': '/kaggle/working/audio/qwen_C_numbers.wav', 'gen_s': 53.57, 'audio_s': 21.28, 'rtf': 2.517, 'sample_rate': 24000, 'peak_vram_mb': 3347.3}\n"}
+,{"stream_name":"stderr","time":291.690363174,"data":"Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.\n"}
+,{"stream_name":"stdout","time":295.29541329,"data":"chunk 0 3347.3\n"}
+,{"stream_name":"stderr","time":295.372443432,"data":"Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.\n"}
+,{"stream_name":"stdout","time":298.370806795,"data":"chunk 1 3347.3\n"}
+,{"stream_name":"stderr","time":298.447377099,"data":"Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.\n"}
+,{"stream_name":"stdout","time":301.697628894,"data":"chunk 2 3347.3\n"}
+,{"stream_name":"stderr","time":301.770713453,"data":"Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.\n"}
+,{"stream_name":"stdout","time":304.963334083,"data":"chunk 3 3347.3\n"}
+,{"stream_name":"stderr","time":305.041255759,"data":"Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.\n"}
+,{"stream_name":"stdout","time":308.432342419,"data":"chunk 4 3347.3\n"}
+,{"stream_name":"stderr","time":308.507202515,"data":"Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.\n"}
+,{"stream_name":"stdout","time":311.95450495,"data":"chunk 5 3347.3\n"}
+,{"stream_name":"stderr","time":312.034978691,"data":"Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.\n"}
+,{"stream_name":"stdout","time":316.444857983,"data":"chunk 6 3347.3\n"}
+,{"stream_name":"stderr","time":316.524231078,"data":"Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.\n"}
+,{"stream_name":"stdout","time":319.862741176,"data":"chunk 7 3347.3\n"}
+,{"stream_name":"stderr","time":319.942910823,"data":"Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.\n"}
+,{"stream_name":"stdout","time":324.146205105,"data":"chunk 8 3347.3\n"}
+,{"stream_name":"stderr","time":324.226536471,"data":"Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.\n"}
+,{"stream_name":"stdout","time":328.280870046,"data":"chunk 9 3347.3\n"}
+,{"stream_name":"stdout","time":328.282472682,"data":"{\n"}
+,{"stream_name":"stdout","time":328.2824869,"data":"  \"status\": \"error\",\n"}
+,{"stream_name":"stdout","time":328.282493807,"data":"  \"timestamp_utc\": \"2026-11-12T05:02:43Z\",\n"}
+,{"stream_name":"stdout","time":328.282497702,"data":"  \"model\": \"Qwen/Qwen3-TTS-12Hz-0.6B-Base\",\n"}
+,{"stream_name":"stdout","time":328.282501544,"data":"  \"sections\": {\n"}
+,{"stream_name":"stdout","time":328.282522537,"data":"    \"A_hook\": {\n"}
+,{"stream_name":"stdout","time":328.282529074,"data":"      \"text\": \"What if the ice beneath your feet could remember the temperature of the entire ocean? In the polar night, seawater freezes slowly, and the ice that forms is not quite frozen water. It is a sponge: a lattice of crystals with pockets of brine trapped inside. As the ice thickens, it pushes that brine out, and the ocean below becomes saltier, colder, and dense enough to sink. That sinking water drives a global conveyor belt that can take a thousand years to complete one loop.\",\n"}
+,{"stream_name":"stdout","time":328.282554162,"data":"      \"words\": 85,\n"}
+,{"stream_name":"stdout","time":328.282562666,"data":"      \"file\": \"/kaggle/working/audio/qwen_A_hook.wav\",\n"}
+,{"stream_name":"stdout","time":328.282565512,"data":"      \"gen_s\": 83.2,\n"}
+,{"stream_name":"stdout","time":328.282568154,"data":"      \"audio_s\": 27.04,\n"}
+,{"stream_name":"stdout","time":328.282607051,"data":"      \"rtf\": 3.077,\n"}
+,{"stream_name":"stdout","time":328.282612545,"data":"      \"sample_rate\": 24000,\n"}
+,{"stream_name":"stdout","time":328.282616815,"data":"      \"peak_vram_mb\": 3347.5\n"}
+,{"stream_name":"stdout","time":328.282620681,"data":"    },\n"}
+,{"stream_name":"stdout","time":328.282624347,"data":"    \"B_dense\": {\n"}
+,{"stream_name":"stdout","time":328.282628461,"data":"      \"text\": \"The physics is surprisingly simple. Water expands when it freezes because hydrogen bonds lock into an open hexagonal lattice. That lattice is less dense than liquid water, so ice floats. The same principle explains why lakes freeze from the top down, why ice sheets can insulate the ocean below, and why a warming climate can change the timing of polar mixing. When the ice melts, it releases fresh water, which is less dense and can cap the surface, slowing the overturning circulation.\",\n"}
+,{"stream_name":"stdout","time":328.28263429,"data":"      \"words\": 82,\n"}
+,{"stream_name":"stdout","time":328.28263989,"data":"      \"file\": \"/kaggle/working/audio/qwen_B_dense.wav\",\n"}
+,{"stream_name":"stdout","time":328.282651662,"data":"      \"gen_s\": 65.55,\n"}
+,{"stream_name":"stdout","time":328.282654288,"data":"      \"audio_s\": 26.24,\n"}
+,{"stream_name":"stdout","time":328.282656933,"data":"      \"rtf\": 2.498,\n"}
+,{"stream_name":"stdout","time":328.282659644,"data":"      \"sample_rate\": 24000,\n"}
+,{"stream_name":"stdout","time":328.282662323,"data":"      \"peak_vram_mb\": 3347.4\n"}
+,{"stream_name":"stdout","time":328.282665052,"data":"    },\n"}
+,{"stream_name":"stdout","time":328.282667616,"data":"    \"C_numbers\": {\n"}
+,{"stream_name":"stdout","time":328.282670417,"data":"      \"text\": \"Consider the numbers. Earth's inner core is about five thousand two hundred degrees Celsius. A light-year is about nine point four six trillion kilometers. The human body contains roughly thirty-seven trillion cells. The Mariana Trench is nearly eleven kilometers deep. Voyager 1 is more than twenty-four billion kilometers from Earth. And a teaspoon of neutron star material would weigh about a billion tons.\",\n"}
+,{"stream_name":"stdout","time":328.282673911,"data":"      \"words\": 63,\n"}
+,{"stream_name":"stdout","time":328.282677527,"data":"      \"file\": \"/kaggle/working/audio/qwen_C_numbers.wav\",\n"}
+,{"stream_name":"stdout","time":328.282680335,"data":"      \"gen_s\": 53.57,\n"}
+,{"stream_name":"stdout","time":328.282683094,"data":"      \"audio_s\": 21.28,\n"}
+,{"stream_name":"stdout","time":328.282685744,"data":"      \"rtf\": 2.517,\n"}
+,{"stream_name":"stdout","time":328.282688346,"data":"      \"sample_rate\": 24000,\n"}
+,{"stream_name":"stdout","time":328.282691019,"data":"      \"peak_vram_mb\": 3347.3\n"}
+,{"stream_name":"stdout","time":328.282693659,"data":"    }\n"}
+,{"stream_name":"stdout","time":328.282696223,"data":"  },\n"}
+,{"stream_name":"stdout","time":328.282703135,"data":"  \"vram_growth\": [\n"}
+,{"stream_name":"stdout","time":328.28270591,"data":"    3347.3,\n"}
+,{"stream_name":"stdout","time":328.28270872,"data":"    3347.3,\n"}
+,{"stream_name":"stdout","time":328.28271131,"data":"    3347.3,\n"}
+,{"stream_name":"stdout","time":328.28272929,"data":"    3347.3,\n"}
+,{"stream_name":"stdout","time":328.282733834,"data":"    3347.3,\n"}
+,{"stream_name":"stdout","time":328.282738192,"data":"    3347.3,\n"}
+,{"stream_name":"stdout","time":328.282742486,"data":"    3347.3,\n"}
+,{"stream_name":"stdout","time":328.282746244,"data":"    3347.3,\n"}
+,{"stream_name":"stdout","time":328.282749451,"data":"    3347.3,\n"}
+,{"stream_name":"stdout","time":328.282752773,"data":"    3347.3\n"}
+,{"stream_name":"stdout","time":328.282756118,"data":"  ],\n"}
+,{"stream_name":"stdout","time":328.282759525,"data":"  \"wer\": {},\n"}
+,{"stream_name":"stdout","time":328.282763293,"data":"  \"errors\": [\n"}
+,{"stream_name":"stdout","time":328.282767004,"data":"    \"Traceback (most recent call last):\\n  File \\\"/kaggle/src/script.py\\\", line 105, in \u003cmodule\u003e\\n    from faster_whisper import WhisperModel\\nModuleNotFoundError: No module named 'faster_whisper'\\n\"\n"}
+,{"stream_name":"stdout","time":328.282772159,"data":"  ],\n"}
+,{"stream_name":"stdout","time":328.282775587,"data":"  \"load_s\": 22.51,\n"}
+,{"stream_name":"stdout","time":328.282780005,"data":"  \"device\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":328.282784367,"data":"  \"vram_total_gb\": 14.56\n"}
+,{"stream_name":"stdout","time":328.282788662,"data":"}\n"}
+,{"stream_name":"stderr","time":335.073515891,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":335.073550364,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":335.303629515,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":335.303671533,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":336.112326253,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":336.648867127,"data":"[NbConvertApp] Writing 587432 bytes to __results__.html\n"}
+]

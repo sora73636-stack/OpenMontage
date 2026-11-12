@@ -24,11 +24,21 @@
       "revision": "main",
       "license_status": "Apache-2.0",
       "repo_size_gb": 2.52,
-      "status": "PENDING",
-      "blocker": "kernel version 5 running; earlier versions failed on dataset mount (fixed by embedded base64 reference)"
+      "status": "PASS",
+      "blocker": "kernel version 5 running; earlier versions failed on dataset mount (fixed by embedded base64 reference)",
+      "audio_s_total": 74.56,
+      "rtf": "2.50-3.08",
+      "peak_vram_mb": 3347.5,
+      "load_s": 22.51,
+      "wer_raw": 0.0647,
+      "wer_number_normalized": 0.01,
+      "vram_growth_10_chunks": "flat at 3347.3 MB",
+      "output_path": "notebooks/kaggle/10_voice_qwen/output/audio/"
     }
   ],
   "notes": [
-    "Result will be filled from QWEN_BENCH.json when terminal."
+    "3/3 sections generated on T4.",
+    "10-chunk VRAM growth flat (no leak in this revision).",
+    "Naturalness not measured; human listening required."
   ]
 }
