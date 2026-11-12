@@ -66,16 +66,16 @@ reviewer confirms. The average score does not override a hard gate.
 
 ## 5. Measured status of the current demo
 
-File: `work/master-run/e2e/final_demo.mp4` (65.0 s)
+File: `work/master-run/e2e/final_demo.mp4` (76.07 s; v3 with Manim + SFX)
 
 | Metric | Measured | Target | Status |
 |---|---|---|---|
 | Container / Fast Start | MP4, `+faststart` | MP4 Fast Start | PASS |
 | Video | H.264 High, 1920×1080, 30 fps, progressive, yuv420p | 1080p SDR | PASS |
 | Video bitrate | **7.98 Mbps** | 8 Mbps reference | PASS (at reference) |
-| Audio | AAC-LC, 48 kHz, stereo, **250 kbps** | 384 kbps reference | REVIEW (below reference, not a YouTube hard fail) |
-| Loudness | **-15.7 LUFS** | -16 ±1 LUFS | PASS |
-| True peak | **-3.8 dBTP** | ≤ -1.0 dBTP | PASS |
+| Audio | AAC-LC, 48 kHz, stereo, **330 kbps** | 384 kbps reference | REVIEW (below reference, not a YouTube hard fail) |
+| Loudness | **-16.0 LUFS** | -16 ±1 LUFS | PASS |
+| True peak | **-2.0 dBTP** | ≤ -1.0 dBTP | PASS |
 | Subtitles | max 42 chars/line, 2 lines | ≤42 chars, ≤2 lines | PASS |
 | QC | 16/16 PASS | all gates | PASS |
 | Human watch-through | not done | required for 10/10 | **PENDING_HUMAN_REVIEW** |

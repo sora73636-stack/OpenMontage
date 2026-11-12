@@ -44,5 +44,17 @@
     "license": "original (project)",
     "source_url": "",
     "sha256": ""
+  },
+  {
+    "asset_id": "A04",
+    "kind": "graphics",
+    "title": "Manim CE ice-float diagram",
+    "center": "original",
+    "credit": "OpenMontage Manim CE diagram",
+    "rights_basis": "ai_generated_illustration",
+    "usable": true,
+    "license": "original (project)",
+    "source_url": "",
+    "sha256": ""
   }
 ]

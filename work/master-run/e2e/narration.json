@@ -102,132 +102,132 @@
       "id": "s00_intro",
       "text": "Fourteen facts that sound wrong, but are true.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s00_intro.wav",
-      "start_s": 0.35,
+      "start_s": 11.417,
       "duration_s": 2.682,
-      "end_s": 3.032
+      "end_s": 14.099
     },
     {
       "id": "s01_ice",
       "text": "Water expands when it freezes, which is why ice floats on a lake.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s01_ice.wav",
-      "start_s": 3.782,
+      "start_s": 14.849,
       "duration_s": 3.773,
-      "end_s": 7.555
+      "end_s": 18.622
     },
     {
       "id": "s02_lightyear",
       "text": "A light-year is the distance light travels in one year, not a measure of time.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s02_lightyear.wav",
-      "start_s": 8.105,
+      "start_s": 19.172,
       "duration_s": 4.389,
-      "end_s": 12.494
+      "end_s": 23.561
     },
     {
       "id": "s03_cells",
       "text": "The human body contains about thirty-seven trillion cells.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s03_cells.wav",
-      "start_s": 13.044,
+      "start_s": 24.111,
       "duration_s": 3.216,
-      "end_s": 16.26
+      "end_s": 27.327
     },
     {
       "id": "s04_sound",
       "text": "Sound cannot travel through the vacuum of space.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s04_sound.wav",
-      "start_s": 16.81,
+      "start_s": 27.877,
       "duration_s": 2.415,
-      "end_s": 19.225
+      "end_s": 30.292
     },
     {
       "id": "s05_photosynthesis",
       "text": "Photosynthesis converts light energy into chemical energy.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s05_photosynthesis.wav",
-      "start_s": 19.775,
+      "start_s": 30.842,
       "duration_s": 3.402,
-      "end_s": 23.177
+      "end_s": 34.244
     },
     {
       "id": "s06_core",
       "text": "The Earth's core is roughly as hot as the surface of the Sun.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s06_core.wav",
-      "start_s": 23.727,
+      "start_s": 34.794,
       "duration_s": 3.564,
-      "end_s": 27.291
+      "end_s": 38.358
     },
     {
       "id": "s07_resistance",
       "text": "Antibiotic resistance arises when bacteria evolve under selective pressure.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s07_resistance.wav",
-      "start_s": 27.841,
+      "start_s": 38.908,
       "duration_s": 4.992,
-      "end_s": 32.833
+      "end_s": 43.9
     },
     {
       "id": "s08_blackhole",
       "text": "A black hole's event horizon is the boundary beyond which nothing can escape.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s08_blackhole.wav",
-      "start_s": 33.383,
+      "start_s": 44.45,
       "duration_s": 3.796,
-      "end_s": 37.179
+      "end_s": 48.246
     },
     {
       "id": "s09_honey",
       "text": "Honey never spoils; edible honey has been found in three-thousand-year-old Egyptian tombs.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s09_honey.wav",
-      "start_s": 37.729,
+      "start_s": 48.796,
       "duration_s": 5.062,
-      "end_s": 42.791
+      "end_s": 53.858
     },
     {
       "id": "s10_octopus",
       "text": "Octopuses have three hearts and blue blood.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s10_octopus.wav",
-      "start_s": 43.341,
+      "start_s": 54.408,
       "duration_s": 2.508,
-      "end_s": 45.849
+      "end_s": 56.916
     },
     {
       "id": "s11_venus",
       "text": "A day on Venus is longer than a year on Venus.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s11_venus.wav",
-      "start_s": 46.399,
+      "start_s": 57.466,
       "duration_s": 2.728,
-      "end_s": 49.127
+      "end_s": 60.194
     },
     {
       "id": "s12_banana",
       "text": "Bananas are berries, but strawberries are not.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s12_banana.wav",
-      "start_s": 49.677,
+      "start_s": 60.744,
       "duration_s": 2.577,
-      "end_s": 52.254
+      "end_s": 63.321
     },
     {
       "id": "s13_shark",
       "text": "Sharks existed before trees.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s13_shark.wav",
-      "start_s": 52.804,
+      "start_s": 63.871,
       "duration_s": 1.95,
-      "end_s": 54.754
+      "end_s": 65.821
     },
     {
       "id": "s14_neutron",
       "text": "A teaspoon of neutron star material would weigh billions of tons.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s14_neutron.wav",
-      "start_s": 55.304,
+      "start_s": 66.371,
       "duration_s": 3.75,
-      "end_s": 59.054
+      "end_s": 70.121
     },
     {
       "id": "s15_outro",
       "text": "Which one surprised you? Tell me in the comments, and follow for more science.",
       "file": "/workspaces/OpenMontage/work/master-run/e2e/audio/s15_outro.wav",
-      "start_s": 59.604,
+      "start_s": 70.671,
       "duration_s": 4.47,
-      "end_s": 64.074
+      "end_s": 75.141
     }
   ],
-  "total_s": 64.974,
-  "expected_duration": 65.0,
+  "total_s": 76.067,
+  "expected_duration": 76.067,
   "tolerance": 1.0
 }

@@ -1,79 +1,9 @@
 {
   "pairs": [
     {
-      "from": "s00_intro",
-      "to": "s01_ice",
-      "color_delta": 2.96
-    },
-    {
-      "from": "s01_ice",
-      "to": "s02_lightyear",
-      "color_delta": 1.69
-    },
-    {
-      "from": "s02_lightyear",
-      "to": "s03_cells",
-      "color_delta": 1.63
-    },
-    {
-      "from": "s03_cells",
-      "to": "s04_sound",
-      "color_delta": 1.55
-    },
-    {
-      "from": "s04_sound",
-      "to": "s05_photosynthesis",
-      "color_delta": 0.55
-    },
-    {
-      "from": "s05_photosynthesis",
-      "to": "s06_core",
-      "color_delta": 7.89
-    },
-    {
-      "from": "s06_core",
-      "to": "s07_resistance",
-      "color_delta": 6.69
-    },
-    {
-      "from": "s07_resistance",
-      "to": "s08_blackhole",
-      "color_delta": 3.44
-    },
-    {
-      "from": "s08_blackhole",
-      "to": "s09_honey",
-      "color_delta": 4.88
-    },
-    {
-      "from": "s09_honey",
-      "to": "s10_octopus",
-      "color_delta": 1.86
-    },
-    {
-      "from": "s10_octopus",
-      "to": "s11_venus",
-      "color_delta": 1.84
-    },
-    {
-      "from": "s11_venus",
-      "to": "s12_banana",
-      "color_delta": 2.37
-    },
-    {
-      "from": "s12_banana",
-      "to": "s13_shark",
-      "color_delta": 1.22
-    },
-    {
-      "from": "s13_shark",
-      "to": "s14_neutron",
-      "color_delta": 1.56
-    },
-    {
-      "from": "s14_neutron",
-      "to": "s15_outro",
-      "color_delta": 1.93
+      "from": "manim",
+      "to": "s00_intro",
+      "color_delta": 14.84
     }
   ]
 }

@@ -1,116 +1,89 @@
-# Factory Decision Report — 2026-11-11
+# Factory Decision Report — updated 2026-11-12
 
-**Decision basis:** observed preflight, real local renders, license evidence, and the
-missing-source fallback. No paid API, no GPU rental, no Flow/Veo credits.
+**Basis:** 10of10 task, Kaggle preflight, real local/Kaggle tests, license evidence.
+No paid API, no GPU rental, no Flow/Veo credits.
 
-## 1. Voice Factory
+## Measured benchmark summary
 
-### Measured local CPU benchmark (2026-11-11)
+| Factory | Candidate | Environment | Result |
+|---|---|---|---|
+| Voice | Kokoro-82M af_heart | local CPU py3.12 | WER **2.78%**, RTF **1.326**, load 10.61 s |
+| Voice | Piper lessac-medium | local CPU py3.12 | WER **2.78%**, RTF **0.805**, 8 utts 23.74 s |
+| Voice | Qwen3-TTS-12Hz-0.6B-Base | Kaggle T4 | kernel `om-10-voice-qwen` running; earlier runs failed on dataset mount, fixed with embedded reference |
+| Animation | Manim CE 0.22.1 | Codespaces CPU | 11.07 s, 1920×1080, 13 animations, render PASS |
+| Animation | Stickman Rig-1 | Codespaces CPU | 32/32 frames, lens 32/32, view projection gap |
+| Audio | DeepFilterNet3 | Codespaces CPU | RTF 0.055; extreme noise WER 69.2%→69.2% (no gain); mild 0%→0% |
+| Audio | FFmpeg loudnorm/limiter | Codespaces | E2E master I=-16.0 LUFS, TP=-2.0 dBTP |
+| Video | Wan2.1-T2V-1.3B | Kaggle preflight | **BLOCKED_STORAGE**: 17.57 GB > 75% of 19.5 GB free |
+| Video | LTX-Video 0.9.6 distilled | Kaggle preflight | **BLOCKED_STORAGE**: 6.34 GB + ~19.3 GB T5 + VAE > 25 GB |
 
-| Engine | Load | 8 utterances | Audio | RTF | WER |
-|---|---:|---:|---:|---:|---:|
-| Kokoro-82M af_heart | 10.61 s | 47.53 s | 35.85 s | 1.326 | 2.78% |
-| Piper lessac-medium | n/a (CLI) | 23.74 s | 29.48 s | 0.805 | 2.78% |
+## Voice
 
-Both engines transcribed 7/8 sentences at 0% WER; the single 22.2% case is the same
-"thirty-seven" → "37" normalization artifact on both. **Naturalness is NOT measured** —
-no human listening. Kaggle GPU TTS was not possible: `spacy` has no build for Kaggle's
-Python 3.13 and the kernel aborted during install (`TTS_BENCH.json` status=error).
-
-### CORE — Kokoro-82M (`hexgrad/Kokoro-82M`, `af_heart`)
-- License: Apache-2.0 (code + weights) — commercial use allowed.
-- Size: 82M params; 24 kHz; CPU-capable; fits T4 and the Codespace with an isolated venv.
-- Why: already referenced by `tools/audio/kokoro_tts.py` and `lib/audio_engine.py`;
-  prior V12 pilot used `af_heart` with WER < 10%; no paid dependency.
-- Status: Kaggle benchmark running (T01); local E2E pending.
+### CORE — Kokoro-82M (`hexgrad/Kokoro-82M`, af_heart)
+Apache-2.0 code+weights; 82M; CPU-capable; measured WER 2.78%, RTF 1.326.
+Used for the E2E narration reference and the first demo.
 
 ### FALLBACK — Piper `en_US-lessac-medium`
-- Code: GPL-3.0 (`piper1-gpl`); voice: CC-BY-4.0 (attribution required).
-- Why: very fast CPU TTS, tiny (~60 MB voice), works without torch.
-- Caveat: GPL program; attribution for the voice; lower naturalness than Kokoro.
-- Status: Kaggle benchmark running (T02).
+GPL-3.0 code; CC-BY-4.0 voice (attribution required); measured WER 2.78%, RTF 0.805.
+Used for the 76 s E2E narration (reliable CPU path).
 
-### EXPERIMENTAL (not in this run)
-- CosyVoice3-0.5B (Apache-2.0, 224k downloads) — zero-shot cloning; needs reference audio
-  and consent; not tested.
-- VoxCPM2 (Apache-2.0) — not tested.
-- MOSS-TTS v1.5 / Nano-100M (Apache-2.0) — not tested.
-- Ming-Lite-Omni-1.5 (MIT) — omni model, not a pure TTS; task fit unverified.
+### EXPERIMENTAL / NOT TESTED
+- Qwen3-TTS-12Hz-0.6B-Base — Apache-2.0, 2.52 GB; P0 kernel in progress. Earlier failures were **our** dataset-mount and missing `qwen-tts` install, not model quality. VRAM-growth issue must be tested with 10 sequential chunks.
+- Ming-3.0-tts-0.5B — MIT, 3.0 GB; requires the `Ming-3.0-tts` GitHub repo; not downloaded.
+- CosyVoice3-0.5B (9.75 GB), VoxCPM2 (4.96 GB), MOSS-TTS-Local (6.14 GB) — not downloaded; disk fits but integration time not spent.
 
 ### BLOCKED
-- Qwen3-TTS — paid DashScope API only; violates strict $0.
+- Qwen3-TTS paid DashScope API — violates strict $0.
 
-## 2. Video Factory
+## Video
 
-### CORE — FFmpeg 6.1.1 + Ken Burns/zoompan + PIL diagrams
-- 100% local, $0, deterministic, already used for V12/V13.
-- Proven: 132 s and 178 s 1080p30 H.264/AAC renders decode clean.
+### CORE — FFmpeg 6.1.1 + Ken Burns + PIL/Manim
+100% local, deterministic; used for the 76 s E2E master.
 
-### FALLBACK — Wan2.1-T2V-1.3B
-- Apache-2.0; 1.3B fits a 14.5 GB T4; T2V only.
-- Not tested: 19.5 GB Kaggle disk is enough for one model, but the run was not attempted.
+### BLOCKED_STORAGE (no download started)
+- **Wan2.1-T2V-1.3B:** repo 17.57 GB (diffusion 5.68 + T5 11.36 + VAE 0.51). 19.5 GB free disk; 17.57 GB is >75% → policy says do not start. T2V only.
+- **LTX-Video 0.9.6 distilled:** distilled file 6.34 GB + T5 text encoder ~19.3 GB + VAE; full pipeline >25 GB. Repo total 254 GB. I2V/T2V not tested.
+- **HunyuanVideo-1.5:** ~33 GB checkpoint, ~14+ GB VRAM → HIGH_END_NOT_T4.
 
-### EXPERIMENTAL — LTX-Video 0.9.6/0.9.7
-- Open Weights License 0.X: commercial use allowed **only for entities with <$10M annual
-  revenue**, with use restrictions and an AI-content disclaimer; >= $10M requires a paid
-  license.
-- ~9–12 GB weights; Kaggle disk can hold one model at a time.
-- Not tested: license review + disk + integration time.
+**I2V remains NOT TESTED.** Do not claim I2V capability.
 
-### I2V status
-- **NOT TESTED.** LTX I2V pipeline support in the installed diffusers version is unverified;
-  Wan2.1 I2V 14B is too large for one T4. Do not claim I2V capability.
+## Animation
 
-## 3. Animation Factory
+### CORE — existing Stickman Rig-1 + PIL/SVG + Manim CE
+- Rig-1: one rig only, 32/32 frames, signature lens 32/32.
+- Manim CE 0.22.1: installed and rendered an 11.07 s ice-density diagram; used in the E2E.
+- **Gap:** rig `profile`/`three_quarter` identical to `front`.
 
-### CORE — existing Stickman Rig-1 (SVG + PIL + FFmpeg)
-- One rig only: `lib/stickman_rig.py` + `lib/stickman_pose_library.py`.
-- Real test: 32 frames (8 poses × 4 views) rendered; signature lens 32/32.
-- **Gap:** `profile` and `three_quarter` are byte-identical to `front`; only `back` flips.
-  Fix the projection before claiming multi-view.
+### NOT TESTED
+- Blender — not installed; heavy; no measured need for the 60–90 s slice.
+- Depth Anything V2 — licence/size not cleared.
 
-### NOT USED (no measured need)
-- Manim CE — not installed; math-animation value is low for a documentary.
-- Blender — not installed; heavy; existing FFmpeg/PIL path is sufficient for 60–90 s.
+## Audio
 
-## 4. Audio Factory
+### CORE — PD music + FFmpeg
+- `assets/music/ardune_red_moon.mp3` — Public Domain Mark 1.0, 212.58 s.
+- FFmpeg `loudnorm` + `alimiter` (level=false) → measured I=-16.0 LUFS, TP=-2.0 dBTP.
 
-### CORE — PD music bed + FFmpeg loudnorm/limiter
-- `assets/music/ardune_red_moon.mp3` — Public Domain Mark 1.0, 212.58 s, documented.
-- `ffmpeg loudnorm` + `alimiter` is the proven mastering path.
+### PARTIAL — DeepFilterNet3
+Runs on CPU (RTF 0.055), but did not measurably improve WER on synthetic noise
+(extreme 69.2%→69.2%; mild 0%→0%). Not a CORE win for clean TTS; test on real
+field recordings before use.
 
-### EXPERIMENTAL
-- ACE-Step v1 3.5B (Apache-2.0) — music generation; 3.5B weights, not tested.
-- MOSS-SoundEffect v2.0 (Apache-2.0) — SFX; not tested.
-- DeepFilterNet (MIT/Apache-2.0 dual) — noise suppression; not installed.
+### NOT TESTED — ACE-Step 1.5 / MOSS-SoundEffect v2.0
+- ACE-Step1.5: MIT, 10.09 GB; fits disk (52%) but integration time not spent.
+- MOSS-SoundEffect-v2.0: Apache-2.0, 11.23 GB; custom code; not downloaded.
 
-### BLOCKED for monetized production
+### BLOCKED — Stable Audio
 - Stable Audio Open 1.0 — CC-BY-NC-4.0 weights.
-- Stable Audio Open Small — gated, terms not verified.
+- Stable Audio Open Small — gated; terms not verified.
 
-## 5. QC / Release
+## 10/10 status
 
-- CORE: `tools/qa/qc.py` + `config/qc_thresholds.json` + rights manifest.
-- **Unresolved:** repo target is **-16 LUFS**, YouTube reference is **-14 LUFS**.
-  Owner must choose before publishing.
-- **Cannot certify:** human review (H-1..H-3) not performed; final status must be
-  `PENDING_HUMAN_REVIEW`.
+**PENDING_HUMAN_REVIEW.** No human has watched the exact final master; no independent
+reviewer has scored it. The 10of10 hard gates are not satisfied.
 
-## 6. Model budget (strict $0)
+## Next smallest step
 
-| Item | Cost | Evidence |
-|---|---:|---|
-| Kaggle T4 kernels (preflight + TTS bench) | $0 | free tier; no paid GPU |
-| Kokoro/Piper weights | $0 | Apache-2.0 / CC-BY voice |
-| PD music | $0 | Public Domain Mark 1.0 |
-| Local CPU renders | $0 | FFmpeg/PIL |
-| Paid APIs / Flow / Veo | $0 used | none invoked |
-
-**No paid route was invoked.** No secrets were printed.
-
-## 7. Recommended next smallest step
-
-1. Collect the TTS benchmark output (T01/T02) and record real WER/RTF.
-2. Build the 60–90 s E2E demo with Kokoro + PD music + PIL diagrams + rig overlay + QC.
-3. Send the exact final file to a human for H-1/H-2; keep status `PENDING_HUMAN_REVIEW`.
-4. Only then decide whether to run Wan2.1 or LTX on Kaggle.
+1. Read the Qwen3-TTS result when the kernel finishes; record PASS/BLOCKED honestly.
+2. Human watch-through of `work/master-run/e2e/final_demo.mp4` (76.07 s).
+3. Only then decide whether to request a high-end GPU for Wan/LTX, or keep FFmpeg/Manim.

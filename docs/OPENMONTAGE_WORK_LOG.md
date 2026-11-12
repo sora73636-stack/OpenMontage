@@ -644,3 +644,13 @@
 - Added `COMPETITOR_VIDEO_AUDIT.csv` (20 rows, 5 biology/evolution), `FINAL_HANDOFF.md`, `configs/model_matrix.yaml`, `configs/quality_gates.yaml`, `reports/benchmark_runs/2026-11-11-tts-local/benchmark_result.json`, `reports/end_to_end/MANIFEST.md`.
 - Re-encoded master to 7.98 Mbps video / AAC 48 kHz / 42-char subtitles; QC 16/16 PASS; SHA-256 `b960ee2e…`.
 - Commit: `89f0d4e3` on `kilo/mega-100` (no push).
+
+### 2026-11-12 — 10of10 execution: preflight artifacts, Manim, Qwen, DeepFilterNet, E2E v3
+
+- Kaggle quota observed: GPU 30.00h total / 29.99h remaining / 0.01h used; refresh 2026-11-14.
+- `notebooks/kaggle/00_preflight/om_00_preflight.ipynb` + full artifact set (nvidia_smi, pip_freeze, ffmpeg/ffprobe, disk, environment JSON). Preflight COMPLETE: 2x T4 14.56 GB, 31.35 GB RAM, 19.5 GB disk, CUDA 13.
+- Manim CE 0.22.1 installed (after libcairo/pango dev deps); rendered 11.07 s 1080p ice-density diagram; converted to 1080p30 for E2E.
+- Qwen3-TTS-12Hz-0.6B-Base kernel: versions 1-4 failed (missing install, dataset mount); v5 with embedded base64 reference running.
+- DeepFilterNet3: installed (torch 2.5.1/torchaudio 2.5.1), RTF 0.055; extreme synthetic noise WER 69.2%→69.2% (no gain), mild 0%→0%.
+- Video models: Wan2.1-T2V-1.3B 17.57 GB and LTX 0.9.6 distilled 6.34 GB + T5 ~19.3 GB → BLOCKED_STORAGE on 19.5 GB disk; no download.
+- E2E v3: 76.07 s, Manim + 16 PIL scenes + rig + PD music + 3 original SFX + stems; 7.98 Mbps; QC 16/16 PASS; SHA-256 2b22174d…

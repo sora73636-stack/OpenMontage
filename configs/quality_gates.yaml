@@ -4,7 +4,7 @@
 version: 1
 generated: 2026-11-11
 source_thresholds: config/qc_thresholds.json
-measured_file: work/master-run/e2e/final_demo.mp4
+measured_file: work/master-run/e2e/final_demo.mp4 (v3: Manim + SFX + stems)
 gates:
   - id: ffprobe_streams
     status: PASS
@@ -23,10 +23,10 @@ gates:
     evidence: "silence ratio 0.0000 <= 0.1"
   - id: ebur128
     status: PASS
-    evidence: "I=-15.7 LUFS (target -16 +/- 1.5); TP=-3.8 dBTP (max -1.5)"
+    evidence: "I=-16.0 LUFS (target -16 +/- 1.5); TP=-2.0 dBTP (max -1.5)"
   - id: duration_vs_script
     status: PASS
-    evidence: "65.00s vs 65.0s, drift 0.00s"
+    evidence: "76.07s vs 76.07s, drift 0.00s"
   - id: subtitle_sync
     status: PASS
     evidence: "last cue within 0.5s; max 42 chars/line, 2 lines"

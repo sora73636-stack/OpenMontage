@@ -1,0 +1,44 @@
+{
+  "schema": "openmontage.benchmark_result/v1",
+  "run_id": "2026-11-12-video-wan-ltx",
+  "factory": "video",
+  "stage": "preflight_storage",
+  "environment": {
+    "host": "Kaggle",
+    "gpu": "2x Tesla T4 14.56 GB",
+    "disk_free_gb": 19.5
+  },
+  "input": {
+    "models": [
+      "Wan-AI/Wan2.1-T2V-1.3B",
+      "Lightricks/LTX-Video 0.9.6 distilled"
+    ]
+  },
+  "runs": [
+    {
+      "job_id": "wan-01",
+      "model_id": "Wan-AI/Wan2.1-T2V-1.3B",
+      "revision": "main",
+      "license_status": "Apache-2.0",
+      "repo_size_gb": 17.57,
+      "disk_free_gb": 19.5,
+      "status": "BLOCKED_STORAGE",
+      "blocker": "17.57 GB > 75% of 19.5 GB free; policy forbids starting download"
+    },
+    {
+      "job_id": "ltx-01",
+      "model_id": "Lightricks/LTX-Video 0.9.6 distilled",
+      "revision": "0.9.6",
+      "license_status": "LTXV Open Weights 0.X",
+      "repo_size_gb": 254.11,
+      "distilled_file_gb": 6.34,
+      "text_encoder_gb": 19.3,
+      "status": "BLOCKED_STORAGE",
+      "blocker": "full pipeline >25 GB > 19.5 GB free"
+    }
+  ],
+  "notes": [
+    "No download started. I2V/T2V remain NOT TESTED.",
+    "Move to high-end/local GPU backlog."
+  ]
+}

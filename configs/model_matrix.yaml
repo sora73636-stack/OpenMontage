@@ -61,14 +61,14 @@ models:
     license: ltxv-open-weights-0.x
     size_gb: 254.11
     status: BLOCKED_STORAGE
-    evidence: full repo 254 GB; exact 0.9.6 2B distilled file not isolated; 19.5 GB Kaggle disk; commercial use only <$10M revenue
+    evidence: 0.9.6 distilled 6.34 GB + T5 ~19.3 GB + VAE > 25 GB; repo 254 GB; 19.5 GB Kaggle disk; commercial use only <$10M revenue
   - id: Wan-AI/Wan2.1-T2V-1.3B
     factory: video
     task: t2v
     license: apache-2.0
     size_gb: null
-    status: EXPERIMENTAL
-    evidence: Apache-2.0; 1.3B fits T4; not downloaded; I2V is a different task
+    status: BLOCKED_STORAGE
+    evidence: repo 17.57 GB (diffusion 5.68 + T5 11.36 + VAE 0.51) > 75% of 19.5 GB free; not downloaded; I2V is a different task
   - id: Tencent-Hunyuan/HunyuanVideo-1.5
     factory: video
     task: i2v
@@ -110,14 +110,14 @@ models:
     license: MIT OR Apache-2.0
     size_gb: null
     status: EXPERIMENTAL
-    evidence: dual-licensed code+weights; not installed
+    evidence: DeepFilterNet3 installed; RTF 0.055; no measurable WER gain on synthetic noise (69.2%→69.2% extreme, 0%→0% mild)
   - id: ManimCommunity/manim
     factory: animation
     task: diagrams
     license: MIT
     size_gb: 0
-    status: EXPERIMENTAL
-    evidence: not installed; no measured test yet
+    status: CORE
+    evidence: Manim CE 0.22.1 installed; rendered 11.07 s 1080p diagram; used in E2E
   - id: blender/blender
     factory: animation
     task: 3d

@@ -1,0 +1,37 @@
+{
+  "engine": "DeepFilterNet3",
+  "torch": "2.5.1+cpu",
+  "torchaudio": "2.5.1+cpu",
+  "enhance_s": 0.25,
+  "input_s": 4.47,
+  "rtf": 0.055,
+  "wer": {
+    "clean": {
+      "wer": 0.0,
+      "hyp": "water expands when it freezes which is why ice floats on a lake"
+    },
+    "noisy": {
+      "wer": 0.0,
+      "hyp": "water expands when it freezes which is why ice floats on a lake"
+    },
+    "enhanced": {
+      "wer": 0.0,
+      "hyp": "water expands when it freezes which is why ice floats on a lake"
+    }
+  },
+  "noise_conditions": {
+    "extreme": {
+      "noise_amp": 0.7,
+      "wer_clean": 0.0,
+      "wer_noisy": 0.6923,
+      "wer_enhanced": 0.6923
+    },
+    "mild": {
+      "noise_amp": 0.12,
+      "wer_clean": 0.0,
+      "wer_noisy": 0.0,
+      "wer_enhanced": 0.0
+    }
+  },
+  "conclusion": "DeepFilterNet3 runs on CPU (RTF ~0.05) but did not measurably improve WER on these synthetic samples; extreme noise stayed at 69% WER. Not a clear CORE win for clean TTS."
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "openmontage.benchmark_result/v1",
+  "run_id": "2026-11-12-voice-qwen",
+  "factory": "voice",
+  "stage": "qwen_smoke",
+  "environment": {
+    "host": "Kaggle T4",
+    "python": "3.13",
+    "kernel": "forts845/om-10-voice-qwen"
+  },
+  "input": {
+    "model": "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+    "reference": "own Kokoro af_heart output",
+    "sections": [
+      "A_hook",
+      "B_dense",
+      "C_numbers"
+    ]
+  },
+  "runs": [
+    {
+      "job_id": "qwen-01",
+      "model_id": "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+      "revision": "main",
+      "license_status": "Apache-2.0",
+      "repo_size_gb": 2.52,
+      "status": "PENDING",
+      "blocker": "kernel version 5 running; earlier versions failed on dataset mount (fixed by embedded base64 reference)"
+    }
+  ],
+  "notes": [
+    "Result will be filled from QWEN_BENCH.json when terminal."
+  ]
+}

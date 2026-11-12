@@ -17,7 +17,7 @@
 | Decisions | `docs/research/FACTORY_DECISION_REPORT.md` | CORE/FALLBACK/EXPERIMENTAL/BLOCKED |
 | Kaggle preflight | `work/master-run/kaggle/preflight/output/PREFLIGHT.json` | 2×T4, 31GB RAM, 19.5GB disk, CUDA13 |
 | Rig render | `work/master-run/animation/rig_contact_sheet.jpg` | 32/32 frames, lens 32/32 |
-| E2E demo | `work/master-run/e2e/final_demo.mp4` | 65.0s, 1080p30, 7.98 Mbps, 66.9MB, QC 16/16 PASS |
+| E2E demo | `work/master-run/e2e/final_demo.mp4` | 76.07s, Manim + 16 scenes + SFX + stems, 7.98 Mbps, 79.1MB, QC 16/16 PASS |
 | QC | `work/master-run/e2e/qc_report.json` | 16/16 PASS (verdict PASS) |
 | Narration | `work/master-run/e2e/audio/` + `narration.json` | Piper lessac, 160 words, 148 wpm |
 | Subtitles | `work/master-run/e2e/subtitles.srt` | 16 cues |

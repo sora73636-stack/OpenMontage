@@ -1,0 +1,39 @@
+{
+  "schema": "openmontage.benchmark_result/v1",
+  "run_id": "2026-11-12-animation-manim",
+  "factory": "animation",
+  "stage": "manim_smoke",
+  "environment": {
+    "host": "GitHub Codespaces",
+    "python": "3.12",
+    "manim": "0.22.1",
+    "gpu": null,
+    "cpu": "4 vCPU"
+  },
+  "input": {
+    "scene": "IceFloats",
+    "duration_s": 11.0,
+    "resolution": "1920x1080",
+    "fps": 60
+  },
+  "runs": [
+    {
+      "job_id": "manim-ice-01",
+      "model_id": "ManimCommunity/manim v0.22.1",
+      "revision": "0.22.1",
+      "license_status": "MIT",
+      "load_s": null,
+      "generation_s_total": null,
+      "audio_s_total": 11.0,
+      "rtf": null,
+      "output_path": "work/master-run/animation/media/videos/manim_ice/1080p60/IceFloats.mp4",
+      "output_hash": null,
+      "status": "PASS",
+      "human_review": "PENDING_HUMAN_REVIEW"
+    }
+  ],
+  "notes": [
+    "Rendered 13 animations; converted to 1080p30 for E2E (work/master-run/e2e/manim/manim_ice_30.mp4).",
+    "No LaTeX used; original PIL/Manim primitives."
+  ]
+}

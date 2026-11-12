@@ -1,0 +1,39 @@
+{
+  "schema": "openmontage.benchmark_result/v1",
+  "run_id": "2026-11-12-audio-deepfilternet",
+  "factory": "audio",
+  "stage": "denoise",
+  "environment": {
+    "host": "GitHub Codespaces",
+    "python": "3.12",
+    "torch": "2.5.1+cpu",
+    "torchaudio": "2.5.1+cpu",
+    "gpu": null
+  },
+  "input": {
+    "clean": "work/master-run/tts_bench/audio/kokoro_01.wav",
+    "noise": "synthetic white noise"
+  },
+  "runs": [
+    {
+      "job_id": "dfn-01",
+      "model_id": "Rikorose/DeepFilterNet (DeepFilterNet3)",
+      "revision": "pip deepfilternet",
+      "license_status": "MIT OR Apache-2.0",
+      "load_s": null,
+      "generation_s_total": 0.25,
+      "audio_s_total": 4.47,
+      "rtf": 0.055,
+      "wer_clean": 0.0,
+      "wer_noisy": 0.6923,
+      "wer_enhanced": 0.6923,
+      "status": "PARTIAL",
+      "human_review": "PENDING_HUMAN_REVIEW"
+    }
+  ],
+  "notes": [
+    "Extreme synthetic noise (amp 0.7): WER 69.2% -> 69.2%, no improvement.",
+    "Mild noise (amp 0.12): 0% -> 0%; no measurable gain.",
+    "Not a clear CORE win for clean TTS; test on real field recordings before use."
+  ]
+}

@@ -30,7 +30,7 @@ reconstructed from the user task + master plan + repo reality).
 | I3 | Real tests: video model | NOT_DONE | resource/license decision deferred | optional |
 | J1 | Integration: fix failing tests | DONE | 138 factory pass; 3,075 collect; QA 38/38 | none |
 | J2 | Integration: missing workers/configs/manifests | PARTIAL | no new worker needed for demo; QC artifacts added | owner decides scope |
-| K | E2E 60–90 s science video | DONE | `work/master-run/e2e/final_demo.mp4` 65.0 s, 1080p30, 8.0 Mbps, 66.9 MB, QC 16/16 PASS | human review |
+| K | E2E 60–90 s science video | DONE | `work/master-run/e2e/final_demo.mp4` 76.07 s, Manim + 16 scenes + SFX + stems, 7.98 Mbps, 79.1 MB, QC 16/16 PASS | human review |
 | Q | 10/10 quality claim | **PENDING_HUMAN_REVIEW** | no human watched the exact file | H-1/H-2 |
 | R | Reports (10 files + CSV) | DONE | `docs/research/*` incl. `COMPETITOR_VIDEO_AUDIT.csv`, `FINAL_HANDOFF.md` | owner review |
 | S3 | 10of10 configs / benchmark manifests | DONE | `configs/model_matrix.yaml`, `configs/quality_gates.yaml`, `reports/benchmark_runs/.../benchmark_result.json`, `reports/end_to_end/MANIFEST.md` | owner review |
