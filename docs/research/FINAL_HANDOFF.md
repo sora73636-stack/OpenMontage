@@ -96,3 +96,58 @@ has scored it. Per the 10of10 hard gates, the status is `PENDING_HUMAN_REVIEW`, 
 
 No `OWNER_APPROVED`, `PUBLISH_READY`, `FINAL_MASTER`, or `READY_FOR_OWNER_REVIEW` status
 is created automatically.
+---
+
+## Update 2026-11-12 — 10of10 Phase 1–5 results
+
+### Voice
+- **Kokoro-82M:** normalized WER **0.0%**, RTF 1.326, load 10.61 s (local CPU).
+- **Piper lessac:** normalized WER **0.0%**, RTF 0.805 (local CPU).
+- **Qwen3-TTS-12Hz-0.6B-Base:** **PASS (technical)** on Kaggle T4 — 3 sections, 74.56 s audio,
+  load 22.51 s, RTF 2.50–3.08, peak VRAM **3347 MB**, 10-chunk VRAM flat (no leak),
+  raw WER 6.47% / **number-normalized WER 1.0%**. Naturalness/human listening **PENDING**.
+- **Ming-3.0-tts-0.5B:** `BLOCKED_INTEGRATION` (requires GitHub repo; 3.0 GB fits disk).
+- CosyVoice3 (9.75 GB), VoxCPM2 (4.96 GB), MOSS-TTS-Local (6.14 GB): `BLOCKED_TIME`
+  (fit disk; integration not done). Qwen paid API: `EXCLUDE` ($0).
+
+### Video
+- **Wan2.1-T2V-1.3B:** `BLOCKED_STORAGE` — repo 17.57 GB > 75% of 19.5 GB free.
+- **LTX-Video 0.9.6 distilled:** `BLOCKED_STORAGE` — 6.34 GB + ~19.3 GB T5 + VAE > 25 GB.
+- **HunyuanVideo-1.5:** `HIGH_END_NOT_T4` (~33 GB). I2V/T2V **NOT TESTED**.
+
+### Animation
+- **Manim CE 0.22.1:** installed (libcairo/pango dev deps), rendered 11.07 s 1080p ice-density
+  diagram; used in the E2E.
+- **Stickman Rig-1:** 32/32 frames, lens 32/32; view projection gap remains.
+- Blender: not installed; desktop/manual.
+
+### Audio
+- **DeepFilterNet3:** RTF 0.055; extreme synthetic noise WER 69.2%→69.2% (no gain),
+  mild 0%→0% — `PARTIAL`, not a CORE win for clean TTS.
+- **ACE-Step1.5:** 10.09 GB, MIT — not downloaded (`BLOCKED_TIME`).
+- **MOSS-SoundEffect v2.0:** 11.23 GB, Apache-2.0 — not downloaded (`BLOCKED_TIME`).
+- Stable Audio Open 1.0 (CC-BY-NC) and Small (gated): `EXCLUDE`/`LICENSE_BLOCKED`.
+- E2E master: I=-16.0 LUFS, TP=-2.0 dBTP.
+
+### E2E
+- `work/master-run/e2e/final_demo.mp4` — **76.07 s**, 1920×1080@30, H.264 High, AAC 48 kHz,
+  7.98 Mbps video, 79.1 MB, SHA-256 `2b22174d…`.
+- Manim intro + 16 PIL scenes + Rig-1 + PD music + 3 original SFX + stems; QC **16/16 PASS**.
+
+### 10/10 rubric status
+
+| Criterion | Weight | Objective status | Human score |
+|---|---:|---|---|
+| Hook / packaging | 12% | hook variants written; no human A/B | PENDING |
+| Scientific accuracy / claims | 18% | 14/14 claims ledger + sources; no unresolved FAIL | PENDING |
+| Story arc / pacing | 12% | 76 s vertical slice; not a full release | PENDING |
+| Visual relevance / clarity | 12% | original diagrams; no frame review | PENDING |
+| Motion / visual pacing | 10% | 17 cuts, zoom/pan/Manim/rig; QC motion PASS | PENDING |
+| Narration / audio mix | 10% | -16 LUFS, TP -2.0, stems | PENDING |
+| Captions / accessibility | 8% | ≤42 chars, 2 lines; QC PASS | PENDING |
+| Visual consistency | 8% | single palette; no human art-direction review | PENDING |
+| Originality | 5% | original diagrams/rig/script; no competitor assets | PENDING |
+| Rights / provenance | 5% | 5/5 records PASS; PD music; CC-BY voice | PENDING |
+
+**No 10/10 claim.** Hard gate H-1 (human watch-through of the exact master) and H-2
+(independent reviewer) are not satisfied.

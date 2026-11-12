@@ -6,3 +6,6 @@ Music: "Ardune Ambient - Red Moon Quarry" by John Oestmann, Public Domain Mark 1
 Voice: lessac (CC-BY-4.0) via Piper.
 Character: OpenMontage Stickman Rig-1 (original).
 No third-party footage. No YouTube downloads. No paid API.
+
+Diagrams: Manim CE 0.22.1 (original) + PIL (original).
+SFX: original synthesized ambience, ice crack and sonar (ffmpeg).

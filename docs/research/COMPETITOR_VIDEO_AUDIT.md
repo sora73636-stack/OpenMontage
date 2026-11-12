@@ -94,3 +94,25 @@ views min 584,813 / median 3,228,233 / max 120,376,705. Hook mix: 10 declarative
 - Raw candidates: `work/master-run/research/competitor_candidates.json`
 - Final set: `work/master-run/research/competitor_final15.json`
 - Selection script: `work/master-run/research/finalize_competitors.py`
+---
+
+## Update 2026-11-12 — biology/evolution set (20 videos total)
+
+The CSV (`COMPETITOR_VIDEO_AUDIT.csv`) contains **20** rows: the original 15 general-science
+videos plus 5 biology/evolution videos required by the 10of10 task.
+
+| # | Channel | Title | Duration | Public views | Evidence |
+|---:|---|---|---:|---:|---|
+| 16 | Veritasium | The Most Controversial Idea In Biology | 28:50 | 9,209,734 | PUBLIC_METADATA |
+| 17 | TierZoo | The Mammal Tier List | 45:28 | 3,090,811 | PUBLIC_METADATA |
+| 18 | PBS Eons | When Mammals and Reptiles Split | 26:37 | 887,545 | PUBLIC_METADATA |
+| 19 | PBS Eons | How An Ancient Ocean Became A Texas Desert | 26:06 | 181,157 | PUBLIC_METADATA |
+| 20 | Kaoru GreenEmerald | The Whole History of the Earth and Life | 1:05:45 | 18,516,615 | PUBLIC_METADATA |
+
+For Veritasium, public chapters and expert credits are recorded in the CSV from the
+task's cited source. For the other four, chapter/narration/visual fields remain
+`NOT_ACCESSIBLE` because no frames, audio, or transcripts were retrieved. No video was
+downloaded. The 10of10 minimum of 5 biology/evolution entries is met at the metadata level.
+
+**Aggregate (20 videos):** median duration 691 s; median views 3.23M; 10 declarative,
+3 curiosity-gap, 2 number/list, 5 biology/evolution (mixed). Frame-level evidence: **0**.

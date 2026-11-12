@@ -25,7 +25,7 @@
 
 ## Exact next action
 
-1. TTS benchmark complete: Kokoro WER 2.78% / RTF 1.326; Piper WER 2.78% / RTF 0.805.
+1. TTS benchmark complete: Kokoro normalized WER 0.0% / RTF 1.326; Piper 0.0% / 0.805; Qwen3-TTS T4 PASS (normalized WER 1.0%, VRAM 3.35 GB, no leak).
 2. Human review: play `work/master-run/e2e/final_demo.mp4` end-to-end; independent
    reviewer scores 1–10. Until then status stays `PENDING_HUMAN_REVIEW`.
 3. If approved: commit only the docs/test fixes/demo artifacts on `kilo/mega-100`
