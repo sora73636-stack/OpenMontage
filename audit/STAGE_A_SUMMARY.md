@@ -18,3 +18,6 @@
   - Stage B needs: cleared reference voice or approved synthetic voice; Real-ESRGAN weight license decision; model weight download plan.
   - Stage B/C/D need the GPU quota confirmed in the account UI.
 - Evidence: `audit/PRODUCTION_SMOKE_TEST_REPORT.md`, `audit/results.json`, `audit/licenses/STATUS.json`.
+
+- Branch: audit/kaggle-t4
+- Evidence commit: 314e3f67c7e3263af901f4c622ca50421789641a
