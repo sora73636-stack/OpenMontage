@@ -1,0 +1,18 @@
+# Stage A audit evidence: never commit weights, secrets or large binaries
+*.pth
+*.pt
+*.safetensors
+*.ckpt
+*.onnx
+*.bin
+*.gguf
+*.npz
+*.mp4
+*.wav
+*.mp3
+*.pyc
+__pycache__/
+kaggle.json
+*.token
+.env
+# Any file larger than 50 MB must not be staged; verify with git status.

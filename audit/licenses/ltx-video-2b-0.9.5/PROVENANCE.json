@@ -1,0 +1,40 @@
+{
+  "code": {
+    "license_fetch_status": "OK",
+    "license_file": {
+      "bytes": 11357,
+      "path": "audit/licenses/ltx-video-2b-0.9.5/LICENSE-code.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "readme_file": {
+      "bytes": 26988,
+      "path": "audit/licenses/ltx-video-2b-0.9.5/MODEL_CARD.md",
+      "sha256": "53e727ff7adfdb468b520f02638771a38eb36af59153ccd1f37830e4fa8805f6"
+    },
+    "ref": "HEAD",
+    "revision": "50f0aef1297574a4b29acbdb874e3a363a6d5f2e",
+    "type": "github",
+    "url": "https://github.com/Lightricks/LTX-Video"
+  },
+  "component": "ltx-video-2b-0.9.5",
+  "extra": {},
+  "license_status": "PASS",
+  "retrieved_utc": "2026-11-13T04:17:25Z",
+  "weights": {
+    "api_license": "other",
+    "cardData_license": "other",
+    "files": [
+      {
+        "bytes": 21993,
+        "path": "audit/licenses/ltx-video-2b-0.9.5/MODEL_CARD.md",
+        "sha256": "f5200749d5e876770eb9779bd33992ba8966cc5627533db92954e8446b509cf4"
+      }
+    ],
+    "gated": false,
+    "revision": "e58e28c39631af4d1468ee57a853764e11c1d37e",
+    "type": "huggingface",
+    "url": "https://huggingface.co/Lightricks/LTX-Video-0.9.5",
+    "weight_sha256": null,
+    "weights_downloaded": false
+  }
+}

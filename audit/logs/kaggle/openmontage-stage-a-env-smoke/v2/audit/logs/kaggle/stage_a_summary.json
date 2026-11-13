@@ -1,0 +1,516 @@
+{
+  "stage": "A",
+  "kernel_purpose": "shared environment snapshot + P2.2 FFmpeg/NVENC",
+  "utc_start": "2026-11-13T04:18:58Z",
+  "status": "PASS",
+  "steps": {
+    "environment_before": {
+      "utc_timestamp": "2026-11-13T04:18:58Z",
+      "python_version": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+      "torch": {
+        "version": "2.11.0+cu130",
+        "cuda_build": "13.0",
+        "cuda_available": true,
+        "device_count": 2,
+        "devices": [
+          {
+            "index": 0,
+            "name": "Tesla T4",
+            "total_memory_mib": 14911,
+            "compute_capability": "7.5",
+            "multi_processor_count": 40,
+            "free_memory_mib": 14806,
+            "total_memory_mib_reported": 14911
+          },
+          {
+            "index": 1,
+            "name": "Tesla T4",
+            "total_memory_mib": 14911,
+            "compute_capability": "7.5",
+            "multi_processor_count": 40,
+            "free_memory_mib": 14806,
+            "total_memory_mib_reported": 14911
+          }
+        ]
+      },
+      "ffmpeg_version_returncode": 0,
+      "ffmpeg_version_first_line": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+      "ffprobe_version_first_line": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+      "network_check": [
+        {
+          "host": "huggingface.co",
+          "port": 443,
+          "reachable": true,
+          "latency_s": 0.068
+        },
+        {
+          "host": "pypi.org",
+          "port": 443,
+          "reachable": true,
+          "latency_s": 0.023
+        },
+        {
+          "host": "github.com",
+          "port": 443,
+          "reachable": true,
+          "latency_s": 0.038
+        }
+      ],
+      "t4_assertion": {
+        "cuda_available": true,
+        "device_count": 2,
+        "all_devices_are_tesla_t4": true,
+        "per_device": [
+          {
+            "index": 0,
+            "name": "Tesla T4",
+            "total_memory_mib": 14911,
+            "compute_capability": "7.5",
+            "free_memory_mib": 14806
+          },
+          {
+            "index": 1,
+            "name": "Tesla T4",
+            "total_memory_mib": 14911,
+            "compute_capability": "7.5",
+            "free_memory_mib": 14806
+          }
+        ],
+        "ok": true,
+        "reasons": []
+      }
+    },
+    "p2_2_ffmpeg_build": {
+      "libx264_present": true,
+      "h264_nvenc_present": true,
+      "nvenc_help_returncode": 0,
+      "nvenc_help_first_lines": "Encoder h264_nvenc [NVIDIA NVENC H.264 encoder]:\n    General capabilities: dr1 delay hardware \n    Threading capabilities: none\n    Supported hardware devices: cuda cuda \n    Supported pixel formats: yuv420p nv12 p010le yuv444p p016le yuv444p16le bgr0 bgra rgb0 rgba x2rgb10le x2bgr10le gbrp gbrp16le cuda\nh264_nvenc AVOptions:\n  -preset            <int>        E..V....... Set the encoding preset (from 0 to 18) (default p4)\n     default         0            E..V....... \n     slow            1            E..V....... hq 2 passes\n     medium          2            E..V....... hq 1 pass\n     fast            3            E..V....... hp 1 pass\n     hp              4            E..V....... \n     hq              5            E..V....... \n     bd              6            E..V....... \n     ll              7            E..V....... low latency\n     llhq            8            E..V....... low latency hq\n     llhp            9            E..V....... low latency hp\n     lossless        10           E..V....... \n     losslesshp      11           E..V....... \n     p1              12           E..V....... fastest (lowest quality)\n     p2              13           E..V....... faster (lower quality)\n     p3              14           E..V....... fast (low quality)\n     p4              15           E..V....... medium (default)\n     p5              16           E..V....... slow (good quality)\n     p6              17           E..V....... slower (better quality)",
+      "configuration": null,
+      "encoder_list_sha256": "a713d6fa85b46256874a86dc4bd185d5b7b3865193b0b32a1b446ae566e35dbf"
+    },
+    "source_generation": {
+      "cmd": "ffmpeg -y -hide_banner -loglevel error -f lavfi -i testsrc2=size=1920x1080:rate=30:duration=10 -f lavfi -i sine=frequency=440:sample_rate=48000:duration=10 -c:v libx264 -preset ultrafast -qp 0 -pix_fmt yuv420p -c:a pcm_s16le -shortest /kaggle/working/audit/previews/p2_2_source.mp4",
+      "returncode": 0,
+      "duration_s": 2.32,
+      "stderr": ""
+    },
+    "p2_2_results": {
+      "libx264": {
+        "name": "libx264",
+        "cmd": "ffmpeg -y -hide_banner -loglevel error -f lavfi -i testsrc2=size=1920x1080:rate=30:duration=10 -f lavfi -i sine=frequency=440:sample_rate=48000:duration=10 -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p -c:a aac -b:a 128k -shortest /kaggle/working/audit/previews/p2_2_libx264.mp4",
+        "returncode": 0,
+        "duration_s": 9.716,
+        "stderr": "",
+        "output": {
+          "path": "/kaggle/working/audit/previews/p2_2_libx264.mp4",
+          "bytes": 7835728,
+          "sha256": "d9964eead1370d6f4f0de533e56691ef27488c33d267761c9da4c93a735e5777"
+        },
+        "probe": {
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+              "profile": "High",
+              "codec_type": "video",
+              "codec_tag_string": "avc1",
+              "codec_tag": "0x31637661",
+              "width": 1920,
+              "height": 1080,
+              "coded_width": 1920,
+              "coded_height": 1080,
+              "closed_captions": 0,
+              "film_grain": 0,
+              "has_b_frames": 2,
+              "sample_aspect_ratio": "1:1",
+              "display_aspect_ratio": "16:9",
+              "pix_fmt": "yuv420p",
+              "level": 40,
+              "chroma_location": "left",
+              "field_order": "progressive",
+              "refs": 1,
+              "is_avc": "true",
+              "nal_length_size": "4",
+              "id": "0x1",
+              "r_frame_rate": "30/1",
+              "avg_frame_rate": "30/1",
+              "time_base": "1/15360",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 153600,
+              "duration": "10.000000",
+              "bit_rate": "6131153",
+              "bits_per_raw_sample": "8",
+              "nb_frames": "300",
+              "extradata_size": 48,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "vendor_id": "[0][0][0][0]",
+                "encoder": "Lavc60.31.102 libx264"
+              }
+            },
+            {
+              "index": 1,
+              "codec_name": "aac",
+              "codec_long_name": "AAC (Advanced Audio Coding)",
+              "profile": "LC",
+              "codec_type": "audio",
+              "codec_tag_string": "mp4a",
+              "codec_tag": "0x6134706d",
+              "sample_fmt": "fltp",
+              "sample_rate": "48000",
+              "channels": 1,
+              "channel_layout": "mono",
+              "bits_per_sample": 0,
+              "initial_padding": 0,
+              "id": "0x2",
+              "r_frame_rate": "0/0",
+              "avg_frame_rate": "0/0",
+              "time_base": "1/48000",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 480000,
+              "duration": "10.000000",
+              "bit_rate": "127392",
+              "nb_frames": "470",
+              "extradata_size": 5,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "SoundHandler",
+                "vendor_id": "[0][0][0][0]"
+              }
+            }
+          ],
+          "format": {
+            "filename": "/kaggle/working/audit/previews/p2_2_libx264.mp4",
+            "nb_streams": 2,
+            "nb_programs": 0,
+            "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+            "format_long_name": "QuickTime / MOV",
+            "start_time": "0.000000",
+            "duration": "10.000000",
+            "size": "7835728",
+            "bit_rate": "6268582",
+            "probe_score": 100,
+            "tags": {
+              "major_brand": "isom",
+              "minor_version": "512",
+              "compatible_brands": "isomiso2avc1mp41",
+              "encoder": "Lavf60.16.100"
+            }
+          }
+        },
+        "decode": {
+          "returncode": 0,
+          "stderr": "",
+          "clean": true
+        },
+        "checks": {
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "nb_frames": "300",
+          "pix_fmt": "yuv420p",
+          "audio_codec": "aac",
+          "sample_rate": "48000",
+          "duration_s": 10.0,
+          "valid_10s_1080p30": true
+        },
+        "pass": true
+      },
+      "h264_nvenc": {
+        "name": "h264_nvenc",
+        "cmd": "ffmpeg -y -hide_banner -loglevel error -f lavfi -i testsrc2=size=1920x1080:rate=30:duration=10 -f lavfi -i sine=frequency=440:sample_rate=48000:duration=10 -c:v h264_nvenc -preset p4 -rc vbr -cq 23 -b:v 0 -pix_fmt yuv420p -c:a aac -b:a 128k -shortest /kaggle/working/audit/previews/p2_2_h264_nvenc.mp4",
+        "returncode": 0,
+        "duration_s": 1.745,
+        "stderr": "",
+        "output": {
+          "path": "/kaggle/working/audit/previews/p2_2_h264_nvenc.mp4",
+          "bytes": 13857612,
+          "sha256": "e0d94ed5e745d10c6484b3dd762cc55aa19b2ef1b0de3b99cba08d9b23c8b8b9"
+        },
+        "probe": {
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+              "profile": "Main",
+              "codec_type": "video",
+              "codec_tag_string": "avc1",
+              "codec_tag": "0x31637661",
+              "width": 1920,
+              "height": 1080,
+              "coded_width": 1920,
+              "coded_height": 1080,
+              "closed_captions": 0,
+              "film_grain": 0,
+              "has_b_frames": 2,
+              "sample_aspect_ratio": "1:1",
+              "display_aspect_ratio": "16:9",
+              "pix_fmt": "yuv420p",
+              "level": 40,
+              "chroma_location": "left",
+              "field_order": "progressive",
+              "refs": 1,
+              "is_avc": "true",
+              "nal_length_size": "4",
+              "id": "0x1",
+              "r_frame_rate": "30/1",
+              "avg_frame_rate": "30/1",
+              "time_base": "1/15360",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 153600,
+              "duration": "10.000000",
+              "bit_rate": "10948478",
+              "bits_per_raw_sample": "8",
+              "nb_frames": "300",
+              "extradata_size": 52,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "vendor_id": "[0][0][0][0]",
+                "encoder": "Lavc60.31.102 h264_nvenc"
+              }
+            },
+            {
+              "index": 1,
+              "codec_name": "aac",
+              "codec_long_name": "AAC (Advanced Audio Coding)",
+              "profile": "LC",
+              "codec_type": "audio",
+              "codec_tag_string": "mp4a",
+              "codec_tag": "0x6134706d",
+              "sample_fmt": "fltp",
+              "sample_rate": "48000",
+              "channels": 1,
+              "channel_layout": "mono",
+              "bits_per_sample": 0,
+              "initial_padding": 0,
+              "id": "0x2",
+              "r_frame_rate": "0/0",
+              "avg_frame_rate": "0/0",
+              "time_base": "1/48000",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 480000,
+              "duration": "10.000000",
+              "bit_rate": "127392",
+              "nb_frames": "470",
+              "extradata_size": 5,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "SoundHandler",
+                "vendor_id": "[0][0][0][0]"
+              }
+            }
+          ],
+          "format": {
+            "filename": "/kaggle/working/audit/previews/p2_2_h264_nvenc.mp4",
+            "nb_streams": 2,
+            "nb_programs": 0,
+            "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+            "format_long_name": "QuickTime / MOV",
+            "start_time": "0.000000",
+            "duration": "10.000000",
+            "size": "13857612",
+            "bit_rate": "11086089",
+            "probe_score": 100,
+            "tags": {
+              "major_brand": "isom",
+              "minor_version": "512",
+              "compatible_brands": "isomiso2avc1mp41",
+              "encoder": "Lavf60.16.100"
+            }
+          }
+        },
+        "decode": {
+          "returncode": 0,
+          "stderr": "",
+          "clean": true
+        },
+        "nvidia_smi_samples": [
+          "2026/11/13 04:19:23.540, 0 %, 105 MiB",
+          "2026/11/13 04:19:23.542, 0 %, 105 MiB",
+          "2026/11/13 04:19:24.545, 7 %, 320 MiB",
+          "2026/11/13 04:19:24.546, 0 %, 105 MiB",
+          "2026/11/13 04:19:25.548, 12 %, 320 MiB",
+          "2026/11/13 04:19:25.549, 0 %, 105 MiB",
+          "2026/11/13 04:19:26.550, 0 %, 105 MiB",
+          "2026/11/13 04:19:26.551, 0 %, 105 MiB",
+          "2026/11/13 04:19:27.553, 0 %, 105 MiB",
+          "2026/11/13 04:19:27.554, 0 %, 105 MiB",
+          "2026/11/13 04:19:28.556, 0 %, 105 MiB",
+          "2026/11/13 04:19:28.557, 0 %, 105 MiB",
+          "2026/11/13 04:19:29.559, 0 %, 105 MiB",
+          "2026/11/13 04:19:29.560, 0 %, 105 MiB",
+          "2026/11/13 04:19:30.562, 0 %, 105 MiB",
+          "2026/11/13 04:19:30.563, 0 %, 105 MiB"
+        ],
+        "nvidia_smi_sample_count": 16,
+        "checks": {
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "nb_frames": "300",
+          "duration_s": 10.0
+        },
+        "pass": true
+      },
+      "nvenc_tested": true,
+      "note": "libx264 PASS does not imply NVENC PASS"
+    },
+    "environment_after": {
+      "utc_timestamp": "2026-11-13T04:19:33Z",
+      "torch": {
+        "version": "2.11.0+cu130",
+        "cuda_available": true,
+        "device_count": 2,
+        "devices": [
+          {
+            "index": 0,
+            "name": "Tesla T4",
+            "total_memory_mib": 14911,
+            "compute_capability": "7.5",
+            "multi_processor_count": 40,
+            "free_memory_mib": 14806,
+            "total_memory_mib_reported": 14911
+          },
+          {
+            "index": 1,
+            "name": "Tesla T4",
+            "total_memory_mib": 14911,
+            "compute_capability": "7.5",
+            "multi_processor_count": 40,
+            "free_memory_mib": 14806,
+            "total_memory_mib_reported": 14911
+          }
+        ]
+      },
+      "network_check": [
+        {
+          "host": "huggingface.co",
+          "port": 443,
+          "reachable": true,
+          "latency_s": 0.056
+        },
+        {
+          "host": "pypi.org",
+          "port": 443,
+          "reachable": true,
+          "latency_s": 0.024
+        },
+        {
+          "host": "github.com",
+          "port": 443,
+          "reachable": true,
+          "latency_s": 0.046
+        }
+      ],
+      "disk_usage": {
+        "working_free_gib": 19.44161605834961
+      },
+      "working_dir_size": {
+        "path": "/kaggle/working/audit/logs/kaggle",
+        "exists": true,
+        "bytes": 67578,
+        "files": 3
+      }
+    }
+  },
+  "helper": {
+    "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+    "embedded_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+    "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+    "match": true
+  },
+  "utc_end": "2026-11-13T04:19:34Z",
+  "wall_seconds": 36.147,
+  "nvenc_status": "PASS",
+  "libx264_status": "PASS"
+}

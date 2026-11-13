@@ -1,0 +1,32 @@
+{
+  "code": {
+    "license_fetch_status": "OK",
+    "license_file": {
+      "bytes": 1062,
+      "path": "audit/licenses/practical-rife-4.25/LICENSE-code.txt",
+      "sha256": "7932fb49341512b959b1744a6d9cbb39e5a1ec89da438a34d0454d5d8df9fecd"
+    },
+    "readme_file": {
+      "bytes": 9583,
+      "path": "audit/licenses/practical-rife-4.25/MODEL_CARD.md",
+      "sha256": "b695ac5d4a69c2f551512678883f8234d784c286d805ca546f4873cb465959b4"
+    },
+    "ref": "HEAD",
+    "revision": "bbfd2ea90910789a860ea3e2b32a240cd577b75e",
+    "type": "github",
+    "url": "https://github.com/hzwer/Practical-RIFE"
+  },
+  "component": "practical-rife-4.25",
+  "extra": {
+    "release_assets": {
+      "assets": [],
+      "http": 200
+    }
+  },
+  "license_status": "PASS",
+  "retrieved_utc": "2026-11-13T04:17:26Z",
+  "weights": {
+    "note": "no model repository resolved",
+    "type": "NONE"
+  }
+}

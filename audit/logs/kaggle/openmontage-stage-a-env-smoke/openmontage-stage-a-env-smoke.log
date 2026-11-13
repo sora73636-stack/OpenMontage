@@ -1,0 +1,506 @@
+[{"stream_name":"stdout","time":0.707768051,"data":"helper sha256: 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match: True\n"}
+,{"stream_name":"stdout","time":9.590597693,"data":"T4 assertion: {\"cuda_available\": true, \"device_count\": 2, \"all_devices_are_tesla_t4\": true, \"per_device\": [{\"index\": 0, \"name\": \"Tesla T4\", \"total_memory_mib\": 14911, \"compute_capability\": \"7.5\", \"free_memory_mib\": 14806}, {\"index\": 1, \"name\": \"Tesla T4\", \"total_memory_mib\": 14911, \"compute_capability\": \"7.5\", \"free_memory_mib\": 14806}], \"ok\": true, \"reasons\": []}\n"}
+,{"stream_name":"stdout","time":25.347244226,"data":"{\n"}
+,{"stream_name":"stdout","time":25.347276568,"data":"  \"stage\": \"A\",\n"}
+,{"stream_name":"stdout","time":25.34728085,"data":"  \"kernel_purpose\": \"shared environment snapshot + P2.2 FFmpeg/NVENC\",\n"}
+,{"stream_name":"stdout","time":25.347284095,"data":"  \"utc_start\": \"2026-11-13T04:05:42Z\",\n"}
+,{"stream_name":"stdout","time":25.347287152,"data":"  \"status\": \"PASS\",\n"}
+,{"stream_name":"stdout","time":25.347290146,"data":"  \"steps\": {\n"}
+,{"stream_name":"stdout","time":25.347293086,"data":"    \"environment_before\": {\n"}
+,{"stream_name":"stdout","time":25.347296021,"data":"      \"utc_timestamp\": \"2026-11-13T04:05:42Z\",\n"}
+,{"stream_name":"stdout","time":25.347299039,"data":"      \"python_version\": \"3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]\",\n"}
+,{"stream_name":"stdout","time":25.347302408,"data":"      \"torch\": {\n"}
+,{"stream_name":"stdout","time":25.347305395,"data":"        \"version\": \"2.11.0+cu130\",\n"}
+,{"stream_name":"stdout","time":25.34730837,"data":"        \"cuda_build\": \"13.0\",\n"}
+,{"stream_name":"stdout","time":25.347311261,"data":"        \"cuda_available\": true,\n"}
+,{"stream_name":"stdout","time":25.347314165,"data":"        \"device_count\": 2,\n"}
+,{"stream_name":"stdout","time":25.347317112,"data":"        \"devices\": [\n"}
+,{"stream_name":"stdout","time":25.347319973,"data":"          {\n"}
+,{"stream_name":"stdout","time":25.34732281,"data":"            \"index\": 0,\n"}
+,{"stream_name":"stdout","time":25.347325706,"data":"            \"name\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":25.347328729,"data":"            \"total_memory_mib\": 14911,\n"}
+,{"stream_name":"stdout","time":25.347331696,"data":"            \"compute_capability\": \"7.5\",\n"}
+,{"stream_name":"stdout","time":25.34733466,"data":"            \"multi_processor_count\": 40,\n"}
+,{"stream_name":"stdout","time":25.347337595,"data":"            \"free_memory_mib\": 14806,\n"}
+,{"stream_name":"stdout","time":25.34734051,"data":"            \"total_memory_mib_reported\": 14911\n"}
+,{"stream_name":"stdout","time":25.347343451,"data":"          },\n"}
+,{"stream_name":"stdout","time":25.347346256,"data":"          {\n"}
+,{"stream_name":"stdout","time":25.347349047,"data":"            \"index\": 1,\n"}
+,{"stream_name":"stdout","time":25.347351907,"data":"            \"name\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":25.347354827,"data":"            \"total_memory_mib\": 14911,\n"}
+,{"stream_name":"stdout","time":25.347357745,"data":"            \"compute_capability\": \"7.5\",\n"}
+,{"stream_name":"stdout","time":25.347360665,"data":"            \"multi_processor_count\": 40,\n"}
+,{"stream_name":"stdout","time":25.347363536,"data":"            \"free_memory_mib\": 14806,\n"}
+,{"stream_name":"stdout","time":25.347366395,"data":"            \"total_memory_mib_reported\": 14911\n"}
+,{"stream_name":"stdout","time":25.347369315,"data":"          }\n"}
+,{"stream_name":"stdout","time":25.347372366,"data":"        ]\n"}
+,{"stream_name":"stdout","time":25.347382451,"data":"      },\n"}
+,{"stream_name":"stdout","time":25.347384894,"data":"      \"ffmpeg_version_returncode\": 0,\n"}
+,{"stream_name":"stdout","time":25.347387226,"data":"      \"ffmpeg_version_first_line\": \"ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers\",\n"}
+,{"stream_name":"stdout","time":25.347389716,"data":"      \"ffprobe_version_first_line\": \"ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers\",\n"}
+,{"stream_name":"stdout","time":25.347392217,"data":"      \"network_check\": [\n"}
+,{"stream_name":"stdout","time":25.347394505,"data":"        {\n"}
+,{"stream_name":"stdout","time":25.347396635,"data":"          \"host\": \"huggingface.co\",\n"}
+,{"stream_name":"stdout","time":25.347398976,"data":"          \"port\": 443,\n"}
+,{"stream_name":"stdout","time":25.347415688,"data":"          \"reachable\": true,\n"}
+,{"stream_name":"stdout","time":25.347419747,"data":"          \"latency_s\": 0.033\n"}
+,{"stream_name":"stdout","time":25.347423264,"data":"        },\n"}
+,{"stream_name":"stdout","time":25.347426801,"data":"        {\n"}
+,{"stream_name":"stdout","time":25.347430086,"data":"          \"host\": \"pypi.org\",\n"}
+,{"stream_name":"stdout","time":25.347433574,"data":"          \"port\": 443,\n"}
+,{"stream_name":"stdout","time":25.347437054,"data":"          \"reachable\": true,\n"}
+,{"stream_name":"stdout","time":25.34744072,"data":"          \"latency_s\": 0.036\n"}
+,{"stream_name":"stdout","time":25.347444583,"data":"        },\n"}
+,{"stream_name":"stdout","time":25.347447823,"data":"        {\n"}
+,{"stream_name":"stdout","time":25.347451226,"data":"          \"host\": \"github.com\",\n"}
+,{"stream_name":"stdout","time":25.347460503,"data":"          \"port\": 443,\n"}
+,{"stream_name":"stdout","time":25.347464245,"data":"          \"reachable\": true,\n"}
+,{"stream_name":"stdout","time":25.347468026,"data":"          \"latency_s\": 0.041\n"}
+,{"stream_name":"stdout","time":25.347471413,"data":"        }\n"}
+,{"stream_name":"stdout","time":25.347474541,"data":"      ],\n"}
+,{"stream_name":"stdout","time":25.34747765,"data":"      \"t4_assertion\": {\n"}
+,{"stream_name":"stdout","time":25.347480925,"data":"        \"cuda_available\": true,\n"}
+,{"stream_name":"stdout","time":25.347484209,"data":"        \"device_count\": 2,\n"}
+,{"stream_name":"stdout","time":25.347487444,"data":"        \"all_devices_are_tesla_t4\": true,\n"}
+,{"stream_name":"stdout","time":25.347490852,"data":"        \"per_device\": [\n"}
+,{"stream_name":"stdout","time":25.347495809,"data":"          {\n"}
+,{"stream_name":"stdout","time":25.347502834,"data":"            \"index\": 0,\n"}
+,{"stream_name":"stdout","time":25.347505097,"data":"            \"name\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":25.347507441,"data":"            \"total_memory_mib\": 14911,\n"}
+,{"stream_name":"stdout","time":25.347510835,"data":"            \"compute_capability\": \"7.5\",\n"}
+,{"stream_name":"stdout","time":25.347513213,"data":"            \"free_memory_mib\": 14806\n"}
+,{"stream_name":"stdout","time":25.347515408,"data":"          },\n"}
+,{"stream_name":"stdout","time":25.347519216,"data":"          {\n"}
+,{"stream_name":"stdout","time":25.347521357,"data":"            \"index\": 1,\n"}
+,{"stream_name":"stdout","time":25.347523495,"data":"            \"name\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":25.347525819,"data":"            \"total_memory_mib\": 14911,\n"}
+,{"stream_name":"stdout","time":25.347531707999998,"data":"            \"compute_capability\": \"7.5\",\n"}
+,{"stream_name":"stdout","time":25.347534099,"data":"            \"free_memory_mib\": 14806\n"}
+,{"stream_name":"stdout","time":25.347536423,"data":"          }\n"}
+,{"stream_name":"stdout","time":25.347538558,"data":"        ],\n"}
+,{"stream_name":"stdout","time":25.347540657,"data":"        \"ok\": true,\n"}
+,{"stream_name":"stdout","time":25.347542928,"data":"        \"reasons\": []\n"}
+,{"stream_name":"stdout","time":25.347545123,"data":"      }\n"}
+,{"stream_name":"stdout","time":25.347547238,"data":"    },\n"}
+,{"stream_name":"stdout","time":25.34754951,"data":"    \"p2_2_ffmpeg_build\": {\n"}
+,{"stream_name":"stdout","time":25.347551793,"data":"      \"libx264_present\": true,\n"}
+,{"stream_name":"stdout","time":25.34755406,"data":"      \"h264_nvenc_present\": true,\n"}
+,{"stream_name":"stdout","time":25.347556312,"data":"      \"nvenc_help_returncode\": 0,\n"}
+,{"stream_name":"stdout","time":25.34755917,"data":"      \"nvenc_help_first_lines\": \"Encoder h264_nvenc [NVIDIA NVENC H.264 encoder]:\\n    General capabilities: dr1 delay hardware \\n    Threading capabilities: none\\n    Supported hardware devices: cuda cuda \\n    Supported pixel formats: yuv420p nv12 p010le yuv444p p016le yuv444p16le bgr0 bgra rgb0 rgba x2rgb10le x2bgr10le gbrp gbrp16le cuda\\nh264_nvenc AVOptions:\\n  -preset            \u003cint\u003e        E..V....... Set the encoding preset (from 0 to 18) (default p4)\\n     default         0            E..V....... \\n     slow            1            E..V....... hq 2 passes\\n     medium          2            E..V....... hq 1 pass\\n     fast            3            E..V....... hp 1 pass\\n     hp              4            E..V....... \\n     hq              5            E..V....... \\n     bd              6            E..V....... \\n     ll              7            E..V....... low latency\\n     llhq            8            E..V....... low latency hq\\n     llhp            9            E..V....... low latency hp\\n     lossless        10           E..V....... \\n     losslesshp      11           E..V....... \\n     p1              12           E..V....... fastest (lowest quality)\\n     p2              13           E..V....... faster (lower quality)\\n     p3              14           E..V....... fast (low quality)\\n     p4              15           E..V....... medium (default)\\n     p5              16           E..V....... slow (good quality)\\n     p6              17           E..V....... slower (better quality)\",\n"}
+,{"stream_name":"stdout","time":25.347568238,"data":"      \"configuration\": null,\n"}
+,{"stream_name":"stdout","time":25.347570858,"data":"      \"encoder_list_sha256\": \"a713d6fa85b46256874a86dc4bd185d5b7b3865193b0b32a1b446ae566e35dbf\"\n"}
+,{"stream_name":"stdout","time":25.347573326,"data":"    },\n"}
+,{"stream_name":"stdout","time":25.347575426,"data":"    \"source_generation\": {\n"}
+,{"stream_name":"stdout","time":25.347577753,"data":"      \"cmd\": \"ffmpeg -y -hide_banner -loglevel error -f lavfi -i testsrc2=size=1920x1080:rate=30:duration=10 -f lavfi -i sine=frequency=440:sample_rate=48000:duration=10 -c:v libx264 -preset ultrafast -qp 0 -pix_fmt yuv420p -c:a pcm_s16le -shortest /kaggle/working/audit/previews/p2_2_source.mp4\",\n"}
+,{"stream_name":"stdout","time":25.347580438,"data":"      \"returncode\": 0,\n"}
+,{"stream_name":"stdout","time":25.347582643,"data":"      \"duration_s\": 1.934,\n"}
+,{"stream_name":"stdout","time":25.347584832,"data":"      \"stderr\": \"\"\n"}
+,{"stream_name":"stdout","time":25.347587083,"data":"    },\n"}
+,{"stream_name":"stdout","time":25.34758917,"data":"    \"p2_2_results\": {\n"}
+,{"stream_name":"stdout","time":25.347591378,"data":"      \"libx264\": {\n"}
+,{"stream_name":"stdout","time":25.347595745,"data":"        \"name\": \"libx264\",\n"}
+,{"stream_name":"stdout","time":25.347598148,"data":"        \"cmd\": \"ffmpeg -y -hide_banner -loglevel error -f lavfi -i testsrc2=size=1920x1080:rate=30:duration=10 -f lavfi -i sine=frequency=440:sample_rate=48000:duration=10 -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p -c:a aac -b:a 128k -shortest /kaggle/working/audit/previews/p2_2_libx264.mp4\",\n"}
+,{"stream_name":"stdout","time":25.347601231,"data":"        \"returncode\": 0,\n"}
+,{"stream_name":"stdout","time":25.34760346,"data":"        \"duration_s\": 8.144,\n"}
+,{"stream_name":"stdout","time":25.34760574,"data":"        \"stderr\": \"\",\n"}
+,{"stream_name":"stdout","time":25.347607992,"data":"        \"output\": {\n"}
+,{"stream_name":"stdout","time":25.347610209,"data":"          \"path\": \"/kaggle/working/audit/previews/p2_2_libx264.mp4\",\n"}
+,{"stream_name":"stdout","time":25.347612645,"data":"          \"bytes\": 7835728,\n"}
+,{"stream_name":"stdout","time":25.34761486,"data":"          \"sha256\": \"d9964eead1370d6f4f0de533e56691ef27488c33d267761c9da4c93a735e5777\"\n"}
+,{"stream_name":"stdout","time":25.347617217,"data":"        },\n"}
+,{"stream_name":"stdout","time":25.347619387,"data":"        \"probe\": {\n"}
+,{"stream_name":"stdout","time":25.347621586,"data":"          \"streams\": [\n"}
+,{"stream_name":"stdout","time":25.347623893,"data":"            {\n"}
+,{"stream_name":"stdout","time":25.34762606,"data":"              \"index\": 0,\n"}
+,{"stream_name":"stdout","time":25.347628443,"data":"              \"codec_name\": \"h264\",\n"}
+,{"stream_name":"stdout","time":25.347630766,"data":"              \"codec_long_name\": \"H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10\",\n"}
+,{"stream_name":"stdout","time":25.347633112,"data":"              \"profile\": \"High\",\n"}
+,{"stream_name":"stdout","time":25.347635412,"data":"              \"codec_type\": \"video\",\n"}
+,{"stream_name":"stdout","time":25.347637659,"data":"              \"codec_tag_string\": \"avc1\",\n"}
+,{"stream_name":"stdout","time":25.347639965,"data":"              \"codec_tag\": \"0x31637661\",\n"}
+,{"stream_name":"stdout","time":25.347642229,"data":"              \"width\": 1920,\n"}
+,{"stream_name":"stdout","time":25.347644495,"data":"              \"height\": 1080,\n"}
+,{"stream_name":"stdout","time":25.347646681,"data":"              \"coded_width\": 1920,\n"}
+,{"stream_name":"stdout","time":25.347648906,"data":"              \"coded_height\": 1080,\n"}
+,{"stream_name":"stdout","time":25.347651097,"data":"              \"closed_captions\": 0,\n"}
+,{"stream_name":"stdout","time":25.347653351,"data":"              \"film_grain\": 0,\n"}
+,{"stream_name":"stdout","time":25.347655545,"data":"              \"has_b_frames\": 2,\n"}
+,{"stream_name":"stdout","time":25.347657781,"data":"              \"sample_aspect_ratio\": \"1:1\",\n"}
+,{"stream_name":"stdout","time":25.34766002,"data":"              \"display_aspect_ratio\": \"16:9\",\n"}
+,{"stream_name":"stdout","time":25.347662305,"data":"              \"pix_fmt\": \"yuv420p\",\n"}
+,{"stream_name":"stdout","time":25.347664591,"data":"              \"level\": 40,\n"}
+,{"stream_name":"stdout","time":25.347666791,"data":"              \"chroma_location\": \"left\",\n"}
+,{"stream_name":"stdout","time":25.347669035,"data":"              \"field_order\": \"progressive\",\n"}
+,{"stream_name":"stdout","time":25.347671339,"data":"              \"refs\": 1,\n"}
+,{"stream_name":"stdout","time":25.347673573,"data":"              \"is_avc\": \"true\",\n"}
+,{"stream_name":"stdout","time":25.347675895,"data":"              \"nal_length_size\": \"4\",\n"}
+,{"stream_name":"stdout","time":25.347680994,"data":"              \"id\": \"0x1\",\n"}
+,{"stream_name":"stdout","time":25.347683353,"data":"              \"r_frame_rate\": \"30/1\",\n"}
+,{"stream_name":"stdout","time":25.347685631,"data":"              \"avg_frame_rate\": \"30/1\",\n"}
+,{"stream_name":"stdout","time":25.347687875,"data":"              \"time_base\": \"1/15360\",\n"}
+,{"stream_name":"stdout","time":25.347690175,"data":"              \"start_pts\": 0,\n"}
+,{"stream_name":"stdout","time":25.34769238,"data":"              \"start_time\": \"0.000000\",\n"}
+,{"stream_name":"stdout","time":25.347694636,"data":"              \"duration_ts\": 153600,\n"}
+,{"stream_name":"stdout","time":25.347696856,"data":"              \"duration\": \"10.000000\",\n"}
+,{"stream_name":"stdout","time":25.347699141,"data":"              \"bit_rate\": \"6131153\",\n"}
+,{"stream_name":"stdout","time":25.347701423,"data":"              \"bits_per_raw_sample\": \"8\",\n"}
+,{"stream_name":"stdout","time":25.347703719,"data":"              \"nb_frames\": \"300\",\n"}
+,{"stream_name":"stdout","time":25.347706126,"data":"              \"extradata_size\": 48,\n"}
+,{"stream_name":"stdout","time":25.347708372,"data":"              \"disposition\": {\n"}
+,{"stream_name":"stdout","time":25.347710581,"data":"                \"default\": 1,\n"}
+,{"stream_name":"stdout","time":25.347712803,"data":"                \"dub\": 0,\n"}
+,{"stream_name":"stdout","time":25.347715026,"data":"                \"original\": 0,\n"}
+,{"stream_name":"stdout","time":25.347717245,"data":"                \"comment\": 0,\n"}
+,{"stream_name":"stdout","time":25.347719448,"data":"                \"lyrics\": 0,\n"}
+,{"stream_name":"stdout","time":25.347721695,"data":"                \"karaoke\": 0,\n"}
+,{"stream_name":"stdout","time":25.347724001,"data":"                \"forced\": 0,\n"}
+,{"stream_name":"stdout","time":25.3477263,"data":"                \"hearing_impaired\": 0,\n"}
+,{"stream_name":"stdout","time":25.347728576,"data":"                \"visual_impaired\": 0,\n"}
+,{"stream_name":"stdout","time":25.347730928,"data":"                \"clean_effects\": 0,\n"}
+,{"stream_name":"stdout","time":25.347733151,"data":"                \"attached_pic\": 0,\n"}
+,{"stream_name":"stdout","time":25.347735351,"data":"                \"timed_thumbnails\": 0,\n"}
+,{"stream_name":"stdout","time":25.347737568,"data":"                \"non_diegetic\": 0,\n"}
+,{"stream_name":"stdout","time":25.347739871,"data":"                \"captions\": 0,\n"}
+,{"stream_name":"stdout","time":25.347742103,"data":"                \"descriptions\": 0,\n"}
+,{"stream_name":"stdout","time":25.347744411,"data":"                \"metadata\": 0,\n"}
+,{"stream_name":"stdout","time":25.347746728,"data":"                \"dependent\": 0,\n"}
+,{"stream_name":"stdout","time":25.347749026,"data":"                \"still_image\": 0\n"}
+,{"stream_name":"stdout","time":25.347751272,"data":"              },\n"}
+,{"stream_name":"stdout","time":25.347753437,"data":"              \"tags\": {\n"}
+,{"stream_name":"stdout","time":25.34775568,"data":"                \"language\": \"und\",\n"}
+,{"stream_name":"stdout","time":25.347757928,"data":"                \"handler_name\": \"VideoHandler\",\n"}
+,{"stream_name":"stdout","time":25.347760206,"data":"                \"vendor_id\": \"[0][0][0][0]\",\n"}
+,{"stream_name":"stdout","time":25.347762472,"data":"                \"encoder\": \"Lavc60.31.102 libx264\"\n"}
+,{"stream_name":"stdout","time":25.347764778,"data":"              }\n"}
+,{"stream_name":"stdout","time":25.347768708,"data":"            },\n"}
+,{"stream_name":"stdout","time":25.347770938,"data":"            {\n"}
+,{"stream_name":"stdout","time":25.34777307,"data":"              \"index\": 1,\n"}
+,{"stream_name":"stdout","time":25.347775276,"data":"              \"codec_name\": \"aac\",\n"}
+,{"stream_name":"stdout","time":25.347777517,"data":"              \"codec_long_name\": \"AAC (Advanced Audio Coding)\",\n"}
+,{"stream_name":"stdout","time":25.347779841,"data":"              \"profile\": \"LC\",\n"}
+,{"stream_name":"stdout","time":25.347782223,"data":"              \"codec_type\": \"audio\",\n"}
+,{"stream_name":"stdout","time":25.347784499,"data":"              \"codec_tag_string\": \"mp4a\",\n"}
+,{"stream_name":"stdout","time":25.347786753,"data":"              \"codec_tag\": \"0x6134706d\",\n"}
+,{"stream_name":"stdout","time":25.34778902,"data":"              \"sample_fmt\": \"fltp\",\n"}
+,{"stream_name":"stdout","time":25.347791233,"data":"              \"sample_rate\": \"48000\",\n"}
+,{"stream_name":"stdout","time":25.347793495,"data":"              \"channels\": 1,\n"}
+,{"stream_name":"stdout","time":25.347795683,"data":"              \"channel_layout\": \"mono\",\n"}
+,{"stream_name":"stdout","time":25.347797936,"data":"              \"bits_per_sample\": 0,\n"}
+,{"stream_name":"stdout","time":25.347800118,"data":"              \"initial_padding\": 0,\n"}
+,{"stream_name":"stdout","time":25.347802334,"data":"              \"id\": \"0x2\",\n"}
+,{"stream_name":"stdout","time":25.347804531,"data":"              \"r_frame_rate\": \"0/0\",\n"}
+,{"stream_name":"stdout","time":25.347806775,"data":"              \"avg_frame_rate\": \"0/0\",\n"}
+,{"stream_name":"stdout","time":25.347808999,"data":"              \"time_base\": \"1/48000\",\n"}
+,{"stream_name":"stdout","time":25.347811275,"data":"              \"start_pts\": 0,\n"}
+,{"stream_name":"stdout","time":25.347813464,"data":"              \"start_time\": \"0.000000\",\n"}
+,{"stream_name":"stdout","time":25.347815988,"data":"              \"duration_ts\": 480000,\n"}
+,{"stream_name":"stdout","time":25.347818215,"data":"              \"duration\": \"10.000000\",\n"}
+,{"stream_name":"stdout","time":25.347820493,"data":"              \"bit_rate\": \"127392\",\n"}
+,{"stream_name":"stdout","time":25.347822726,"data":"              \"nb_frames\": \"470\",\n"}
+,{"stream_name":"stdout","time":25.347824988,"data":"              \"extradata_size\": 5,\n"}
+,{"stream_name":"stdout","time":25.347827188,"data":"              \"disposition\": {\n"}
+,{"stream_name":"stdout","time":25.347829414,"data":"                \"default\": 1,\n"}
+,{"stream_name":"stdout","time":25.347831602,"data":"                \"dub\": 0,\n"}
+,{"stream_name":"stdout","time":25.347833919,"data":"                \"original\": 0,\n"}
+,{"stream_name":"stdout","time":25.347836146,"data":"                \"comment\": 0,\n"}
+,{"stream_name":"stdout","time":25.347838327,"data":"                \"lyrics\": 0,\n"}
+,{"stream_name":"stdout","time":25.347840537,"data":"                \"karaoke\": 0,\n"}
+,{"stream_name":"stdout","time":25.347842715,"data":"                \"forced\": 0,\n"}
+,{"stream_name":"stdout","time":25.347844935,"data":"                \"hearing_impaired\": 0,\n"}
+,{"stream_name":"stdout","time":25.347847136,"data":"                \"visual_impaired\": 0,\n"}
+,{"stream_name":"stdout","time":25.347849372,"data":"                \"clean_effects\": 0,\n"}
+,{"stream_name":"stdout","time":25.347851555,"data":"                \"attached_pic\": 0,\n"}
+,{"stream_name":"stdout","time":25.347855628,"data":"                \"timed_thumbnails\": 0,\n"}
+,{"stream_name":"stdout","time":25.34785792,"data":"                \"non_diegetic\": 0,\n"}
+,{"stream_name":"stdout","time":25.347860291,"data":"                \"captions\": 0,\n"}
+,{"stream_name":"stdout","time":25.347862496,"data":"                \"descriptions\": 0,\n"}
+,{"stream_name":"stdout","time":25.347864676,"data":"                \"metadata\": 0,\n"}
+,{"stream_name":"stdout","time":25.347866886,"data":"                \"dependent\": 0,\n"}
+,{"stream_name":"stdout","time":25.347869083,"data":"                \"still_image\": 0\n"}
+,{"stream_name":"stdout","time":25.347871318,"data":"              },\n"}
+,{"stream_name":"stdout","time":25.347873451,"data":"              \"tags\": {\n"}
+,{"stream_name":"stdout","time":25.347875662,"data":"                \"language\": \"und\",\n"}
+,{"stream_name":"stdout","time":25.347877891,"data":"                \"handler_name\": \"SoundHandler\",\n"}
+,{"stream_name":"stdout","time":25.347880161,"data":"                \"vendor_id\": \"[0][0][0][0]\"\n"}
+,{"stream_name":"stdout","time":25.347882416,"data":"              }\n"}
+,{"stream_name":"stdout","time":25.347884568,"data":"            }\n"}
+,{"stream_name":"stdout","time":25.347886696,"data":"          ],\n"}
+,{"stream_name":"stdout","time":25.347888833,"data":"          \"format\": {\n"}
+,{"stream_name":"stdout","time":25.347891056,"data":"            \"filename\": \"/kaggle/working/audit/previews/p2_2_libx264.mp4\",\n"}
+,{"stream_name":"stdout","time":25.347893378,"data":"            \"nb_streams\": 2,\n"}
+,{"stream_name":"stdout","time":25.347895601,"data":"            \"nb_programs\": 0,\n"}
+,{"stream_name":"stdout","time":25.347897846,"data":"            \"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\",\n"}
+,{"stream_name":"stdout","time":25.347900141,"data":"            \"format_long_name\": \"QuickTime / MOV\",\n"}
+,{"stream_name":"stdout","time":25.347902451,"data":"            \"start_time\": \"0.000000\",\n"}
+,{"stream_name":"stdout","time":25.347905406,"data":"            \"duration\": \"10.000000\",\n"}
+,{"stream_name":"stdout","time":25.347907713,"data":"            \"size\": \"7835728\",\n"}
+,{"stream_name":"stdout","time":25.347910056,"data":"            \"bit_rate\": \"6268582\",\n"}
+,{"stream_name":"stdout","time":25.347912306,"data":"            \"probe_score\": 100,\n"}
+,{"stream_name":"stdout","time":25.34791464,"data":"            \"tags\": {\n"}
+,{"stream_name":"stdout","time":25.347916838,"data":"              \"major_brand\": \"isom\",\n"}
+,{"stream_name":"stdout","time":25.347919105,"data":"              \"minor_version\": \"512\",\n"}
+,{"stream_name":"stdout","time":25.34792138,"data":"              \"compatible_brands\": \"isomiso2avc1mp41\",\n"}
+,{"stream_name":"stdout","time":25.347924325,"data":"              \"encoder\": \"Lavf60.16.100\"\n"}
+,{"stream_name":"stdout","time":25.347943331,"data":"            }\n"}
+,{"stream_name":"stdout","time":25.347946678,"data":"          }\n"}
+,{"stream_name":"stdout","time":25.347950178,"data":"        },\n"}
+,{"stream_name":"stdout","time":25.347953517,"data":"        \"decode\": {\n"}
+,{"stream_name":"stdout","time":25.34795722,"data":"          \"returncode\": 0,\n"}
+,{"stream_name":"stdout","time":25.347960844,"data":"          \"stderr\": \"\",\n"}
+,{"stream_name":"stdout","time":25.34796409,"data":"          \"clean\": true\n"}
+,{"stream_name":"stdout","time":25.347967468,"data":"        },\n"}
+,{"stream_name":"stdout","time":25.347971606,"data":"        \"checks\": {\n"}
+,{"stream_name":"stdout","time":25.348007436,"data":"          \"video_codec\": \"h264\",\n"}
+,{"stream_name":"stdout","time":25.348017461,"data":"          \"width\": 1920,\n"}
+,{"stream_name":"stdout","time":25.348019854,"data":"          \"height\": 1080,\n"}
+,{"stream_name":"stdout","time":25.348022115,"data":"          \"avg_frame_rate\": \"30/1\",\n"}
+,{"stream_name":"stdout","time":25.348024512,"data":"          \"nb_frames\": \"300\",\n"}
+,{"stream_name":"stdout","time":25.348026812,"data":"          \"pix_fmt\": \"yuv420p\",\n"}
+,{"stream_name":"stdout","time":25.348029115,"data":"          \"audio_codec\": \"aac\",\n"}
+,{"stream_name":"stdout","time":25.348031435,"data":"          \"sample_rate\": \"48000\",\n"}
+,{"stream_name":"stdout","time":25.348034098,"data":"          \"duration_s\": 10.0,\n"}
+,{"stream_name":"stdout","time":25.348036435,"data":"          \"valid_10s_1080p30\": true\n"}
+,{"stream_name":"stdout","time":25.348038763,"data":"        },\n"}
+,{"stream_name":"stdout","time":25.34804093,"data":"        \"pass\": true\n"}
+,{"stream_name":"stdout","time":25.348043275,"data":"      },\n"}
+,{"stream_name":"stdout","time":25.348045464,"data":"      \"h264_nvenc\": {\n"}
+,{"stream_name":"stdout","time":25.348047717,"data":"        \"name\": \"h264_nvenc\",\n"}
+,{"stream_name":"stdout","time":25.348050069,"data":"        \"cmd\": \"ffmpeg -y -hide_banner -loglevel error -f lavfi -i testsrc2=size=1920x1080:rate=30:duration=10 -f lavfi -i sine=frequency=440:sample_rate=48000:duration=10 -c:v h264_nvenc -preset p4 -rc vbr -cq 23 -b:v 0 -pix_fmt yuv420p -c:a aac -b:a 128k -shortest /kaggle/working/audit/previews/p2_2_h264_nvenc.mp4\",\n"}
+,{"stream_name":"stdout","time":25.348052965,"data":"        \"returncode\": 0,\n"}
+,{"stream_name":"stdout","time":25.348055223,"data":"        \"duration_s\": 1.739,\n"}
+,{"stream_name":"stdout","time":25.348057487,"data":"        \"stderr\": \"\",\n"}
+,{"stream_name":"stdout","time":25.348059745,"data":"        \"output\": {\n"}
+,{"stream_name":"stdout","time":25.348062076,"data":"          \"path\": \"/kaggle/working/audit/previews/p2_2_h264_nvenc.mp4\",\n"}
+,{"stream_name":"stdout","time":25.348064443,"data":"          \"bytes\": 13857612,\n"}
+,{"stream_name":"stdout","time":25.348066734,"data":"          \"sha256\": \"e0d94ed5e745d10c6484b3dd762cc55aa19b2ef1b0de3b99cba08d9b23c8b8b9\"\n"}
+,{"stream_name":"stdout","time":25.348069121,"data":"        },\n"}
+,{"stream_name":"stdout","time":25.348071265,"data":"        \"probe\": {\n"}
+,{"stream_name":"stdout","time":25.348073502,"data":"          \"streams\": [\n"}
+,{"stream_name":"stdout","time":25.348075939,"data":"            {\n"}
+,{"stream_name":"stdout","time":25.348078158,"data":"              \"index\": 0,\n"}
+,{"stream_name":"stdout","time":25.34808047,"data":"              \"codec_name\": \"h264\",\n"}
+,{"stream_name":"stdout","time":25.348082795,"data":"              \"codec_long_name\": \"H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10\",\n"}
+,{"stream_name":"stdout","time":25.348085205,"data":"              \"profile\": \"Main\",\n"}
+,{"stream_name":"stdout","time":25.348087513,"data":"              \"codec_type\": \"video\",\n"}
+,{"stream_name":"stdout","time":25.348089819,"data":"              \"codec_tag_string\": \"avc1\",\n"}
+,{"stream_name":"stdout","time":25.348092155,"data":"              \"codec_tag\": \"0x31637661\",\n"}
+,{"stream_name":"stdout","time":25.348094471,"data":"              \"width\": 1920,\n"}
+,{"stream_name":"stdout","time":25.348096734,"data":"              \"height\": 1080,\n"}
+,{"stream_name":"stdout","time":25.348101278,"data":"              \"coded_width\": 1920,\n"}
+,{"stream_name":"stdout","time":25.348103587,"data":"              \"coded_height\": 1080,\n"}
+,{"stream_name":"stdout","time":25.348105858,"data":"              \"closed_captions\": 0,\n"}
+,{"stream_name":"stdout","time":25.348108129,"data":"              \"film_grain\": 0,\n"}
+,{"stream_name":"stdout","time":25.34811041,"data":"              \"has_b_frames\": 2,\n"}
+,{"stream_name":"stdout","time":25.34811267,"data":"              \"sample_aspect_ratio\": \"1:1\",\n"}
+,{"stream_name":"stdout","time":25.348114986,"data":"              \"display_aspect_ratio\": \"16:9\",\n"}
+,{"stream_name":"stdout","time":25.348117428,"data":"              \"pix_fmt\": \"yuv420p\",\n"}
+,{"stream_name":"stdout","time":25.348119748,"data":"              \"level\": 40,\n"}
+,{"stream_name":"stdout","time":25.348121991,"data":"              \"chroma_location\": \"left\",\n"}
+,{"stream_name":"stdout","time":25.348124296,"data":"              \"field_order\": \"progressive\",\n"}
+,{"stream_name":"stdout","time":25.348126623,"data":"              \"refs\": 1,\n"}
+,{"stream_name":"stdout","time":25.348128893,"data":"              \"is_avc\": \"true\",\n"}
+,{"stream_name":"stdout","time":25.348131172,"data":"              \"nal_length_size\": \"4\",\n"}
+,{"stream_name":"stdout","time":25.34813347,"data":"              \"id\": \"0x1\",\n"}
+,{"stream_name":"stdout","time":25.348135757,"data":"              \"r_frame_rate\": \"30/1\",\n"}
+,{"stream_name":"stdout","time":25.348138051,"data":"              \"avg_frame_rate\": \"30/1\",\n"}
+,{"stream_name":"stdout","time":25.348140355,"data":"              \"time_base\": \"1/15360\",\n"}
+,{"stream_name":"stdout","time":25.348142674,"data":"              \"start_pts\": 0,\n"}
+,{"stream_name":"stdout","time":25.34814492,"data":"              \"start_time\": \"0.000000\",\n"}
+,{"stream_name":"stdout","time":25.348147226,"data":"              \"duration_ts\": 153600,\n"}
+,{"stream_name":"stdout","time":25.348149479,"data":"              \"duration\": \"10.000000\",\n"}
+,{"stream_name":"stdout","time":25.348151793,"data":"              \"bit_rate\": \"10948478\",\n"}
+,{"stream_name":"stdout","time":25.34815415,"data":"              \"bits_per_raw_sample\": \"8\",\n"}
+,{"stream_name":"stdout","time":25.348156709,"data":"              \"nb_frames\": \"300\",\n"}
+,{"stream_name":"stdout","time":25.348159063,"data":"              \"extradata_size\": 52,\n"}
+,{"stream_name":"stdout","time":25.348161357,"data":"              \"disposition\": {\n"}
+,{"stream_name":"stdout","time":25.348163625,"data":"                \"default\": 1,\n"}
+,{"stream_name":"stdout","time":25.348165854,"data":"                \"dub\": 0,\n"}
+,{"stream_name":"stdout","time":25.34816811,"data":"                \"original\": 0,\n"}
+,{"stream_name":"stdout","time":25.348170505,"data":"                \"comment\": 0,\n"}
+,{"stream_name":"stdout","time":25.348172801,"data":"                \"lyrics\": 0,\n"}
+,{"stream_name":"stdout","time":25.348175043,"data":"                \"karaoke\": 0,\n"}
+,{"stream_name":"stdout","time":25.348177301,"data":"                \"forced\": 0,\n"}
+,{"stream_name":"stdout","time":25.348179561,"data":"                \"hearing_impaired\": 0,\n"}
+,{"stream_name":"stdout","time":25.348181875,"data":"                \"visual_impaired\": 0,\n"}
+,{"stream_name":"stdout","time":25.348184161,"data":"                \"clean_effects\": 0,\n"}
+,{"stream_name":"stdout","time":25.348186421,"data":"                \"attached_pic\": 0,\n"}
+,{"stream_name":"stdout","time":25.34818871,"data":"                \"timed_thumbnails\": 0,\n"}
+,{"stream_name":"stdout","time":25.348199815,"data":"                \"non_diegetic\": 0,\n"}
+,{"stream_name":"stdout","time":25.348202191,"data":"                \"captions\": 0,\n"}
+,{"stream_name":"stdout","time":25.348204441,"data":"                \"descriptions\": 0,\n"}
+,{"stream_name":"stdout","time":25.34820671,"data":"                \"metadata\": 0,\n"}
+,{"stream_name":"stdout","time":25.34820899,"data":"                \"dependent\": 0,\n"}
+,{"stream_name":"stdout","time":25.348211255,"data":"                \"still_image\": 0\n"}
+,{"stream_name":"stdout","time":25.348213532,"data":"              },\n"}
+,{"stream_name":"stdout","time":25.348215746,"data":"              \"tags\": {\n"}
+,{"stream_name":"stdout","time":25.348218,"data":"                \"language\": \"und\",\n"}
+,{"stream_name":"stdout","time":25.34822031,"data":"                \"handler_name\": \"VideoHandler\",\n"}
+,{"stream_name":"stdout","time":25.348222617,"data":"                \"vendor_id\": \"[0][0][0][0]\",\n"}
+,{"stream_name":"stdout","time":25.348224924,"data":"                \"encoder\": \"Lavc60.31.102 h264_nvenc\"\n"}
+,{"stream_name":"stdout","time":25.348227305,"data":"              }\n"}
+,{"stream_name":"stdout","time":25.348229512,"data":"            },\n"}
+,{"stream_name":"stdout","time":25.348231715,"data":"            {\n"}
+,{"stream_name":"stdout","time":25.348233915,"data":"              \"index\": 1,\n"}
+,{"stream_name":"stdout","time":25.348236206,"data":"              \"codec_name\": \"aac\",\n"}
+,{"stream_name":"stdout","time":25.348238505,"data":"              \"codec_long_name\": \"AAC (Advanced Audio Coding)\",\n"}
+,{"stream_name":"stdout","time":25.348240912,"data":"              \"profile\": \"LC\",\n"}
+,{"stream_name":"stdout","time":25.348243216,"data":"              \"codec_type\": \"audio\",\n"}
+,{"stream_name":"stdout","time":25.348245533,"data":"              \"codec_tag_string\": \"mp4a\",\n"}
+,{"stream_name":"stdout","time":25.348247844,"data":"              \"codec_tag\": \"0x6134706d\",\n"}
+,{"stream_name":"stdout","time":25.348250165,"data":"              \"sample_fmt\": \"fltp\",\n"}
+,{"stream_name":"stdout","time":25.348252466,"data":"              \"sample_rate\": \"48000\",\n"}
+,{"stream_name":"stdout","time":25.348254773,"data":"              \"channels\": 1,\n"}
+,{"stream_name":"stdout","time":25.348257029,"data":"              \"channel_layout\": \"mono\",\n"}
+,{"stream_name":"stdout","time":25.34825933,"data":"              \"bits_per_sample\": 0,\n"}
+,{"stream_name":"stdout","time":25.348261602,"data":"              \"initial_padding\": 0,\n"}
+,{"stream_name":"stdout","time":25.348264052,"data":"              \"id\": \"0x2\",\n"}
+,{"stream_name":"stdout","time":25.348266335,"data":"              \"r_frame_rate\": \"0/0\",\n"}
+,{"stream_name":"stdout","time":25.348268636,"data":"              \"avg_frame_rate\": \"0/0\",\n"}
+,{"stream_name":"stdout","time":25.348270933,"data":"              \"time_base\": \"1/48000\",\n"}
+,{"stream_name":"stdout","time":25.348273318,"data":"              \"start_pts\": 0,\n"}
+,{"stream_name":"stdout","time":25.34827575,"data":"              \"start_time\": \"0.000000\",\n"}
+,{"stream_name":"stdout","time":25.348278059,"data":"              \"duration_ts\": 480000,\n"}
+,{"stream_name":"stdout","time":25.348280352,"data":"              \"duration\": \"10.000000\",\n"}
+,{"stream_name":"stdout","time":25.34828266,"data":"              \"bit_rate\": \"127392\",\n"}
+,{"stream_name":"stdout","time":25.348285006,"data":"              \"nb_frames\": \"470\",\n"}
+,{"stream_name":"stdout","time":25.348289278,"data":"              \"extradata_size\": 5,\n"}
+,{"stream_name":"stdout","time":25.348291626,"data":"              \"disposition\": {\n"}
+,{"stream_name":"stdout","time":25.348293903,"data":"                \"default\": 1,\n"}
+,{"stream_name":"stdout","time":25.348296181,"data":"                \"dub\": 0,\n"}
+,{"stream_name":"stdout","time":25.348298455,"data":"                \"original\": 0,\n"}
+,{"stream_name":"stdout","time":25.348300711,"data":"                \"comment\": 0,\n"}
+,{"stream_name":"stdout","time":25.348302956,"data":"                \"lyrics\": 0,\n"}
+,{"stream_name":"stdout","time":25.348305211,"data":"                \"karaoke\": 0,\n"}
+,{"stream_name":"stdout","time":25.348307946,"data":"                \"forced\": 0,\n"}
+,{"stream_name":"stdout","time":25.348310241,"data":"                \"hearing_impaired\": 0,\n"}
+,{"stream_name":"stdout","time":25.348312534,"data":"                \"visual_impaired\": 0,\n"}
+,{"stream_name":"stdout","time":25.34831482,"data":"                \"clean_effects\": 0,\n"}
+,{"stream_name":"stdout","time":25.348317107,"data":"                \"attached_pic\": 0,\n"}
+,{"stream_name":"stdout","time":25.348319419,"data":"                \"timed_thumbnails\": 0,\n"}
+,{"stream_name":"stdout","time":25.348321696,"data":"                \"non_diegetic\": 0,\n"}
+,{"stream_name":"stdout","time":25.348323961,"data":"                \"captions\": 0,\n"}
+,{"stream_name":"stdout","time":25.34832619,"data":"                \"descriptions\": 0,\n"}
+,{"stream_name":"stdout","time":25.348328456,"data":"                \"metadata\": 0,\n"}
+,{"stream_name":"stdout","time":25.348330709,"data":"                \"dependent\": 0,\n"}
+,{"stream_name":"stdout","time":25.348332973,"data":"                \"still_image\": 0\n"}
+,{"stream_name":"stdout","time":25.348335261,"data":"              },\n"}
+,{"stream_name":"stdout","time":25.348337461,"data":"              \"tags\": {\n"}
+,{"stream_name":"stdout","time":25.348339724,"data":"                \"language\": \"und\",\n"}
+,{"stream_name":"stdout","time":25.34834203,"data":"                \"handler_name\": \"SoundHandler\",\n"}
+,{"stream_name":"stdout","time":25.348344325,"data":"                \"vendor_id\": \"[0][0][0][0]\"\n"}
+,{"stream_name":"stdout","time":25.348346656,"data":"              }\n"}
+,{"stream_name":"stdout","time":25.348348861,"data":"            }\n"}
+,{"stream_name":"stdout","time":25.348351048,"data":"          ],\n"}
+,{"stream_name":"stdout","time":25.348353215,"data":"          \"format\": {\n"}
+,{"stream_name":"stdout","time":25.348355466,"data":"            \"filename\": \"/kaggle/working/audit/previews/p2_2_h264_nvenc.mp4\",\n"}
+,{"stream_name":"stdout","time":25.348357877,"data":"            \"nb_streams\": 2,\n"}
+,{"stream_name":"stdout","time":25.348360235,"data":"            \"nb_programs\": 0,\n"}
+,{"stream_name":"stdout","time":25.348362488,"data":"            \"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\",\n"}
+,{"stream_name":"stdout","time":25.348364827,"data":"            \"format_long_name\": \"QuickTime / MOV\",\n"}
+,{"stream_name":"stdout","time":25.348367167,"data":"            \"start_time\": \"0.000000\",\n"}
+,{"stream_name":"stdout","time":25.348369481,"data":"            \"duration\": \"10.000000\",\n"}
+,{"stream_name":"stdout","time":25.348371811,"data":"            \"size\": \"13857612\",\n"}
+,{"stream_name":"stdout","time":25.348374216,"data":"            \"bit_rate\": \"11086089\",\n"}
+,{"stream_name":"stdout","time":25.348378256,"data":"            \"probe_score\": 100,\n"}
+,{"stream_name":"stdout","time":25.348380575,"data":"            \"tags\": {\n"}
+,{"stream_name":"stdout","time":25.348382849,"data":"              \"major_brand\": \"isom\",\n"}
+,{"stream_name":"stdout","time":25.348385194,"data":"              \"minor_version\": \"512\",\n"}
+,{"stream_name":"stdout","time":25.348387515,"data":"              \"compatible_brands\": \"isomiso2avc1mp41\",\n"}
+,{"stream_name":"stdout","time":25.348389866,"data":"              \"encoder\": \"Lavf60.16.100\"\n"}
+,{"stream_name":"stdout","time":25.348392233,"data":"            }\n"}
+,{"stream_name":"stdout","time":25.348394438,"data":"          }\n"}
+,{"stream_name":"stdout","time":25.34839661,"data":"        },\n"}
+,{"stream_name":"stdout","time":25.348398794,"data":"        \"decode\": {\n"}
+,{"stream_name":"stdout","time":25.348401013,"data":"          \"returncode\": 0,\n"}
+,{"stream_name":"stdout","time":25.348403293,"data":"          \"stderr\": \"\",\n"}
+,{"stream_name":"stdout","time":25.348405576,"data":"          \"clean\": true\n"}
+,{"stream_name":"stdout","time":25.348407831,"data":"        },\n"}
+,{"stream_name":"stdout","time":25.348410006,"data":"        \"checks\": {\n"}
+,{"stream_name":"stdout","time":25.348412263,"data":"          \"video_codec\": \"h264\",\n"}
+,{"stream_name":"stdout","time":25.34841457,"data":"          \"width\": 1920,\n"}
+,{"stream_name":"stdout","time":25.348416825,"data":"          \"height\": 1080,\n"}
+,{"stream_name":"stdout","time":25.348419117,"data":"          \"avg_frame_rate\": \"30/1\",\n"}
+,{"stream_name":"stdout","time":25.348421437,"data":"          \"nb_frames\": \"300\",\n"}
+,{"stream_name":"stdout","time":25.34842379,"data":"          \"duration_s\": 10.0\n"}
+,{"stream_name":"stdout","time":25.348426079,"data":"        },\n"}
+,{"stream_name":"stdout","time":25.348428268,"data":"        \"pass\": true\n"}
+,{"stream_name":"stdout","time":25.348430513,"data":"      },\n"}
+,{"stream_name":"stdout","time":25.348432695,"data":"      \"nvenc_tested\": true,\n"}
+,{"stream_name":"stdout","time":25.348434985,"data":"      \"note\": \"libx264 PASS does not imply NVENC PASS\"\n"}
+,{"stream_name":"stdout","time":25.348437339,"data":"    },\n"}
+,{"stream_name":"stdout","time":25.348439495,"data":"    \"environment_after\": {\n"}
+,{"stream_name":"stdout","time":25.348441822,"data":"      \"utc_timestamp\": \"2026-11-13T04:06:06Z\",\n"}
+,{"stream_name":"stdout","time":25.348444174,"data":"      \"torch\": {\n"}
+,{"stream_name":"stdout","time":25.348446453,"data":"        \"version\": \"2.11.0+cu130\",\n"}
+,{"stream_name":"stdout","time":25.348448801,"data":"        \"cuda_available\": true,\n"}
+,{"stream_name":"stdout","time":25.348451078,"data":"        \"device_count\": 2,\n"}
+,{"stream_name":"stdout","time":25.34845352,"data":"        \"devices\": [\n"}
+,{"stream_name":"stdout","time":25.34845578,"data":"          {\n"}
+,{"stream_name":"stdout","time":25.348457963,"data":"            \"index\": 0,\n"}
+,{"stream_name":"stdout","time":25.348460248,"data":"            \"name\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":25.348462546,"data":"            \"total_memory_mib\": 14911,\n"}
+,{"stream_name":"stdout","time":25.348465143,"data":"            \"compute_capability\": \"7.5\",\n"}
+,{"stream_name":"stdout","time":25.348467485,"data":"            \"multi_processor_count\": 40,\n"}
+,{"stream_name":"stdout","time":25.348469793,"data":"            \"free_memory_mib\": 14806,\n"}
+,{"stream_name":"stdout","time":25.348473748,"data":"            \"total_memory_mib_reported\": 14911\n"}
+,{"stream_name":"stdout","time":25.348476123,"data":"          },\n"}
+,{"stream_name":"stdout","time":25.348478316,"data":"          {\n"}
+,{"stream_name":"stdout","time":25.34848049,"data":"            \"index\": 1,\n"}
+,{"stream_name":"stdout","time":25.348482761,"data":"            \"name\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":25.348485074,"data":"            \"total_memory_mib\": 14911,\n"}
+,{"stream_name":"stdout","time":25.34848735,"data":"            \"compute_capability\": \"7.5\",\n"}
+,{"stream_name":"stdout","time":25.348489693,"data":"            \"multi_processor_count\": 40,\n"}
+,{"stream_name":"stdout","time":25.348491986,"data":"            \"free_memory_mib\": 14806,\n"}
+,{"stream_name":"stdout","time":25.348494258,"data":"            \"total_memory_mib_reported\": 14911\n"}
+,{"stream_name":"stdout","time":25.34849656,"data":"          }\n"}
+,{"stream_name":"stdout","time":25.348498745,"data":"        ]\n"}
+,{"stream_name":"stdout","time":25.348500921,"data":"      },\n"}
+,{"stream_name":"stdout","time":25.348503076,"data":"      \"network_check\": [\n"}
+,{"stream_name":"stdout","time":25.348505333,"data":"        {\n"}
+,{"stream_name":"stdout","time":25.348507546,"data":"          \"host\": \"huggingface.co\",\n"}
+,{"stream_name":"stdout","time":25.34850985,"data":"          \"port\": 443,\n"}
+,{"stream_name":"stdout","time":25.348512114,"data":"          \"reachable\": true,\n"}
+,{"stream_name":"stdout","time":25.348514374,"data":"          \"latency_s\": 0.012\n"}
+,{"stream_name":"stdout","time":25.348516652,"data":"        },\n"}
+,{"stream_name":"stdout","time":25.34851883,"data":"        {\n"}
+,{"stream_name":"stdout","time":25.348520996,"data":"          \"host\": \"pypi.org\",\n"}
+,{"stream_name":"stdout","time":25.348523284,"data":"          \"port\": 443,\n"}
+,{"stream_name":"stdout","time":25.348525523,"data":"          \"reachable\": true,\n"}
+,{"stream_name":"stdout","time":25.348527767,"data":"          \"latency_s\": 0.036\n"}
+,{"stream_name":"stdout","time":25.348530006,"data":"        },\n"}
+,{"stream_name":"stdout","time":25.348532176,"data":"        {\n"}
+,{"stream_name":"stdout","time":25.348534341,"data":"          \"host\": \"github.com\",\n"}
+,{"stream_name":"stdout","time":25.348536635,"data":"          \"port\": 443,\n"}
+,{"stream_name":"stdout","time":25.348538877,"data":"          \"reachable\": true,\n"}
+,{"stream_name":"stdout","time":25.348541113,"data":"          \"latency_s\": 0.041\n"}
+,{"stream_name":"stdout","time":25.34854336,"data":"        }\n"}
+,{"stream_name":"stdout","time":25.348545543,"data":"      ],\n"}
+,{"stream_name":"stdout","time":25.348547868,"data":"      \"disk_usage\": {\n"}
+,{"stream_name":"stdout","time":25.348550151,"data":"        \"working_free_gib\": 19.441619873046875\n"}
+,{"stream_name":"stdout","time":25.348552515,"data":"      },\n"}
+,{"stream_name":"stdout","time":25.348554655,"data":"      \"working_dir_size\": {\n"}
+,{"stream_name":"stdout","time":25.348556938,"data":"        \"path\": \"/kaggle/working/audit/logs/kaggle\",\n"}
+,{"stream_name":"stdout","time":25.348559294,"data":"        \"exists\": true,\n"}
+,{"stream_name":"stdout","time":25.348561528,"data":"        \"bytes\": 66969,\n"}
+,{"stream_name":"stdout","time":25.348564913,"data":"        \"files\": 2\n"}
+,{"stream_name":"stdout","time":25.348567216,"data":"      }\n"}
+,{"stream_name":"stdout","time":25.348569477,"data":"    }\n"}
+,{"stream_name":"stdout","time":25.348573502,"data":"  },\n"}
+,{"stream_name":"stdout","time":25.348575732,"data":"  \"helper\": {\n"}
+,{"stream_name":"stdout","time":25.34857802,"data":"    \"path\": \"/kaggle/working/audit/scripts/kaggle_environment_snapshot.py\",\n"}
+,{"stream_name":"stdout","time":25.348580492,"data":"    \"embedded_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":25.348582922,"data":"    \"actual_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":25.348585449,"data":"    \"match\": true\n"}
+,{"stream_name":"stdout","time":25.3485877,"data":"  },\n"}
+,{"stream_name":"stdout","time":25.348589906,"data":"  \"utc_end\": \"2026-11-13T04:06:07Z\",\n"}
+,{"stream_name":"stdout","time":25.348592319,"data":"  \"wall_seconds\": 24.642,\n"}
+,{"stream_name":"stdout","time":25.348594599,"data":"  \"nvenc_status\": \"PASS\",\n"}
+,{"stream_name":"stdout","time":25.348596926,"data":"  \"libx264_status\": \"PASS\"\n"}
+,{"stream_name":"stdout","time":25.34859925,"data":"}\n"}
+,{"stream_name":"stderr","time":29.596807216,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":29.596838626,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":29.838743044,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":29.838773144,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":30.612226167,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":31.52936735,"data":"[NbConvertApp] Writing 345926 bytes to __results__.html\n"}
+]

@@ -1,0 +1,195 @@
+{
+  "code": {
+    "license_fetch_status": "OK",
+    "license_file": {
+      "bytes": 1519,
+      "path": "audit/licenses/real-esrgan-x4plus/LICENSE-code.txt",
+      "sha256": "4a699ec4863d96a91fc265948a0c90033f7e8735d515524dcf3444736406e0c2"
+    },
+    "readme_file": {
+      "bytes": 16548,
+      "path": "audit/licenses/real-esrgan-x4plus/MODEL_CARD.md",
+      "sha256": "d0a13607913ea94e65a91ac864b969683a41a45b0aec16e0ae64271649d0364d"
+    },
+    "ref": "HEAD",
+    "revision": "a4abfb2979a7bbff3f69f58f58ae324608821e27",
+    "type": "github",
+    "url": "https://github.com/xinntao/Real-ESRGAN"
+  },
+  "component": "real-esrgan-x4plus",
+  "extra": {
+    "release_assets": {
+      "assets": [
+        {
+          "name": "realesr-animevideov3.pth",
+          "size": 2504012,
+          "tag": "v0.2.5.0",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-animevideov3.pth"
+        },
+        {
+          "name": "realesr-general-wdn-x4v3.pth",
+          "size": 4885111,
+          "tag": "v0.2.5.0",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-general-wdn-x4v3.pth"
+        },
+        {
+          "name": "realesr-general-x4v3.pth",
+          "size": 4885111,
+          "tag": "v0.2.5.0",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-general-x4v3.pth"
+        },
+        {
+          "name": "realesrgan-ncnn-vulkan-20220424-macos.zip",
+          "size": 51817124,
+          "tag": "v0.2.5.0",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-macos.zip"
+        },
+        {
+          "name": "realesrgan-ncnn-vulkan-20220424-ubuntu.zip",
+          "size": 46931474,
+          "tag": "v0.2.5.0",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-ubuntu.zip"
+        },
+        {
+          "name": "realesrgan-ncnn-vulkan-20220424-windows.zip",
+          "size": 45474481,
+          "tag": "v0.2.5.0",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-windows.zip"
+        },
+        {
+          "name": "realesrgan-ncnn-vulkan-20211212-macos.zip",
+          "size": 80633283,
+          "tag": "v0.2.3.0",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.3.0/realesrgan-ncnn-vulkan-20211212-macos.zip"
+        },
+        {
+          "name": "realesrgan-ncnn-vulkan-20211212-ubuntu.zip",
+          "size": 75808207,
+          "tag": "v0.2.3.0",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.3.0/realesrgan-ncnn-vulkan-20211212-ubuntu.zip"
+        },
+        {
+          "name": "realesrgan-ncnn-vulkan-20211212-windows.zip",
+          "size": 74718979,
+          "tag": "v0.2.3.0",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.3.0/realesrgan-ncnn-vulkan-20211212-windows.zip"
+        },
+        {
+          "name": "RealESRGANv2-animevideo-xsx2.pth",
+          "size": 2419014,
+          "tag": "v0.2.3.0",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.3.0/RealESRGANv2-animevideo-xsx2.pth"
+        },
+        {
+          "name": "RealESRGANv2-animevideo-xsx4.pth",
+          "size": 2502086,
+          "tag": "v0.2.3.0",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.3.0/RealESRGANv2-animevideo-xsx4.pth"
+        },
+        {
+          "name": "realesrgan-ncnn-vulkan-20210901-macos.zip",
+          "size": 77876124,
+          "tag": "v0.2.2.4",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/realesrgan-ncnn-vulkan-20210901-macos.zip"
+        },
+        {
+          "name": "realesrgan-ncnn-vulkan-20210901-ubuntu.zip",
+          "size": 73032251,
+          "tag": "v0.2.2.4",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/realesrgan-ncnn-vulkan-20210901-ubuntu.zip"
+        },
+        {
+          "name": "realesrgan-ncnn-vulkan-20210901-windows.zip",
+          "size": 72158466,
+          "tag": "v0.2.2.4",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/realesrgan-ncnn-vulkan-20210901-windows.zip"
+        },
+        {
+          "name": "RealESRGAN_x4plus_anime_6B.pth",
+          "size": 17938799,
+          "tag": "v0.2.2.4",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth"
+        },
+        {
+          "name": "RealESRGAN_x4plus_anime_6B_netD.pth",
+          "size": 17588267,
+          "tag": "v0.2.2.4",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B_netD.pth"
+        },
+        {
+          "name": "RealESRGAN_x2plus_netD.pth",
+          "size": 17588267,
+          "tag": "v0.2.2.3",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.3/RealESRGAN_x2plus_netD.pth"
+        },
+        {
+          "name": "RealESRGAN_x4plus_netD.pth",
+          "size": 17587089,
+          "tag": "v0.2.2.3",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.3/RealESRGAN_x4plus_netD.pth"
+        },
+        {
+          "name": "RealESRGAN_x2plus.pth",
+          "size": 67061725,
+          "tag": "v0.2.1",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.1/RealESRGAN_x2plus.pth"
+        },
+        {
+          "name": "realesrgan-ncnn-vulkan-20210801-macos.zip",
+          "size": 100520343,
+          "tag": "v0.1.2",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.2/realesrgan-ncnn-vulkan-20210801-macos.zip"
+        },
+        {
+          "name": "realesrgan-ncnn-vulkan-20210801-ubuntu.zip",
+          "size": 95676473,
+          "tag": "v0.1.2",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.2/realesrgan-ncnn-vulkan-20210801-ubuntu.zip"
+        },
+        {
+          "name": "realesrgan-ncnn-vulkan-20210801-windows.zip",
+          "size": 94619217,
+          "tag": "v0.1.2",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.2/realesrgan-ncnn-vulkan-20210801-windows.zip"
+        },
+        {
+          "name": "ESRGAN_SRx4_DF2KOST_official-ff704c30.pth",
+          "size": 66922040,
+          "tag": "v0.1.1",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.1/ESRGAN_SRx4_DF2KOST_official-ff704c30.pth"
+        },
+        {
+          "name": "RealESRGAN-ncnn-vulkan-20210725-windows.zip",
+          "size": 95377523,
+          "tag": "v0.1.1",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.1/RealESRGAN-ncnn-vulkan-20210725-windows.zip"
+        },
+        {
+          "name": "RealESRNet_x4plus.pth",
+          "size": 67040989,
+          "tag": "v0.1.1",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.1/RealESRNet_x4plus.pth"
+        },
+        {
+          "name": "RealESRGAN-ncnn-vulkan.zip",
+          "size": 33330489,
+          "tag": "v0.1.0",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN-ncnn-vulkan.zip"
+        },
+        {
+          "name": "RealESRGAN_x4plus.pth",
+          "size": 67040989,
+          "tag": "v0.1.0",
+          "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth"
+        }
+      ],
+      "http": 200
+    }
+  },
+  "license_status": "FAIL",
+  "retrieved_utc": "2026-11-13T04:17:27Z",
+  "weights": {
+    "note": "no model repository resolved",
+    "type": "NONE"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "code": {
+    "license_fetch_status": "OK",
+    "license_file": {
+      "bytes": 11357,
+      "path": "audit/licenses/flux2-klein-4b/LICENSE-code.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "readme_file": {
+      "bytes": 8466,
+      "path": "audit/licenses/flux2-klein-4b/MODEL_CARD.md",
+      "sha256": "435753749320bbb395c15983e63e3dc73936c03f0f1870c628e7bf922c55eef7"
+    },
+    "ref": "HEAD",
+    "revision": "50fe5162777813d869182b139e83b10743caef15",
+    "type": "github",
+    "url": "https://github.com/black-forest-labs/flux2"
+  },
+  "component": "flux2-klein-4b",
+  "extra": {},
+  "license_status": "PASS",
+  "retrieved_utc": "2026-11-13T04:17:35Z",
+  "weights": {
+    "api_license": "apache-2.0",
+    "cardData_license": "apache-2.0",
+    "files": [
+      {
+        "bytes": 9991,
+        "path": "audit/licenses/flux2-klein-4b/MODEL_CARD.md",
+        "sha256": "bd447051cf2db4bf67b992e563d89c35ebf1123f009c063361a222ab14e1c4f7"
+      }
+    ],
+    "gated": false,
+    "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+    "type": "huggingface",
+    "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B",
+    "weight_sha256": null,
+    "weights_downloaded": false
+  }
+}

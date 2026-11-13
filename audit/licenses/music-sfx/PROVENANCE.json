@@ -1,0 +1,17 @@
+{
+  "code": {
+    "note": "assets selected in Phase 8 (Stage D); none downloaded in Stage A",
+    "type": "NONE"
+  },
+  "component": "music-sfx",
+  "extra": {
+    "reason": "no asset selected yet; Phase 8 requires cleared YouTube Audio Library / Sonniss GDC assets",
+    "status": "NOT TESTED"
+  },
+  "license_status": "NOT TESTED",
+  "retrieved_utc": "2026-11-13T04:17:48Z",
+  "weights": {
+    "note": "no model repository resolved",
+    "type": "NONE"
+  }
+}

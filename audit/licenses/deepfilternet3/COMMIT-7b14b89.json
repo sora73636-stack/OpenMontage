@@ -1,0 +1,101 @@
+{
+  "sha": "7b14b895fe7fc42cab72b4a4c1e49c982bd6404b",
+  "node_id": "C_kwDOGMZlTtoAKDdiMTRiODk1ZmU3ZmM0MmNhYjcyYjRhNGMxZTQ5Yzk4MmJkNjQwNGI",
+  "commit": {
+    "author": {
+      "name": "Hendrik Schr\u00f6ter",
+      "email": "16517898+Rikorose@users.noreply.github.com",
+      "date": "2026-11-06T06:21:50Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-11-06T06:21:50Z"
+    },
+    "message": "Update license section to include model weights\n\nClarified that model weights are also dual-licensed.",
+    "tree": {
+      "sha": "d456957462c298ed68cb19e228fdf3f507f9fea4",
+      "url": "https://api.github.com/repos/Rikorose/DeepFilterNet/git/trees/d456957462c298ed68cb19e228fdf3f507f9fea4"
+    },
+    "url": "https://api.github.com/repos/Rikorose/DeepFilterNet/git/commits/7b14b895fe7fc42cab72b4a4c1e49c982bd6404b",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq7XH+CRC1aQ7uu5UhlAAA/B8QALCwW5QvsH8RprKa9Z+nOh7G\nZ159UdX4/ewduz8V+KLc0zDe4l/Ku2xTHw05MB/CmZ9NV1nmyX1B3R2an5FNd3Gp\ntJnEUpXu+Bd7nldSg5cX2chc0JtlKCTVXUfkdhZ7Um7aZPwasvzWNhN0DRdyWQSS\nJ16BPetcpNhdY32ywLbrwY500p2PTjV2nL4qfK/qxRm0XXwOjQ7w2j+1dL0054HT\ngnXDwuijImSk5iIdHxG6NhEStdxMxdAnFgzQOzYP/2kqImCElL5YFOJ9jUQ+zfIr\nD/Hi+aj4QD2QgeQPcTd3jQnBzFsOVoH60qe0Js6Ylp/Igkvm31rQ3T00abm2dw+8\nARGDDNgcdl0IbyzWy0LndCgABIDD3Eqici9yjUAfxmSK6MSft7EyPEDgJJMy8QT7\nvmPH3XnfxoEUoFvRnZW8G7DokogrGxNNloirOvtA7h+I2Q+ymkcPZ7E2W0U5UXQr\nZ/U/6WHbVXboQJ5DEBpOkX84FMvox5yDkHdwesQf0pdhWZjYHlISPVoXDHlojj1B\nON4PJNzm35hJ/nTktXiihw84K7xzs5sE2jYdmahKZ//A4jBVSXwtLWTccxJzb6gh\n6LQV2VL29zwoRuZY7KMCoWcAvbGbC4fJVHUw3igFO9ApUuF1OSaAk/PYVCIEcnZO\nHSbBIuhYNLaztseyChxP\n=ICHJ\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree d456957462c298ed68cb19e228fdf3f507f9fea4\nparent d375b2d8309e0935d165700c91da9de862a99c31\nauthor Hendrik Schr\u00f6ter <16517898+Rikorose@users.noreply.github.com> 1793946110 +0100\ncommitter GitHub <noreply@github.com> 1793946110 +0100\n\nUpdate license section to include model weights\n\nClarified that model weights are also dual-licensed.",
+      "verified_at": "2026-11-06T06:21:50Z"
+    }
+  },
+  "url": "https://api.github.com/repos/Rikorose/DeepFilterNet/commits/7b14b895fe7fc42cab72b4a4c1e49c982bd6404b",
+  "html_url": "https://github.com/Rikorose/DeepFilterNet/commit/7b14b895fe7fc42cab72b4a4c1e49c982bd6404b",
+  "comments_url": "https://api.github.com/repos/Rikorose/DeepFilterNet/commits/7b14b895fe7fc42cab72b4a4c1e49c982bd6404b/comments",
+  "author": {
+    "login": "Rikorose",
+    "id": 16517898,
+    "node_id": "MDQ6VXNlcjE2NTE3ODk4",
+    "avatar_url": "https://avatars.githubusercontent.com/u/16517898?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Rikorose",
+    "html_url": "https://github.com/Rikorose",
+    "followers_url": "https://api.github.com/users/Rikorose/followers",
+    "following_url": "https://api.github.com/users/Rikorose/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Rikorose/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Rikorose/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Rikorose/subscriptions",
+    "organizations_url": "https://api.github.com/users/Rikorose/orgs",
+    "repos_url": "https://api.github.com/users/Rikorose/repos",
+    "events_url": "https://api.github.com/users/Rikorose/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Rikorose/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "d375b2d8309e0935d165700c91da9de862a99c31",
+      "url": "https://api.github.com/repos/Rikorose/DeepFilterNet/commits/d375b2d8309e0935d165700c91da9de862a99c31",
+      "html_url": "https://github.com/Rikorose/DeepFilterNet/commit/d375b2d8309e0935d165700c91da9de862a99c31"
+    }
+  ],
+  "stats": {
+    "total": 2,
+    "additions": 1,
+    "deletions": 1
+  },
+  "files": [
+    {
+      "sha": "ebbeefba153ea0636b8484b1bd37e989514ca72f",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/Rikorose/DeepFilterNet/blob/7b14b895fe7fc42cab72b4a4c1e49c982bd6404b/README.md",
+      "raw_url": "https://github.com/Rikorose/DeepFilterNet/raw/7b14b895fe7fc42cab72b4a4c1e49c982bd6404b/README.md",
+      "contents_url": "https://api.github.com/repos/Rikorose/DeepFilterNet/contents/README.md?ref=7b14b895fe7fc42cab72b4a4c1e49c982bd6404b",
+      "patch": "@@ -322,7 +322,7 @@ If you use the multi-frame beamforming algorithms. please cite *Deep Multi-Frame\n \n ## License\n \n-DeepFilterNet is free and open source! All code in this repository is dual-licensed under either:\n+DeepFilterNet is free and open source! All code and model weights in this repository are dual-licensed under either:\n \n * MIT License ([LICENSE-MIT](LICENSE-MIT) or [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT))\n * Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0))"
+    }
+  ]
+}

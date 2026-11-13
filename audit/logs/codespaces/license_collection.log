@@ -1,0 +1,56 @@
+2026-11-13T04:16:22Z license collection start
+2026-11-13T04:16:24Z cosyvoice3: github FunAudioLLM/CosyVoice@074ca6dc9e80 license=MISSING
+2026-11-13T04:16:26Z ltx-video-2b-0.9.5: github Lightricks/LTX-Video@50f0aef12975 license=MISSING
+2026-11-13T04:16:28Z practical-rife-4.25: github hzwer/Practical-RIFE@bbfd2ea90910 license=MISSING
+2026-11-13T04:16:30Z real-esrgan-x4plus: github xinntao/Real-ESRGAN@a4abfb2979a7 license=MISSING
+2026-11-13T04:16:32Z kokoro-82m: github hexgrad/kokoro@dfb907a02bba license=MISSING
+2026-11-13T04:16:34Z whisper-large-v3-turbo: github openai/whisper@86098128c0b4 license=MISSING
+2026-11-13T04:16:36Z parakeet-tdt-0.6b-v3: github NVIDIA/NeMo@079e48770098 license=MISSING
+2026-11-13T04:16:38Z deepfilternet3: github Rikorose/DeepFilterNet@7b14b895fe7f license=MISSING
+2026-11-13T04:16:41Z wan2.1-t2v-1.3b: github Wan-Video/Wan2.1@9737cba9c1c3 license=MISSING
+2026-11-13T04:16:43Z depth-anything-v2-small: github LiheYoung/Depth-Anything@1d03336771fe license=MISSING
+2026-11-13T04:16:45Z video-depth-anything-small: github DepthAnything/Video-Depth-Anything@4f5ae23172ba license=MISSING
+2026-11-13T04:16:45Z sdxl-base-1.0: BLOCKED resolving revision (remote: Repository not found.
+fatal: repository 'https://github.com/stabilityai/generative-models/' not found)
+2026-11-13T04:16:47Z depthflow: github BrokenSource/DepthFlow@4d002b49f0ee license=MISSING
+2026-11-13T04:16:49Z manim-ce-0.22.1: github ManimCommunity/manim@16ea443e2a5f license=MISSING
+2026-11-13T04:16:51Z ffmpeg-6.1.1: github FFmpeg/FFmpeg@6f4048827982 license=MISSING
+2026-11-13T04:16:52Z cosyvoice3: hf FunAudioLLM/Fun-CosyVoice3-0.5B-2512@29e01c4e8d00 license=apache-2.0 files=1
+2026-11-13T04:16:53Z ltx-video-2b-0.9.5: hf Lightricks/LTX-Video-0.9.5@e58e28c39631 license=other files=1
+2026-11-13T04:16:53Z flux2-klein-4b: hf black-forest-labs/FLUX.2-klein-4B@e7b7dc27f91d license=apache-2.0 files=1
+2026-11-13T04:16:54Z kokoro-82m: hf hexgrad/Kokoro-82M@f3ff3571791e license=apache-2.0 files=1
+2026-11-13T04:16:54Z whisper-large-v3-turbo: hf openai/whisper-large-v3-turbo@41f01f3fe87f license=mit files=1
+2026-11-13T04:16:55Z parakeet-tdt-0.6b-v3: hf nvidia/parakeet-tdt-0.6b-v3@541d1f99c6b0 license=cc-by-4.0 files=1
+2026-11-13T04:16:56Z wan2.1-t2v-1.3b: hf Wan-AI/Wan2.1-T2V-1.3B@37ec512624d6 license=apache-2.0 files=2
+2026-11-13T04:16:56Z depth-anything-v2-small: hf depth-anything/Depth-Anything-V2-Small@03876f8651c7 license=apache-2.0 files=1
+2026-11-13T04:16:57Z video-depth-anything-small: hf depth-anything/Video-Depth-Anything-Small@256875362cff license=apache-2.0 files=1
+2026-11-13T04:16:58Z sdxl-base-1.0: hf stabilityai/stable-diffusion-xl-base-1.0@462165984030 license=openrail++ files=1
+2026-11-13T04:16:59Z license collection done: 18 records -> /workspaces/OpenMontage/audit/licenses/INDEX.json
+2026-11-13T04:17:24Z license collection start
+2026-11-13T04:17:25Z cosyvoice3: github FunAudioLLM/CosyVoice@074ca6dc9e80 license=OK
+2026-11-13T04:17:25Z ltx-video-2b-0.9.5: github Lightricks/LTX-Video@50f0aef12975 license=OK
+2026-11-13T04:17:26Z practical-rife-4.25: github hzwer/Practical-RIFE@bbfd2ea90910 license=OK
+2026-11-13T04:17:27Z real-esrgan-x4plus: github xinntao/Real-ESRGAN@a4abfb2979a7 license=OK
+2026-11-13T04:17:28Z kokoro-82m: github hexgrad/kokoro@dfb907a02bba license=OK
+2026-11-13T04:17:28Z whisper-large-v3-turbo: github openai/whisper@86098128c0b4 license=OK
+2026-11-13T04:17:29Z parakeet-tdt-0.6b-v3: github NVIDIA/NeMo@079e48770098 license=OK
+2026-11-13T04:17:30Z deepfilternet3: github Rikorose/DeepFilterNet@7b14b895fe7f license=OK
+2026-11-13T04:17:31Z wan2.1-t2v-1.3b: github Wan-Video/Wan2.1@9737cba9c1c3 license=OK
+2026-11-13T04:17:32Z depth-anything-v2-small: github LiheYoung/Depth-Anything@1d03336771fe license=OK
+2026-11-13T04:17:33Z video-depth-anything-small: github DepthAnything/Video-Depth-Anything@4f5ae23172ba license=OK
+2026-11-13T04:17:34Z sdxl-base-1.0: github Stability-AI/generative-models@e8cd657656fa license=OK
+2026-11-13T04:17:35Z flux2-klein-4b: github black-forest-labs/flux2@50fe51627778 license=OK
+2026-11-13T04:17:37Z depthflow: github BrokenSource/DepthFlow@4d002b49f0ee license=MISSING
+2026-11-13T04:17:38Z manim-ce-0.22.1: github ManimCommunity/manim@16ea443e2a5f license=OK
+2026-11-13T04:17:40Z ffmpeg-6.1.1: github FFmpeg/FFmpeg@6f4048827982 license=MISSING
+2026-11-13T04:17:41Z cosyvoice3: hf FunAudioLLM/Fun-CosyVoice3-0.5B-2512@29e01c4e8d00 license=apache-2.0 files=1
+2026-11-13T04:17:42Z ltx-video-2b-0.9.5: hf Lightricks/LTX-Video-0.9.5@e58e28c39631 license=other files=1
+2026-11-13T04:17:42Z flux2-klein-4b: hf black-forest-labs/FLUX.2-klein-4B@e7b7dc27f91d license=apache-2.0 files=1
+2026-11-13T04:17:43Z kokoro-82m: hf hexgrad/Kokoro-82M@f3ff3571791e license=apache-2.0 files=1
+2026-11-13T04:17:44Z whisper-large-v3-turbo: hf openai/whisper-large-v3-turbo@41f01f3fe87f license=mit files=1
+2026-11-13T04:17:44Z parakeet-tdt-0.6b-v3: hf nvidia/parakeet-tdt-0.6b-v3@541d1f99c6b0 license=cc-by-4.0 files=1
+2026-11-13T04:17:45Z wan2.1-t2v-1.3b: hf Wan-AI/Wan2.1-T2V-1.3B@37ec512624d6 license=apache-2.0 files=2
+2026-11-13T04:17:46Z depth-anything-v2-small: hf depth-anything/Depth-Anything-V2-Small@03876f8651c7 license=apache-2.0 files=1
+2026-11-13T04:17:46Z video-depth-anything-small: hf depth-anything/Video-Depth-Anything-Small@256875362cff license=apache-2.0 files=1
+2026-11-13T04:17:47Z sdxl-base-1.0: hf stabilityai/stable-diffusion-xl-base-1.0@462165984030 license=openrail++ files=1
+2026-11-13T04:17:48Z license collection done: 18 records -> /workspaces/OpenMontage/audit/licenses/INDEX.json

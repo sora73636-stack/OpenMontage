@@ -1,0 +1,45 @@
+{
+  "code": {
+    "license_fetch_status": "OK",
+    "license_file": {
+      "bytes": 11357,
+      "path": "audit/licenses/wan2.1-t2v-1.3b/LICENSE-code.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "readme_file": {
+      "bytes": 43823,
+      "path": "audit/licenses/wan2.1-t2v-1.3b/MODEL_CARD.md",
+      "sha256": "3bdaca69aa116222a49859dc21d4a735b60a580af7e1b81531085c87227e4486"
+    },
+    "ref": "HEAD",
+    "revision": "9737cba9c1c3c4d04b33fcad41c111989865d315",
+    "type": "github",
+    "url": "https://github.com/Wan-Video/Wan2.1"
+  },
+  "component": "wan2.1-t2v-1.3b",
+  "extra": {},
+  "license_status": "PASS",
+  "retrieved_utc": "2026-11-13T04:17:31Z",
+  "weights": {
+    "api_license": "apache-2.0",
+    "cardData_license": "apache-2.0",
+    "files": [
+      {
+        "bytes": 16913,
+        "path": "audit/licenses/wan2.1-t2v-1.3b/MODEL_CARD.md",
+        "sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119"
+      },
+      {
+        "bytes": 11357,
+        "path": "audit/licenses/wan2.1-t2v-1.3b/LICENSE.txt",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    ],
+    "gated": false,
+    "revision": "37ec512624d61f7aa208f7ea8140a131f93afc9a",
+    "type": "huggingface",
+    "url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B",
+    "weight_sha256": null,
+    "weights_downloaded": false
+  }
+}

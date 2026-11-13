@@ -1,0 +1,137 @@
+{
+  "components": [
+    {
+      "code_revision": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+      "code_url": "https://github.com/FunAudioLLM/CosyVoice",
+      "component": "cosyvoice3",
+      "weights_revision": "29e01c4e8d000f4bcd70751be16fa94bf3d85a18",
+      "weights_url": "https://huggingface.co/FunAudioLLM/Fun-CosyVoice3-0.5B-2512"
+    },
+    {
+      "code_revision": null,
+      "code_url": null,
+      "component": "cosyvoice3-reference-voice",
+      "weights_revision": null,
+      "weights_url": null
+    },
+    {
+      "code_revision": "7b14b895fe7fc42cab72b4a4c1e49c982bd6404b",
+      "code_url": "https://github.com/Rikorose/DeepFilterNet",
+      "component": "deepfilternet3",
+      "weights_revision": null,
+      "weights_url": null
+    },
+    {
+      "code_revision": "1d03336771fe09c5398ffdd211441e33941a97dc",
+      "code_url": "https://github.com/LiheYoung/Depth-Anything",
+      "component": "depth-anything-v2-small",
+      "weights_revision": "03876f8651c73a60fe4c2c48294e09fcb6838fcf",
+      "weights_url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Small"
+    },
+    {
+      "code_revision": "4d002b49f0ee2172d38fac93dcbc50c487e12301",
+      "code_url": "https://github.com/BrokenSource/DepthFlow",
+      "component": "depthflow",
+      "weights_revision": null,
+      "weights_url": null
+    },
+    {
+      "code_revision": "6f4048827982a8f48f71f551a6e1ed2362816eec",
+      "code_url": "https://github.com/FFmpeg/FFmpeg",
+      "component": "ffmpeg-6.1.1",
+      "weights_revision": null,
+      "weights_url": null
+    },
+    {
+      "code_revision": "50fe5162777813d869182b139e83b10743caef15",
+      "code_url": "https://github.com/black-forest-labs/flux2",
+      "component": "flux2-klein-4b",
+      "weights_revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+      "weights_url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B"
+    },
+    {
+      "code_revision": "dfb907a02bba8152ca444717ca5d78747ccb4bec",
+      "code_url": "https://github.com/hexgrad/kokoro",
+      "component": "kokoro-82m",
+      "weights_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "weights_url": "https://huggingface.co/hexgrad/Kokoro-82M"
+    },
+    {
+      "code_revision": "50f0aef1297574a4b29acbdb874e3a363a6d5f2e",
+      "code_url": "https://github.com/Lightricks/LTX-Video",
+      "component": "ltx-video-2b-0.9.5",
+      "weights_revision": "e58e28c39631af4d1468ee57a853764e11c1d37e",
+      "weights_url": "https://huggingface.co/Lightricks/LTX-Video-0.9.5"
+    },
+    {
+      "code_revision": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+      "code_url": "https://github.com/ManimCommunity/manim",
+      "component": "manim-ce-0.22.1",
+      "weights_revision": null,
+      "weights_url": null
+    },
+    {
+      "code_revision": null,
+      "code_url": null,
+      "component": "music-sfx",
+      "weights_revision": null,
+      "weights_url": null
+    },
+    {
+      "code_revision": "079e48770098a4cffcf542a4bc974cafc84502a3",
+      "code_url": "https://github.com/NVIDIA/NeMo",
+      "component": "parakeet-tdt-0.6b-v3",
+      "weights_revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+      "weights_url": "https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3"
+    },
+    {
+      "code_revision": "bbfd2ea90910789a860ea3e2b32a240cd577b75e",
+      "code_url": "https://github.com/hzwer/Practical-RIFE",
+      "component": "practical-rife-4.25",
+      "weights_revision": null,
+      "weights_url": null
+    },
+    {
+      "code_revision": "a4abfb2979a7bbff3f69f58f58ae324608821e27",
+      "code_url": "https://github.com/xinntao/Real-ESRGAN",
+      "component": "real-esrgan-x4plus",
+      "weights_revision": null,
+      "weights_url": null
+    },
+    {
+      "code_revision": "e8cd657656fa5d61688191730d0e03242bf4ed44",
+      "code_url": "https://github.com/Stability-AI/generative-models",
+      "component": "sdxl-base-1.0",
+      "weights_revision": "462165984030d82259a11f4367a4eed129e94a7b",
+      "weights_url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0"
+    },
+    {
+      "code_revision": "4f5ae23172ba60fd7bc11ef671cca678842c7072",
+      "code_url": "https://github.com/DepthAnything/Video-Depth-Anything",
+      "component": "video-depth-anything-small",
+      "weights_revision": "256875362cff76724b920335dfb4b29dd611f66e",
+      "weights_url": "https://huggingface.co/depth-anything/Video-Depth-Anything-Small"
+    },
+    {
+      "code_revision": "9737cba9c1c3c4d04b33fcad41c111989865d315",
+      "code_url": "https://github.com/Wan-Video/Wan2.1",
+      "component": "wan2.1-t2v-1.3b",
+      "weights_revision": "37ec512624d61f7aa208f7ea8140a131f93afc9a",
+      "weights_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B"
+    },
+    {
+      "code_revision": "86098128c0b4f24f0e2aa2994de830614b474227",
+      "code_url": "https://github.com/openai/whisper",
+      "component": "whisper-large-v3-turbo",
+      "weights_revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9",
+      "weights_url": "https://huggingface.co/openai/whisper-large-v3-turbo"
+    }
+  ],
+  "decision_document": {
+    "found": false,
+    "path": null,
+    "search": "find . -maxdepth 5 -iname '*FINAL_PRODUCTION_DECISION*' -o -iname '*production*decision*' -> no matches; git rev-list --all --objects -> no matches",
+    "sha256": null
+  },
+  "generated_utc": "2026-11-13T04:21:09Z"
+}

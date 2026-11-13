@@ -1,0 +1,40 @@
+{
+  "code": {
+    "license_fetch_status": "OK",
+    "license_file": {
+      "bytes": 11357,
+      "path": "audit/licenses/cosyvoice3/LICENSE-code.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "readme_file": {
+      "bytes": 13764,
+      "path": "audit/licenses/cosyvoice3/MODEL_CARD.md",
+      "sha256": "66436370172c2830ed98aa643b31898c65e16eee14ade68f00828d21fae602e0"
+    },
+    "ref": "HEAD",
+    "revision": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+    "type": "github",
+    "url": "https://github.com/FunAudioLLM/CosyVoice"
+  },
+  "component": "cosyvoice3",
+  "extra": {},
+  "license_status": "PASS",
+  "retrieved_utc": "2026-11-13T04:17:25Z",
+  "weights": {
+    "api_license": "apache-2.0",
+    "cardData_license": "apache-2.0",
+    "files": [
+      {
+        "bytes": 11982,
+        "path": "audit/licenses/cosyvoice3/MODEL_CARD.md",
+        "sha256": "d4ec0fe1342b60a424ce1cd8971c670d26be38068a96148bcb6a1b8a334c3088"
+      }
+    ],
+    "gated": false,
+    "revision": "29e01c4e8d000f4bcd70751be16fa94bf3d85a18",
+    "type": "huggingface",
+    "url": "https://huggingface.co/FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+    "weight_sha256": null,
+    "weights_downloaded": false
+  }
+}

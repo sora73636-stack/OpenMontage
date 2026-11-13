@@ -1,0 +1,19 @@
+{
+  "code": {
+    "license_fetch_status": "NO LICENSE FILE AT TOP LEVEL",
+    "license_file": null,
+    "readme_file": null,
+    "ref": "HEAD",
+    "revision": "4d002b49f0ee2172d38fac93dcbc50c487e12301",
+    "type": "github",
+    "url": "https://github.com/BrokenSource/DepthFlow"
+  },
+  "component": "depthflow",
+  "extra": {},
+  "license_status": "BLOCKED",
+  "retrieved_utc": "2026-11-13T04:17:37Z",
+  "weights": {
+    "note": "no model repository resolved",
+    "type": "NONE"
+  }
+}

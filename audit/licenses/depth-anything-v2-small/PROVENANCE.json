@@ -1,0 +1,40 @@
+{
+  "code": {
+    "license_fetch_status": "OK",
+    "license_file": {
+      "bytes": 11357,
+      "path": "audit/licenses/depth-anything-v2-small/LICENSE-code.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "readme_file": {
+      "bytes": 14821,
+      "path": "audit/licenses/depth-anything-v2-small/MODEL_CARD.md",
+      "sha256": "d097dcf1318266f3b75cd22d31453fc88bbd3231ec88984b92c7ca9361c4701b"
+    },
+    "ref": "HEAD",
+    "revision": "1d03336771fe09c5398ffdd211441e33941a97dc",
+    "type": "github",
+    "url": "https://github.com/LiheYoung/Depth-Anything"
+  },
+  "component": "depth-anything-v2-small",
+  "extra": {},
+  "license_status": "PASS",
+  "retrieved_utc": "2026-11-13T04:17:32Z",
+  "weights": {
+    "api_license": "apache-2.0",
+    "cardData_license": "apache-2.0",
+    "files": [
+      {
+        "bytes": 1958,
+        "path": "audit/licenses/depth-anything-v2-small/MODEL_CARD.md",
+        "sha256": "d96b19c959007126110b199a7c2e9c24530b61796a26f1af035420625a10f916"
+      }
+    ],
+    "gated": false,
+    "revision": "03876f8651c73a60fe4c2c48294e09fcb6838fcf",
+    "type": "huggingface",
+    "url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Small",
+    "weight_sha256": null,
+    "weights_downloaded": false
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "code": {
+    "license_fetch_status": "OK",
+    "license_file": {
+      "bytes": 1063,
+      "path": "audit/licenses/whisper-large-v3-turbo/LICENSE-code.txt",
+      "sha256": "b5d65a59060e68c4ff940e1eddfa6f94b2d68fdf58ed7f4dd57721c997e35e9d"
+    },
+    "readme_file": {
+      "bytes": 8246,
+      "path": "audit/licenses/whisper-large-v3-turbo/MODEL_CARD.md",
+      "sha256": "38c180c2a8d8ba628a3e131ad42bf06c8a51bb681efb30fbe28d5a0f4b65f288"
+    },
+    "ref": "HEAD",
+    "revision": "86098128c0b4f24f0e2aa2994de830614b474227",
+    "type": "github",
+    "url": "https://github.com/openai/whisper"
+  },
+  "component": "whisper-large-v3-turbo",
+  "extra": {},
+  "license_status": "PASS",
+  "retrieved_utc": "2026-11-13T04:17:28Z",
+  "weights": {
+    "api_license": "mit",
+    "cardData_license": "mit",
+    "files": [
+      {
+        "bytes": 21196,
+        "path": "audit/licenses/whisper-large-v3-turbo/MODEL_CARD.md",
+        "sha256": "aaef74a740faca90fa1899c4233ebe17f2093b9846d0acf16d9131bf650e9585"
+      }
+    ],
+    "gated": false,
+    "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9",
+    "type": "huggingface",
+    "url": "https://huggingface.co/openai/whisper-large-v3-turbo",
+    "weight_sha256": null,
+    "weights_downloaded": false
+  }
+}

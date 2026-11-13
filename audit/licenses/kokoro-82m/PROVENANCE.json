@@ -1,0 +1,40 @@
+{
+  "code": {
+    "license_fetch_status": "OK",
+    "license_file": {
+      "bytes": 11357,
+      "path": "audit/licenses/kokoro-82m/LICENSE-code.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "readme_file": {
+      "bytes": 8355,
+      "path": "audit/licenses/kokoro-82m/MODEL_CARD.md",
+      "sha256": "b50b84220668f8247a2405b249c34c7083acc24114279ff1429fd79f46a2c04b"
+    },
+    "ref": "HEAD",
+    "revision": "dfb907a02bba8152ca444717ca5d78747ccb4bec",
+    "type": "github",
+    "url": "https://github.com/hexgrad/kokoro"
+  },
+  "component": "kokoro-82m",
+  "extra": {},
+  "license_status": "PASS",
+  "retrieved_utc": "2026-11-13T04:17:28Z",
+  "weights": {
+    "api_license": "apache-2.0",
+    "cardData_license": "apache-2.0",
+    "files": [
+      {
+        "bytes": 6348,
+        "path": "audit/licenses/kokoro-82m/MODEL_CARD.md",
+        "sha256": "91dcabced89db6f109b8786642f50402d3ee87450e8189589b6f85520e7f4d78"
+      }
+    ],
+    "gated": false,
+    "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+    "type": "huggingface",
+    "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+    "weight_sha256": null,
+    "weights_downloaded": false
+  }
+}

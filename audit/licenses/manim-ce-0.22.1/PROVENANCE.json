@@ -1,0 +1,27 @@
+{
+  "code": {
+    "license_fetch_status": "OK",
+    "license_file": {
+      "bytes": 1072,
+      "path": "audit/licenses/manim-ce-0.22.1/LICENSE-code.txt",
+      "sha256": "c6a922fc1cfaed7ac0f87aa1dc77ebf5a3c8d1ccc5ab01da33153f0d013bf019"
+    },
+    "readme_file": {
+      "bytes": 8378,
+      "path": "audit/licenses/manim-ce-0.22.1/MODEL_CARD.md",
+      "sha256": "41cac8aeb33a726c1b0a70d10233ee06d9cd73c6df0bace8145637d75c5fc283"
+    },
+    "ref": "refs/tags/v0.22.1",
+    "revision": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "type": "github",
+    "url": "https://github.com/ManimCommunity/manim"
+  },
+  "component": "manim-ce-0.22.1",
+  "extra": {},
+  "license_status": "PASS",
+  "retrieved_utc": "2026-11-13T04:17:38Z",
+  "weights": {
+    "note": "no model repository resolved",
+    "type": "NONE"
+  }
+}

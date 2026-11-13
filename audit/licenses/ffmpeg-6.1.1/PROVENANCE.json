@@ -1,0 +1,19 @@
+{
+  "code": {
+    "license_fetch_status": "NO LICENSE FILE AT TOP LEVEL",
+    "license_file": null,
+    "readme_file": null,
+    "ref": "refs/tags/n6.1.1",
+    "revision": "6f4048827982a8f48f71f551a6e1ed2362816eec",
+    "type": "github",
+    "url": "https://github.com/FFmpeg/FFmpeg"
+  },
+  "component": "ffmpeg-6.1.1",
+  "extra": {},
+  "license_status": "PASS",
+  "retrieved_utc": "2026-11-13T04:17:40Z",
+  "weights": {
+    "note": "no model repository resolved",
+    "type": "NONE"
+  }
+}

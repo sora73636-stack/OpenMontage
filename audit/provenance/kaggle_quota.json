@@ -1,0 +1,30 @@
+{
+  "account_quota_note": "Kaggle CLI 2.2.5 exposes no quota endpoint; remaining quota must be read in the account UI. Not verified here.",
+  "account_quota_visible": false,
+  "allocated_gpus": 2,
+  "campaign_total_gpu_hours_estimate": 0.020082,
+  "generated_utc": "2026-11-13T04:21:09Z",
+  "official_source": [
+    {
+      "quote": "You can use up to a quota limit per week of GPU. The quota resets weekly and is 30 hours or sometimes higher depending on demand and resources",
+      "retrieval": "live page body blocked by reCAPTCHA (HTTP 200 challenge); quote captured from search index of the same official URL",
+      "url": "https://www.kaggle.com/docs/efficient-gpu-usage"
+    },
+    {
+      "quote": "12 hours execution time for CPU and GPU notebook sessions and 9 hours for TPU notebook sessions; 20 Gigabytes of auto-saved disk space (/kaggle/working); T4 x2 GPU Specifications: 2 Nvidia Tesla T4 GPUs, 4 CPU cores, 29 Gigabytes of RAM",
+      "retrieval": "live page body blocked by reCAPTCHA; quote captured from search index of the same official URL",
+      "url": "https://www.kaggle.com/docs/notebooks"
+    },
+    {
+      "quote": "1 hour of Notebook runtime in the 2xT4 setup only consumes 1 hour of your GPU quota, even though you had access to two (Kaggle Staff)",
+      "retrieval": "search index",
+      "url": "https://www.kaggle.com/discussions/product-feedback/361104"
+    }
+  ],
+  "planning_ceiling_hours_per_week": 30,
+  "quota_accounted_hours_estimate": 0.010041,
+  "quota_accounted_note": "Official staff statement: 2xT4 consumes 1 quota-hour per wall hour. Upper bound (wall x GPUs) is the conservative estimate.",
+  "safety_stop_hours": 24,
+  "stage_a_wall_seconds": 36.147,
+  "upper_bound_gpu_hours": 0.020082
+}

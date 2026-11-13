@@ -1,0 +1,17 @@
+{
+  "code": {
+    "note": "no canonical code repository resolved",
+    "type": "NONE"
+  },
+  "component": "cosyvoice3-reference-voice",
+  "extra": {
+    "reason": "no cleared reference recording available; Phase 6.5 requires user/CC0/CC-BY or approved synthetic voice",
+    "status": "BLOCKED"
+  },
+  "license_status": "BLOCKED",
+  "retrieved_utc": "2026-11-13T04:17:48Z",
+  "weights": {
+    "note": "no model repository resolved",
+    "type": "NONE"
+  }
+}

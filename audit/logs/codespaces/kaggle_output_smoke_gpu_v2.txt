@@ -1,0 +1,49 @@
+Downloading environment_snapshot_after.json to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle
+  0%|          | 0.00/40.3k [00:00<?, ?B/s]100%|██████████| 40.3k/40.3k [00:00<00:00, 676kB/s]
+
+Output file downloaded to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle/environment_snapshot_after.json
+Downloading environment_snapshot_after.txt to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle
+  0%|          | 0.00/25.1k [00:00<?, ?B/s]100%|██████████| 25.1k/25.1k [00:00<00:00, 773kB/s]
+
+Output file downloaded to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle/environment_snapshot_after.txt
+Downloading environment_snapshot_before.json to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle
+  0%|          | 0.00/40.3k [00:00<?, ?B/s]100%|██████████| 40.3k/40.3k [00:00<00:00, 628kB/s]
+
+Output file downloaded to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle/environment_snapshot_before.json
+Downloading environment_snapshot_before.txt to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle
+  0%|          | 0.00/25.1k [00:00<?, ?B/s]100%|██████████| 25.1k/25.1k [00:00<00:00, 780kB/s]
+
+Output file downloaded to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle/environment_snapshot_before.txt
+Downloading p2_2_h264_nvenc_nvidia_smi.csv to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle
+  0%|          | 0.00/609 [00:00<?, ?B/s]100%|██████████| 609/609 [00:00<00:00, 3.66MB/s]
+
+Output file downloaded to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle/p2_2_h264_nvenc_nvidia_smi.csv
+Downloading stage_a_summary.json to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle
+  0%|          | 0.00/18.4k [00:00<?, ?B/s]100%|██████████| 18.4k/18.4k [00:00<00:00, 968kB/s]
+
+Output file downloaded to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle/stage_a_summary.json
+Downloading stage_a_summary.txt to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle
+  0%|          | 0.00/18.4k [00:00<?, ?B/s]100%|██████████| 18.4k/18.4k [00:00<00:00, 761kB/s]
+
+Output file downloaded to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/logs/kaggle/stage_a_summary.txt
+Downloading p2_2_h264_nvenc.mp4 to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/previews
+  0%|          | 0.00/13.2M [00:00<?, ?B/s]  8%|▊         | 1.00M/13.2M [00:00<00:07, 1.81MB/s] 15%|█▌        | 2.00M/13.2M [00:00<00:03, 3.24MB/s] 30%|███       | 4.00M/13.2M [00:00<00:01, 6.28MB/s] 53%|█████▎    | 7.00M/13.2M [00:01<00:00, 10.9MB/s] 76%|███████▌  | 10.0M/13.2M [00:01<00:00, 14.5MB/s] 98%|█████████▊| 13.0M/13.2M [00:01<00:00, 16.0MB/s]100%|██████████| 13.2M/13.2M [00:01<00:00, 10.7MB/s]
+
+Output file downloaded to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/previews/p2_2_h264_nvenc.mp4
+Downloading p2_2_libx264.mp4 to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/previews
+  0%|          | 0.00/7.47M [00:00<?, ?B/s] 13%|█▎        | 1.00M/7.47M [00:00<00:04, 1.67MB/s] 27%|██▋       | 2.00M/7.47M [00:00<00:01, 3.00MB/s] 54%|█████▎    | 4.00M/7.47M [00:00<00:00, 5.73MB/s] 94%|█████████▎| 7.00M/7.47M [00:01<00:00, 10.1MB/s]100%|██████████| 7.47M/7.47M [00:01<00:00, 7.09MB/s]
+
+Output file downloaded to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/previews/p2_2_libx264.mp4
+Downloading p2_2_source.mp4 to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/previews
+  0%|          | 0.00/41.4M [00:00<?, ?B/s]  2%|▏         | 1.00M/41.4M [00:00<00:25, 1.69MB/s]  5%|▍         | 2.00M/41.4M [00:00<00:13, 3.03MB/s] 10%|▉         | 4.00M/41.4M [00:00<00:06, 5.93MB/s] 17%|█▋        | 7.00M/41.4M [00:01<00:03, 10.4MB/s] 24%|██▍       | 10.0M/41.4M [00:01<00:02, 14.1MB/s] 31%|███▏      | 13.0M/41.4M [00:01<00:01, 15.7MB/s] 39%|███▊      | 16.0M/41.4M [00:01<00:01, 18.0MB/s] 46%|████▌     | 19.0M/41.4M [00:01<00:01, 18.2MB/s] 53%|█████▎    | 22.0M/41.4M [00:01<00:01, 19.9MB/s] 60%|██████    | 25.0M/41.4M [00:01<00:00, 19.5MB/s] 68%|██████▊   | 28.0M/41.4M [00:02<00:00, 20.9MB/s] 75%|███████▍  | 31.0M/41.4M [00:02<00:00, 20.0MB/s] 82%|████████▏ | 34.0M/41.4M [00:02<00:00, 21.3MB/s] 89%|████████▉ | 37.0M/41.4M [00:02<00:00, 20.5MB/s] 97%|█████████▋| 40.0M/41.4M [00:02<00:00, 21.6MB/s]100%|██████████| 41.4M/41.4M [00:02<00:00, 15.8MB/s]
+
+Output file downloaded to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/previews/p2_2_source.mp4
+Downloading kaggle_environment_snapshot.cpython-313.pyc to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/scripts/__pycache__
+  0%|          | 0.00/15.5k [00:00<?, ?B/s]100%|██████████| 15.5k/15.5k [00:00<00:00, 1.24MB/s]
+
+Output file downloaded to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/scripts/__pycache__/kaggle_environment_snapshot.cpython-313.pyc
+Downloading kaggle_environment_snapshot.py to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/scripts
+  0%|          | 0.00/10.7k [00:00<?, ?B/s]100%|██████████| 10.7k/10.7k [00:00<00:00, 18.3MB/s]
+
+Output file downloaded to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/scripts/kaggle_environment_snapshot.py
+Kernel log downloaded to audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/openmontage-stage-a-env-smoke.log 

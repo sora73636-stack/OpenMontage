@@ -1,0 +1,40 @@
+{
+  "code": {
+    "license_fetch_status": "OK",
+    "license_file": {
+      "bytes": 11356,
+      "path": "audit/licenses/video-depth-anything-small/LICENSE-code.txt",
+      "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1"
+    },
+    "readme_file": {
+      "bytes": 9452,
+      "path": "audit/licenses/video-depth-anything-small/MODEL_CARD.md",
+      "sha256": "cb786de4a6ef8f344cd8212dd9e51a6c08923fa5ccafc91dd6c96ee4f4af4d88"
+    },
+    "ref": "HEAD",
+    "revision": "4f5ae23172ba60fd7bc11ef671cca678842c7072",
+    "type": "github",
+    "url": "https://github.com/DepthAnything/Video-Depth-Anything"
+  },
+  "component": "video-depth-anything-small",
+  "extra": {},
+  "license_status": "PASS",
+  "retrieved_utc": "2026-11-13T04:17:33Z",
+  "weights": {
+    "api_license": "apache-2.0",
+    "cardData_license": "apache-2.0",
+    "files": [
+      {
+        "bytes": 1111,
+        "path": "audit/licenses/video-depth-anything-small/MODEL_CARD.md",
+        "sha256": "dea5a98977eae58de809fa3ca589090ab56f0ae326069ddb86fdcca1c5f8d8f0"
+      }
+    ],
+    "gated": false,
+    "revision": "256875362cff76724b920335dfb4b29dd611f66e",
+    "type": "huggingface",
+    "url": "https://huggingface.co/depth-anything/Video-Depth-Anything-Small",
+    "weight_sha256": null,
+    "weights_downloaded": false
+  }
+}

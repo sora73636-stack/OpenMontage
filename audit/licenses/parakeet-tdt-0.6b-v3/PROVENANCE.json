@@ -1,0 +1,40 @@
+{
+  "code": {
+    "license_fetch_status": "OK",
+    "license_file": {
+      "bytes": 11357,
+      "path": "audit/licenses/parakeet-tdt-0.6b-v3/LICENSE-code.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "readme_file": {
+      "bytes": 11245,
+      "path": "audit/licenses/parakeet-tdt-0.6b-v3/MODEL_CARD.md",
+      "sha256": "822b36f37286a654572e4709f635f8e86953c33af08bb9cbd808e9f36faff283"
+    },
+    "ref": "HEAD",
+    "revision": "079e48770098a4cffcf542a4bc974cafc84502a3",
+    "type": "github",
+    "url": "https://github.com/NVIDIA/NeMo"
+  },
+  "component": "parakeet-tdt-0.6b-v3",
+  "extra": {},
+  "license_status": "PASS",
+  "retrieved_utc": "2026-11-13T04:17:29Z",
+  "weights": {
+    "api_license": "cc-by-4.0",
+    "cardData_license": "cc-by-4.0",
+    "files": [
+      {
+        "bytes": 42888,
+        "path": "audit/licenses/parakeet-tdt-0.6b-v3/MODEL_CARD.md",
+        "sha256": "7a4306a43f395e3a716e77f1d81c03db18a0a355d7b566bb1d6307213ba0302b"
+      }
+    ],
+    "gated": false,
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "type": "huggingface",
+    "url": "https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3",
+    "weight_sha256": null,
+    "weights_downloaded": false
+  }
+}
