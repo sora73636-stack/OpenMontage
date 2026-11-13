@@ -1,0 +1,94 @@
+2026-11-13T05:35:26Z helper sha256 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match=True
+2026-11-13T05:35:26Z fixture science_voice_script.txt 9555 bytes sha=cbb5b7ee8f13e8d60c5b25f9502d4c7a6ab682f5dbce75dcae6d169f3bf358e9
+2026-11-13T05:35:26Z fixture science_terms.json 4890 bytes sha=877f430837d8059b47a3671da1679d2637a9ed9077c9239b24b828a042e32862
+2026-11-13T05:35:26Z fixture image_video_prompts.json 1586 bytes sha=5f1cf0117327fb0801023549c6186105deaaf2323c1dc23becaec3428848678b
+2026-11-13T05:35:31Z $ /usr/local/bin/uv venv --python 3.11 /tmp/audit/envs/flux2 -> rc=0 1.627s
+2026-11-13T05:35:31Z stderr tail: warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`? | Downloading cpython-3.11.17-linux-x86_64-gnu (download) (29.4MiB) |  Downloaded cpython-3.11.17-linux-x86_64-gnu (download) | Using CPython 3.11.17 | Creating virtual environment at: /tmp/audit/envs/flux2 | Activate with: source /tmp/audit/envs/flux2/bin/activate | 
+2026-11-13T05:36:10Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/flux2/bin/python torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126 -> rc=0 38.716s
+2026-11-13T05:36:10Z stderr tail: nloading nvidia-cuda-nvrtc-cu12 (22.6MiB) | Downloading nvidia-cusparse-cu12 (206.5MiB) | Downloading nvidia-cusparselt-cu12 (149.5MiB) | Downloading nvidia-curand-cu12 (53.7MiB) | Downloading nvidia-cufft-cu12 (190.9MiB) | Downloading nvidia-cuda-cupti-cu12 (8.5MiB) |  Downloaded networkx |  Downloaded torchvision |  Downloaded sympy |  Downloaded pillow |  Downloaded nvidia-cuda-cupti-cu12 |  Downloaded numpy |  Downloaded nvidia-nvjitlink-cu12 |  Downloaded nvidia-cuda-nvrtc-cu12 |  Downloaded triton |  Downloaded nvidia-curand-cu12 |  Downloaded nvidia-nccl-cu12 |  Downloaded nvidia-cusolver-cu12 |  Downloaded nvidia-cusparse-cu12 |  Downloaded nvidia-cusparselt-cu12 |  Downloaded nvidia-cublas-cu12 |  Downloaded nvidia-cufft-cu12 |  Downloaded torch |  Downloaded nvidia-cudnn-cu12 | Prepared 26 packages in 36.91s | Installed 26 packages in 255ms |  + filelock==4.2.4 |  + fsspec==2026.9.0 |  + jinja2==3.1.6 |  + markupsafe==3.0.3 |  + mpmath==1.3.0 |  + networkx==3.6.1 |  + numpy==2.4.6 |  + nvidia-cublas-cu12==12.6.4.1 |  + nvidia-cuda-cupti-cu12==12.6.80 |  + nvidia-cuda-nvrtc-cu12==12.6.77 |  + nvidia-cuda-runtime-cu12==12.6.77 |  + nvidia-cudnn-cu12==9.5.1.17 |  + nvidia-cufft-cu12==11.3.0.4 |  + nvidia-curand-cu12==10.3.7.77 |  + nvidia-cusolver-cu12==11.7.1.2 |  + nvidia-cusparse-cu12==12.5.4.2 |  + nvidia-cusparselt-cu12==0.6.3 |  + nvidia-nccl-cu12==2.21.5 |  + nvidia-nvjitlink-cu12==12.6.85 |  + nvidia-nvtx-cu12==12.6.77 |  + pillow==13.0.0 |  + sympy==1.13.1 |  + torch==2.6.0+cu126 |  + torchvision==0.21.0+cu126 |  + triton==3.2.0 |  + typing-extensions==4.16.0 | 
+2026-11-13T05:36:28Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/flux2/bin/python git+https://github.com/huggingface/diffusers.git transformers sentencepiece accelerate safetensors -> rc=0 17.993s
+2026-11-13T05:36:28Z stderr tail: dantic-core (2.1MiB) | Downloading pygments (1.2MiB) | Downloading transformers (12.4MiB) | Downloading sentencepiece (1.6MiB) |    Building diffusers @ git+https://github.com/huggingface/diffusers.git@27a54904a7def137c98b6520141873d9a9b08adb | Downloading tokenizers (3.2MiB) | Downloading hf-xet (4.1MiB) |  Downloaded pygments |  Downloaded sentencepiece |  Downloaded pydantic-core |  Downloaded tokenizers |  Downloaded hf-xet |  Downloaded transformers |       Built diffusers @ git+https://github.com/huggingface/diffusers.git@27a54904a7def137c98b6520141873d9a9b08adb | Prepared 38 packages in 2.52s | Installed 38 packages in 194ms |  + accelerate==1.15.0 |  + annotated-doc==0.0.6 |  + annotated-types==0.8.0 |  + anyio==4.16.0 |  + certifi==2026.10.23 |  + charset-normalizer==3.5.2 |  + click==8.5.1 |  + diffusers==0.43.0.dev0 (from git+https://github.com/huggingface/diffusers.git@27a54904a7def137c98b6520141873d9a9b08adb) |  + h11==0.16.0 |  + hf-xet==1.8.0 |  + httpcore2==2.16.0 |  + httpx2==2.16.0 |  + huggingface-hub==2.4.0 |  + idna==3.20 |  + importlib-metadata==10.2.0 |  + lazy-importer==0.1.0 |  + markdown-it-py==4.3.0 |  + mdurl==0.1.2 |  + packaging==26.3 |  + psutil==7.2.2 |  + pydantic==2.14.3 |  + pydantic-core==2.50.4 |  + pygments==2.21.0 |  + pyyaml==6.0.3 |  + regex==2026.11.9 |  + requests==2.34.2 |  + rich==15.0.0 |  + safetensors==0.8.0 |  + sentencepiece==0.2.3 |  + shellingham==1.5.4 |  + tokenizers==0.23.3 |  + tqdm==4.70.1 |  + transformers==5.22.2 |  + truststore==0.10.5 |  + typer==0.29.1 |  + typing-inspection==0.4.5 |  + urllib3==2.8.0 |  + zipp==4.1.2 | 
+2026-11-13T05:38:57Z $ /tmp/audit/envs/flux2/bin/python /kaggle/working/audit/scripts/flux_run.py -> rc=1 149.394s
+2026-11-13T05:38:57Z stderr tail: vs/flux2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1343, in to |     return self._apply(convert) |            ^^^^^^^^^^^^^^^^^^^^ |   File "/tmp/audit/envs/flux2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 903, in _apply |     module._apply(fn) |   File "/tmp/audit/envs/flux2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 903, in _apply |     module._apply(fn) |   File "/tmp/audit/envs/flux2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 903, in _apply |     module._apply(fn) |   [Previous line repeated 1 more time] |   File "/tmp/audit/envs/flux2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 930, in _apply |     param_applied = fn(param) |                     ^^^^^^^^^ |   File "/tmp/audit/envs/flux2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1329, in convert |     return t.to( |            ^^^^^ | torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 162.00 MiB. GPU 0 has a total capacity of 14.56 GiB of which 88.81 MiB is free. Process 7 has 102.00 MiB memory in use. Including non-PyTorch memory, this process has 14.37 GiB memory in use. Of the allocated memory 14.27 GiB is allocated by PyTorch, and 850.00 KiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables) | 
+2026-11-13T05:39:00Z FINAL {"status": "FAIL", "blocker": "inference/output validation failed"}
+{
+  "component": "flux2-klein-4b",
+  "priority": "P0",
+  "kernel": "openmontage-p0-flux2-klein-4b",
+  "utc_start": "2026-11-13T05:35:26Z",
+  "utc_end": "2026-11-13T05:39:00Z",
+  "status": "FAIL",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "environment_before": {
+      "t4": {
+        "cuda_available": true,
+        "device_count": 1,
+        "all_devices_are_tesla_t4": true,
+        "per_device": [
+          {
+            "index": 0,
+            "name": "Tesla T4",
+            "total_memory_mib": 14911,
+            "compute_capability": "7.5",
+            "free_memory_mib": 14806
+          }
+        ],
+        "ok": true,
+        "reasons": []
+      },
+      "devices": [
+        {
+          "index": 0,
+          "name": "Tesla T4",
+          "total_memory_mib": 14911,
+          "compute_capability": "7.5",
+          "multi_processor_count": 40,
+          "free_memory_mib": 14806,
+          "total_memory_mib_reported": 14911
+        }
+      ]
+    },
+    "install_torch": {
+      "rc": 0,
+      "duration_s": 38.716
+    },
+    "install_diffusers": {
+      "rc": 0,
+      "duration_s": 17.993,
+      "stderr": "Using Python 3.11.17 environment at: /tmp/audit/envs/flux2\n   Updating https://github.com/huggingface/diffusers.git (HEAD)\n    Updated https://github.com/huggingface/diffusers.git (27a54904a7def137c98b6520141873d9a9b08adb)\nResolved 63 packages in 15.23s\nDownloading pydantic-core (2.1MiB)\nDownloading pygments (1.2MiB)\nDownloading transformers (12.4MiB)\nDownloading sentencepiece (1.6MiB)\n   Building diffusers @ git+https://github.com/huggingface/diffusers.git@27a54904a7def137c98b6520141873d9a9b08adb\nDownloading tokenizers (3.2MiB)\nDownloading hf-xet (4.1MiB)\n Downloaded pygments\n Downloaded sentencepiece\n Downloaded pydantic-core\n Downloaded tokenizers\n Downloaded hf-xet\n Downloaded transformers\n      Built diffusers @ git+https://github.com/huggingface/diffusers.git@27a54904a7def137c98b6520141873d9a9b08adb\nPrepared 38 packages in 2.52s\nInstalled 38 packages in 194ms\n + accelerate==1.15.0\n + annotated-doc==0.0.6\n + annotated-types==0.8.0\n + anyio==4.16.0\n + certifi==2026.10.23\n + charset-normalizer==3.5.2\n + click==8.5.1\n + diffusers==0.43.0.dev0 (from git+https://github.com/huggingface/diffusers.git@27a54904a7def137c98b6520141873d9a9b08adb)\n + h11==0.16.0\n + hf-xet==1.8.0\n + httpcore2==2.16.0\n + httpx2==2.16.0\n + huggingface-hub==2.4.0\n + idna==3.20\n + importlib-metadata==10.2.0\n + lazy-importer==0.1.0\n + markdown-it-py==4.3.0\n + mdurl==0.1.2\n + packaging==26.3\n + psutil==7.2.2\n + pydantic==2.14.3\n + pydantic-core==2.50.4\n + pygments==2.21.0\n + pyyaml==6.0.3\n + regex==2026.11.9\n + requests==2.34.2\n + rich==15.0.0\n + safetensors==0.8.0\n + sentencepiece==0.2.3\n + shellingham==1.5.4\n + tokenizers==0.23.3\n + tqdm==4.70.1\n + transformers==5.22.2\n + truststore==0.10.5\n + typer==0.29.1\n + typing-inspection==0.4.5\n + urllib3==2.8.0\n + zipp==4.1.2\n"
+    },
+    "inference": {
+      "rc": 1,
+      "duration_s": 149.394,
+      "stdout": "",
+      "stderr": "7 files:  88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 15/17 [01:15<00:19,  9.70s/it]\nFetching 17 files:  94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 16/17 [01:19<00:08,  8.74s/it]\nFetching 17 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 17/17 [01:19<00:00,  4.68s/it]\n\nLoading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]\n\nLoading weights:   0%|          | 0/398 [00:00<?, ?it/s]\u001b[A\n\nLoading weights:   0%|          | 1/398 [00:04<30:24,  4.60s/it]\u001b[A\n\nLoading weights:  45%|\u2588\u2588\u2588\u2588\u258d     | 179/398 [00:04<00:04, 52.26it/s]\u001b[A\n\nLoading weights:  58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 231/398 [00:05<00:03, 55.10it/s]\u001b[A\n\nLoading weights:  66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 263/398 [00:07<00:03, 37.01it/s]\u001b[A\n\nLoading weights:  71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 283/398 [00:09<00:04, 28.37it/s]\u001b[A\n\nLoading weights:  74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 296/398 [00:10<00:03, 25.75it/s]\u001b[A\n\nLoading weights:  77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 306/398 [00:10<00:03, 23.56it/s]\u001b[A\n\nLoading weights:  79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 313/398 [00:11<00:04, 20.30it/s]\u001b[A\n\nLoading weights:  81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 322/398 [00:12<00:04, 17.76it/s]\u001b[A\n\nLoading weights:  84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 333/398 [00:12<00:03, 17.21it/s]\u001b[A\n\nLoading weights:  86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 344/398 [00:13<00:03, 17.00it/s]\u001b[A\n\nLoading weights:  89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 355/398 [00:14<00:02, 16.41it/s]\u001b[A\n\nLoading weights:  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 366/398 [00:15<00:01, 16.26it/s]\u001b[A\n\nLoading weights:  95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 377/398 [00:15<00:01, 16.24it/s]\u001b[A\n\nLoading weights:  97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 388/398 [00:16<00:00, 15.40it/s]\u001b[A\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 398/398 [00:16<00:00, 23.98it/s]\n\nLoading pipeline components...:  20%|\u2588\u2588        | 1/5 [00:17<01:08, 17.09s/it]\nLoading pipeline components...:  60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 3/5 [00:47<00:31, 15.77s/it]The config attributes {'force_upcast': True} were passed to AutoencoderKLFlux2, but are not expected and will be ignored. Please verify your config.json configuration file.\n\nLoading pipeline components...:  80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 4/5 [00:48<00:10, 10.57s/it]\nLoading pipeline components...: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 5/5 [00:49<00:00,  7.28s/it]\nLoading pipeline components...: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 5/5 [00:49<00:00,  9.81s/it]\nTraceback (most recent call last):\n  File \"/kaggle/working/audit/scripts/flux_run.py\", line 8, in <module>\n    pipe.to('cuda')\n  File \"/tmp/audit/envs/flux2/lib/python3.11/site-packages/diffusers/pipelines/pipeline_utils.py\", line 583, in to\n    module.to(device, dtype)\n  File \"/tmp/audit/envs/flux2/lib/python3.11/site-packages/diffusers/models/modeling_utils.py\", line 1622, in to\n    return super().to(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/audit/envs/flux2/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 1343, in to\n    return self._apply(convert)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/audit/envs/flux2/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 903, in _apply\n    module._apply(fn)\n  File \"/tmp/audit/envs/flux2/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 903, in _apply\n    module._apply(fn)\n  File \"/tmp/audit/envs/flux2/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 903, in _apply\n    module._apply(fn)\n  [Previous line repeated 1 more time]\n  File \"/tmp/audit/envs/flux2/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 930, in _apply\n    param_applied = fn(param)\n                    ^^^^^^^^^\n  File \"/tmp/audit/envs/flux2/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 1329, in convert\n    return t.to(\n           ^^^^^\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 162.00 MiB. GPU 0 has a total capacity of 14.56 GiB of which 88.81 MiB is free. Process 7 has 102.00 MiB memory in use. Including non-PyTorch memory, this process has 14.37 GiB memory in use. Of the allocated memory 14.27 GiB is allocated by PyTorch, and 850.00 KiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)\n"
+    },
+    "metrics": {},
+    "outputs": [],
+    "validation": {
+      "images": 0
+    },
+    "environment_after": {
+      "working_free_gib": 19.502178192138672
+    },
+    "dtype": null,
+    "runtime_seconds": null,
+    "peak_vram_allocated_mb": null,
+    "peak_vram_reserved_mb": null,
+    "attn": null
+  },
+  "errors": [],
+  "blocker": "inference/output validation failed"
+}
+/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 361477 bytes to __results__.html

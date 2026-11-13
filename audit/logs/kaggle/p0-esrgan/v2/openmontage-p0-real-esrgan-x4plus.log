@@ -1,0 +1,161 @@
+[{"stream_name":"stdout","time":1.668728268,"data":"2026-11-13T06:54:13Z helper sha256 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match=True\n"}
+,{"stream_name":"stdout","time":1.676590711,"data":"2026-11-13T06:54:13Z fixture science_voice_script.txt 9555 bytes sha=cbb5b7ee8f13e8d60c5b25f9502d4c7a6ab682f5dbce75dcae6d169f3bf358e9\n"}
+,{"stream_name":"stdout","time":1.676679589,"data":"2026-11-13T06:54:13Z fixture science_terms.json 4890 bytes sha=877f430837d8059b47a3671da1679d2637a9ed9077c9239b24b828a042e32862\n"}
+,{"stream_name":"stdout","time":1.676970732,"data":"2026-11-13T06:54:13Z fixture image_video_prompts.json 1586 bytes sha=5f1cf0117327fb0801023549c6186105deaaf2323c1dc23becaec3428848678b\n"}
+,{"stream_name":"stdout","time":13.526487532,"data":"2026-11-13T06:54:25Z $ /usr/local/bin/uv venv --python 3.11 /tmp/audit/envs/esrgan -\u003e rc=0 1.607s\n"}
+,{"stream_name":"stdout","time":13.526623467,"data":"2026-11-13T06:54:25Z stderr tail: warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`? | Downloading cpython-3.11.17-linux-x86_64-gnu (download) (29.4MiB) |  Downloaded cpython-3.11.17-linux-x86_64-gnu (download) | Using CPython 3.11.17 | Creating virtual environment at: /tmp/audit/envs/esrgan | Activate with: source /tmp/audit/envs/esrgan/bin/activate | \n"}
+,{"stream_name":"stdout","time":52.145743255,"data":"2026-11-13T06:55:04Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/esrgan/bin/python torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126 -\u003e rc=0 38.619s\n"}
+,{"stream_name":"stdout","time":52.14584927,"data":"2026-11-13T06:55:04Z stderr tail: nloading nvidia-cuda-nvrtc-cu12 (22.6MiB) | Downloading nvidia-cusparse-cu12 (206.5MiB) | Downloading nvidia-cusparselt-cu12 (149.5MiB) | Downloading nvidia-cufft-cu12 (190.9MiB) | Downloading nvidia-cuda-cupti-cu12 (8.5MiB) | Downloading nvidia-curand-cu12 (53.7MiB) |  Downloaded torchvision |  Downloaded networkx |  Downloaded nvidia-cuda-cupti-cu12 |  Downloaded sympy |  Downloaded pillow |  Downloaded nvidia-nvjitlink-cu12 |  Downloaded numpy |  Downloaded nvidia-cuda-nvrtc-cu12 |  Downloaded nvidia-curand-cu12 |  Downloaded triton |  Downloaded nvidia-nccl-cu12 |  Downloaded nvidia-cusolver-cu12 |  Downloaded nvidia-cusparselt-cu12 |  Downloaded nvidia-cudnn-cu12 |  Downloaded nvidia-cusparse-cu12 |  Downloaded nvidia-cublas-cu12 |  Downloaded nvidia-cufft-cu12 |  Downloaded torch | Prepared 26 packages in 37.78s | Installed 26 packages in 248ms |  + filelock==4.2.4 |  + fsspec==2026.9.0 |  + jinja2==3.1.6 |  + markupsafe==3.0.3 |  + mpmath==1.3.0 |  + networkx==3.6.1 |  + numpy==2.4.6 |  + nvidia-cublas-cu12==12.6.4.1 |  + nvidia-cuda-cupti-cu12==12.6.80 |  + nvidia-cuda-nvrtc-cu12==12.6.77 |  + nvidia-cuda-runtime-cu12==12.6.77 |  + nvidia-cudnn-cu12==9.5.1.17 |  + nvidia-cufft-cu12==11.3.0.4 |  + nvidia-curand-cu12==10.3.7.77 |  + nvidia-cusolver-cu12==11.7.1.2 |  + nvidia-cusparse-cu12==12.5.4.2 |  + nvidia-cusparselt-cu12==0.6.3 |  + nvidia-nccl-cu12==2.21.5 |  + nvidia-nvjitlink-cu12==12.6.85 |  + nvidia-nvtx-cu12==12.6.77 |  + pillow==13.0.0 |  + sympy==1.13.1 |  + torch==2.6.0+cu126 |  + torchvision==0.21.0+cu126 |  + triton==3.2.0 |  + typing-extensions==4.16.0 | \n"}
+,{"stream_name":"stdout","time":52.904887976,"data":"2026-11-13T06:55:04Z $ git clone --recursive https://github.com/xinntao/Real-ESRGAN /tmp/audit/repos/real-esrgan -\u003e rc=0 0.759s\n"}
+,{"stream_name":"stdout","time":52.904969345,"data":"2026-11-13T06:55:04Z stderr tail: Cloning into '/tmp/audit/repos/real-esrgan'... | \n"}
+,{"stream_name":"stdout","time":52.935005344,"data":"2026-11-13T06:55:04Z $ git -C /tmp/audit/repos/real-esrgan checkout -q a4abfb2979a7 -\u003e rc=0 0.03s\n"}
+,{"stream_name":"stdout","time":52.96561754,"data":"2026-11-13T06:55:04Z $ git -C /tmp/audit/repos/real-esrgan submodule update --init --recursive -\u003e rc=0 0.03s\n"}
+,{"stream_name":"stdout","time":102.220088073,"data":"2026-11-13T06:55:54Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/esrgan/bin/python -r /tmp/audit/repos/real-esrgan/requirements.txt -\u003e rc=0 49.254s\n"}
+,{"stream_name":"stdout","time":102.220167685,"data":"2026-11-13T06:55:54Z stderr tail:  | Downloading scipy (33.7MiB) | Downloading tensorboard-data-server (6.3MiB) | Downloading tb-nightly (5.3MiB) | Downloading fonttools (5.2MiB) | Downloading grpcio (7.0MiB) | Downloading numba (3.7MiB) | Downloading scikit-image (13.1MiB) | Downloading llvmlite (56.9MiB) | Downloading matplotlib (9.4MiB) | Downloading opencv-python (70.4MiB) |  Downloaded kiwisolver |  Downloaded numba |  Downloaded fonttools |  Downloaded tb-nightly |  Downloaded tensorboard-data-server |       Built basicsr==1.4.2 |  Downloaded grpcio |  Downloaded matplotlib |  Downloaded scikit-image |  Downloaded llvmlite |  Downloaded scipy |  Downloaded opencv-python | Prepared 40 packages in 6.89s | Installed 41 packages in 275ms |  + absl-py==2.5.1 |  + addict==2.4.0 |  + basicsr==1.4.2 |  + certifi==2026.10.23 |  + charset-normalizer==3.5.2 |  + contourpy==1.3.3 |  + cycler==0.12.1 |  + facexlib==0.3.0 |  + filterpy==2.0.0 |  + fonttools==4.68.0 |  + future==1.0.0 |  + gfpgan==1.3.8 |  + grpcio==1.85.1 |  + idna==3.20 |  + imageio==2.38.1 |  + kiwisolver==1.5.1 |  + lazy-loader==0.6 |  + llvmlite==0.50.0 |  + lmdb==3.0.0 |  + markdown==3.11.3 |  + matplotlib==3.11.2 |  + numba==0.68.1 |  + opencv-python==5.0.0.93 |  + packaging==26.3 |  + platformdirs==4.14.5 |  + protobuf==7.36.2 |  + pyparsing==3.3.3 |  + python-dateutil==4.0.0 |  + pyyaml==6.0.3 |  + requests==2.34.2 |  + scikit-image==0.26.0 |  + scipy==1.17.1 |  + setuptools==84.2.1 |  + tb-nightly==2.21.0a20251023 |  + tensorboard-data-server==0.7.2 |  + tifffile==2026.3.3 |  + tqdm==4.70.1 |  + tzdata==2026.6 |  + urllib3==2.8.0 |  + werkzeug==3.1.9 |  + yapf==0.43.0 | \n"}
+,{"stream_name":"stdout","time":105.168974934,"data":"2026-11-13T06:55:57Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/esrgan/bin/python -e /tmp/audit/repos/real-esrgan -\u003e rc=0 2.948s\n"}
+,{"stream_name":"stdout","time":105.169020573,"data":"2026-11-13T06:55:57Z stderr tail: Using Python 3.11.17 environment at: /tmp/audit/envs/esrgan | Resolved 68 packages in 612ms |    Building realesrgan @ file:///tmp/audit/repos/real-esrgan |       Built realesrgan @ file:///tmp/audit/repos/real-esrgan | Prepared 1 package in 245ms | Installed 1 package in 0.88ms |  + realesrgan==0.3.0 (from file:///tmp/audit/repos/real-esrgan) | \n"}
+,{"stream_name":"stdout","time":105.526312303,"data":"2026-11-13T06:55:57Z $ wget -q -O /tmp/audit/weights/real-esrgan/RealESRGAN_x4plus.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth -\u003e rc=0 0.357s\n"}
+,{"stream_name":"stdout","time":122.364666397,"data":"2026-11-13T06:56:14Z $ cd /tmp/audit/repos/real-esrgan \u0026\u0026 TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1 PYTHONPATH=/kaggle/working/audit/scripts /tmp/audit/envs/esrgan/bin/python /kaggle/working/audit/scripts/esrgan_cli.py -n RealESRGAN_x4plus -i /kaggle/working/audit/fixtures/esrgan/inputs -o /kaggle/working/audit/fixtures/esrgan/outputs --outscale 4 -\u003e rc=0 16.599s\n"}
+,{"stream_name":"stdout","time":122.364815835,"data":"2026-11-13T06:56:14Z stdout tail: Downloading: \"https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth\" to /tmp/audit/repos/real-esrgan/weights/RealESRGAN_x4plus.pth |  | Testing 0 frame_00 | Testing 1 frame_01 | Testing 2 frame_02 | Testing 3 frame_03 | Testing 4 frame_04 | Testing 5 frame_05 | Testing 6 frame_06 | Testing 7 frame_07 | Testing 8 frame_08 | Testing 9 frame_09 | \n"}
+,{"stream_name":"stdout","time":122.364909022,"data":"2026-11-13T06:56:14Z stderr tail:  |   0%|          | 0.00/63.9M [00:00\u003c?, ?B/s] |  62%|██████▏   | 39.6M/63.9M [00:00\u003c00:00, 415MB/s] | 100%|██████████| 63.9M/63.9M [00:00\u003c00:00, 344MB/s] | /tmp/audit/repos/real-esrgan/realesrgan/utils.py:63: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False. |   loadnet = torch.load(model_path, map_location=torch.device('cpu')) | \n"}
+,{"stream_name":"stdout","time":143.994572065,"data":"2026-11-13T06:56:35Z FINAL {\"status\": \"PASS\", \"blocker\": null}\n"}
+,{"stream_name":"stdout","time":143.994821158,"data":"{\n"}
+,{"stream_name":"stdout","time":143.994842258,"data":"  \"component\": \"real-esrgan-x4plus\",\n"}
+,{"stream_name":"stdout","time":143.99484829,"data":"  \"priority\": \"P0\",\n"}
+,{"stream_name":"stdout","time":143.99485376,"data":"  \"kernel\": \"openmontage-p0-real-esrgan-x4plus\",\n"}
+,{"stream_name":"stdout","time":143.99485912,"data":"  \"utc_start\": \"2026-11-13T06:54:13Z\",\n"}
+,{"stream_name":"stdout","time":143.994864329,"data":"  \"utc_end\": \"2026-11-13T06:56:35Z\",\n"}
+,{"stream_name":"stdout","time":143.994875317,"data":"  \"status\": \"PASS\",\n"}
+,{"stream_name":"stdout","time":143.994879096,"data":"  \"steps\": {\n"}
+,{"stream_name":"stdout","time":143.994882407,"data":"    \"helper\": {\n"}
+,{"stream_name":"stdout","time":143.994885847,"data":"      \"path\": \"/kaggle/working/audit/scripts/kaggle_environment_snapshot.py\",\n"}
+,{"stream_name":"stdout","time":143.994889407,"data":"      \"expected_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":143.994893218,"data":"      \"actual_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":143.99489679,"data":"      \"match\": true\n"}
+,{"stream_name":"stdout","time":143.994900098,"data":"    },\n"}
+,{"stream_name":"stdout","time":143.994903266,"data":"    \"environment_before\": {\n"}
+,{"stream_name":"stdout","time":143.994906577,"data":"      \"t4\": {\n"}
+,{"stream_name":"stdout","time":143.994909828,"data":"        \"cuda_available\": true,\n"}
+,{"stream_name":"stdout","time":143.994913251,"data":"        \"device_count\": 1,\n"}
+,{"stream_name":"stdout","time":143.99491661,"data":"        \"all_devices_are_tesla_t4\": true,\n"}
+,{"stream_name":"stdout","time":143.994919974,"data":"        \"per_device\": [\n"}
+,{"stream_name":"stdout","time":143.994923336,"data":"          {\n"}
+,{"stream_name":"stdout","time":143.994926562,"data":"            \"index\": 0,\n"}
+,{"stream_name":"stdout","time":143.994929868,"data":"            \"name\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":143.994937721,"data":"            \"total_memory_mib\": 14911,\n"}
+,{"stream_name":"stdout","time":143.994942753,"data":"            \"compute_capability\": \"7.5\",\n"}
+,{"stream_name":"stdout","time":143.994947367,"data":"            \"free_memory_mib\": 14806\n"}
+,{"stream_name":"stdout","time":143.99495072,"data":"          }\n"}
+,{"stream_name":"stdout","time":143.994953917,"data":"        ],\n"}
+,{"stream_name":"stdout","time":143.994957053,"data":"        \"ok\": true,\n"}
+,{"stream_name":"stdout","time":143.994960453,"data":"        \"reasons\": []\n"}
+,{"stream_name":"stdout","time":143.994970634,"data":"      },\n"}
+,{"stream_name":"stdout","time":143.994974026,"data":"      \"devices\": [\n"}
+,{"stream_name":"stdout","time":143.994977303,"data":"        {\n"}
+,{"stream_name":"stdout","time":143.994980518,"data":"          \"index\": 0,\n"}
+,{"stream_name":"stdout","time":143.994983874,"data":"          \"name\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":143.994996676,"data":"          \"total_memory_mib\": 14911,\n"}
+,{"stream_name":"stdout","time":143.994999707,"data":"          \"compute_capability\": \"7.5\",\n"}
+,{"stream_name":"stdout","time":143.995002442,"data":"          \"multi_processor_count\": 40,\n"}
+,{"stream_name":"stdout","time":143.995005191,"data":"          \"free_memory_mib\": 14806,\n"}
+,{"stream_name":"stdout","time":143.995007838,"data":"          \"total_memory_mib_reported\": 14911\n"}
+,{"stream_name":"stdout","time":143.995010539,"data":"        }\n"}
+,{"stream_name":"stdout","time":143.995013094,"data":"      ]\n"}
+,{"stream_name":"stdout","time":143.995016036,"data":"    },\n"}
+,{"stream_name":"stdout","time":143.995018722,"data":"    \"install_torch\": {\n"}
+,{"stream_name":"stdout","time":143.995031125,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":143.995034062,"data":"      \"duration_s\": 38.619\n"}
+,{"stream_name":"stdout","time":143.995036729,"data":"    },\n"}
+,{"stream_name":"stdout","time":143.995039246,"data":"    \"install_requirements\": {\n"}
+,{"stream_name":"stdout","time":143.995041939,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":143.995044615,"data":"      \"duration_s\": 49.254,\n"}
+,{"stream_name":"stdout","time":143.995049239,"data":"      \"stderr\": \"\\nDownloading scipy (33.7MiB)\\nDownloading tensorboard-data-server (6.3MiB)\\nDownloading tb-nightly (5.3MiB)\\nDownloading fonttools (5.2MiB)\\nDownloading grpcio (7.0MiB)\\nDownloading numba (3.7MiB)\\nDownloading scikit-image (13.1MiB)\\nDownloading llvmlite (56.9MiB)\\nDownloading matplotlib (9.4MiB)\\nDownloading opencv-python (70.4MiB)\\n Downloaded kiwisolver\\n Downloaded numba\\n Downloaded fonttools\\n Downloaded tb-nightly\\n Downloaded tensorboard-data-server\\n      Built basicsr==1.4.2\\n Downloaded grpcio\\n Downloaded matplotlib\\n Downloaded scikit-image\\n Downloaded llvmlite\\n Downloaded scipy\\n Downloaded opencv-python\\nPrepared 40 packages in 6.89s\\nInstalled 41 packages in 275ms\\n + absl-py==2.5.1\\n + addict==2.4.0\\n + basicsr==1.4.2\\n + certifi==2026.10.23\\n + charset-normalizer==3.5.2\\n + contourpy==1.3.3\\n + cycler==0.12.1\\n + facexlib==0.3.0\\n + filterpy==2.0.0\\n + fonttools==4.68.0\\n + future==1.0.0\\n + gfpgan==1.3.8\\n + grpcio==1.85.1\\n + idna==3.20\\n + imageio==2.38.1\\n + kiwisolver==1.5.1\\n + lazy-loader==0.6\\n + llvmlite==0.50.0\\n + lmdb==3.0.0\\n + markdown==3.11.3\\n + matplotlib==3.11.2\\n + numba==0.68.1\\n + opencv-python==5.0.0.93\\n + packaging==26.3\\n + platformdirs==4.14.5\\n + protobuf==7.36.2\\n + pyparsing==3.3.3\\n + python-dateutil==4.0.0\\n + pyyaml==6.0.3\\n + requests==2.34.2\\n + scikit-image==0.26.0\\n + scipy==1.17.1\\n + setuptools==84.2.1\\n + tb-nightly==2.21.0a20251023\\n + tensorboard-data-server==0.7.2\\n + tifffile==2026.3.3\\n + tqdm==4.70.1\\n + tzdata==2026.6\\n + urllib3==2.8.0\\n + werkzeug==3.1.9\\n + yapf==0.43.0\\n\"\n"}
+,{"stream_name":"stdout","time":143.995062599,"data":"    },\n"}
+,{"stream_name":"stdout","time":143.995065148,"data":"    \"install_realesrgan\": {\n"}
+,{"stream_name":"stdout","time":143.995067818,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":143.995070393,"data":"      \"duration_s\": 2.948,\n"}
+,{"stream_name":"stdout","time":143.995073311,"data":"      \"stderr\": \"Using Python 3.11.17 environment at: /tmp/audit/envs/esrgan\\nResolved 68 packages in 612ms\\n   Building realesrgan @ file:///tmp/audit/repos/real-esrgan\\n      Built realesrgan @ file:///tmp/audit/repos/real-esrgan\\nPrepared 1 package in 245ms\\nInstalled 1 package in 0.88ms\\n + realesrgan==0.3.0 (from file:///tmp/audit/repos/real-esrgan)\\n\"\n"}
+,{"stream_name":"stdout","time":143.99507699,"data":"    },\n"}
+,{"stream_name":"stdout","time":143.9950795,"data":"    \"weights\": {\n"}
+,{"stream_name":"stdout","time":143.995085416,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":143.995088297,"data":"      \"bytes\": 67040989,\n"}
+,{"stream_name":"stdout","time":143.995091094,"data":"      \"sha256\": \"4fa0d38905f75ac06eb49a7951b426670021be3018265fd191d2125df9d682f1\"\n"}
+,{"stream_name":"stdout","time":143.995093971,"data":"    },\n"}
+,{"stream_name":"stdout","time":143.995096477,"data":"    \"inference\": {\n"}
+,{"stream_name":"stdout","time":143.995099182,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":143.995101758,"data":"      \"duration_s\": 16.599,\n"}
+,{"stream_name":"stdout","time":143.995104856,"data":"      \"stderr\": \"\\n  0%|          | 0.00/63.9M [00:00\u003c?, ?B/s]\\n 62%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u258f   | 39.6M/63.9M [00:00\u003c00:00, 415MB/s]\\n100%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588| 63.9M/63.9M [00:00\u003c00:00, 344MB/s]\\n/tmp/audit/repos/real-esrgan/realesrgan/utils.py:63: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.\\n  loadnet = torch.load(model_path, map_location=torch.device('cpu'))\\n\"\n"}
+,{"stream_name":"stdout","time":143.995109854,"data":"    },\n"}
+,{"stream_name":"stdout","time":143.995112368,"data":"    \"outputs\": [\n"}
+,{"stream_name":"stdout","time":143.995115003,"data":"      {\n"}
+,{"stream_name":"stdout","time":143.995117657,"data":"        \"path\": \"/kaggle/working/audit/fixtures/esrgan/outputs/frame_00_out.png\",\n"}
+,{"stream_name":"stdout","time":143.995120511,"data":"        \"bytes\": 676907,\n"}
+,{"stream_name":"stdout","time":143.995123178,"data":"        \"sha256\": \"3d777f258da36e0dc4d10180de10c55f37cc38567473ac4caf687d8f207e2f65\"\n"}
+,{"stream_name":"stdout","time":143.995163302,"data":"      },\n"}
+,{"stream_name":"stdout","time":143.995171263,"data":"      {\n"}
+,{"stream_name":"stdout","time":143.995175907,"data":"        \"path\": \"/kaggle/working/audit/fixtures/esrgan/outputs/frame_01_out.png\",\n"}
+,{"stream_name":"stdout","time":143.995180165,"data":"        \"bytes\": 678881,\n"}
+,{"stream_name":"stdout","time":143.995184048,"data":"        \"sha256\": \"0845e949b9e2074dc16fb7a552c99d9e22a63c1382677c74272a9c85ae3c9e7f\"\n"}
+,{"stream_name":"stdout","time":143.99518819,"data":"      },\n"}
+,{"stream_name":"stdout","time":143.995193874,"data":"      {\n"}
+,{"stream_name":"stdout","time":143.995205945,"data":"        \"path\": \"/kaggle/working/audit/fixtures/esrgan/outputs/frame_02_out.png\",\n"}
+,{"stream_name":"stdout","time":143.995208997,"data":"        \"bytes\": 680855,\n"}
+,{"stream_name":"stdout","time":143.995211694,"data":"        \"sha256\": \"3b4611682218b80461192255634b5f6544b23f31f5faa379aad07c34a4929eb4\"\n"}
+,{"stream_name":"stdout","time":143.99521447,"data":"      },\n"}
+,{"stream_name":"stdout","time":143.995217005,"data":"      {\n"}
+,{"stream_name":"stdout","time":143.995219543,"data":"        \"path\": \"/kaggle/working/audit/fixtures/esrgan/outputs/frame_03_out.png\",\n"}
+,{"stream_name":"stdout","time":143.9952224,"data":"        \"bytes\": 682293,\n"}
+,{"stream_name":"stdout","time":143.995225039,"data":"        \"sha256\": \"6fd58df13e253baeef4643f79d7748466e2c5c57c9beaf2362b54d9969fbe7d7\"\n"}
+,{"stream_name":"stdout","time":143.995227814,"data":"      },\n"}
+,{"stream_name":"stdout","time":143.995230364,"data":"      {\n"}
+,{"stream_name":"stdout","time":143.995233015,"data":"        \"path\": \"/kaggle/working/audit/fixtures/esrgan/outputs/frame_04_out.png\",\n"}
+,{"stream_name":"stdout","time":143.99523944,"data":"        \"bytes\": 685723,\n"}
+,{"stream_name":"stdout","time":143.995242155,"data":"        \"sha256\": \"eb2c55b7c56845ddc9f746936e1b8851e5472da11d39f900b6cfdf5b55ec559f\"\n"}
+,{"stream_name":"stdout","time":143.995244883,"data":"      },\n"}
+,{"stream_name":"stdout","time":143.995247511,"data":"      {\n"}
+,{"stream_name":"stdout","time":143.99525003,"data":"        \"path\": \"/kaggle/working/audit/fixtures/esrgan/outputs/frame_05_out.png\",\n"}
+,{"stream_name":"stdout","time":143.995252841,"data":"        \"bytes\": 685655,\n"}
+,{"stream_name":"stdout","time":143.99525544,"data":"        \"sha256\": \"23d1c6f2b95f15ad0493b05ebadb62563bc685a6f3fe13d7fba2feeb67a3d770\"\n"}
+,{"stream_name":"stdout","time":143.995258158,"data":"      },\n"}
+,{"stream_name":"stdout","time":143.995260663,"data":"      {\n"}
+,{"stream_name":"stdout","time":143.995263253,"data":"        \"path\": \"/kaggle/working/audit/fixtures/esrgan/outputs/frame_06_out.png\",\n"}
+,{"stream_name":"stdout","time":143.995265963,"data":"        \"bytes\": 693813,\n"}
+,{"stream_name":"stdout","time":143.995268578,"data":"        \"sha256\": \"a3048a12d355238e92be4199617ebea5d9bd3e03e8dd17c1cd4a6fb9122962b4\"\n"}
+,{"stream_name":"stdout","time":143.99527131,"data":"      },\n"}
+,{"stream_name":"stdout","time":143.995273817,"data":"      {\n"}
+,{"stream_name":"stdout","time":143.995276326,"data":"        \"path\": \"/kaggle/working/audit/fixtures/esrgan/outputs/frame_07_out.png\",\n"}
+,{"stream_name":"stdout","time":143.995279096,"data":"        \"bytes\": 703451,\n"}
+,{"stream_name":"stdout","time":143.995281858,"data":"        \"sha256\": \"7de39451e75bbcaf50e5f5c6cf2e109520dcae80a4d12fb3fc4380b5d191419c\"\n"}
+,{"stream_name":"stdout","time":143.995284626,"data":"      },\n"}
+,{"stream_name":"stdout","time":143.995287133,"data":"      {\n"}
+,{"stream_name":"stdout","time":143.995289636,"data":"        \"path\": \"/kaggle/working/audit/fixtures/esrgan/outputs/frame_08_out.png\",\n"}
+,{"stream_name":"stdout","time":143.995292407,"data":"        \"bytes\": 713597,\n"}
+,{"stream_name":"stdout","time":143.995295006,"data":"        \"sha256\": \"331b84ad1ad8f29c31364bf4c728df07e4cd4929b63c62470207b293b9b5ef41\"\n"}
+,{"stream_name":"stdout","time":143.995297707,"data":"      },\n"}
+,{"stream_name":"stdout","time":143.995300215,"data":"      {\n"}
+,{"stream_name":"stdout","time":143.995303249,"data":"        \"path\": \"/kaggle/working/audit/fixtures/esrgan/outputs/frame_09_out.png\",\n"}
+,{"stream_name":"stdout","time":143.995306063,"data":"        \"bytes\": 726362,\n"}
+,{"stream_name":"stdout","time":143.995308687,"data":"        \"sha256\": \"2a4c8388b5ff8b7151eecca9832b4deca59fdcba65bfc8b9968024f0f0581854\"\n"}
+,{"stream_name":"stdout","time":143.995329635,"data":"      }\n"}
+,{"stream_name":"stdout","time":143.995334472,"data":"    ],\n"}
+,{"stream_name":"stdout","time":143.995338264,"data":"    \"validation\": {\n"}
+,{"stream_name":"stdout","time":143.99534211,"data":"      \"files\": 10,\n"}
+,{"stream_name":"stdout","time":143.995345899,"data":"      \"valid_1024\": 10\n"}
+,{"stream_name":"stdout","time":143.995349799,"data":"    },\n"}
+,{"stream_name":"stdout","time":143.995353488,"data":"    \"environment_after\": {\n"}
+,{"stream_name":"stdout","time":143.995359488,"data":"      \"working_free_gib\": 19.495410919189453\n"}
+,{"stream_name":"stdout","time":143.995367669,"data":"    },\n"}
+,{"stream_name":"stdout","time":143.995370394,"data":"    \"dtype\": \"FP32 (no dtype flag)\",\n"}
+,{"stream_name":"stdout","time":143.99537318,"data":"    \"runtime_seconds\": 16.599\n"}
+,{"stream_name":"stdout","time":143.995378969,"data":"  },\n"}
+,{"stream_name":"stdout","time":143.995382615,"data":"  \"errors\": [],\n"}
+,{"stream_name":"stdout","time":143.995385338,"data":"  \"peak_vram_mib_nvidia_smi\": 1041,\n"}
+,{"stream_name":"stdout","time":143.995388119,"data":"  \"peak_vram_source\": \"nvidia-smi memory.used (subprocess)\"\n"}
+,{"stream_name":"stdout","time":143.99539095,"data":"}\n"}
+,{"stream_name":"stderr","time":149.313913844,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":149.313940659,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":149.612006014,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":149.612032222,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":150.431375487,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":151.612816271,"data":"[NbConvertApp] Writing 369174 bytes to __results__.html\n"}
+]

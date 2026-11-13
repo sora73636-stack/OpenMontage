@@ -1,0 +1,114 @@
+2026-11-13T05:47:18Z helper sha256 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match=True
+2026-11-13T05:47:18Z fixture science_voice_script.txt 9555 bytes sha=cbb5b7ee8f13e8d60c5b25f9502d4c7a6ab682f5dbce75dcae6d169f3bf358e9
+2026-11-13T05:47:18Z fixture science_terms.json 4890 bytes sha=877f430837d8059b47a3671da1679d2637a9ed9077c9239b24b828a042e32862
+2026-11-13T05:47:18Z fixture image_video_prompts.json 1586 bytes sha=5f1cf0117327fb0801023549c6186105deaaf2323c1dc23becaec3428848678b
+2026-11-13T05:47:23Z $ /usr/local/bin/uv venv --python 3.10 /tmp/audit/envs/ltx -> rc=0 1.713s
+2026-11-13T05:47:23Z stderr tail: warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`? | Downloading cpython-3.10.22-linux-x86_64-gnu (download) (28.0MiB) |  Downloaded cpython-3.10.22-linux-x86_64-gnu (download) | Using CPython 3.10.22 | Creating virtual environment at: /tmp/audit/envs/ltx | Activate with: source /tmp/audit/envs/ltx/bin/activate | 
+2026-11-13T05:48:02Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/ltx/bin/python torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126 -> rc=0 38.832s
+2026-11-13T05:48:02Z stderr tail: nloading nvidia-cuda-nvrtc-cu12 (22.6MiB) | Downloading nvidia-cusparse-cu12 (206.5MiB) | Downloading nvidia-cufft-cu12 (190.9MiB) | Downloading nvidia-cuda-cupti-cu12 (8.5MiB) | Downloading nvidia-curand-cu12 (53.7MiB) | Downloading nvidia-cusparselt-cu12 (149.5MiB) |  Downloaded networkx |  Downloaded pillow |  Downloaded torchvision |  Downloaded sympy |  Downloaded numpy |  Downloaded nvidia-cuda-cupti-cu12 |  Downloaded nvidia-nvjitlink-cu12 |  Downloaded nvidia-cuda-nvrtc-cu12 |  Downloaded nvidia-curand-cu12 |  Downloaded triton |  Downloaded nvidia-nccl-cu12 |  Downloaded nvidia-cusolver-cu12 |  Downloaded torch |  Downloaded nvidia-cusparselt-cu12 |  Downloaded nvidia-cublas-cu12 |  Downloaded nvidia-cusparse-cu12 |  Downloaded nvidia-cudnn-cu12 |  Downloaded nvidia-cufft-cu12 | Prepared 26 packages in 37.79s | Installed 26 packages in 246ms |  + filelock==4.1.0 |  + fsspec==2026.9.0 |  + jinja2==3.1.6 |  + markupsafe==3.0.3 |  + mpmath==1.3.0 |  + networkx==3.4.2 |  + numpy==2.2.6 |  + nvidia-cublas-cu12==12.6.4.1 |  + nvidia-cuda-cupti-cu12==12.6.80 |  + nvidia-cuda-nvrtc-cu12==12.6.77 |  + nvidia-cuda-runtime-cu12==12.6.77 |  + nvidia-cudnn-cu12==9.5.1.17 |  + nvidia-cufft-cu12==11.3.0.4 |  + nvidia-curand-cu12==10.3.7.77 |  + nvidia-cusolver-cu12==11.7.1.2 |  + nvidia-cusparse-cu12==12.5.4.2 |  + nvidia-cusparselt-cu12==0.6.3 |  + nvidia-nccl-cu12==2.21.5 |  + nvidia-nvjitlink-cu12==12.6.85 |  + nvidia-nvtx-cu12==12.6.77 |  + pillow==12.3.0 |  + sympy==1.13.1 |  + torch==2.6.0+cu126 |  + torchvision==0.21.0+cu126 |  + triton==3.2.0 |  + typing-extensions==4.16.0 | 
+2026-11-13T05:48:07Z $ git clone --recursive https://github.com/Lightricks/LTX-Video /tmp/audit/repos/ltx-video -> rc=0 4.962s
+2026-11-13T05:48:07Z stderr tail: Cloning into '/tmp/audit/repos/ltx-video'... | 
+2026-11-13T05:48:07Z $ git -C /tmp/audit/repos/ltx-video checkout -q 50f0aef12975 -> rc=0 0.01s
+2026-11-13T05:48:07Z $ git -C /tmp/audit/repos/ltx-video submodule update --init --recursive -> rc=0 0.032s
+2026-11-13T05:48:10Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/ltx/bin/python -e /tmp/audit/repos/ltx-video[inference] accelerate -> rc=0 3.583s
+2026-11-13T05:48:10Z stderr tail: Using Python 3.10.22 environment at: /tmp/audit/envs/ltx | Resolved 57 packages in 540ms |    Building ltx-video @ file:///tmp/audit/repos/ltx-video | Downloading hf-xet (4.1MiB) | Downloading timm (2.7MiB) | Downloading transformers (9.9MiB) | Downloading tokenizers (3.0MiB) | Downloading diffusers (5.4MiB) | Downloading av (34.9MiB) | Downloading sentencepiece (1.6MiB) | Downloading imageio-ffmpeg (64.8MiB) |  Downloaded sentencepiece |  Downloaded timm |  Downloaded tokenizers |  Downloaded hf-xet |  Downloaded diffusers |  Downloaded transformers |  Downloaded av |  Downloaded imageio-ffmpeg |       Built ltx-video @ file:///tmp/audit/repos/ltx-video | Prepared 31 packages in 2.63s | Installed 31 packages in 95ms |  + accelerate==1.15.0 |  + anyio==4.16.0 |  + av==17.1.0 |  + certifi==2026.10.23 |  + charset-normalizer==3.5.2 |  + diffusers==0.39.0 |  + einops==0.8.2 |  + exceptiongroup==1.3.1 |  + h11==0.16.0 |  + hf-xet==1.8.0 |  + httpcore==1.0.9 |  + httpx==0.28.1 |  + huggingface-hub==0.36.2 |  + idna==3.20 |  + imageio==2.38.0 |  + imageio-ffmpeg==0.8.1 |  + importlib-metadata==9.0.1 |  + ltx-video==0.1.2 (from file:///tmp/audit/repos/ltx-video) |  + packaging==26.3 |  + psutil==7.2.2 |  + pyyaml==6.0.3 |  + regex==2026.9.29 |  + requests==2.34.2 |  + safetensors==0.8.0 |  + sentencepiece==0.2.3 |  + timm==1.0.31 |  + tokenizers==0.21.4 |  + tqdm==4.70.1 |  + transformers==4.51.3 |  + urllib3==2.8.0 |  + zipp==4.1.2 | 
+2026-11-13T05:52:32Z $ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True /tmp/audit/envs/ltx/bin/python /kaggle/working/audit/scripts/ltx_run.py -> rc=0 261.4s
+2026-11-13T05:52:32Z stdout tail: {"dtype": "torch.float16", "load_s": 183.17891025543213, "gen_s": 62.465187549591064, "frames": 49, "peak_alloc_mb": 11033.015625, "peak_reserved_mb": 11050.0, "attn": "unknown"} | 
+2026-11-13T05:52:32Z stderr tail: /30 [00:00<?, ?it/s] |   3%|▎         | 1/30 [00:11<05:47, 11.97s/it] |   7%|▋         | 2/30 [00:12<02:26,  5.22s/it] |  10%|█         | 3/30 [00:13<01:27,  3.23s/it] |  13%|█▎        | 4/30 [00:14<00:59,  2.29s/it] |  17%|█▋        | 5/30 [00:15<00:44,  1.77s/it] |  20%|██        | 6/30 [00:15<00:35,  1.46s/it] |  23%|██▎       | 7/30 [00:16<00:29,  1.26s/it] |  27%|██▋       | 8/30 [00:17<00:24,  1.13s/it] |  30%|███       | 9/30 [00:18<00:21,  1.05s/it] |  33%|███▎      | 10/30 [00:19<00:19,  1.01it/s] |  37%|███▋      | 11/30 [00:20<00:18,  1.05it/s] |  40%|████      | 12/30 [00:21<00:16,  1.08it/s] |  43%|████▎     | 13/30 [00:21<00:15,  1.10it/s] |  47%|████▋     | 14/30 [00:22<00:14,  1.12it/s] |  50%|█████     | 15/30 [00:23<00:13,  1.13it/s] |  53%|█████▎    | 16/30 [00:24<00:12,  1.14it/s] |  57%|█████▋    | 17/30 [00:25<00:11,  1.14it/s] |  60%|██████    | 18/30 [00:26<00:10,  1.15it/s] |  63%|██████▎   | 19/30 [00:27<00:09,  1.15it/s] |  67%|██████▋   | 20/30 [00:27<00:08,  1.15it/s] |  70%|███████   | 21/30 [00:28<00:07,  1.15it/s] |  73%|███████▎  | 22/30 [00:29<00:06,  1.15it/s] |  77%|███████▋  | 23/30 [00:30<00:06,  1.15it/s] |  80%|████████  | 24/30 [00:31<00:05,  1.15it/s] |  83%|████████▎ | 25/30 [00:32<00:04,  1.16it/s] |  87%|████████▋ | 26/30 [00:33<00:03,  1.16it/s] |  90%|█████████ | 27/30 [00:33<00:02,  1.16it/s] |  93%|█████████▎| 28/30 [00:34<00:01,  1.16it/s] |  97%|█████████▋| 29/30 [00:35<00:00,  1.16it/s] | 100%|██████████| 30/30 [00:36<00:00,  1.16it/s] | 100%|██████████| 30/30 [00:36<00:00,  1.22s/it] | 
+2026-11-13T05:52:32Z $ ffprobe -v error -show_streams -show_format -of json /kaggle/working/audit/results/ltx-video-2b-0.9.5/out.mp4 -> rc=0 0.666s
+2026-11-13T05:52:32Z stdout tail: es": "49", |             "extradata_size": 44, |             "disposition": { |                 "default": 1, |                 "dub": 0, |                 "original": 0, |                 "comment": 0, |                 "lyrics": 0, |                 "karaoke": 0, |                 "forced": 0, |                 "hearing_impaired": 0, |                 "visual_impaired": 0, |                 "clean_effects": 0, |                 "attached_pic": 0, |                 "timed_thumbnails": 0, |                 "non_diegetic": 0, |                 "captions": 0, |                 "descriptions": 0, |                 "metadata": 0, |                 "dependent": 0, |                 "still_image": 0 |             }, |             "tags": { |                 "language": "und", |                 "handler_name": "VideoHandler", |                 "vendor_id": "[0][0][0][0]", |                 "encoder": "Lavc63.1.102 libx264" |             } |         } |     ], |     "format": { |         "filename": "/kaggle/working/audit/results/ltx-video-2b-0.9.5/out.mp4", |         "nb_streams": 1, |         "nb_programs": 0, |         "format_name": "mov,mp4,m4a,3gp,3g2,mj2", |         "format_long_name": "QuickTime / MOV", |         "start_time": "0.000000", |         "duration": "2.041667", |         "size": "45418", |         "bit_rate": "177964", |         "probe_score": 100, |         "tags": { |             "major_brand": "isom", |             "minor_version": "512", |             "compatible_brands": "isomiso2avc1mp41", |             "encoder": "Lavf63.1.102" |         } |     } | } | 
+2026-11-13T05:52:33Z $ ffmpeg -v error -i /kaggle/working/audit/results/ltx-video-2b-0.9.5/out.mp4 -f null - -> rc=0 0.181s
+2026-11-13T05:52:35Z FINAL {"status": "PASS", "blocker": null}
+{
+  "component": "ltx-video-2b-0.9.5",
+  "priority": "P0",
+  "kernel": "openmontage-p0-ltx-video-2b-0-9-5",
+  "utc_start": "2026-11-13T05:47:18Z",
+  "utc_end": "2026-11-13T05:52:35Z",
+  "status": "PASS",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "environment_before": {
+      "t4": {
+        "cuda_available": true,
+        "device_count": 1,
+        "all_devices_are_tesla_t4": true,
+        "per_device": [
+          {
+            "index": 0,
+            "name": "Tesla T4",
+            "total_memory_mib": 14911,
+            "compute_capability": "7.5",
+            "free_memory_mib": 14806
+          }
+        ],
+        "ok": true,
+        "reasons": []
+      },
+      "devices": [
+        {
+          "index": 0,
+          "name": "Tesla T4",
+          "total_memory_mib": 14911,
+          "compute_capability": "7.5",
+          "multi_processor_count": 40,
+          "free_memory_mib": 14806,
+          "total_memory_mib_reported": 14911
+        }
+      ]
+    },
+    "install_torch": {
+      "rc": 0,
+      "duration_s": 38.832
+    },
+    "install_repo": {
+      "rc": 0,
+      "duration_s": 3.583,
+      "stderr": "Using Python 3.10.22 environment at: /tmp/audit/envs/ltx\nResolved 57 packages in 540ms\n   Building ltx-video @ file:///tmp/audit/repos/ltx-video\nDownloading hf-xet (4.1MiB)\nDownloading timm (2.7MiB)\nDownloading transformers (9.9MiB)\nDownloading tokenizers (3.0MiB)\nDownloading diffusers (5.4MiB)\nDownloading av (34.9MiB)\nDownloading sentencepiece (1.6MiB)\nDownloading imageio-ffmpeg (64.8MiB)\n Downloaded sentencepiece\n Downloaded timm\n Downloaded tokenizers\n Downloaded hf-xet\n Downloaded diffusers\n Downloaded transformers\n Downloaded av\n Downloaded imageio-ffmpeg\n      Built ltx-video @ file:///tmp/audit/repos/ltx-video\nPrepared 31 packages in 2.63s\nInstalled 31 packages in 95ms\n + accelerate==1.15.0\n + anyio==4.16.0\n + av==17.1.0\n + certifi==2026.10.23\n + charset-normalizer==3.5.2\n + diffusers==0.39.0\n + einops==0.8.2\n + exceptiongroup==1.3.1\n + h11==0.16.0\n + hf-xet==1.8.0\n + httpcore==1.0.9\n + httpx==0.28.1\n + huggingface-hub==0.36.2\n + idna==3.20\n + imageio==2.38.0\n + imageio-ffmpeg==0.8.1\n + importlib-metadata==9.0.1\n + ltx-video==0.1.2 (from file:///tmp/audit/repos/ltx-video)\n + packaging==26.3\n + psutil==7.2.2\n + pyyaml==6.0.3\n + regex==2026.9.29\n + requests==2.34.2\n + safetensors==0.8.0\n + sentencepiece==0.2.3\n + timm==1.0.31\n + tokenizers==0.21.4\n + tqdm==4.70.1\n + transformers==4.51.3\n + urllib3==2.8.0\n + zipp==4.1.2\n"
+    },
+    "inference": {
+      "rc": 0,
+      "duration_s": 261.4,
+      "stdout": "{\"dtype\": \"torch.float16\", \"load_s\": 183.17891025543213, \"gen_s\": 62.465187549591064, \"frames\": 49, \"peak_alloc_mb\": 11033.015625, \"peak_reserved_mb\": 11050.0, \"attn\": \"unknown\"}\n",
+      "stderr": "\nFetching 16 files:   0%|          | 0/16 [00:00<?, ?it/s]\nFetching 16 files:  50%|\u2588\u2588\u2588\u2588\u2588     | 8/16 [00:00<00:00, 26.56it/s]\nFetching 16 files:  62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 10/16 [00:19<00:11,  1.99s/it]\nFetching 16 files:  69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 11/16 [01:05<00:29,  5.98s/it]\nFetching 16 files:  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 12/16 [01:24<00:28,  7.01s/it]\nFetching 16 files:  81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 13/16 [01:36<00:22,  7.43s/it]\nFetching 16 files:  88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 14/16 [01:36<00:13,  6.91s/it]\nFetching 16 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 16/16 [01:48<00:00,  6.80s/it]\nFetching 16 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 16/16 [01:48<00:00,  6.80s/it]\n\nLoading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]\n\nLoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]\u001b[A\n\nLoading checkpoint shards:  25%|\u2588\u2588\u258c       | 1/4 [00:14<00:42, 14.27s/it]\u001b[A\n\nLoading checkpoint shards:  50%|\u2588\u2588\u2588\u2588\u2588     | 2/4 [00:21<00:20, 10.33s/it]\u001b[A\n\nLoading checkpoint shards:  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 3/4 [00:35<00:11, 11.94s/it]\u001b[A\n\nLoading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 4/4 [00:48<00:00, 12.20s/it]\u001b[A\nLoading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 4/4 [00:48<00:00, 12.08s/it]\n\nLoading pipeline components...:  20%|\u2588\u2588        | 1/5 [00:48<03:14, 48.51s/it]\nLoading pipeline components...:  40%|\u2588\u2588\u2588\u2588      | 2/5 [01:04<01:27, 29.12s/it]\nLoading pipeline components...:  60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 3/5 [01:13<00:40, 20.36s/it]\nLoading pipeline components...: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 5/5 [01:14<00:00,  8.88s/it]\nLoading pipeline components...: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 5/5 [01:14<00:00, 14.83s/it]\n\n  0%|          | 0/30 [00:00<?, ?it/s]\n  3%|\u258e         | 1/30 [00:11<05:47, 11.97s/it]\n  7%|\u258b         | 2/30 [00:12<02:26,  5.22s/it]\n 10%|\u2588         | 3/30 [00:13<01:27,  3.23s/it]\n 13%|\u2588\u258e        | 4/30 [00:14<00:59,  2.29s/it]\n 17%|\u2588\u258b        | 5/30 [00:15<00:44,  1.77s/it]\n 20%|\u2588\u2588        | 6/30 [00:15<00:35,  1.46s/it]\n 23%|\u2588\u2588\u258e       | 7/30 [00:16<00:29,  1.26s/it]\n 27%|\u2588\u2588\u258b       | 8/30 [00:17<00:24,  1.13s/it]\n 30%|\u2588\u2588\u2588       | 9/30 [00:18<00:21,  1.05s/it]\n 33%|\u2588\u2588\u2588\u258e      | 10/30 [00:19<00:19,  1.01it/s]\n 37%|\u2588\u2588\u2588\u258b      | 11/30 [00:20<00:18,  1.05it/s]\n 40%|\u2588\u2588\u2588\u2588      | 12/30 [00:21<00:16,  1.08it/s]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 13/30 [00:21<00:15,  1.10it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 14/30 [00:22<00:14,  1.12it/s]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 15/30 [00:23<00:13,  1.13it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 16/30 [00:24<00:12,  1.14it/s]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 17/30 [00:25<00:11,  1.14it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 18/30 [00:26<00:10,  1.15it/s]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 19/30 [00:27<00:09,  1.15it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 20/30 [00:27<00:08,  1.15it/s]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 21/30 [00:28<00:07,  1.15it/s]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 22/30 [00:29<00:06,  1.15it/s]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 23/30 [00:30<00:06,  1.15it/s]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 24/30 [00:31<00:05,  1.15it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 25/30 [00:32<00:04,  1.16it/s]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 26/30 [00:33<00:03,  1.16it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 27/30 [00:33<00:02,  1.16it/s]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 28/30 [00:34<00:01,  1.16it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 29/30 [00:35<00:00,  1.16it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [00:36<00:00,  1.16it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [00:36<00:00,  1.22s/it]\n"
+    },
+    "metrics": {
+      "dtype": "torch.float16",
+      "load_s": 183.17891025543213,
+      "gen_s": 62.465187549591064,
+      "frames": 49,
+      "peak_alloc_mb": 11033.015625,
+      "peak_reserved_mb": 11050.0,
+      "attn": "unknown"
+    },
+    "outputs": [
+      {
+        "path": "/kaggle/working/audit/results/ltx-video-2b-0.9.5/out.mp4",
+        "bytes": 45418,
+        "sha256": "098e7afc31e92ef82558d0c37768d87d986af1caacc78ed152245c4214531145"
+      }
+    ],
+    "ffprobe": "{\n    \"streams\": [\n        {\n            \"index\": 0,\n            \"codec_name\": \"h264\",\n            \"codec_long_name\": \"H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10\",\n            \"profile\": \"High\",\n            \"codec_type\": \"video\",\n            \"codec_tag_string\": \"avc1\",\n            \"codec_tag\": \"0x31637661\",\n            \"width\": 512,\n            \"height\": 512,\n            \"coded_width\": 512,\n            \"coded_height\": 512,\n            \"closed_captions\": 0,\n            \"film_grain\": 0,\n            \"has_b_frames\": 2,\n            \"pix_fmt\": \"yuv420p\",\n            \"level\": 30,\n            \"chroma_location\": \"left\",\n            \"field_order\": \"progressive\",\n            \"refs\": 1,\n            \"is_avc\": \"true\",\n            \"nal_length_size\": \"4\",\n            \"id\": \"0x1\",\n            \"r_frame_rate\": \"24/1\",\n            \"avg_frame_rate\": \"24/1\",\n            \"time_base\": \"1/12288\",\n            \"start_pts\": 0,\n            \"start_time\": \"0.000000\",\n            \"duration_ts\": 25088,\n            \"duration\": \"2.041667\",\n            \"bit_rate\": \"172306\",\n            \"bits_per_raw_sample\": \"8\",\n            \"nb_frames\": \"49\",\n            \"extradata_size\": 44,\n            \"disposition\": {\n                \"default\": 1,\n                \"dub\": 0,\n                \"original\": 0,\n                \"comment\": 0,\n                \"lyrics\": 0,\n                \"karaoke\": 0,\n                \"forced\": 0,\n                \"hearing_impaired\": 0,\n                \"visual_impaired\": 0,\n                \"clean_effects\": 0,\n                \"attached_pic\": 0,\n                \"timed_thumbnails\": 0,\n                \"non_diegetic\": 0,\n                \"captions\": 0,\n                \"descriptions\": 0,\n                \"metadata\": 0,\n                \"dependent\": 0,\n                \"still_image\": 0\n            },\n            \"tags\": {\n                \"language\": \"und\",\n                \"handler_name\": \"VideoHandler\",\n                \"vendor_id\": \"[0][0][0][0]\",\n                \"encoder\": \"Lavc63.1.102 libx264\"\n            }\n        }\n    ],\n    \"format\": {\n        \"filename\": \"/kaggle/working/audit/results/ltx-video-2b-0.9.5/out.mp4\",\n        \"nb_streams\": 1,\n        \"nb_programs\": 0,\n        \"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\",\n        \"format_long_name\": \"QuickTime / MOV\",\n        \"start_time\": \"0.000000\",\n        \"duration\": \"2.041667\",\n        \"size\": \"45418\",\n        \"bit_rate\": \"177964\",\n        \"probe_score\": 100,\n        \"tags\": {\n            \"major_brand\": \"isom\",\n            \"minor_version\": \"512\",\n            \"compatible_brands\": \"isomiso2avc1mp41\",\n            \"encoder\": \"Lavf63.1.102\"\n        }\n    }\n}\n",
+    "decode_clean": true,
+    "environment_after": {
+      "working_free_gib": 19.50212860107422
+    },
+    "dtype": "torch.float16",
+    "runtime_seconds": 62.465187549591064,
+    "peak_vram_allocated_mb": 11033.015625,
+    "peak_vram_reserved_mb": 11050.0,
+    "attn": "unknown"
+  },
+  "errors": []
+}
+/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 363301 bytes to __results__.html

@@ -57,3 +57,24 @@
 - Последствие: возможна выдача лицензии весов за подтверждённую без текста и без права на коммерческое использование.
 - Правило на будущее: записывать `"license_basis": "model_card_metadata"` и статус `"условный PASS"` (conditional PASS), не считать это окончательным PASS; при наличии текста лицензии — статус PASS и путь к LICENSE-weights.txt.
 - Как проверять: в audit/licenses/STATUS.json для таких компонентов есть license_basis=model_card_metadata и license_status="CONDITIONAL PASS"; для компонентов с текстом лицензии указан путь к файлу.
+
+### L7 — CANCEL_ACKNOWLEDGED без сообщения (2026-11-13)
+- Что произошло: Kaggle-ноутбук P0 RIFE (v1 и v2) менял статус RUNNING -> CANCEL_ACKNOWLEDGED примерно через 90 секунд после старта. Логи обрывались на установке зависимостей/скачивании; сообщения об ошибке не было. Диагностика: CPU-only kernel COMPLETE (~2.5 мин), GPU-only kernel COMPLETE (~42 с), GPU+internet kernel COMPLETE (~3 мин), uv+torch kernel COMPLETE (~4.5 мин), gdown-скачивание 4.25 COMPLETE (~1.5 мин).
+- Причина: не установлена. Исключены: отсутствие GPU, отсутствие интернета, uv, torch, Google Drive. Остаётся внешняя причина (преэкшн/лимит аккаунта) либо ресурсный watchdog; требует проверки в веб-интерфейсе Kaggle.
+- Последствие: два GPU-запуска потеряны; RIFE не протестирован.
+- Правило на будущее: при CANCEL_ACKNOWLEDGED сохранить лог, запустить минимальный GPU+internet диагностический kernel и не повторять тяжёлый kernel более одного раза; при повторе — BLOCKED с указанием общего внешнего признака.
+- Как проверять: в логе есть переход в CANCEL_ACKNOWLEDGED; рядом лежат результаты diag_cpu/diag_gpu/diag_gpu_net/diag_uv/diag_gdown с COMPLETE.
+
+### L8 — `kaggle kernels output` без фильтра тянет весь /kaggle/working (2026-11-13)
+- Что произошло: после LTX-рана `kaggle kernels output <id> -p ... -o` без `--file-pattern` начал скачивать содержимое `/kaggle/working`, включая venv с torch (файлы `audit/envs/ltx/bin/*`), и был прерван таймаутом; повторные попытки получили `429 Too Many Requests` от Kaggle API.
+- Причина: venv, репозиторий и кэши были созданы внутри `/kaggle/working`; API выгружает всё содержимое без фильтра.
+- Последствие: потеря времени на загрузку, rate limit, риск превысить лимит 20 ГБ и получить неполные артефакты.
+- Правило на будущее: venv/репозитории/веса/кэши держать вне `/kaggle/working` (например `/tmp/audit/...`), в `/kaggle/working` — только evidence; скачивать результат с `--file-pattern` (regex), например `--file-pattern '.*\.log$'`.
+- Как проверять: `du -sh /kaggle/working` в ноутбуке — только logs/results/config; в downloaded-папке нет `envs/`, `repos/`, `weights/`.
+
+### L9 — CosyVoice: пять последовательных падений из-за окружения и формата промпта (2026-11-13)
+- Что произошло: CosyVoice 3 падал пять раз: (1) сборка openai-whisper без `pkg_resources`; (2) `ModuleNotFoundError: onnxruntime`; (3) `ModuleNotFoundError: whisper`; (4) `en_core_web_sm` не установлен; (5) `AssertionError: <|endofprompt|> not detected`; (6) chunking дал 1 чанк на 9552 символа из-за двойного слеша в regex (`\\s` вместо `\s`).
+- Причина: официальный requirements не ставился целиком (фильтр), build-зависимости не установлены, пример из model card не воспроизведён дословно, regex собран с двойным escape.
+- Последствие: 5 лишних Kaggle-рана (~20 минут GPU и ожидания).
+- Правило на будущее: перед тяжёлым прогоном (а) прочитать официальный inference-пример и скопировать формат промпта/токены, (б) проверить импорты, (в) проверить regex на одном абзаце локально, (г) для sdist ставить `setuptools<81 wheel` и `--no-build-isolation-package`.
+- Как проверять: в логе `chunking.chunks > 1` и `max_chars <= 300`; prompt содержит `<|endofprompt|>`; установка requirements завершилась rc=0.

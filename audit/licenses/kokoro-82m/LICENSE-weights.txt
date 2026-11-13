@@ -1,0 +1,4 @@
+kokoro-82m: no separate weight license file in the model repository.
+license_basis: model_card_metadata
+The model card declares the license; see MODEL_CARD.md and PROVENANCE.json.
+Status is CONDITIONAL PASS, not final PASS.

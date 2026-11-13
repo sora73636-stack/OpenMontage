@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "image_prompts": [
+    {
+      "id": 1,
+      "seed": 424242,
+      "size": [
+        512,
+        512
+      ],
+      "prompt": "A scientifically accurate, highly detailed educational cutaway illustration of a mitochondrion, showing the outer membrane, inner membrane, cristae, matrix, and ATP synthase complexes, clean studio lighting, clear scientific composition, no labels, no text, no watermark."
+    },
+    {
+      "id": 2,
+      "seed": 202607,
+      "size": [
+        512,
+        512
+      ],
+      "prompt": "A scientifically grounded visualization of the James Webb Space Telescope observing a distant exoplanet, realistic engineering details, accurate telescope proportions, deep-space background, educational documentary visual style, no labels, no text, no watermark."
+    },
+    {
+      "id": 3,
+      "seed": 271828,
+      "size": [
+        512,
+        512
+      ],
+      "prompt": "A precise scientific visualization of a gravitational-wave observatory with two perpendicular interferometer arms, laser beam paths, mirrors, realistic facility scale, clean explanatory composition, no labels, no text, no watermark."
+    }
+  ],
+  "video_prompt": "Create a short, scientifically grounded educational documentary shot of a spacecraft approaching a distant exoplanet. Show a slow continuous camera movement, stable object geometry, physically plausible lighting, realistic space-science visual style, no text, no labels, no watermark, no abrupt scene changes.",
+  "video_seed": 424242,
+  "video_size": [
+    512,
+    512
+  ],
+  "video_frames": 49
+}

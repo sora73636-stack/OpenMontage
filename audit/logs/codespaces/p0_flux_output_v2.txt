@@ -1,0 +1,33 @@
+Downloading image_video_prompts.json to audit/logs/kaggle/p0-flux/v2/audit/config
+  0%|          | 0.00/1.55k [00:00<?, ?B/s]100%|██████████| 1.55k/1.55k [00:00<00:00, 5.37MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-flux/v2/audit/config/image_video_prompts.json
+Downloading science_terms.json to audit/logs/kaggle/p0-flux/v2/audit/config
+  0%|          | 0.00/4.78k [00:00<?, ?B/s]100%|██████████| 4.78k/4.78k [00:00<00:00, 19.4MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-flux/v2/audit/config/science_terms.json
+Downloading environment_snapshot_after_flux.json to audit/logs/kaggle/p0-flux/v2/audit/logs/kaggle
+  0%|          | 0.00/40.0k [00:00<?, ?B/s]100%|██████████| 40.0k/40.0k [00:00<00:00, 578kB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-flux/v2/audit/logs/kaggle/environment_snapshot_after_flux.json
+Downloading environment_snapshot_before_flux.json to audit/logs/kaggle/p0-flux/v2/audit/logs/kaggle
+  0%|          | 0.00/40.0k [00:00<?, ?B/s]100%|██████████| 40.0k/40.0k [00:00<00:00, 568kB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-flux/v2/audit/logs/kaggle/environment_snapshot_before_flux.json
+Downloading flux_1.png to audit/logs/kaggle/p0-flux/v2/audit/results/flux2-klein-4b
+  0%|          | 0.00/364k [00:00<?, ?B/s]100%|██████████| 364k/364k [00:00<00:00, 1.04MB/s]100%|██████████| 364k/364k [00:00<00:00, 1.04MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-flux/v2/audit/results/flux2-klein-4b/flux_1.png
+Downloading flux_2.png to audit/logs/kaggle/p0-flux/v2/audit/results/flux2-klein-4b
+  0%|          | 0.00/430k [00:00<?, ?B/s]100%|██████████| 430k/430k [00:00<00:00, 1.01MB/s]100%|██████████| 430k/430k [00:00<00:00, 1.01MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-flux/v2/audit/results/flux2-klein-4b/flux_2.png
+Downloading flux_3.png to audit/logs/kaggle/p0-flux/v2/audit/results/flux2-klein-4b
+  0%|          | 0.00/255k [00:00<?, ?B/s]100%|██████████| 255k/255k [00:00<00:00, 768kB/s]100%|██████████| 255k/255k [00:00<00:00, 767kB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-flux/v2/audit/results/flux2-klein-4b/flux_3.png
+Downloading summary.json to audit/logs/kaggle/p0-flux/v2/audit/results/flux2-klein-4b
+  0%|          | 0.00/10.5k [00:00<?, ?B/s]100%|██████████| 10.5k/10.5k [00:00<00:00, 7.08MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-flux/v2/audit/results/flux2-klein-4b/summary.json
+Kernel log downloaded to audit/logs/kaggle/p0-flux/v2/openmontage-p0-flux2-klein-4b.log 

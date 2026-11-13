@@ -1,0 +1,101 @@
+Downloading image_video_prompts.json to audit/logs/kaggle/p0-esrgan/v2/audit/config
+  0%|          | 0.00/1.55k [00:00<?, ?B/s]100%|██████████| 1.55k/1.55k [00:00<00:00, 3.63MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/config/image_video_prompts.json
+Downloading science_terms.json to audit/logs/kaggle/p0-esrgan/v2/audit/config
+  0%|          | 0.00/4.78k [00:00<?, ?B/s]100%|██████████| 4.78k/4.78k [00:00<00:00, 20.7MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/config/science_terms.json
+Downloading frame_00.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs
+  0%|          | 0.00/26.7k [00:00<?, ?B/s]100%|██████████| 26.7k/26.7k [00:00<00:00, 634kB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs/frame_00.png
+Downloading frame_01.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs
+  0%|          | 0.00/26.8k [00:00<?, ?B/s]100%|██████████| 26.8k/26.8k [00:00<00:00, 4.77MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs/frame_01.png
+Downloading frame_02.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs
+  0%|          | 0.00/26.8k [00:00<?, ?B/s]100%|██████████| 26.8k/26.8k [00:00<00:00, 696kB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs/frame_02.png
+Downloading frame_03.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs
+  0%|          | 0.00/26.7k [00:00<?, ?B/s]100%|██████████| 26.7k/26.7k [00:00<00:00, 669kB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs/frame_03.png
+Downloading frame_04.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs
+  0%|          | 0.00/26.7k [00:00<?, ?B/s]100%|██████████| 26.7k/26.7k [00:00<00:00, 2.87MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs/frame_04.png
+Downloading frame_05.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs
+  0%|          | 0.00/26.7k [00:00<?, ?B/s]100%|██████████| 26.7k/26.7k [00:00<00:00, 719kB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs/frame_05.png
+Downloading frame_06.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs
+  0%|          | 0.00/26.8k [00:00<?, ?B/s]100%|██████████| 26.8k/26.8k [00:00<00:00, 1.01MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs/frame_06.png
+Downloading frame_07.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs
+  0%|          | 0.00/27.0k [00:00<?, ?B/s]100%|██████████| 27.0k/27.0k [00:00<00:00, 669kB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs/frame_07.png
+Downloading frame_08.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs
+  0%|          | 0.00/27.2k [00:00<?, ?B/s]100%|██████████| 27.2k/27.2k [00:00<00:00, 716kB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs/frame_08.png
+Downloading frame_09.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs
+  0%|          | 0.00/27.5k [00:00<?, ?B/s]100%|██████████| 27.5k/27.5k [00:00<00:00, 660kB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs/frame_09.png
+Downloading frame_00_out.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs
+  0%|          | 0.00/661k [00:00<?, ?B/s]100%|██████████| 661k/661k [00:00<00:00, 1.37MB/s]100%|██████████| 661k/661k [00:00<00:00, 1.36MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_00_out.png
+Downloading frame_01_out.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs
+  0%|          | 0.00/663k [00:00<?, ?B/s]100%|██████████| 663k/663k [00:00<00:00, 1.35MB/s]100%|██████████| 663k/663k [00:00<00:00, 1.35MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_01_out.png
+Downloading frame_02_out.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs
+  0%|          | 0.00/665k [00:00<?, ?B/s]100%|██████████| 665k/665k [00:00<00:00, 1.36MB/s]100%|██████████| 665k/665k [00:00<00:00, 1.36MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_02_out.png
+Downloading frame_03_out.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs
+  0%|          | 0.00/666k [00:00<?, ?B/s]100%|██████████| 666k/666k [00:00<00:00, 2.80MB/s]100%|██████████| 666k/666k [00:00<00:00, 2.79MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_03_out.png
+Downloading frame_04_out.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs
+  0%|          | 0.00/670k [00:00<?, ?B/s]100%|██████████| 670k/670k [00:00<00:00, 1.35MB/s]100%|██████████| 670k/670k [00:00<00:00, 1.35MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_04_out.png
+Downloading frame_05_out.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs
+  0%|          | 0.00/670k [00:00<?, ?B/s]100%|██████████| 670k/670k [00:00<00:00, 1.28MB/s]100%|██████████| 670k/670k [00:00<00:00, 1.27MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_05_out.png
+Downloading frame_06_out.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs
+  0%|          | 0.00/678k [00:00<?, ?B/s]100%|██████████| 678k/678k [00:00<00:00, 1.60MB/s]100%|██████████| 678k/678k [00:00<00:00, 1.60MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_06_out.png
+Downloading frame_07_out.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs
+  0%|          | 0.00/687k [00:00<?, ?B/s]100%|██████████| 687k/687k [00:00<00:00, 1.35MB/s]100%|██████████| 687k/687k [00:00<00:00, 1.35MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_07_out.png
+Downloading frame_08_out.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs
+  0%|          | 0.00/697k [00:00<?, ?B/s]100%|██████████| 697k/697k [00:00<00:00, 1.30MB/s]100%|██████████| 697k/697k [00:00<00:00, 1.30MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_08_out.png
+Downloading frame_09_out.png to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs
+  0%|          | 0.00/709k [00:00<?, ?B/s]100%|██████████| 709k/709k [00:00<00:00, 1.35MB/s]100%|██████████| 709k/709k [00:00<00:00, 1.35MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_09_out.png
+Downloading environment_snapshot_after_esrgan.json to audit/logs/kaggle/p0-esrgan/v2/audit/logs/kaggle
+  0%|          | 0.00/40.0k [00:00<?, ?B/s]100%|██████████| 40.0k/40.0k [00:00<00:00, 911kB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/logs/kaggle/environment_snapshot_after_esrgan.json
+Downloading environment_snapshot_before_esrgan.json to audit/logs/kaggle/p0-esrgan/v2/audit/logs/kaggle
+  0%|          | 0.00/40.0k [00:00<?, ?B/s]100%|██████████| 40.0k/40.0k [00:00<00:00, 582kB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/logs/kaggle/environment_snapshot_before_esrgan.json
+Downloading summary.json to audit/logs/kaggle/p0-esrgan/v2/audit/results/real-esrgan-x4plus
+  0%|          | 0.00/6.49k [00:00<?, ?B/s]100%|██████████| 6.49k/6.49k [00:00<00:00, 27.8MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-esrgan/v2/audit/results/real-esrgan-x4plus/summary.json
+Kernel log downloaded to audit/logs/kaggle/p0-esrgan/v2/openmontage-p0-real-esrgan-x4plus.log 

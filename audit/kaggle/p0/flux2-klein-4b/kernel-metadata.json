@@ -1,0 +1,16 @@
+{
+  "id": "forts845/openmontage-p0-flux2-klein-4b",
+  "title": "OpenMontage P0 flux2-klein-4b",
+  "code_file": "notebook.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

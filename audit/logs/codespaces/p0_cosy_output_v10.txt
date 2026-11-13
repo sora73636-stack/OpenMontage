@@ -1,0 +1,25 @@
+Downloading image_video_prompts.json to audit/logs/kaggle/p0-cosy/v10/audit/config
+  0%|          | 0.00/1.55k [00:00<?, ?B/s]100%|██████████| 1.55k/1.55k [00:00<00:00, 5.36MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-cosy/v10/audit/config/image_video_prompts.json
+Downloading science_terms.json to audit/logs/kaggle/p0-cosy/v10/audit/config
+  0%|          | 0.00/4.78k [00:00<?, ?B/s]100%|██████████| 4.78k/4.78k [00:00<00:00, 19.4MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-cosy/v10/audit/config/science_terms.json
+Downloading environment_snapshot_after_cosyvoice.json to audit/logs/kaggle/p0-cosy/v10/audit/logs/kaggle
+  0%|          | 0.00/40.0k [00:00<?, ?B/s]100%|██████████| 40.0k/40.0k [00:00<00:00, 2.24MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-cosy/v10/audit/logs/kaggle/environment_snapshot_after_cosyvoice.json
+Downloading environment_snapshot_before_cosyvoice.json to audit/logs/kaggle/p0-cosy/v10/audit/logs/kaggle
+  0%|          | 0.00/40.0k [00:00<?, ?B/s]100%|██████████| 40.0k/40.0k [00:00<00:00, 2.85MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-cosy/v10/audit/logs/kaggle/environment_snapshot_before_cosyvoice.json
+Downloading out.wav to audit/logs/kaggle/p0-cosy/v10/audit/results/cosyvoice3
+  0%|          | 0.00/27.6M [00:00<?, ?B/s]  4%|▎         | 1.00M/27.6M [00:00<00:16, 1.70MB/s]  7%|▋         | 2.00M/27.6M [00:00<00:08, 3.04MB/s] 15%|█▍        | 4.00M/27.6M [00:00<00:04, 5.95MB/s] 22%|██▏       | 6.00M/27.6M [00:01<00:02, 8.92MB/s] 33%|███▎      | 9.00M/27.6M [00:01<00:01, 13.1MB/s] 44%|████▎     | 12.0M/27.6M [00:01<00:00, 16.3MB/s] 54%|█████▍    | 15.0M/27.6M [00:01<00:00, 17.1MB/s] 65%|██████▌   | 18.0M/27.6M [00:01<00:00, 19.1MB/s] 76%|███████▌  | 21.0M/27.6M [00:01<00:00, 19.0MB/s] 87%|████████▋ | 24.0M/27.6M [00:01<00:00, 20.5MB/s] 98%|█████████▊| 27.0M/27.6M [00:02<00:00, 19.9MB/s]100%|██████████| 27.6M/27.6M [00:02<00:00, 14.1MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-cosy/v10/audit/results/cosyvoice3/out.wav
+Downloading summary.json to audit/logs/kaggle/p0-cosy/v10/audit/results/cosyvoice3
+  0%|          | 0.00/14.5k [00:00<?, ?B/s]100%|██████████| 14.5k/14.5k [00:00<00:00, 1.75MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-cosy/v10/audit/results/cosyvoice3/summary.json
+Kernel log downloaded to audit/logs/kaggle/p0-cosy/v10/openmontage-p0-cosyvoice3.log 

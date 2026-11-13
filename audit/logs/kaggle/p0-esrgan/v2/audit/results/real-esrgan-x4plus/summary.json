@@ -1,0 +1,133 @@
+{
+  "component": "real-esrgan-x4plus",
+  "priority": "P0",
+  "kernel": "openmontage-p0-real-esrgan-x4plus",
+  "utc_start": "2026-11-13T06:54:13Z",
+  "utc_end": "2026-11-13T06:56:35Z",
+  "status": "PASS",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "environment_before": {
+      "t4": {
+        "cuda_available": true,
+        "device_count": 1,
+        "all_devices_are_tesla_t4": true,
+        "per_device": [
+          {
+            "index": 0,
+            "name": "Tesla T4",
+            "total_memory_mib": 14911,
+            "compute_capability": "7.5",
+            "free_memory_mib": 14806
+          }
+        ],
+        "ok": true,
+        "reasons": []
+      },
+      "devices": [
+        {
+          "index": 0,
+          "name": "Tesla T4",
+          "total_memory_mib": 14911,
+          "compute_capability": "7.5",
+          "multi_processor_count": 40,
+          "free_memory_mib": 14806,
+          "total_memory_mib_reported": 14911
+        }
+      ]
+    },
+    "install_torch": {
+      "rc": 0,
+      "duration_s": 38.619
+    },
+    "install_requirements": {
+      "rc": 0,
+      "duration_s": 49.254,
+      "stderr": "\nDownloading scipy (33.7MiB)\nDownloading tensorboard-data-server (6.3MiB)\nDownloading tb-nightly (5.3MiB)\nDownloading fonttools (5.2MiB)\nDownloading grpcio (7.0MiB)\nDownloading numba (3.7MiB)\nDownloading scikit-image (13.1MiB)\nDownloading llvmlite (56.9MiB)\nDownloading matplotlib (9.4MiB)\nDownloading opencv-python (70.4MiB)\n Downloaded kiwisolver\n Downloaded numba\n Downloaded fonttools\n Downloaded tb-nightly\n Downloaded tensorboard-data-server\n      Built basicsr==1.4.2\n Downloaded grpcio\n Downloaded matplotlib\n Downloaded scikit-image\n Downloaded llvmlite\n Downloaded scipy\n Downloaded opencv-python\nPrepared 40 packages in 6.89s\nInstalled 41 packages in 275ms\n + absl-py==2.5.1\n + addict==2.4.0\n + basicsr==1.4.2\n + certifi==2026.10.23\n + charset-normalizer==3.5.2\n + contourpy==1.3.3\n + cycler==0.12.1\n + facexlib==0.3.0\n + filterpy==2.0.0\n + fonttools==4.68.0\n + future==1.0.0\n + gfpgan==1.3.8\n + grpcio==1.85.1\n + idna==3.20\n + imageio==2.38.1\n + kiwisolver==1.5.1\n + lazy-loader==0.6\n + llvmlite==0.50.0\n + lmdb==3.0.0\n + markdown==3.11.3\n + matplotlib==3.11.2\n + numba==0.68.1\n + opencv-python==5.0.0.93\n + packaging==26.3\n + platformdirs==4.14.5\n + protobuf==7.36.2\n + pyparsing==3.3.3\n + python-dateutil==4.0.0\n + pyyaml==6.0.3\n + requests==2.34.2\n + scikit-image==0.26.0\n + scipy==1.17.1\n + setuptools==84.2.1\n + tb-nightly==2.21.0a20251023\n + tensorboard-data-server==0.7.2\n + tifffile==2026.3.3\n + tqdm==4.70.1\n + tzdata==2026.6\n + urllib3==2.8.0\n + werkzeug==3.1.9\n + yapf==0.43.0\n"
+    },
+    "install_realesrgan": {
+      "rc": 0,
+      "duration_s": 2.948,
+      "stderr": "Using Python 3.11.17 environment at: /tmp/audit/envs/esrgan\nResolved 68 packages in 612ms\n   Building realesrgan @ file:///tmp/audit/repos/real-esrgan\n      Built realesrgan @ file:///tmp/audit/repos/real-esrgan\nPrepared 1 package in 245ms\nInstalled 1 package in 0.88ms\n + realesrgan==0.3.0 (from file:///tmp/audit/repos/real-esrgan)\n"
+    },
+    "weights": {
+      "rc": 0,
+      "bytes": 67040989,
+      "sha256": "4fa0d38905f75ac06eb49a7951b426670021be3018265fd191d2125df9d682f1"
+    },
+    "inference": {
+      "rc": 0,
+      "duration_s": 16.599,
+      "stderr": "\n  0%|          | 0.00/63.9M [00:00<?, ?B/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 39.6M/63.9M [00:00<00:00, 415MB/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 63.9M/63.9M [00:00<00:00, 344MB/s]\n/tmp/audit/repos/real-esrgan/realesrgan/utils.py:63: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.\n  loadnet = torch.load(model_path, map_location=torch.device('cpu'))\n"
+    },
+    "outputs": [
+      {
+        "path": "/kaggle/working/audit/fixtures/esrgan/outputs/frame_00_out.png",
+        "bytes": 676907,
+        "sha256": "3d777f258da36e0dc4d10180de10c55f37cc38567473ac4caf687d8f207e2f65"
+      },
+      {
+        "path": "/kaggle/working/audit/fixtures/esrgan/outputs/frame_01_out.png",
+        "bytes": 678881,
+        "sha256": "0845e949b9e2074dc16fb7a552c99d9e22a63c1382677c74272a9c85ae3c9e7f"
+      },
+      {
+        "path": "/kaggle/working/audit/fixtures/esrgan/outputs/frame_02_out.png",
+        "bytes": 680855,
+        "sha256": "3b4611682218b80461192255634b5f6544b23f31f5faa379aad07c34a4929eb4"
+      },
+      {
+        "path": "/kaggle/working/audit/fixtures/esrgan/outputs/frame_03_out.png",
+        "bytes": 682293,
+        "sha256": "6fd58df13e253baeef4643f79d7748466e2c5c57c9beaf2362b54d9969fbe7d7"
+      },
+      {
+        "path": "/kaggle/working/audit/fixtures/esrgan/outputs/frame_04_out.png",
+        "bytes": 685723,
+        "sha256": "eb2c55b7c56845ddc9f746936e1b8851e5472da11d39f900b6cfdf5b55ec559f"
+      },
+      {
+        "path": "/kaggle/working/audit/fixtures/esrgan/outputs/frame_05_out.png",
+        "bytes": 685655,
+        "sha256": "23d1c6f2b95f15ad0493b05ebadb62563bc685a6f3fe13d7fba2feeb67a3d770"
+      },
+      {
+        "path": "/kaggle/working/audit/fixtures/esrgan/outputs/frame_06_out.png",
+        "bytes": 693813,
+        "sha256": "a3048a12d355238e92be4199617ebea5d9bd3e03e8dd17c1cd4a6fb9122962b4"
+      },
+      {
+        "path": "/kaggle/working/audit/fixtures/esrgan/outputs/frame_07_out.png",
+        "bytes": 703451,
+        "sha256": "7de39451e75bbcaf50e5f5c6cf2e109520dcae80a4d12fb3fc4380b5d191419c"
+      },
+      {
+        "path": "/kaggle/working/audit/fixtures/esrgan/outputs/frame_08_out.png",
+        "bytes": 713597,
+        "sha256": "331b84ad1ad8f29c31364bf4c728df07e4cd4929b63c62470207b293b9b5ef41"
+      },
+      {
+        "path": "/kaggle/working/audit/fixtures/esrgan/outputs/frame_09_out.png",
+        "bytes": 726362,
+        "sha256": "2a4c8388b5ff8b7151eecca9832b4deca59fdcba65bfc8b9968024f0f0581854"
+      }
+    ],
+    "validation": {
+      "files": 10,
+      "valid_1024": 10
+    },
+    "environment_after": {
+      "working_free_gib": 19.495410919189453
+    },
+    "dtype": "FP32 (no dtype flag)",
+    "runtime_seconds": 16.599
+  },
+  "errors": [],
+  "peak_vram_mib_nvidia_smi": 1041,
+  "peak_vram_source": "nvidia-smi memory.used (subprocess)"
+}

@@ -1,0 +1,102 @@
+2026-11-13T05:41:49Z helper sha256 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match=True
+2026-11-13T05:41:49Z fixture science_voice_script.txt 9555 bytes sha=cbb5b7ee8f13e8d60c5b25f9502d4c7a6ab682f5dbce75dcae6d169f3bf358e9
+2026-11-13T05:41:49Z fixture science_terms.json 4890 bytes sha=877f430837d8059b47a3671da1679d2637a9ed9077c9239b24b828a042e32862
+2026-11-13T05:41:49Z fixture image_video_prompts.json 1586 bytes sha=5f1cf0117327fb0801023549c6186105deaaf2323c1dc23becaec3428848678b
+2026-11-13T05:41:55Z $ /usr/local/bin/uv venv --python 3.10 /tmp/audit/envs/ltx -> rc=0 2.009s
+2026-11-13T05:41:55Z stderr tail: warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`? | Downloading cpython-3.10.22-linux-x86_64-gnu (download) (28.0MiB) |  Downloaded cpython-3.10.22-linux-x86_64-gnu (download) | Using CPython 3.10.22 | Creating virtual environment at: /tmp/audit/envs/ltx | Activate with: source /tmp/audit/envs/ltx/bin/activate | 
+2026-11-13T05:42:33Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/ltx/bin/python torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126 -> rc=0 38.385s
+2026-11-13T05:42:33Z stderr tail: nloading nvidia-cuda-nvrtc-cu12 (22.6MiB) | Downloading nvidia-cusparse-cu12 (206.5MiB) | Downloading nvidia-cusparselt-cu12 (149.5MiB) | Downloading nvidia-curand-cu12 (53.7MiB) | Downloading nvidia-cufft-cu12 (190.9MiB) | Downloading nvidia-cuda-cupti-cu12 (8.5MiB) |  Downloaded networkx |  Downloaded sympy |  Downloaded pillow |  Downloaded torchvision |  Downloaded numpy |  Downloaded nvidia-cuda-cupti-cu12 |  Downloaded nvidia-nvjitlink-cu12 |  Downloaded nvidia-cuda-nvrtc-cu12 |  Downloaded triton |  Downloaded nvidia-curand-cu12 |  Downloaded nvidia-nccl-cu12 |  Downloaded nvidia-cusolver-cu12 |  Downloaded nvidia-cudnn-cu12 |  Downloaded nvidia-cusparselt-cu12 |  Downloaded nvidia-cusparse-cu12 |  Downloaded nvidia-cublas-cu12 |  Downloaded nvidia-cufft-cu12 |  Downloaded torch | Prepared 26 packages in 36.12s | Installed 26 packages in 1.40s |  + filelock==4.1.0 |  + fsspec==2026.9.0 |  + jinja2==3.1.6 |  + markupsafe==3.0.3 |  + mpmath==1.3.0 |  + networkx==3.4.2 |  + numpy==2.2.6 |  + nvidia-cublas-cu12==12.6.4.1 |  + nvidia-cuda-cupti-cu12==12.6.80 |  + nvidia-cuda-nvrtc-cu12==12.6.77 |  + nvidia-cuda-runtime-cu12==12.6.77 |  + nvidia-cudnn-cu12==9.5.1.17 |  + nvidia-cufft-cu12==11.3.0.4 |  + nvidia-curand-cu12==10.3.7.77 |  + nvidia-cusolver-cu12==11.7.1.2 |  + nvidia-cusparse-cu12==12.5.4.2 |  + nvidia-cusparselt-cu12==0.6.3 |  + nvidia-nccl-cu12==2.21.5 |  + nvidia-nvjitlink-cu12==12.6.85 |  + nvidia-nvtx-cu12==12.6.77 |  + pillow==12.3.0 |  + sympy==1.13.1 |  + torch==2.6.0+cu126 |  + torchvision==0.21.0+cu126 |  + triton==3.2.0 |  + typing-extensions==4.16.0 | 
+2026-11-13T05:42:34Z $ git clone --recursive https://github.com/Lightricks/LTX-Video /tmp/audit/repos/ltx-video -> rc=0 0.922s
+2026-11-13T05:42:34Z stderr tail: Cloning into '/tmp/audit/repos/ltx-video'... | 
+2026-11-13T05:42:34Z $ git -C /tmp/audit/repos/ltx-video checkout -q 50f0aef12975 -> rc=0 0.011s
+2026-11-13T05:42:34Z $ git -C /tmp/audit/repos/ltx-video submodule update --init --recursive -> rc=0 0.038s
+2026-11-13T05:42:39Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/ltx/bin/python -e /tmp/audit/repos/ltx-video[inference] -> rc=0 5.028s
+2026-11-13T05:42:39Z stderr tail: Using Python 3.10.22 environment at: /tmp/audit/envs/ltx | Resolved 56 packages in 635ms |    Building ltx-video @ file:///tmp/audit/repos/ltx-video | Downloading tokenizers (3.0MiB) | Downloading imageio-ffmpeg (64.8MiB) | Downloading hf-xet (4.1MiB) | Downloading timm (2.7MiB) | Downloading diffusers (5.4MiB) | Downloading av (34.9MiB) | Downloading sentencepiece (1.6MiB) | Downloading transformers (9.9MiB) |  Downloaded sentencepiece |  Downloaded timm |  Downloaded tokenizers |  Downloaded hf-xet |  Downloaded diffusers |  Downloaded transformers |  Downloaded av |  Downloaded imageio-ffmpeg |       Built ltx-video @ file:///tmp/audit/repos/ltx-video | Prepared 30 packages in 3.92s | Installed 30 packages in 111ms |  + anyio==4.16.0 |  + av==17.1.0 |  + certifi==2026.10.23 |  + charset-normalizer==3.5.2 |  + diffusers==0.39.0 |  + einops==0.8.2 |  + exceptiongroup==1.3.1 |  + h11==0.16.0 |  + hf-xet==1.8.0 |  + httpcore==1.0.9 |  + httpx==0.28.1 |  + huggingface-hub==0.36.2 |  + idna==3.20 |  + imageio==2.38.0 |  + imageio-ffmpeg==0.8.1 |  + importlib-metadata==9.0.1 |  + ltx-video==0.1.2 (from file:///tmp/audit/repos/ltx-video) |  + packaging==26.3 |  + psutil==7.2.2 |  + pyyaml==6.0.3 |  + regex==2026.9.29 |  + requests==2.34.2 |  + safetensors==0.8.0 |  + sentencepiece==0.2.3 |  + timm==1.0.31 |  + tokenizers==0.21.4 |  + tqdm==4.70.1 |  + transformers==4.51.3 |  + urllib3==2.8.0 |  + zipp==4.1.2 | 
+2026-11-13T05:46:02Z $ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True /tmp/audit/envs/ltx/bin/python /kaggle/working/audit/scripts/ltx_run.py -> rc=1 202.966s
+2026-11-13T05:46:02Z stderr tail: 6 files: 100%|██████████| 16/16 [01:41<00:00,  6.33s/it] |  | Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s] | Loading pipeline components...:  20%|██        | 1/5 [00:00<00:00,  5.98it/s] | Loading pipeline components...:  40%|████      | 2/5 [00:19<00:33, 11.32s/it] | Loading pipeline components...:  60%|██████    | 3/5 [00:28<00:20, 10.38s/it] | Loading pipeline components...:  80%|████████  | 4/5 [00:28<00:06,  6.36s/it] |  | Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][A |  | Loading checkpoint shards:  25%|██▌       | 1/4 [00:12<00:37, 12.60s/it][A |  | Loading checkpoint shards:  50%|█████     | 2/4 [00:27<00:28, 14.01s/it][A |  | Loading checkpoint shards:  75%|███████▌  | 3/4 [00:43<00:14, 14.66s/it][A |  | Loading checkpoint shards: 100%|██████████| 4/4 [00:55<00:00, 13.91s/it][A | Loading checkpoint shards: 100%|██████████| 4/4 [00:55<00:00, 13.95s/it] |  | Loading pipeline components...: 100%|██████████| 5/5 [01:24<00:00, 24.23s/it] | Loading pipeline components...: 100%|██████████| 5/5 [01:24<00:00, 16.93s/it] | Traceback (most recent call last): |   File "/kaggle/working/audit/scripts/ltx_run.py", line 11, in <module> |     pipe.enable_model_cpu_offload() |   File "/tmp/audit/envs/ltx/lib/python3.10/site-packages/diffusers/pipelines/pipeline_utils.py", line 1221, in enable_model_cpu_offload |     raise ImportError("`enable_model_cpu_offload` requires `accelerate v0.17.0` or higher.") | ImportError: `enable_model_cpu_offload` requires `accelerate v0.17.0` or higher. | 
+2026-11-13T05:46:03Z $ ffprobe -v error -show_streams -show_format -of json /kaggle/working/audit/results/ltx-video-2b-0.9.5/out.mp4 -> rc=1 0.751s
+2026-11-13T05:46:03Z stdout tail: { |  | } | 
+2026-11-13T05:46:03Z stderr tail: /kaggle/working/audit/results/ltx-video-2b-0.9.5/out.mp4: No such file or directory | 
+2026-11-13T05:46:03Z $ ffmpeg -v error -i /kaggle/working/audit/results/ltx-video-2b-0.9.5/out.mp4 -f null - -> rc=254 0.118s
+2026-11-13T05:46:03Z stderr tail: [in#0 @ 0x55f9f6d87140] Error opening input: No such file or directory | Error opening input file /kaggle/working/audit/results/ltx-video-2b-0.9.5/out.mp4. | Error opening input files: No such file or directory | 
+2026-11-13T05:46:06Z FINAL {"status": "FAIL", "blocker": "inference/decode validation failed"}
+{
+  "component": "ltx-video-2b-0.9.5",
+  "priority": "P0",
+  "kernel": "openmontage-p0-ltx-video-2b-0-9-5",
+  "utc_start": "2026-11-13T05:41:49Z",
+  "utc_end": "2026-11-13T05:46:06Z",
+  "status": "FAIL",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "environment_before": {
+      "t4": {
+        "cuda_available": true,
+        "device_count": 1,
+        "all_devices_are_tesla_t4": true,
+        "per_device": [
+          {
+            "index": 0,
+            "name": "Tesla T4",
+            "total_memory_mib": 14911,
+            "compute_capability": "7.5",
+            "free_memory_mib": 14806
+          }
+        ],
+        "ok": true,
+        "reasons": []
+      },
+      "devices": [
+        {
+          "index": 0,
+          "name": "Tesla T4",
+          "total_memory_mib": 14911,
+          "compute_capability": "7.5",
+          "multi_processor_count": 40,
+          "free_memory_mib": 14806,
+          "total_memory_mib_reported": 14911
+        }
+      ]
+    },
+    "install_torch": {
+      "rc": 0,
+      "duration_s": 38.385
+    },
+    "install_repo": {
+      "rc": 0,
+      "duration_s": 5.028,
+      "stderr": "Using Python 3.10.22 environment at: /tmp/audit/envs/ltx\nResolved 56 packages in 635ms\n   Building ltx-video @ file:///tmp/audit/repos/ltx-video\nDownloading tokenizers (3.0MiB)\nDownloading imageio-ffmpeg (64.8MiB)\nDownloading hf-xet (4.1MiB)\nDownloading timm (2.7MiB)\nDownloading diffusers (5.4MiB)\nDownloading av (34.9MiB)\nDownloading sentencepiece (1.6MiB)\nDownloading transformers (9.9MiB)\n Downloaded sentencepiece\n Downloaded timm\n Downloaded tokenizers\n Downloaded hf-xet\n Downloaded diffusers\n Downloaded transformers\n Downloaded av\n Downloaded imageio-ffmpeg\n      Built ltx-video @ file:///tmp/audit/repos/ltx-video\nPrepared 30 packages in 3.92s\nInstalled 30 packages in 111ms\n + anyio==4.16.0\n + av==17.1.0\n + certifi==2026.10.23\n + charset-normalizer==3.5.2\n + diffusers==0.39.0\n + einops==0.8.2\n + exceptiongroup==1.3.1\n + h11==0.16.0\n + hf-xet==1.8.0\n + httpcore==1.0.9\n + httpx==0.28.1\n + huggingface-hub==0.36.2\n + idna==3.20\n + imageio==2.38.0\n + imageio-ffmpeg==0.8.1\n + importlib-metadata==9.0.1\n + ltx-video==0.1.2 (from file:///tmp/audit/repos/ltx-video)\n + packaging==26.3\n + psutil==7.2.2\n + pyyaml==6.0.3\n + regex==2026.9.29\n + requests==2.34.2\n + safetensors==0.8.0\n + sentencepiece==0.2.3\n + timm==1.0.31\n + tokenizers==0.21.4\n + tqdm==4.70.1\n + transformers==4.51.3\n + urllib3==2.8.0\n + zipp==4.1.2\n"
+    },
+    "inference": {
+      "rc": 1,
+      "duration_s": 202.966,
+      "stdout": "",
+      "stderr": "Cannot initialize model with low cpu memory usage because `accelerate` was not found in the environment. Defaulting to `low_cpu_mem_usage=False`. It is strongly recommended to install `accelerate` for faster and less memory-intense model loading. You can do so with: \n```\npip install accelerate\n```\n.\n\nFetching 16 files:   0%|          | 0/16 [00:00<?, ?it/s]\nFetching 16 files:  50%|\u2588\u2588\u2588\u2588\u2588     | 8/16 [00:00<00:00, 20.02it/s]\nFetching 16 files:  62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 10/16 [00:19<00:11,  1.99s/it]\nFetching 16 files:  69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 11/16 [01:18<00:35,  7.17s/it]\nFetching 16 files:  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 12/16 [01:35<00:31,  8.00s/it]\nFetching 16 files:  81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 13/16 [01:36<00:22,  7.43s/it]\nFetching 16 files:  88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 14/16 [01:41<00:14,  7.23s/it]\nFetching 16 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 16/16 [01:41<00:00,  6.33s/it]\nFetching 16 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 16/16 [01:41<00:00,  6.33s/it]\n\nLoading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]\nLoading pipeline components...:  20%|\u2588\u2588        | 1/5 [00:00<00:00,  5.98it/s]\nLoading pipeline components...:  40%|\u2588\u2588\u2588\u2588      | 2/5 [00:19<00:33, 11.32s/it]\nLoading pipeline components...:  60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 3/5 [00:28<00:20, 10.38s/it]\nLoading pipeline components...:  80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 4/5 [00:28<00:06,  6.36s/it]\n\nLoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]\u001b[A\n\nLoading checkpoint shards:  25%|\u2588\u2588\u258c       | 1/4 [00:12<00:37, 12.60s/it]\u001b[A\n\nLoading checkpoint shards:  50%|\u2588\u2588\u2588\u2588\u2588     | 2/4 [00:27<00:28, 14.01s/it]\u001b[A\n\nLoading checkpoint shards:  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 3/4 [00:43<00:14, 14.66s/it]\u001b[A\n\nLoading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 4/4 [00:55<00:00, 13.91s/it]\u001b[A\nLoading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 4/4 [00:55<00:00, 13.95s/it]\n\nLoading pipeline components...: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 5/5 [01:24<00:00, 24.23s/it]\nLoading pipeline components...: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 5/5 [01:24<00:00, 16.93s/it]\nTraceback (most recent call last):\n  File \"/kaggle/working/audit/scripts/ltx_run.py\", line 11, in <module>\n    pipe.enable_model_cpu_offload()\n  File \"/tmp/audit/envs/ltx/lib/python3.10/site-packages/diffusers/pipelines/pipeline_utils.py\", line 1221, in enable_model_cpu_offload\n    raise ImportError(\"`enable_model_cpu_offload` requires `accelerate v0.17.0` or higher.\")\nImportError: `enable_model_cpu_offload` requires `accelerate v0.17.0` or higher.\n"
+    },
+    "metrics": {},
+    "outputs": [],
+    "ffprobe": "{\n\n}\n",
+    "decode_clean": false,
+    "environment_after": {
+      "working_free_gib": 19.502178192138672
+    },
+    "dtype": null,
+    "runtime_seconds": null,
+    "peak_vram_allocated_mb": null,
+    "peak_vram_reserved_mb": null,
+    "attn": null
+  },
+  "errors": [],
+  "blocker": "inference/decode validation failed"
+}
+/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 363290 bytes to __results__.html

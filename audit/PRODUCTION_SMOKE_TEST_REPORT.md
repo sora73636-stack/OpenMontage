@@ -98,3 +98,39 @@ kaggle kernels output forts845/openmontage-stage-a-env-smoke/2 -p audit/logs/kag
 
 ## 19. Output artifact inventory
 See `audit/results.json` and `audit/provenance/source_manifest.json`.
+
+
+---
+
+# Stage B (2026-11-13) — P0 runtime + Phase 6 fixtures
+
+## B1. Scope
+Phase 4 (P0) and Phase 6 fixtures. Stage A results are unchanged.
+
+## B2. Phase 6 fixtures
+- `audit/config/science_voice_script.txt` — 1491 words (~9.9 min at 150 wpm).
+- `audit/config/science_terms.json` — 28 terms with variants and match rules.
+- `audit/config/image_video_prompts.json` — 3 image prompts/seeds (424242, 202607, 271828), video prompt/seed 424242.
+- SHA256 recorded in `audit/config/SHA256SUMS.txt`.
+
+## B3. P0 results
+
+| Component | License | Runtime | dtype | Peak VRAM | Time | Log |
+|---|---|---|---|---|---|---|
+| LTX-Video 2B v0.9.5 | PASS (Open RAIL-M) | PASS | FP16 | 11033 MiB alloc / 11050 reserved | 62.47 s / 49 frames | audit/logs/kaggle/p0-ltx/v3/ltx_logs.txt |
+| FLUX.2 klein 4B | PASS (Apache-2.0) | PASS | FP16 | 7936 MiB alloc / 7948 reserved | 23.6 s / image (3 images) | audit/logs/kaggle/p0-flux/v2/flux_logs.txt |
+| CosyVoice 3 | CONDITIONAL PASS (model-card metadata) | PASS | FP32 | 3589.6 MiB alloc / 4264 reserved | 594.76 s / 602.28 s audio (RTF 0.988) | audit/logs/kaggle/p0-cosy/v10/cosy_logs.txt |
+| Practical-RIFE 4.25 | PASS (MIT) | BLOCKED | — | — | — | audit/logs/kaggle/p0-rife/v2/openmontage-p0-practical-rife-4-25.log |
+| Real-ESRGAN x4plus | FAIL (weight license not explicit) | PASS | FP32 | 1041 MiB (nvidia-smi) | 16.6 s / 10 images | audit/logs/kaggle/p0-esrgan/v2/esrgan_logs.txt |
+
+## B4. Failures/blockers
+- Practical-RIFE: v1 and v2 CANCEL_ACKNOWLEDGED at ~90 s. CPU-only, GPU-only, GPU+internet, uv+torch and gdown diagnostics all COMPLETE. Cause not established. No further retries.
+- Real-ESRGAN: runtime PASS but weight license FAIL.
+- CosyVoice: license is model-card metadata only -> CONDITIONAL PASS.
+- Attention backend for LTX/FLUX is UNKNOWN (no flash-attn installed).
+
+## B5. GPU budget
+Stage B upper bound: 0.05 + 0.052 + 0.176 + 0.148 + 0.502 + 0.079 = 1.007 GPU-hours (wall x GPUs). Quota-accounted estimate ~0.50 h (2xT4 = 1 h per wall hour). No stage limit of 24 h approached.
+
+## B6. Production gate
+No component is production-approved: human quality review is pending for all; Real-ESRGAN also fails license.

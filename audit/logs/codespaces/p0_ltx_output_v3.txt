@@ -1,0 +1,5 @@
+Downloading out.mp4 to audit/logs/kaggle/p0-ltx/v3/audit/results/ltx-video-2b-0.9.5
+  0%|          | 0.00/44.4k [00:00<?, ?B/s]100%|██████████| 44.4k/44.4k [00:00<00:00, 65.6MB/s]
+
+Output file downloaded to audit/logs/kaggle/p0-ltx/v3/audit/results/ltx-video-2b-0.9.5/out.mp4
+Kernel log downloaded to audit/logs/kaggle/p0-ltx/v3/openmontage-p0-ltx-video-2b-0-9-5.log 

@@ -1,0 +1,116 @@
+{
+  "component": "flux2-klein-4b",
+  "priority": "P0",
+  "kernel": "openmontage-p0-flux2-klein-4b",
+  "utc_start": "2026-11-13T05:53:50Z",
+  "utc_end": "2026-11-13T05:58:17Z",
+  "status": "PASS",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "environment_before": {
+      "t4": {
+        "cuda_available": true,
+        "device_count": 1,
+        "all_devices_are_tesla_t4": true,
+        "per_device": [
+          {
+            "index": 0,
+            "name": "Tesla T4",
+            "total_memory_mib": 14911,
+            "compute_capability": "7.5",
+            "free_memory_mib": 14806
+          }
+        ],
+        "ok": true,
+        "reasons": []
+      },
+      "devices": [
+        {
+          "index": 0,
+          "name": "Tesla T4",
+          "total_memory_mib": 14911,
+          "compute_capability": "7.5",
+          "multi_processor_count": 40,
+          "free_memory_mib": 14806,
+          "total_memory_mib_reported": 14911
+        }
+      ]
+    },
+    "install_torch": {
+      "rc": 0,
+      "duration_s": 32.458
+    },
+    "install_diffusers": {
+      "rc": 0,
+      "duration_s": 16.661,
+      "stderr": "Using Python 3.11.17 environment at: /tmp/audit/envs/flux2\n   Updating https://github.com/huggingface/diffusers.git (HEAD)\n    Updated https://github.com/huggingface/diffusers.git (27a54904a7def137c98b6520141873d9a9b08adb)\nResolved 63 packages in 14.11s\n   Building diffusers @ git+https://github.com/huggingface/diffusers.git@27a54904a7def137c98b6520141873d9a9b08adb\nDownloading hf-xet (4.1MiB)\nDownloading pygments (1.2MiB)\nDownloading tokenizers (3.2MiB)\nDownloading sentencepiece (1.6MiB)\nDownloading pydantic-core (2.1MiB)\nDownloading transformers (12.4MiB)\n Downloaded pygments\n Downloaded sentencepiece\n Downloaded pydantic-core\n Downloaded tokenizers\n Downloaded hf-xet\n Downloaded transformers\n      Built diffusers @ git+https://github.com/huggingface/diffusers.git@27a54904a7def137c98b6520141873d9a9b08adb\nPrepared 38 packages in 2.40s\nInstalled 38 packages in 111ms\n + accelerate==1.15.0\n + annotated-doc==0.0.6\n + annotated-types==0.8.0\n + anyio==4.16.0\n + certifi==2026.10.23\n + charset-normalizer==3.5.2\n + click==8.5.1\n + diffusers==0.43.0.dev0 (from git+https://github.com/huggingface/diffusers.git@27a54904a7def137c98b6520141873d9a9b08adb)\n + h11==0.16.0\n + hf-xet==1.8.0\n + httpcore2==2.16.0\n + httpx2==2.16.0\n + huggingface-hub==2.4.0\n + idna==3.20\n + importlib-metadata==10.2.0\n + lazy-importer==0.1.0\n + markdown-it-py==4.3.0\n + mdurl==0.1.2\n + packaging==26.3\n + psutil==7.2.2\n + pydantic==2.14.3\n + pydantic-core==2.50.4\n + pygments==2.21.0\n + pyyaml==6.0.3\n + regex==2026.11.9\n + requests==2.34.2\n + rich==15.0.0\n + safetensors==0.8.0\n + sentencepiece==0.2.3\n + shellingham==1.5.4\n + tokenizers==0.23.3\n + tqdm==4.70.1\n + transformers==5.22.2\n + truststore==0.10.5\n + typer==0.29.1\n + typing-inspection==0.4.5\n + urllib3==2.8.0\n + zipp==4.1.2\n"
+    },
+    "inference": {
+      "rc": 0,
+      "duration_s": 210.944,
+      "stdout": "{\"dtype\": \"torch.float16\", \"load_s\": 130.9161524772644, \"images\": [{\"id\": 1, \"seed\": 424242, \"seconds\": 23.606536149978638, \"path\": \"/kaggle/working/audit/results/flux2-klein-4b/flux_1.png\"}, {\"id\": 2, \"seed\": 202607, \"seconds\": 21.367516040802002, \"path\": \"/kaggle/working/audit/results/flux2-klein-4b/flux_2.png\"}, {\"id\": 3, \"seed\": 271828, \"seconds\": 21.061150312423706, \"path\": \"/kaggle/working/audit/results/flux2-klein-4b/flux_3.png\"}], \"peak_alloc_mb\": 7936.2763671875, \"peak_reserved_mb\": 7948.0, \"attn\": \"unknown\"}\n",
+      "stderr": "/tmp/audit/envs/flux2/lib/python3.11/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.\n  deprecate(\"torch_dtype\", \"1.0.0\", _TORCH_DTYPE_DEPRECATION_MESSAGE)\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nFetching 17 files:   0%|          | 0/17 [00:00<?, ?it/s]\nFetching 17 files:  12%|\u2588\u258f        | 2/17 [00:00<00:01,  9.39it/s]\nFetching 17 files:  47%|\u2588\u2588\u2588\u2588\u258b     | 8/17 [00:00<00:00, 20.61it/s]\nFetching 17 files:  71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 12/17 [00:00<00:00, 19.89it/s]\nFetching 17 files:  76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 13/17 [00:19<00:00, 19.89it/s]\nFetching 17 files:  82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 14/17 [00:44<00:15,  5.28s/it]\nFetching 17 files:  88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 15/17 [01:21<00:19,  9.90s/it]\nFetching 17 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 17/17 [01:21<00:00,  4.82s/it]\n\nLoading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]\n\nLoading weights:   0%|          | 0/398 [00:00<?, ?it/s]\u001b[A\n\nLoading weights:   0%|          | 1/398 [00:03<23:38,  3.57s/it]\u001b[A\n\nLoading weights:  45%|\u2588\u2588\u2588\u2588\u258d     | 179/398 [00:03<00:03, 67.11it/s]\u001b[A\n\nLoading weights:  62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 245/398 [00:05<00:02, 51.21it/s]\u001b[A\n\nLoading weights:  71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 282/398 [00:08<00:03, 33.59it/s]\u001b[A\n\nLoading weights:  77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 305/398 [00:09<00:03, 27.39it/s]\u001b[A\n\nLoading weights:  81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 321/398 [00:10<00:02, 25.80it/s]\u001b[A\n\nLoading weights:  83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 332/398 [00:11<00:02, 23.55it/s]\u001b[A\n\nLoading weights:  85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 340/398 [00:12<00:02, 20.74it/s]\u001b[A\n\nLoading weights:  87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 346/398 [00:12<00:02, 17.87it/s]\u001b[A\n\nLoading weights:  89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 355/398 [00:13<00:02, 17.03it/s]\u001b[A\n\nLoading weights:  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 366/398 [00:14<00:01, 16.37it/s]\u001b[A\n\nLoading weights:  95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 377/398 [00:14<00:01, 16.10it/s]\u001b[A\n\nLoading weights:  97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 388/398 [00:15<00:00, 15.58it/s]\u001b[A\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 398/398 [00:15<00:00, 25.27it/s]\n\nLoading pipeline components...:  20%|\u2588\u2588        | 1/5 [00:16<01:04, 16.23s/it]\nLoading pipeline components...:  40%|\u2588\u2588\u2588\u2588      | 2/5 [00:46<01:13, 24.52s/it]The config attributes {'force_upcast': True} were passed to AutoencoderKLFlux2, but are not expected and will be ignored. Please verify your config.json configuration file.\n\nLoading pipeline components...:  60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 3/5 [00:47<00:27, 13.61s/it]\nLoading pipeline components...: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 5/5 [00:47<00:00,  6.08s/it]\nLoading pipeline components...: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 5/5 [00:47<00:00,  9.56s/it]\n\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|\u2588\u2588\u258c       | 1/4 [00:10<00:30, 10.07s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 2/4 [00:10<00:08,  4.22s/it]\n 75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 3/4 [00:10<00:02,  2.63s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 4/4 [00:11<00:00,  1.88s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 4/4 [00:11<00:00,  2.91s/it]\n\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|\u2588\u2588\u258c       | 1/4 [00:09<00:27,  9.18s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 2/4 [00:09<00:08,  4.22s/it]\n 75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 3/4 [00:10<00:02,  2.65s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 4/4 [00:11<00:00,  1.91s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 4/4 [00:11<00:00,  2.87s/it]\n\n  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|\u2588\u2588\u258c       | 1/4 [00:08<00:26,  8.73s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 2/4 [00:09<00:08,  4.06s/it]\n 75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 3/4 [00:10<00:02,  2.58s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 4/4 [00:11<00:00,  1.88s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 4/4 [00:11<00:00,  2.79s/it]\n"
+    },
+    "metrics": {
+      "dtype": "torch.float16",
+      "load_s": 130.9161524772644,
+      "images": [
+        {
+          "id": 1,
+          "seed": 424242,
+          "seconds": 23.606536149978638,
+          "path": "/kaggle/working/audit/results/flux2-klein-4b/flux_1.png"
+        },
+        {
+          "id": 2,
+          "seed": 202607,
+          "seconds": 21.367516040802002,
+          "path": "/kaggle/working/audit/results/flux2-klein-4b/flux_2.png"
+        },
+        {
+          "id": 3,
+          "seed": 271828,
+          "seconds": 21.061150312423706,
+          "path": "/kaggle/working/audit/results/flux2-klein-4b/flux_3.png"
+        }
+      ],
+      "peak_alloc_mb": 7936.2763671875,
+      "peak_reserved_mb": 7948.0,
+      "attn": "unknown"
+    },
+    "outputs": [
+      {
+        "path": "/kaggle/working/audit/results/flux2-klein-4b/flux_1.png",
+        "bytes": 372293,
+        "sha256": "cefe4f04213e4ef43d2c0ffe399f165af7b35978f235da7eefdd5b31a6e931da"
+      },
+      {
+        "path": "/kaggle/working/audit/results/flux2-klein-4b/flux_2.png",
+        "bytes": 439852,
+        "sha256": "bb6be063ba309f3c8302c8a0ecc1cdd66faa1f9283437e0156aea4fe204142a1"
+      },
+      {
+        "path": "/kaggle/working/audit/results/flux2-klein-4b/flux_3.png",
+        "bytes": 261146,
+        "sha256": "00e85bd13850c2888686dad219f49e91ffc74fdc51446196c68584cd9f1eda41"
+      }
+    ],
+    "validation": {
+      "images": 3
+    },
+    "environment_after": {
+      "working_free_gib": 19.501174926757812
+    },
+    "dtype": "torch.float16",
+    "runtime_seconds": 23.606536149978638,
+    "peak_vram_allocated_mb": 7936.2763671875,
+    "peak_vram_reserved_mb": 7948.0,
+    "attn": "unknown"
+  },
+  "errors": []
+}

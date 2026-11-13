@@ -1,0 +1,131 @@
+{
+  "component": "cosyvoice3",
+  "priority": "P0",
+  "kernel": "openmontage-p0-cosyvoice3",
+  "utc_start": "2026-11-13T06:34:55Z",
+  "utc_end": "2026-11-13T06:49:59Z",
+  "status": "PASS",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "environment_before": {
+      "t4": {
+        "cuda_available": true,
+        "device_count": 1,
+        "all_devices_are_tesla_t4": true,
+        "per_device": [
+          {
+            "index": 0,
+            "name": "Tesla T4",
+            "total_memory_mib": 14911,
+            "compute_capability": "7.5",
+            "free_memory_mib": 14806
+          }
+        ],
+        "ok": true,
+        "reasons": []
+      },
+      "devices": [
+        {
+          "index": 0,
+          "name": "Tesla T4",
+          "total_memory_mib": 14911,
+          "compute_capability": "7.5",
+          "multi_processor_count": 40,
+          "free_memory_mib": 14806,
+          "total_memory_mib_reported": 14911
+        }
+      ]
+    },
+    "install_torch": {
+      "rc": 0,
+      "duration_s": 30.812
+    },
+    "install_openai_whisper": {
+      "rc": 0,
+      "duration_s": 2.462,
+      "stderr": "Using Python 3.10.22 environment at: /tmp/audit/envs/cosyvoice\nResolved 35 packages in 1.09s\nDownloading numpy (16.0MiB)\nDownloading numba (3.7MiB)\nDownloading llvmlite (56.9MiB)\nDownloading tiktoken (1.2MiB)\n Downloaded tiktoken\n Downloaded numba\n Downloaded numpy\n Downloaded llvmlite\nPrepared 12 packages in 785ms\nInstalled 12 packages in 29ms\n   Building openai-whisper==20231117\n      Built openai-whisper==20231117\nPrepared 1 package without build isolation in 528ms\nInstalled 1 package in 1ms\n + certifi==2026.10.23\n + charset-normalizer==3.5.2\n + idna==3.20\n + llvmlite==0.50.0\n + more-itertools==11.1.0\n + numba==0.68.1\n + numpy==2.2.6\n + openai-whisper==20231117\n + regex==2026.9.29\n + requests==2.34.2\n + tiktoken==0.14.0\n + tqdm==4.70.1\n + urllib3==2.8.0\n"
+    },
+    "requirements_filter": {
+      "omitted": [
+        "deepspeed",
+        "tensorrt",
+        "onnxruntime-gpu",
+        "gradio",
+        "fastapi",
+        "fastapi-cli",
+        "uvicorn",
+        "tensorboard",
+        "grpcio",
+        "grpcio-tools",
+        "openai-whisper"
+      ],
+      "kept": 27
+    },
+    "install_requirements": {
+      "rc": 0,
+      "duration_s": 30.608,
+      "stderr": "B)\nDownloading numpy (17.4MiB)\nDownloading soundfile (1.1MiB)\nDownloading tokenizers (3.0MiB)\nDownloading fonttools (5.0MiB)\nDownloading diffusers (2.1MiB)\nDownloading transformers (9.9MiB)\nDownloading modelscope (5.5MiB)\nDownloading lightning (1.9MiB)\nDownloading kiwisolver (1.6MiB)\nDownloading pydantic-core (2.0MiB)\nDownloading networkx (2.0MiB)\nDownloading cython (3.3MiB)\nDownloading scikit-learn (9.2MiB)\nDownloading matplotlib (11.0MiB)\nDownloading onnx (15.2MiB)\n   Building pyworld==0.3.4\n   Building wget==3.2\n Downloaded soundfile\n      Built antlr4-python3-runtime==4.9.3\n Downloaded pygments\n      Built wget==3.2\n Downloaded kaldifst\n Downloaded kiwisolver\n Downloaded aiohttp\n Downloaded pydantic-core\n Downloaded networkx\n Downloaded lightning\n Downloaded diffusers\n Downloaded tokenizers\n Downloaded cython\n Downloaded hf-xet\n Downloaded fonttools\n Downloaded pillow\n Downloaded modelscope\n Downloaded matplotlib\n Downloaded scikit-learn\n Downloaded transformers\n Downloaded numpy\n Downloaded scipy\n Downloaded pyarrow\n Downloaded onnx\n      Built pyworld==0.3.4\nPrepared 86 packages in 26.65s\nUninstalled 4 packages in 29ms\nInstalled 86 packages in 338ms\n + aiohappyeyeballs==2.7.1\n + aiohttp==3.14.5\n + aiosignal==1.4.0\n + annotated-types==0.8.0\n + antlr4-python3-runtime==4.9.3\n + async-timeout==5.0.1\n + attrs==26.1.0\n + audioread==3.1.0\n + beautifulsoup4==4.15.0\n + cffi==2.1.1\n + cloudpickle==3.1.2\n + conformer==0.3.2\n + contourpy==1.3.2\n + cycler==0.12.1\n + cython==3.3.1\n + decorator==5.3.1\n + diffusers==0.29.0\n + einops==0.8.2\n + einx==0.4.3\n + fonttools==4.65.0\n + frozendict==2.5.1\n + frozenlist==1.8.0\n - fsspec==2026.9.0\n + fsspec==2024.12.0\n + gdown==5.1.0\n + hf-xet==1.8.0\n + huggingface-hub==0.36.2\n + hydra-core==1.3.2\n + hyperpyyaml==1.2.3\n + importlib-metadata==9.0.1\n + inflect==7.3.1\n + joblib==1.6.0\n + kaldifst==1.9.0\n + kiwisolver==1.5.1\n + lazy-loader==0.6\n + librosa==0.10.2\n + lightning==2.2.4\n + lightning-utilities==0.15.3\n + loguru==0.8.0\n + markdown-it-py==4.3.0\n + matplotlib==3.7.5\n + mdurl==0.1.2\n + modelscope==1.20.0\n + msgpack==1.2.4\n + multidict==7.1.0\n - networkx==3.4.2\n + networkx==3.1\n - numpy==2.2.6\n + numpy==1.26.4\n + omegaconf==2.3.0\n + onnx==1.16.0\n - packaging==26.3\n + packaging==24.2\n + pillow==12.3.0\n + platformdirs==4.12.4\n + pooch==1.9.0\n + propcache==0.5.4\n + protobuf==4.25.0\n + pyarrow==18.1.0\n + pycparser==3.11\n + pydantic==2.7.0\n + pydantic-core==2.18.1\n + pygments==2.21.0\n + pyparsing==3.3.3\n + pysocks==1.7.1\n + python-dateutil==3.0.0\n + pytorch-lightning==2.6.6\n + pyworld==0.3.4\n + pyyaml==6.0.3\n + rich==13.7.1\n + ruamel-yaml==0.18.17\n + ruamel-yaml-clib==0.2.15\n + safetensors==0.8.0\n + scikit-learn==1.7.2\n + scipy==1.15.3\n + six==1.17.0\n + soundfile==0.12.1\n + soupsieve==2.10\n + soxr==1.1.0\n + threadpoolctl==3.8.0\n + tokenizers==0.21.4\n + torchmetrics==1.9.0\n + transformers==4.51.3\n + typeguard==4.6.0\n + tzdata==2026.6\n + wetext==0.0.4\n + wget==3.2\n + x-transformers==2.11.24\n + yarl==1.25.1\n + zipp==4.1.2\n"
+    },
+    "install_onnxruntime": {
+      "rc": 0,
+      "duration_s": 0.321,
+      "stderr": "Using Python 3.10.22 environment at: /tmp/audit/envs/cosyvoice\nResolved 9 packages in 116ms\nDownloading onnxruntime (16.6MiB)\n Downloaded onnxruntime\nPrepared 4 packages in 176ms\nInstalled 4 packages in 9ms\n + coloredlogs==15.0.1\n + flatbuffers==25.12.19\n + humanfriendly==10.0\n + onnxruntime==1.23.2\n"
+    },
+    "model_download": {
+      "path": "/tmp/audit/weights/cosyvoice3/Fun-CosyVoice3-0.5B",
+      "bytes": 9747523368
+    },
+    "kokoro_reference": {
+      "rc": 0,
+      "stdout": "WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.\nOK 5.85\n",
+      "stderr": "/tmp/audit/envs/cosyvoice/lib/python3.10/site-packages/torch/nn/modules/rnn.py:83: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1\n  warnings.warn(\"dropout option adds dropout after all but last \"\n/tmp/audit/envs/cosyvoice/lib/python3.10/site-packages/torch/nn/utils/weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.\n  warnings.warn(\"torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.\")\n"
+    },
+    "reference_voice": {
+      "path": "/tmp/audit/weights/cosyvoice3/reference/reference_10s.wav",
+      "sha256": "6e14879e1ab16114a7a8edd915762855491d0b5a4015a45264d3a09fb7933202",
+      "license_basis": "model_card_metadata",
+      "license_status": "CONDITIONAL PASS"
+    },
+    "chunking": {
+      "chunks": 43,
+      "max_chars": 297
+    },
+    "inference": {
+      "rc": 0,
+      "duration_s": 725.057,
+      "stdout": "Downloading Model to directory: /root/.cache/modelscope/hub/pengzhendong/wetext\ndtype torch.float32\n{\"dtype\": \"torch.float32\", \"gen_s\": 594.7569844722748, \"samples\": 14454720, \"sr\": 24000, \"peak_alloc_mb\": 3589.59814453125, \"peak_reserved_mb\": 4264.0}\n",
+      "stderr": "[00:00<?, ?it/s]2026-11-13 06:47:38,759 INFO synthesis text This willingness to change is a strength, not a weakness, and it is why science has produced such reliable knowledge about the natural world. The history of science is full of examples of instruments that opened new windows. Galileo's telescope revealed moons around Jupiter and phases of Venus.\n2026-11-13 06:47:55,075 INFO yield speech len 18.12, rtf 0.9003995664861818\n\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:17<00:00, 17.19s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:17<00:00, 17.19s/it]\n\n  0%|          | 0/1 [00:00<?, ?it/s]2026-11-13 06:47:55,973 INFO synthesis text Leeuwenhoek's microscope revealed microorganisms. The particle accelerator revealed the structure of the atomic nucleus.\n2026-11-13 06:48:03,440 INFO yield speech len 7.44, rtf 1.00360208301134\n\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:08<00:00,  8.35s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:08<00:00,  8.35s/it]\n\n  0%|          | 0/1 [00:00<?, ?it/s]2026-11-13 06:48:04,301 INFO synthesis text The James Webb Space Telescope is the latest in this tradition, and its images of distant galaxies, star-forming regions, and exoplanet atmospheres are already reshaping our understanding of the universe. Yet the instrument is only as good as the questions we ask of it.\n2026-11-13 06:48:18,747 INFO yield speech len 15.76, rtf 0.9166744154721952\n\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:15<00:00, 15.31s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:15<00:00, 15.31s/it]\n\n  0%|          | 0/1 [00:00<?, ?it/s]2026-11-13 06:48:19,610 INFO synthesis text Spectroscopy, photometry, and careful modeling turn photons into evidence, and evidence into knowledge. Measurement is the bridge between a model and a claim.\n2026-11-13 06:48:29,234 INFO yield speech len 10.32, rtf 0.9325314861859462\n\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:10<00:00, 10.48s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:10<00:00, 10.48s/it]\n\n  0%|          | 0/1 [00:00<?, ?it/s]2026-11-13 06:48:30,103 INFO synthesis text A thermometer, a spectrometer, and a gravitational-wave interferometer are all instruments that convert a physical quantity into a number, and each number carries an uncertainty. Scientists report the uncertainty because a measurement without an error bar is incomplete.\n2026-11-13 06:48:45,521 INFO yield speech len 16.84, rtf 0.9155417706224528\n\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:16<00:00, 16.29s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:16<00:00, 16.29s/it]\n\n  0%|          | 0/1 [00:00<?, ?it/s]2026-11-13 06:48:46,409 INFO synthesis text They also report the method, the instrument, the calibration, and the conditions, because a result that cannot be reproduced is not yet knowledge. This is why the same quantity may be measured in different ways, and why independent measurements are so valuable.\n2026-11-13 06:49:00,404 INFO yield speech len 15.16, rtf 0.923134547739356\n\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:14<00:00, 14.88s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:14<00:00, 14.88s/it]\n\n  0%|          | 0/1 [00:00<?, ?it/s]2026-11-13 06:49:01,294 INFO synthesis text When two methods agree within their uncertainties, confidence grows; when they disagree, the disagreement itself becomes the subject of investigation.\n2026-11-13 06:49:09,674 INFO yield speech len 8.72, rtf 0.9610559141963994\n\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:09<00:00,  9.26s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:09<00:00,  9.26s/it]\n\n  0%|          | 0/1 [00:00<?, ?it/s]2026-11-13 06:49:10,546 INFO synthesis text In summary, the same physical laws govern the interior of a cell, the atmosphere of a distant exoplanet, and the propagation of gravitational waves across the universe.\n2026-11-13 06:49:20,012 INFO yield speech len 10.12, rtf 0.9353317997672341\n\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:10<00:00, 10.34s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:10<00:00, 10.34s/it]\n\n  0%|          | 0/1 [00:00<?, ?it/s]2026-11-13 06:49:20,868 INFO synthesis text The mitochondrion, the chloroplast, the enzyme, and the atom are all part of one continuous story, written in the language of physics and chemistry.\n2026-11-13 06:49:29,526 INFO yield speech len 9.12, rtf 0.9494451577203317\n\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:09<00:00,  9.51s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:09<00:00,  9.51s/it]\n\n  0%|          | 0/1 [00:00<?, ?it/s]2026-11-13 06:49:30,400 INFO synthesis text The James Webb Space Telescope, the Laser Interferometer Gravitational-Wave Observatory, and the microscope are different instruments built to read that story at different scales.\n2026-11-13 06:49:40,177 INFO yield speech len 10.48, rtf 0.9329487349240834\n\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:10<00:00, 10.65s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:10<00:00, 10.65s/it]\n\n  0%|          | 0/1 [00:00<?, ?it/s]2026-11-13 06:49:41,051 INFO synthesis text Science advances when we build better instruments, ask sharper questions, and remain honest about what the evidence can and cannot show. The universe is vast, and the scientific enterprise is one of the few ways we have to understand it.\n2026-11-13 06:49:54,047 INFO yield speech len 14.16, rtf 0.9177686130933169\n\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:13<00:00, 13.87s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:13<00:00, 13.87s/it]\n"
+    },
+    "metrics": {
+      "dtype": "torch.float32",
+      "gen_s": 594.7569844722748,
+      "samples": 14454720,
+      "sr": 24000,
+      "peak_alloc_mb": 3589.59814453125,
+      "peak_reserved_mb": 4264.0
+    },
+    "outputs": [
+      {
+        "path": "/kaggle/working/audit/results/cosyvoice3/out.wav",
+        "bytes": 28909518,
+        "sha256": "6c1b937ab0882e2489566ec951ac607dca9494442ca9f12f9ef5fff2da4a1442"
+      }
+    ],
+    "audio_duration_s": 602.28,
+    "rtf": 0.9875091061836269,
+    "environment_after": {
+      "working_free_gib": 19.475223541259766
+    },
+    "dtype": "torch.float32",
+    "runtime_seconds": 594.7569844722748,
+    "peak_vram_allocated_mb": 3589.59814453125,
+    "peak_vram_reserved_mb": 4264.0,
+    "cloning_reference": "Kokoro af_heart"
+  },
+  "errors": []
+}

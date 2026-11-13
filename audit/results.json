@@ -32,16 +32,55 @@
       }
     ],
     "weekly_quota_hours": null,
-    "estimated_gpu_hours_used": 0.020082,
+    "estimated_gpu_hours_used": 1.007,
     "notebook_runs": [
       {
-        "kernel_id": "forts845/openmontage-stage-a-env-smoke",
+        "kernel_id": "forts845/openmontage-p0-practical-rife-4-25",
+        "version": 1,
+        "status": "CANCEL_ACKNOWLEDGED",
+        "url": "https://www.kaggle.com/code/forts845/openmontage-p0-practical-rife-4-25",
+        "wall_seconds": 90,
+        "gpu_upper_bound_hours": 0.05
+      },
+      {
+        "kernel_id": "forts845/openmontage-p0-practical-rife-4-25",
+        "version": 2,
+        "status": "CANCEL_ACKNOWLEDGED",
+        "url": "https://www.kaggle.com/code/forts845/openmontage-p0-practical-rife-4-25",
+        "wall_seconds": 94,
+        "gpu_upper_bound_hours": 0.052
+      },
+      {
+        "kernel_id": "forts845/openmontage-p0-ltx-video-2b-0-9-5",
+        "version": 3,
+        "status": "COMPLETE",
+        "url": "https://www.kaggle.com/code/forts845/openmontage-p0-ltx-video-2b-0-9-5",
+        "wall_seconds": 317,
+        "gpu_upper_bound_hours": 0.176
+      },
+      {
+        "kernel_id": "forts845/openmontage-p0-flux2-klein-4b",
         "version": 2,
         "status": "COMPLETE",
-        "url": "https://www.kaggle.com/code/forts845/openmontage-stage-a-env-smoke",
-        "wall_seconds": 36.147,
-        "gpu_upper_bound_hours": 0.020082,
-        "result": "PASS"
+        "url": "https://www.kaggle.com/code/forts845/openmontage-p0-flux2-klein-4b",
+        "wall_seconds": 267,
+        "gpu_upper_bound_hours": 0.148
+      },
+      {
+        "kernel_id": "forts845/openmontage-p0-cosyvoice3",
+        "version": 10,
+        "status": "COMPLETE",
+        "url": "https://www.kaggle.com/code/forts845/openmontage-p0-cosyvoice3",
+        "wall_seconds": 904,
+        "gpu_upper_bound_hours": 0.502
+      },
+      {
+        "kernel_id": "forts845/openmontage-p0-real-esrgan-x4plus",
+        "version": 2,
+        "status": "COMPLETE",
+        "url": "https://www.kaggle.com/code/forts845/openmontage-p0-real-esrgan-x4plus",
+        "wall_seconds": 142,
+        "gpu_upper_bound_hours": 0.079
       }
     ]
   },
@@ -764,7 +803,11 @@
     "Official Kaggle docs pages could not be fetched live (reCAPTCHA); quotes came from the search index of the same official URLs and must be re-checked from a browser.",
     "FINAL_PRODUCTION_DECISION was not found anywhere in the repository or its history.",
     "Weight SHA256 values are not collected in Stage A.",
-    "Human quality acceptance is not provided and cannot be self-approved."
+    "Human quality acceptance is not provided and cannot be self-approved.",
+    "Practical-RIFE: kernel CANCEL_ACKNOWLEDGED twice at ~90 s; cause not established; diagnostics (CPU/GPU/GPU+net/uv/gdown) all COMPLETE.",
+    "CosyVoice/Whisper/Kokoro/DepthAnything license basis is model_card_metadata (conditional PASS), not an explicit weight license text.",
+    "Real-ESRGAN x4plus weight license not explicit -> license FAIL.",
+    "LTX/FLUX attention backend is UNKNOWN; no flash-attn installed and set_attn_implementation was unavailable."
   ],
   "human_review_items": [
     {
@@ -775,6 +818,26 @@
     {
       "path": "audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/previews/p2_2_h264_nvenc.mp4",
       "what": "sanity check test pattern decode only",
+      "status": "PENDING HUMAN REVIEW"
+    },
+    {
+      "path": "audit/logs/kaggle/p0-ltx/v3/audit/results/ltx-video-2b-0.9.5/out.mp4",
+      "what": "video stability/flicker/deformation",
+      "status": "PENDING HUMAN REVIEW"
+    },
+    {
+      "path": "audit/logs/kaggle/p0-flux/v2/audit/results/flux2-klein-4b/flux_1.png",
+      "what": "image scientific accuracy/artifacts",
+      "status": "PENDING HUMAN REVIEW"
+    },
+    {
+      "path": "audit/logs/kaggle/p0-cosy/v10/audit/results/cosyvoice3/out.wav",
+      "what": "voice naturalness/pronunciation/numbers/units",
+      "status": "PENDING HUMAN REVIEW"
+    },
+    {
+      "path": "audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_00_out.png",
+      "what": "ESRGAN halos/textures",
       "status": "PENDING HUMAN REVIEW"
     }
   ]
