@@ -1,0 +1,29 @@
+Kaggle official documentation retrieval evidence (Stage A, Phase 1.1)
+Retrieved: 2026-11-13T04:04Z (UTC)
+
+Attempt 1 (plain curl):
+  https://www.kaggle.com/docs/notebooks           -> HTTP 404, 0 bytes
+  https://www.kaggle.com/docs/efficient-gpu-usage -> HTTP 404, 0 bytes
+
+Attempt 2 (browser User-Agent + Accept: text/html):
+  https://www.kaggle.com/docs/notebooks           -> HTTP 200, 20466 bytes
+  https://www.kaggle.com/docs/efficient-gpu-usage -> HTTP 200, 20490 bytes
+  Body was a Google reCAPTCHA challenge page, not the documentation content.
+
+Attempt 3 (Internet Archive snapshots):
+  http://archive.org/wayback/available?url=https://www.kaggle.com/docs/efficient-gpu-usage
+    -> closest snapshot 20261030032526, status 200
+  http://archive.org/wayback/available?url=https://www.kaggle.com/docs/notebooks
+    -> closest snapshot 20261107185303, status 200
+  Downloaded HTML was a JavaScript single-page-application shell with no
+  documentation body. The archived HTML also contained site scripts; it was
+  deleted rather than committed.
+
+Fallback used (recorded, not fabricated): verbatim snippets returned by the
+search index for the same official URLs. These are stored with their source
+URLs in audit/provenance/kaggle_quota.json and must be re-checked from a
+browser before being treated as current facts.
+
+Official CLI metadata schema was retrieved successfully:
+  https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/kernels_metadata.md
+  -> HTTP 200, saved as audit/provenance/kaggle_kernels_metadata.md

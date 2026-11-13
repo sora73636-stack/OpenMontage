@@ -1,0 +1,18 @@
+{
+  "kernel_metadata_path": "audit/kaggle/smoke_gpu/kernel-metadata.json",
+  "kernel_metadata_sha256": "b53d7e8d6e87bf52076c7b0494f89c87c0c376740cc050aea7d3e36fce81b2f1",
+  "kernel_id": "forts845/openmontage-stage-a-env-smoke",
+  "kernel_url": "https://www.kaggle.com/code/forts845/openmontage-stage-a-env-smoke",
+  "versions_pushed": 2,
+  "push_log": [
+    "audit/logs/codespaces/kaggle_push_smoke_gpu.txt",
+    "audit/logs/codespaces/kaggle_push_smoke_gpu_v2.txt"
+  ],
+  "output_logs": [
+    "audit/logs/codespaces/kaggle_output_smoke_gpu.txt",
+    "audit/logs/codespaces/kaggle_output_smoke_gpu_v2.txt"
+  ],
+  "final_status": "forts845/openmontage-stage-a-env-smoke has status \"KernelWorkerStatus.COMPLETE\"",
+  "dataset_used": false,
+  "dataset_note": "Kernel output retrieval was sufficient; no dataset was created (Phase 1.4)."
+}
