@@ -117,16 +117,22 @@ Phase 4 (P0) and Phase 6 fixtures. Stage A results are unchanged.
 
 | Component | License | Runtime | dtype | Peak VRAM | Time | Log |
 |---|---|---|---|---|---|---|
-| LTX-Video 2B v0.9.5 | PASS (Open RAIL-M) | PASS | FP16 | 11033 MiB alloc / 11050 reserved | 62.47 s / 49 frames | audit/logs/kaggle/p0-ltx/v3/ltx_logs.txt |
-| FLUX.2 klein 4B | PASS (Apache-2.0) | PASS | FP16 | 7936 MiB alloc / 7948 reserved | 23.6 s / image (3 images) | audit/logs/kaggle/p0-flux/v2/flux_logs.txt |
+| LTX-Video 2B v0.9.5 | PASS (Open RAIL-M) | PASS | FP16 | 11033 MiB alloc / 11050 reserved | 62.47 s generation / 49 frames | audit/logs/kaggle/p0-ltx/v3/ltx_logs.txt |
+| FLUX.2 klein 4B | PASS (Apache-2.0) | PASS | FP16 | 7936 MiB alloc / 7948 reserved | 23.6 / 21.4 / 21.1 s per image; 66.0 s for 3 images | audit/logs/kaggle/p0-flux/v2/flux_logs.txt |
 | CosyVoice 3 | CONDITIONAL PASS (model-card metadata) | PASS | FP32 | 3589.6 MiB alloc / 4264 reserved | 594.76 s / 602.28 s audio (RTF 0.988) | audit/logs/kaggle/p0-cosy/v10/cosy_logs.txt |
-| Practical-RIFE 4.25 | PASS (MIT) | BLOCKED | — | — | — | audit/logs/kaggle/p0-rife/v2/openmontage-p0-practical-rife-4-25.log |
+| Practical-RIFE 4.25 | PASS (MIT) | BLOCKED | — | — | no inference (CANCEL_ACKNOWLEDGED at ~90 s, v1/v2) | audit/logs/kaggle/p0-rife/v2/openmontage-p0-practical-rife-4-25.log |
 | Real-ESRGAN x4plus | FAIL (weight license not explicit) | PASS | FP32 | 1041 MiB (nvidia-smi) | 16.6 s / 10 images | audit/logs/kaggle/p0-esrgan/v2/esrgan_logs.txt |
+
+FLUX timing clarification: **23.6 s is one image, not all three.** Per-image generation
+times were 23.6065 s (seed 424242), 21.3675 s (seed 202607) and 21.0611 s (seed 271828);
+total generation = 66.035 s. The 130.916 s model-load time is excluded. The JSON records
+`runtime_seconds: 66.035` with `runtime_seconds_basis` and `checks.seconds_per_image`.
 
 ## B4. Failures/blockers
 - Practical-RIFE: v1 and v2 CANCEL_ACKNOWLEDGED at ~90 s. CPU-only, GPU-only, GPU+internet, uv+torch and gdown diagnostics all COMPLETE. Cause not established. No further retries.
 - Real-ESRGAN: runtime PASS but weight license FAIL.
 - CosyVoice: license is model-card metadata only -> CONDITIONAL PASS.
+- CosyVoice ran in FP32 because the notebook called `AutoModel(model_dir=...)` without `fp16=True`; the official `CosyVoice3.__init__(..., fp16=False)` does expose an FP16 path.
 - Attention backend for LTX/FLUX is UNKNOWN (no flash-attn installed).
 
 ## B5. GPU budget
@@ -134,3 +140,12 @@ Stage B upper bound: 0.05 + 0.052 + 0.176 + 0.148 + 0.502 + 0.079 = 1.007 GPU-ho
 
 ## B6. Production gate
 No component is production-approved: human quality review is pending for all; Real-ESRGAN also fails license.
+
+## B7. Human-review previews (compressed copies)
+- CosyVoice: `audit/previews/stage_b/cosyvoice3_af_heart.mp3` — full 602.28 s, mono 96 kbps, 7.2 MB.
+- FLUX: `audit/previews/stage_b/flux_1.jpg`, `flux_2.jpg`, `flux_3.jpg` — 512x512 JPEG.
+- LTX: `audit/previews/stage_b/ltx_out.mp4` — 45 KB, 512x512, 24 fps, 49 frames.
+- Real-ESRGAN: `esrgan_frame_00_before.jpg` / `_after.jpg` through `frame_02` — 256x256 before, 1024x1024 after.
+- Checksums: `audit/previews/stage_b/SHA256SUMS.txt`; review index: `audit/previews/human_review_index.md`.
+- Practical-RIFE: no preview (kernel cancelled before inference).
+- Results JSON rebuilt from logs by `audit/scripts/rebuild_stage_b_results.py`; previews by `audit/scripts/make_stage_b_previews.py`.

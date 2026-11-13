@@ -16,3 +16,6 @@ kaggle.json
 *.token
 .env
 # Any file larger than 50 MB must not be staged; verify with git status.
+# Stage B human-review previews are intentionally small and committed for review.
+!previews/stage_b/
+!previews/stage_b/**

@@ -1,5 +1,5 @@
 {
-  "audit_timestamp_utc": "2026-11-13T04:21:09Z",
+  "audit_timestamp_utc": "2026-11-13T10:53:00Z",
   "repository_commit": "185af2eb8d4a18825219677612f9b6458702f122",
   "decision_document": {
     "path": null,
@@ -10,7 +10,12 @@
     "cli_version": "2.2.5",
     "account_identity_redacted": "forts845",
     "kernel_ids": [
-      "forts845/openmontage-stage-a-env-smoke"
+      "forts845/openmontage-stage-a-env-smoke",
+      "forts845/openmontage-p0-practical-rife-4-25",
+      "forts845/openmontage-p0-ltx-video-2b-0-9-5",
+      "forts845/openmontage-p0-flux2-klein-4b",
+      "forts845/openmontage-p0-cosyvoice3",
+      "forts845/openmontage-p0-real-esrgan-x4plus"
     ],
     "official_limits_source_urls": [
       "https://www.kaggle.com/docs/efficient-gpu-usage",
@@ -82,7 +87,9 @@
         "wall_seconds": 142,
         "gpu_upper_bound_hours": 0.079
       }
-    ]
+    ],
+    "notebook_runs_scope": "Stage B (Phase 4 P0); Stage A run tracked separately",
+    "stage_a_gpu_upper_bound_hours": 0.020082
   },
   "components": [
     {
@@ -258,37 +265,56 @@
     {
       "name": "cosyvoice3",
       "priority": "P0",
-      "version": "29e01c4e8d000f4bcd70751be16fa94bf3d85a18",
+      "stage": "B",
+      "version": "Fun-CosyVoice3-0.5B-2512",
       "source_url": "https://huggingface.co/FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
       "revision": "29e01c4e8d000f4bcd70751be16fa94bf3d85a18",
       "checkpoint_files": [],
       "checkpoint_sha256": [],
-      "code_license": null,
-      "weight_license": "Code Apache-2",
+      "code_license": "Apache-2.0 (CosyVoice repo)",
+      "weight_license": "Apache-2.0 (model-card metadata only)",
       "license_evidence": [
-        "audit/licenses/cosyvoice3/LICENSE-code.txt",
-        "audit/licenses/cosyvoice3/MODEL_CARD.md"
+        "audit/licenses/cosyvoice3/MODEL_CARD.md",
+        "audit/licenses/cosyvoice3/LICENSE-weights.txt"
       ],
-      "license_status": "PASS",
-      "dtype": null,
-      "attention_backend": null,
-      "gpu_index": null,
-      "gpu_name": null,
-      "peak_vram_allocated_mb": null,
-      "peak_vram_reserved_mb": null,
+      "license_status": "CONDITIONAL PASS",
+      "license_basis": "model_card_metadata",
+      "dtype": "torch.float32",
+      "attention_backend": "unknown (no FA2 installed)",
+      "gpu_index": 0,
+      "gpu_name": "Tesla T4",
+      "peak_vram_allocated_mb": 3589.598,
+      "peak_vram_reserved_mb": 4264.0,
       "peak_ram_mb": null,
-      "runtime_seconds": null,
-      "rtf": null,
+      "runtime_seconds": 594.757,
+      "runtime_seconds_basis": "generation only; excludes model load and weight download",
+      "rtf": 0.987509,
       "fps": null,
-      "automatic_quality_status": "NOT TESTED",
+      "automatic_quality_status": "PASS",
       "human_review_status": "NEEDS HUMAN REVIEW",
-      "runtime_status": "NOT TESTED",
+      "runtime_status": "PASS",
       "production_status": "BLOCKED",
-      "input_artifacts": [],
-      "output_artifacts": [],
-      "log_path": null,
-      "kaggle_kernel_url": null,
-      "errors": "Stage A scope: no model runtime test (Stage B/C/D)"
+      "input_artifacts": [
+        "audit/config/science_voice_script.txt",
+        "audit/config/science_terms.json"
+      ],
+      "output_artifacts": [
+        "audit/logs/kaggle/p0-cosy/v10/audit/results/cosyvoice3/out.wav"
+      ],
+      "log_path": "audit/logs/kaggle/p0-cosy/v10/cosy_logs.txt",
+      "kaggle_kernel_url": "https://www.kaggle.com/code/forts845/openmontage-p0-cosyvoice3",
+      "errors": null,
+      "notes": "43 chunks; 602.28 s audio at 24 kHz mono; FP32 because the notebook did not pass fp16=True; reference voice Kokoro af_heart.",
+      "checks": {
+        "chunks": 43,
+        "max_chars_per_chunk": 297,
+        "audio_duration_s": 602.28,
+        "sample_rate_hz": 24000,
+        "samples": 14454720,
+        "generation_seconds": 594.757,
+        "rtf": 0.987509,
+        "reference_voice": "Kokoro af_heart"
+      }
     },
     {
       "name": "deepfilternet3",
@@ -400,39 +426,66 @@
     },
     {
       "name": "flux2-klein-4b",
-      "priority": "P?",
-      "version": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+      "priority": "P0",
+      "stage": "B",
+      "version": "FLUX.2 klein 4B",
       "source_url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B",
       "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
       "checkpoint_files": [],
       "checkpoint_sha256": [],
-      "code_license": null,
-      "weight_license": "Model card states Apache-2",
+      "code_license": "Apache-2.0 (FLUX.2 repo)",
+      "weight_license": "Apache-2.0",
       "license_evidence": [
-        "audit/licenses/flux2-klein-4b/LICENSE-code.txt",
-        "audit/licenses/flux2-klein-4b/LICENSE-weights.txt",
-        "audit/licenses/flux2-klein-4b/MODEL_CARD.md"
+        "audit/licenses/flux2-klein-4b/LICENSE-weights.txt"
       ],
       "license_status": "PASS",
-      "dtype": null,
-      "attention_backend": null,
-      "gpu_index": null,
-      "gpu_name": null,
-      "peak_vram_allocated_mb": null,
-      "peak_vram_reserved_mb": null,
+      "license_basis": "license_text",
+      "dtype": "torch.float16",
+      "attention_backend": "unknown",
+      "gpu_index": 0,
+      "gpu_name": "Tesla T4",
+      "peak_vram_allocated_mb": 7936.276,
+      "peak_vram_reserved_mb": 7948.0,
       "peak_ram_mb": null,
-      "runtime_seconds": null,
+      "runtime_seconds": 66.035,
+      "runtime_seconds_basis": "sum of the three per-image generation times; excludes model load",
       "rtf": null,
       "fps": null,
-      "automatic_quality_status": "NOT TESTED",
+      "automatic_quality_status": "PASS",
       "human_review_status": "NEEDS HUMAN REVIEW",
-      "runtime_status": "NOT TESTED",
+      "runtime_status": "PASS",
       "production_status": "BLOCKED",
-      "input_artifacts": [],
-      "output_artifacts": [],
-      "log_path": null,
-      "kaggle_kernel_url": null,
-      "errors": "Stage A scope: no model runtime test (Stage B/C/D)"
+      "input_artifacts": [
+        "audit/config/image_video_prompts.json"
+      ],
+      "output_artifacts": [
+        "audit/logs/kaggle/p0-flux/v2/audit/results/flux2-klein-4b/flux_1.png",
+        "audit/logs/kaggle/p0-flux/v2/audit/results/flux2-klein-4b/flux_2.png",
+        "audit/logs/kaggle/p0-flux/v2/audit/results/flux2-klein-4b/flux_3.png"
+      ],
+      "log_path": "audit/logs/kaggle/p0-flux/v2/flux_logs.txt",
+      "kaggle_kernel_url": "https://www.kaggle.com/code/forts845/openmontage-p0-flux2-klein-4b",
+      "errors": null,
+      "notes": "3 prompts/seeds, 512x512, 4 steps, guidance 1.0; 23.6/21.4/21.1 s is per image, not for all three.",
+      "checks": {
+        "images": 3,
+        "resolution": "512x512",
+        "steps": 4,
+        "guidance": 1.0,
+        "seconds_per_image": [
+          23.607,
+          21.368,
+          21.061
+        ],
+        "generation_seconds_total": 66.035,
+        "model_load_seconds": 130.916,
+        "step_seconds": 210.944,
+        "image_sha256": [
+          "cefe4f04213e4ef43d2c0ffe399f165af7b35978f235da7eefdd5b31a6e931da",
+          "bb6be063ba309f3c8302c8a0ecc1cdd66faa1f9283437e0156aea4fe204142a1",
+          "00e85bd13850c2888686dad219f49e91ffc74fdc51446196c68584cd9f1eda41"
+        ]
+      }
     },
     {
       "name": "kokoro-82m",
@@ -472,38 +525,57 @@
     {
       "name": "ltx-video-2b-0.9.5",
       "priority": "P0",
-      "version": "e58e28c39631af4d1468ee57a853764e11c1d37e",
+      "stage": "B",
+      "version": "0.9.5",
       "source_url": "https://huggingface.co/Lightricks/LTX-Video-0.9.5",
       "revision": "e58e28c39631af4d1468ee57a853764e11c1d37e",
       "checkpoint_files": [],
       "checkpoint_sha256": [],
-      "code_license": null,
-      "weight_license": "Exact checkpoint license saved: Open RAIL-M (LICENSE-weights",
+      "code_license": "LTX-Video repo code license (Apache-2.0); see LICENSE-code.txt",
+      "weight_license": "Open RAIL-M (commercial use with use restrictions)",
       "license_evidence": [
-        "audit/licenses/ltx-video-2b-0.9.5/LICENSE-code.txt",
-        "audit/licenses/ltx-video-2b-0.9.5/LICENSE-weights.txt",
-        "audit/licenses/ltx-video-2b-0.9.5/MODEL_CARD.md"
+        "audit/licenses/ltx-video-2b-0.9.5/LICENSE-weights.txt"
       ],
       "license_status": "PASS",
-      "dtype": null,
-      "attention_backend": null,
-      "gpu_index": null,
-      "gpu_name": null,
-      "peak_vram_allocated_mb": null,
-      "peak_vram_reserved_mb": null,
+      "license_basis": "license_text",
+      "dtype": "torch.float16",
+      "attention_backend": "unknown",
+      "gpu_index": 0,
+      "gpu_name": "Tesla T4",
+      "peak_vram_allocated_mb": 11033.015625,
+      "peak_vram_reserved_mb": 11050.0,
       "peak_ram_mb": null,
-      "runtime_seconds": null,
+      "runtime_seconds": 62.465,
+      "runtime_seconds_basis": "generation only; excludes model load",
       "rtf": null,
-      "fps": null,
-      "automatic_quality_status": "NOT TESTED",
+      "fps": 24,
+      "automatic_quality_status": "PASS",
       "human_review_status": "NEEDS HUMAN REVIEW",
-      "runtime_status": "NOT TESTED",
+      "runtime_status": "PASS",
       "production_status": "BLOCKED",
-      "input_artifacts": [],
-      "output_artifacts": [],
-      "log_path": null,
-      "kaggle_kernel_url": null,
-      "errors": "Stage A scope: no model runtime test (Stage B/C/D)"
+      "input_artifacts": [
+        "audit/config/image_video_prompts.json"
+      ],
+      "output_artifacts": [
+        "audit/logs/kaggle/p0-ltx/v3/audit/results/ltx-video-2b-0.9.5/out.mp4"
+      ],
+      "log_path": "audit/logs/kaggle/p0-ltx/v3/ltx_logs.txt",
+      "kaggle_kernel_url": "https://www.kaggle.com/code/forts845/openmontage-p0-ltx-video-2b-0-9-5",
+      "errors": null,
+      "notes": "512x512, 49 frames, 30 steps, seed 424242; decode clean; cpu offload used to fit 15 GB.",
+      "checks": {
+        "resolution": "512x512",
+        "frames": 49,
+        "steps": 30,
+        "seed": 424242,
+        "model_load_seconds": 183.179,
+        "generation_seconds": 62.465,
+        "step_seconds": 261.4,
+        "decode_clean": true,
+        "ffprobe_duration_s": 2.041667,
+        "ffprobe_size_bytes": 45418,
+        "output_sha256": "098e7afc31e92ef82558d0c37768d87d986af1caacc78ed152245c4214531145"
+      }
     },
     {
       "name": "manim-ce-0.22.1",
@@ -578,19 +650,19 @@
     {
       "name": "practical-rife-4.25",
       "priority": "P0",
-      "version": "bbfd2ea90910789a860ea3e2b32a240cd577b75e",
+      "stage": "B",
+      "version": "4.25",
       "source_url": "https://github.com/hzwer/Practical-RIFE",
       "revision": "bbfd2ea90910789a860ea3e2b32a240cd577b75e",
       "checkpoint_files": [],
       "checkpoint_sha256": [],
-      "code_license": null,
-      "weight_license": "Repo LICENSE is MIT; README states: 'The content of these links is under the same MIT license as this project",
+      "code_license": "MIT",
+      "weight_license": "MIT (maintainer statement covers linked models)",
       "license_evidence": [
-        "audit/licenses/practical-rife-4.25/LICENSE-code.txt",
-        "audit/licenses/practical-rife-4.25/MODEL_CARD.md",
-        "audit/licenses/practical-rife-4.25/RELEASE_ASSETS.json"
+        "audit/licenses/practical-rife-4.25/LICENSE-code.txt"
       ],
       "license_status": "PASS",
+      "license_basis": "license_text",
       "dtype": null,
       "attention_backend": null,
       "gpu_index": null,
@@ -599,53 +671,102 @@
       "peak_vram_reserved_mb": null,
       "peak_ram_mb": null,
       "runtime_seconds": null,
+      "runtime_seconds_basis": "no inference reached",
       "rtf": null,
       "fps": null,
       "automatic_quality_status": "NOT TESTED",
       "human_review_status": "NEEDS HUMAN REVIEW",
-      "runtime_status": "NOT TESTED",
+      "runtime_status": "BLOCKED",
       "production_status": "BLOCKED",
-      "input_artifacts": [],
+      "input_artifacts": [
+        "audit/config/image_video_prompts.json"
+      ],
       "output_artifacts": [],
-      "log_path": null,
-      "kaggle_kernel_url": null,
-      "errors": "Stage A scope: no model runtime test (Stage B/C/D)"
+      "log_path": "audit/logs/kaggle/p0-rife/v2/openmontage-p0-practical-rife-4-25.log",
+      "kaggle_kernel_url": "https://www.kaggle.com/code/forts845/openmontage-p0-practical-rife-4-25",
+      "errors": "v1 and v2 CANCEL_ACKNOWLEDGED at ~90 s; CPU/GPU/GPU+net/uv/gdown diagnostics COMPLETE; cause not established.",
+      "notes": "No retry beyond one documented recovery attempt (hard rule 45).",
+      "checks": {
+        "kernel_status": "CANCEL_ACKNOWLEDGED",
+        "attempts": [
+          {
+            "version": 1,
+            "approx_seconds": 90
+          },
+          {
+            "version": 2,
+            "approx_seconds": 94
+          }
+        ],
+        "diagnostics": [
+          "diag_cpu",
+          "diag_gpu",
+          "diag_gpu_net",
+          "diag_uv",
+          "diag_gdown"
+        ],
+        "diagnostics_status": "COMPLETE",
+        "cause": "not established"
+      }
     },
     {
       "name": "real-esrgan-x4plus",
       "priority": "P0",
-      "version": "a4abfb2979a7bbff3f69f58f58ae324608821e27",
+      "stage": "B",
+      "version": "RealESRGAN_x4plus (release v0.1.0)",
       "source_url": "https://github.com/xinntao/Real-ESRGAN",
       "revision": "a4abfb2979a7bbff3f69f58f58ae324608821e27",
-      "checkpoint_files": [],
-      "checkpoint_sha256": [],
-      "code_license": null,
-      "weight_license": "Code LICENSE is BSD-3-Clause, but no explicit license statement for the exact RealESRGAN_x4plus",
+      "checkpoint_files": [
+        "weights/RealESRGAN_x4plus.pth"
+      ],
+      "checkpoint_sha256": [
+        "4fa0d38905f75ac06eb49a7951b426670021be3018265fd191d2125df9d682f1"
+      ],
+      "code_license": "BSD-3-Clause",
+      "weight_license": "NOT EXPLICIT (no statement for the exact .pth)",
       "license_evidence": [
         "audit/licenses/real-esrgan-x4plus/LICENSE-code.txt",
-        "audit/licenses/real-esrgan-x4plus/MODEL_CARD.md",
         "audit/licenses/real-esrgan-x4plus/RELEASE_ASSETS.json"
       ],
       "license_status": "FAIL",
-      "dtype": null,
+      "license_basis": "license_text",
+      "dtype": "FP32",
       "attention_backend": null,
-      "gpu_index": null,
-      "gpu_name": null,
+      "gpu_index": 0,
+      "gpu_name": "Tesla T4",
       "peak_vram_allocated_mb": null,
       "peak_vram_reserved_mb": null,
+      "peak_vram_mib_nvidia_smi": 1041,
       "peak_ram_mb": null,
-      "runtime_seconds": null,
+      "runtime_seconds": 16.599,
+      "runtime_seconds_basis": "10 images in one CLI call; excludes install and weight download",
       "rtf": null,
       "fps": null,
-      "automatic_quality_status": "NOT TESTED",
+      "automatic_quality_status": "PASS",
       "human_review_status": "NEEDS HUMAN REVIEW",
-      "runtime_status": "NOT TESTED",
+      "runtime_status": "PASS",
       "production_status": "BLOCKED",
-      "input_artifacts": [],
-      "output_artifacts": [],
-      "log_path": null,
-      "kaggle_kernel_url": null,
-      "errors": "Stage A scope: no model runtime test (Stage B/C/D)"
+      "input_artifacts": [
+        "audit/fixtures/esrgan/inputs/frame_00.png"
+      ],
+      "output_artifacts": [
+        "audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_00_out.png",
+        "audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_01_out.png",
+        "audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_02_out.png"
+      ],
+      "log_path": "audit/logs/kaggle/p0-esrgan/v2/esrgan_logs.txt",
+      "kaggle_kernel_url": "https://www.kaggle.com/code/forts845/openmontage-p0-real-esrgan-x4plus",
+      "errors": null,
+      "notes": "10/10 outputs 1024x1024 verified locally; peak VRAM from nvidia-smi (subprocess), not torch API.",
+      "checks": {
+        "images": 10,
+        "input_size": "256x256",
+        "output_size": "1024x1024",
+        "seconds_per_image": 1.66,
+        "peak_vram_source": "nvidia-smi memory.used (subprocess)",
+        "weights_bytes": 67040989,
+        "weights_sha256": "4fa0d38905f75ac06eb49a7951b426670021be3018265fd191d2125df9d682f1"
+      }
     },
     {
       "name": "sdxl-base-1.0",
@@ -797,48 +918,72 @@
   },
   "recommendations": {
     "status": "NOT PRODUCED",
-    "reason": "Stage A only proves control plane, GPU type and licenses; no model runtime results"
+    "reason": "Stage B proves P0 runtime on a T4, but all five components remain blocked for production: human quality review is pending and Real-ESRGAN x4plus fails weight-license clearance."
   },
   "unconfirmed_claims": [
     "Official Kaggle docs pages could not be fetched live (reCAPTCHA); quotes came from the search index of the same official URLs and must be re-checked from a browser.",
     "FINAL_PRODUCTION_DECISION was not found anywhere in the repository or its history.",
-    "Weight SHA256 values are not collected in Stage A.",
+    "Weight SHA256 was not collected in Stage A; Stage B recorded it only for Real-ESRGAN x4plus (4fa0d38905f75ac06eb49a7951b426670021be3018265fd191d2125df9d682f1).",
     "Human quality acceptance is not provided and cannot be self-approved.",
     "Practical-RIFE: kernel CANCEL_ACKNOWLEDGED twice at ~90 s; cause not established; diagnostics (CPU/GPU/GPU+net/uv/gdown) all COMPLETE.",
     "CosyVoice/Whisper/Kokoro/DepthAnything license basis is model_card_metadata (conditional PASS), not an explicit weight license text.",
     "Real-ESRGAN x4plus weight license not explicit -> license FAIL.",
-    "LTX/FLUX attention backend is UNKNOWN; no flash-attn installed and set_attn_implementation was unavailable."
+    "LTX/FLUX attention backend is UNKNOWN; no flash-attn installed and set_attn_implementation was unavailable.",
+    "FLUX 23.6 s is per image; the three images took 23.6 + 21.4 + 21.1 = 66.0 s of generation time (model load 130.9 s excluded)."
   ],
   "human_review_items": [
     {
       "path": "audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/previews/p2_2_libx264.mp4",
-      "what": "sanity check test pattern decode only",
-      "status": "PENDING HUMAN REVIEW"
+      "what": "Stage A decode sanity only (test pattern)",
+      "status": "PENDING HUMAN REVIEW (optional)"
     },
     {
       "path": "audit/logs/kaggle/openmontage-stage-a-env-smoke/v2/audit/previews/p2_2_h264_nvenc.mp4",
-      "what": "sanity check test pattern decode only",
+      "what": "Stage A decode sanity only (test pattern)",
+      "status": "PENDING HUMAN REVIEW (optional)"
+    },
+    {
+      "path": "audit/previews/stage_b/cosyvoice3_af_heart.mp3",
+      "what": "voice naturalness, pronunciation, numbers/units, artifacts",
       "status": "PENDING HUMAN REVIEW"
     },
     {
-      "path": "audit/logs/kaggle/p0-ltx/v3/audit/results/ltx-video-2b-0.9.5/out.mp4",
-      "what": "video stability/flicker/deformation",
+      "path": "audit/previews/stage_b/flux_1.jpg",
+      "what": "image scientific accuracy and artifacts (mitochondrion cutaway)",
       "status": "PENDING HUMAN REVIEW"
     },
     {
-      "path": "audit/logs/kaggle/p0-flux/v2/audit/results/flux2-klein-4b/flux_1.png",
-      "what": "image scientific accuracy/artifacts",
+      "path": "audit/previews/stage_b/flux_2.jpg",
+      "what": "image scientific accuracy and artifacts (JWST exoplanet)",
       "status": "PENDING HUMAN REVIEW"
     },
     {
-      "path": "audit/logs/kaggle/p0-cosy/v10/audit/results/cosyvoice3/out.wav",
-      "what": "voice naturalness/pronunciation/numbers/units",
+      "path": "audit/previews/stage_b/flux_3.jpg",
+      "what": "image scientific accuracy and artifacts (gravitational-wave observatory)",
       "status": "PENDING HUMAN REVIEW"
     },
     {
-      "path": "audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_00_out.png",
-      "what": "ESRGAN halos/textures",
+      "path": "audit/previews/stage_b/ltx_out.mp4",
+      "what": "video stability, flicker, deformation, black/frozen frames",
+      "status": "PENDING HUMAN REVIEW"
+    },
+    {
+      "path": "audit/previews/stage_b/esrgan_frame_00_before.jpg",
+      "what": "ESRGAN before/after: halos, textures, invented detail (frame 00)",
+      "status": "PENDING HUMAN REVIEW"
+    },
+    {
+      "path": "audit/previews/stage_b/esrgan_frame_01_after.jpg",
+      "what": "ESRGAN before/after: halos, textures, invented detail (frame 01)",
+      "status": "PENDING HUMAN REVIEW"
+    },
+    {
+      "path": "audit/previews/stage_b/esrgan_frame_02_after.jpg",
+      "what": "ESRGAN before/after: halos, textures, invented detail (frame 02)",
       "status": "PENDING HUMAN REVIEW"
     }
-  ]
+  ],
+  "stage_a_timestamp_utc": "2026-11-13T04:21:09Z",
+  "stage_b_rebuilt_utc": "2026-11-13T10:53:00Z",
+  "stage_b_rebuild_scope": "Rebuilt only the five P0 component records from preserved Kaggle logs; Stage A records, license evidence and hashes are unchanged."
 }
