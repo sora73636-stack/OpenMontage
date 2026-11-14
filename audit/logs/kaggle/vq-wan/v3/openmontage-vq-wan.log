@@ -1,0 +1,330 @@
+[{"stream_name":"stdout","time":1.091738506,"data":"2026-11-14T03:23:32Z helper sha256 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match=True\n"}
+,{"stream_name":"stdout","time":1.125981351,"data":"2026-11-14T03:23:32Z fixture science_voice_script.txt 9555 bytes sha=cbb5b7ee8f13e8d60c5b25f9502d4c7a6ab682f5dbce75dcae6d169f3bf358e9\n"}
+,{"stream_name":"stdout","time":1.126013476,"data":"2026-11-14T03:23:32Z fixture science_terms.json 4890 bytes sha=877f430837d8059b47a3671da1679d2637a9ed9077c9239b24b828a042e32862\n"}
+,{"stream_name":"stdout","time":1.1260202320000001,"data":"2026-11-14T03:23:32Z fixture image_video_prompts.json 1586 bytes sha=5f1cf0117327fb0801023549c6186105deaaf2323c1dc23becaec3428848678b\n"}
+,{"stream_name":"stdout","time":15.862184037,"data":"2026-11-14T03:23:47Z $ /usr/local/bin/uv venv --python 3.10 /tmp/audit/envs/vqwan -\u003e rc=0 1.744s\n"}
+,{"stream_name":"stdout","time":15.862211449,"data":"2026-11-14T03:23:47Z stderr tail: warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`? | Downloading cpython-3.10.22-linux-x86_64-gnu (download) (28.0MiB) |  Downloaded cpython-3.10.22-linux-x86_64-gnu (download) | Using CPython 3.10.22 | Creating virtual environment at: /tmp/audit/envs/vqwan | Activate with: source /tmp/audit/envs/vqwan/bin/activate | \n"}
+,{"stream_name":"stdout","time":48.297322535,"data":"2026-11-14T03:24:19Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/vqwan/bin/python torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126 -\u003e rc=0 32.434s\n"}
+,{"stream_name":"stdout","time":48.297355098,"data":"2026-11-14T03:24:19Z stderr tail: r-cu12 (150.9MiB) | Downloading nvidia-cuda-nvrtc-cu12 (22.6MiB) | Downloading nvidia-cusparse-cu12 (206.5MiB) |  Downloaded pillow | Downloading nvidia-cusparselt-cu12 (149.5MiB) | Downloading nvidia-curand-cu12 (53.7MiB) |  Downloaded sympy | Downloading nvidia-cufft-cu12 (190.9MiB) | Downloading nvidia-cuda-cupti-cu12 (8.5MiB) |  Downloaded numpy |  Downloaded torchvision |  Downloaded nvidia-cuda-cupti-cu12 |  Downloaded nvidia-nvjitlink-cu12 |  Downloaded nvidia-cuda-nvrtc-cu12 |  Downloaded triton |  Downloaded nvidia-curand-cu12 |  Downloaded nvidia-nccl-cu12 |  Downloaded nvidia-cusolver-cu12 |  Downloaded nvidia-cusparselt-cu12 |  Downloaded nvidia-cusparse-cu12 |  Downloaded torch |  Downloaded nvidia-cufft-cu12 |  Downloaded nvidia-cublas-cu12 |  Downloaded nvidia-cudnn-cu12 | Prepared 26 packages in 31.16s | Installed 26 packages in 238ms |  + filelock==4.1.0 |  + fsspec==2026.9.0 |  + jinja2==3.1.6 |  + markupsafe==3.0.3 |  + mpmath==1.3.0 |  + networkx==3.4.2 |  + numpy==2.2.6 |  + nvidia-cublas-cu12==12.6.4.1 |  + nvidia-cuda-cupti-cu12==12.6.80 |  + nvidia-cuda-nvrtc-cu12==12.6.77 |  + nvidia-cuda-runtime-cu12==12.6.77 |  + nvidia-cudnn-cu12==9.5.1.17 |  + nvidia-cufft-cu12==11.3.0.4 |  + nvidia-curand-cu12==10.3.7.77 |  + nvidia-cusolver-cu12==11.7.1.2 |  + nvidia-cusparse-cu12==12.5.4.2 |  + nvidia-cusparselt-cu12==0.6.3 |  + nvidia-nccl-cu12==2.21.5 |  + nvidia-nvjitlink-cu12==12.6.85 |  + nvidia-nvtx-cu12==12.6.77 |  + pillow==12.3.0 |  + sympy==1.13.1 |  + torch==2.6.0+cu126 |  + torchvision==0.21.0+cu126 |  + triton==3.2.0 |  + typing-extensions==4.16.0 | \n"}
+,{"stream_name":"stdout","time":50.728598017,"data":"2026-11-14T03:24:22Z $ git clone --recursive https://github.com/Wan-Video/Wan2.1 /tmp/audit/repos/wan21 -\u003e rc=0 2.431s\n"}
+,{"stream_name":"stdout","time":50.728943035,"data":"2026-11-14T03:24:22Z stderr tail: Cloning into '/tmp/audit/repos/wan21'... | \n"}
+,{"stream_name":"stdout","time":50.781248239,"data":"2026-11-14T03:24:22Z $ git -C /tmp/audit/repos/wan21 checkout -q 9737cba9c1c3 -\u003e rc=0 0.052s\n"}
+,{"stream_name":"stdout","time":50.812808354,"data":"2026-11-14T03:24:22Z $ git -C /tmp/audit/repos/wan21 submodule update --init --recursive -\u003e rc=0 0.031s\n"}
+,{"stream_name":"stdout","time":51.102689973,"data":"2026-11-14T03:24:22Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/vqwan/bin/python \"setuptools\u003c81\" wheel -\u003e rc=0 0.29s\n"}
+,{"stream_name":"stdout","time":51.102954639,"data":"2026-11-14T03:24:22Z stderr tail: Using Python 3.10.22 environment at: /tmp/audit/envs/vqwan | Resolved 3 packages in 182ms | Downloading setuptools (1.0MiB) |  Downloaded setuptools | Prepared 3 packages in 67ms | Installed 3 packages in 23ms |  + packaging==26.3 |  + setuptools==80.10.2 |  + wheel==0.48.0 | \n"}
+,{"stream_name":"stdout","time":57.189634884,"data":"2026-11-14T03:24:28Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/vqwan/bin/python -r /kaggle/working/audit/requirements_noflash.txt einops -\u003e rc=0 6.086s\n"}
+,{"stream_name":"stdout","time":57.189703283,"data":"2026-11-14T03:24:28Z stderr tail: cffi==2.1.1 |  + charset-normalizer==3.5.2 |  + click==8.5.1 |  + cryptography==50.0.2 |  + dashscope==2.1.0 |  + diffusers==0.41.0 |  + easydict==1.14 |  + einops==0.8.2 |  + exceptiongroup==1.3.1 |  + fastapi==0.162.5 |  + frozenlist==1.8.0 |  + ftfy==6.3.1 |  + gradio==6.32.0 |  + gradio-client==2.7.2 |  + groovy==0.1.2 |  + h11==0.16.0 |  + hf-gradio==0.4.1 |  + hf-xet==1.8.0 |  + httpcore==1.0.9 |  + httpx==0.28.1 |  + httpx-sse==0.4.3 |  + huggingface-hub==1.33.0 |  + idna==3.20 |  + imageio==2.38.0 |  + imageio-ffmpeg==0.8.1 |  + importlib-metadata==9.0.1 |  + markdown-it-py==4.3.0 |  + mdurl==0.1.2 |  + multidict==7.1.0 |  - numpy==2.2.6 |  + numpy==1.26.4 |  + opencv-python==4.11.0.86 |  + opentelemetry-api==1.45.2 |  + opentelemetry-sdk==1.45.2 |  + opentelemetry-semantic-conventions==0.66b2 |  + orjson==3.13.0 |  + pandas==2.3.3 |  + propcache==0.5.4 |  + psutil==7.2.2 |  + pycparser==3.11 |  + pydantic==2.14.3 |  + pydantic-core==2.50.4 |  + pydub==0.25.1 |  + pygments==2.21.0 |  + python-dateutil==3.0.0 |  + python-multipart==0.0.32 |  + pytz==2026.6 |  + pyyaml==6.0.3 |  + regex==2026.9.29 |  + requests==2.34.2 |  + rich==15.0.0 |  + safehttpx==0.1.7 |  + safetensors==0.8.0 |  + semantic-version==2.10.0 |  + shellingham==1.5.4 |  + six==1.17.0 |  + starlette==1.7.0 |  + tenacity==9.2.1 |  + tiktoken==0.14.0 |  + tokenizers==0.23.3 |  + tomli==2.5.0 |  + tomlkit==0.14.0 |  + tqdm==4.70.1 |  + transformers==5.20.2 |  + typer==0.29.1 |  + typing-inspection==0.4.5 |  + tzdata==2026.6 |  + urllib3==2.8.0 |  + uvicorn==0.54.0 |  + wcwidth==0.9.4 |  + websocket-client==1.9.2 |  + yarl==1.25.1 |  + zipp==4.1.2 | \n"}
+,{"stream_name":"stdout","time":57.204644161,"data":"2026-11-14T03:24:28Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/vqwan/bin/python huggingface_hub -\u003e rc=0 0.015s\n"}
+,{"stream_name":"stdout","time":57.204740982,"data":"2026-11-14T03:24:28Z stderr tail: Using Python 3.10.22 environment at: /tmp/audit/envs/vqwan | Checked 1 package in 4ms | \n"}
+,{"stream_name":"stdout","time":138.990186484,"data":"2026-11-14T03:25:50Z $ /tmp/audit/envs/vqwan/bin/hf download Wan-AI/Wan2.1-T2V-1.3B --local-dir /tmp/audit/weights/Wan2.1-T2V-1.3B -\u003e rc=0 81.785s\n"}
+,{"stream_name":"stdout","time":138.99047464,"data":"2026-11-14T03:25:50Z stdout tail: \u001b[32m✓ Downloaded\u001b[0m |   path: /tmp/audit/weights/Wan2.1-T2V-1.3B | \n"}
+,{"stream_name":"stdout","time":138.990629435,"data":"2026-11-14T03:25:50Z stderr tail: \u001b[90mHint: A new version of huggingface_hub (2.4.0) is available! You are using version 1.33.0.\u001b[0m | \u001b[90mHint: The `hf-cli` skill is not installed. Run `hf skills add -g` to teach your AI agents how to use the `hf` CLI.\u001b[0m |  | Fetching 22 files:   0%|          | 0/22 [00:00\u003c?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads. | Still waiting to acquire lock on /tmp/audit/weights/Wan2.1-T2V-1.3B/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds) |  | Fetching 22 files:   5%|▍         | 1/22 [00:00\u003c00:03,  6.67it/s] | Fetching 22 files:  14%|█▎        | 3/22 [00:02\u003c00:18,  1.02it/s] | Fetching 22 files:  18%|█▊        | 4/22 [00:03\u003c00:15,  1.17it/s] | Fetching 22 files:  41%|████      | 9/22 [00:03\u003c00:03,  3.84it/s] | Fetching 22 files:  55%|█████▍    | 12/22 [00:03\u003c00:01,  5.41it/s] | Fetching 22 files:  64%|██████▎   | 14/22 [00:04\u003c00:02,  3.88it/s] | Fetching 22 files:  73%|███████▎  | 16/22 [00:04\u003c00:01,  4.72it/s] | Fetching 22 files:  82%|████████▏ | 18/22 [00:04\u003c00:00,  5.99it/s] | Fetching 22 files:  91%|█████████ | 20/22 [00:05\u003c00:00,  5.60it/s] | Fetching 22 files:  91%|█████████ | 20/22 [00:20\u003c00:00,  5.60it/s] | Fetching 22 files:  95%|█████████▌| 21/22 [00:39\u003c00:05,  5.97s/it] | Fetching 22 files: 100%|██████████| 22/22 [01:19\u003c00:00, 12.67s/it] | Fetching 22 files: 100%|██████████| 22/22 [01:19\u003c00:00,  3.62s/it] | \n"}
+,{"stream_name":"stdout","time":656.0969685,"data":"2026-11-14T03:34:27Z $ cd /tmp/audit/repos/wan21 \u0026\u0026 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True /tmp/audit/envs/vqwan/bin/python vq_generate.py --task t2v-1.3B --size 832*480 --frame_num 33 --ckpt_dir /tmp/audit/weights/Wan2.1-T2V-1.3B --offload_model True --t5_cpu --base_seed 424242 --sample_solver unipc --sample_steps 6 --sample_shift 8 --sample_guide_scale 6 --prompt \"A slow cinematic flyby of Jupiter's moon Europa, showing its icy cracked surface, subsurface ocean implied beneath, realistic space lighting, documentary style, no text, no watermark.\" --save_file /kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242_raw16.mp4 -\u003e rc=0 517.097s\n"}
+,{"stream_name":"stdout","time":656.098442812,"data":"2026-11-14T03:34:27Z stdout tail: ation model config: {'__name__': 'Config: Wan T2V 1.3B', 't5_model': 'umt5_xxl', 't5_dtype': torch.bfloat16, 'text_len': 512, 'param_dtype': torch.float16, 'num_train_timesteps': 1000, 'sample_fps': 16, 'sample_neg_prompt': '色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走', 't5_checkpoint': 'models_t5_umt5-xxl-enc-bf16.pth', 't5_tokenizer': 'google/umt5-xxl', 'vae_checkpoint': 'Wan2.1_VAE.pth', 'vae_stride': (4, 8, 8), 'patch_size': (1, 2, 2), 'dim': 1536, 'ffn_dim': 8960, 'freq_dim': 256, 'num_heads': 12, 'num_layers': 30, 'window_size': (-1, -1), 'qk_norm': True, 'cross_attn_norm': True, 'eps': 1e-06} | [2026-11-14 03:26:12,955] INFO: Input prompt: A slow cinematic flyby of Jupiter's moon Europa, showing its icy cracked surface, subsurface ocean implied beneath, realistic space lighting, documentary style, no text, no watermark. | [2026-11-14 03:26:12,955] INFO: Creating WanT2V pipeline. | [2026-11-14 03:27:39,304] INFO: loading /tmp/audit/weights/Wan2.1-T2V-1.3B/models_t5_umt5-xxl-enc-bf16.pth | [2026-11-14 03:28:23,612] INFO: loading /tmp/audit/weights/Wan2.1-T2V-1.3B/Wan2.1_VAE.pth | [2026-11-14 03:28:25,738] INFO: Creating WanModel from /tmp/audit/weights/Wan2.1-T2V-1.3B | [2026-11-14 03:28:48,938] INFO: Generating video ... | [2026-11-14 03:34:22,317] INFO: Saving generated video to /kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242_raw16.mp4 | [2026-11-14 03:34:24,085] INFO: Finished. | \n"}
+,{"stream_name":"stdout","time":656.098471356,"data":"2026-11-14T03:34:27Z stderr tail:  |   0%|          | 0/6 [00:00\u003c?, ?it/s] |  17%|█▋        | 1/6 [00:12\u003c01:04, 12.87s/it] |  33%|███▎      | 2/6 [00:24\u003c00:49, 12.41s/it] |  50%|█████     | 3/6 [00:37\u003c00:37, 12.47s/it] |  67%|██████▋   | 4/6 [00:49\u003c00:24, 12.41s/it] |  83%|████████▎ | 5/6 [01:01\u003c00:12, 12.31s/it] | 100%|██████████| 6/6 [01:13\u003c00:00, 12.17s/it] | 100%|██████████| 6/6 [01:13\u003c00:00, 12.31s/it] | \n"}
+,{"stream_name":"stdout","time":657.797456958,"data":"2026-11-14T03:34:29Z $ ffmpeg -y -loglevel error -i /kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242_raw16.mp4 -r 24 -c:v libx264 -crf 18 -pix_fmt yuv420p /kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4 -\u003e rc=0 1.699s\n"}
+,{"stream_name":"stdout","time":658.175435691,"data":"CLIP {\"model\": \"Wan2.1-T2V-1.3B\", \"slug\": \"europa_flyby\", \"prompt\": \"A slow cinematic flyby of Jupiter's moon Europa, showing its icy cracked surface, subsurface ocean implied beneath, realistic space lighting, documentary style, no text, no watermark.\", \"seed\": 424242, \"dtype\": \"float16 (patched from bf16 config; T5 stays bf16 on CPU)\", \"scheduler\": \"unipc\", \"steps\": 6, \"guidance_scale\": 6.0, \"sample_shift\": 8, \"width\": 832, \"height\": 480, \"num_frames\": 33, \"fps\": 24, \"native_sample_fps\": 16, \"gen_s\": 517.105, \"gen_rc\": 0, \"encode_rc\": 0, \"file\": \"/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4\", \"bytes\": 682294, \"ffprobe\": {\"width\": 832, \"height\": 480, \"fps\": \"24/1\", \"frames\": \"50\", \"codec\": \"h264\", \"pix_fmt\": \"yuv420p\", \"duration_s\": 2.083333}, \"checks\": {\"black_segments\": 0, \"freeze_segments\": 0, \"blackdetect\": false, \"freezedetect\": false, \"stderr_tail\": \" : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 2620 kb/s\\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 2614 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 libx264\\nStream mapping:\\n  Stream #0:0 -\u003e #0:0 (h264 (native) -\u003e wrapped_avframe (native))\\nPress [q] to stop, [?] for help\\nOutput #0, null, to 'pipe:':\\n  Metadata:\\n    major_brand     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 wrapped_avframe\\n[out#0/null @ 0x5951ee5c80c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=14.3x    \\n\"}}\n"}
+,{"stream_name":"stdout","time":1151.074278301,"data":"2026-11-14T03:42:42Z $ cd /tmp/audit/repos/wan21 \u0026\u0026 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True /tmp/audit/envs/vqwan/bin/python vq_generate.py --task t2v-1.3B --size 832*480 --frame_num 33 --ckpt_dir /tmp/audit/weights/Wan2.1-T2V-1.3B --offload_model True --t5_cpu --base_seed 202607 --sample_solver unipc --sample_steps 6 --sample_shift 8 --sample_guide_scale 6 --prompt \"A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark.\" --save_file /kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607_raw16.mp4 -\u003e rc=0 492.893s\n"}
+,{"stream_name":"stdout","time":1151.075022639,"data":"2026-11-14T03:42:42Z stdout tail:  {'__name__': 'Config: Wan T2V 1.3B', 't5_model': 'umt5_xxl', 't5_dtype': torch.bfloat16, 'text_len': 512, 'param_dtype': torch.float16, 'num_train_timesteps': 1000, 'sample_fps': 16, 'sample_neg_prompt': '色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走', 't5_checkpoint': 'models_t5_umt5-xxl-enc-bf16.pth', 't5_tokenizer': 'google/umt5-xxl', 'vae_checkpoint': 'Wan2.1_VAE.pth', 'vae_stride': (4, 8, 8), 'patch_size': (1, 2, 2), 'dim': 1536, 'ffn_dim': 8960, 'freq_dim': 256, 'num_heads': 12, 'num_layers': 30, 'window_size': (-1, -1), 'qk_norm': True, 'cross_attn_norm': True, 'eps': 1e-06} | [2026-11-14 03:34:36,261] INFO: Input prompt: A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark. | [2026-11-14 03:34:36,261] INFO: Creating WanT2V pipeline. | [2026-11-14 03:36:02,523] INFO: loading /tmp/audit/weights/Wan2.1-T2V-1.3B/models_t5_umt5-xxl-enc-bf16.pth | [2026-11-14 03:36:42,620] INFO: loading /tmp/audit/weights/Wan2.1-T2V-1.3B/Wan2.1_VAE.pth | [2026-11-14 03:36:44,747] INFO: Creating WanModel from /tmp/audit/weights/Wan2.1-T2V-1.3B | [2026-11-14 03:37:07,419] INFO: Generating video ... | [2026-11-14 03:42:37,709] INFO: Saving generated video to /kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607_raw16.mp4 | [2026-11-14 03:42:39,126] INFO: Finished. | \n"}
+,{"stream_name":"stdout","time":1151.075192744,"data":"2026-11-14T03:42:42Z stderr tail:  |   0%|          | 0/6 [00:00\u003c?, ?it/s] |  17%|█▋        | 1/6 [00:13\u003c01:05, 13.01s/it] |  33%|███▎      | 2/6 [00:25\u003c00:50, 12.57s/it] |  50%|█████     | 3/6 [00:37\u003c00:37, 12.58s/it] |  67%|██████▋   | 4/6 [00:50\u003c00:24, 12.42s/it] |  83%|████████▎ | 5/6 [01:02\u003c00:12, 12.26s/it] | 100%|██████████| 6/6 [01:13\u003c00:00, 12.11s/it] | 100%|██████████| 6/6 [01:13\u003c00:00, 12.31s/it] | \n"}
+,{"stream_name":"stdout","time":1152.350870379,"data":"2026-11-14T03:42:43Z $ ffmpeg -y -loglevel error -i /kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607_raw16.mp4 -r 24 -c:v libx264 -crf 18 -pix_fmt yuv420p /kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4 -\u003e rc=0 1.275s\n"}
+,{"stream_name":"stdout","time":1152.701299662,"data":"CLIP {\"model\": \"Wan2.1-T2V-1.3B\", \"slug\": \"saturn_solar\", \"prompt\": \"A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark.\", \"seed\": 202607, \"dtype\": \"float16 (patched from bf16 config; T5 stays bf16 on CPU)\", \"scheduler\": \"unipc\", \"steps\": 6, \"guidance_scale\": 6.0, \"sample_shift\": 8, \"width\": 832, \"height\": 480, \"num_frames\": 33, \"fps\": 24, \"native_sample_fps\": 16, \"gen_s\": 492.9, \"gen_rc\": 0, \"encode_rc\": 0, \"file\": \"/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4\", \"bytes\": 370514, \"ffprobe\": {\"width\": 832, \"height\": 480, \"fps\": \"24/1\", \"frames\": \"50\", \"codec\": \"h264\", \"pix_fmt\": \"yuv420p\", \"duration_s\": 2.083333}, \"checks\": {\"black_segments\": 0, \"freeze_segments\": 0, \"blackdetect\": false, \"freezedetect\": false, \"stderr_tail\": \" : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 1422 kb/s\\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 1417 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 libx264\\nStream mapping:\\n  Stream #0:0 -\u003e #0:0 (h264 (native) -\u003e wrapped_avframe (native))\\nPress [q] to stop, [?] for help\\nOutput #0, null, to 'pipe:':\\n  Metadata:\\n    major_brand     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 wrapped_avframe\\n[out#0/null @ 0x5b757bcb42c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=16.1x    \\n\"}}\n"}
+,{"stream_name":"stdout","time":1654.209152807,"data":"2026-11-14T03:51:05Z $ cd /tmp/audit/repos/wan21 \u0026\u0026 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True /tmp/audit/envs/vqwan/bin/python vq_generate.py --task t2v-1.3B --size 832*480 --frame_num 33 --ckpt_dir /tmp/audit/weights/Wan2.1-T2V-1.3B --offload_model True --t5_cpu --base_seed 271828 --sample_solver unipc --sample_steps 6 --sample_shift 8 --sample_guide_scale 6 --prompt \"A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark.\" --save_file /kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828_raw16.mp4 -\u003e rc=0 501.501s\n"}
+,{"stream_name":"stdout","time":1654.210260939,"data":"2026-11-14T03:51:05Z stdout tail: ig: {'__name__': 'Config: Wan T2V 1.3B', 't5_model': 'umt5_xxl', 't5_dtype': torch.bfloat16, 'text_len': 512, 'param_dtype': torch.float16, 'num_train_timesteps': 1000, 'sample_fps': 16, 'sample_neg_prompt': '色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走', 't5_checkpoint': 'models_t5_umt5-xxl-enc-bf16.pth', 't5_tokenizer': 'google/umt5-xxl', 'vae_checkpoint': 'Wan2.1_VAE.pth', 'vae_stride': (4, 8, 8), 'patch_size': (1, 2, 2), 'dim': 1536, 'ffn_dim': 8960, 'freq_dim': 256, 'num_heads': 12, 'num_layers': 30, 'window_size': (-1, -1), 'qk_norm': True, 'cross_attn_norm': True, 'eps': 1e-06} | [2026-11-14 03:42:50,503] INFO: Input prompt: A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark. | [2026-11-14 03:42:50,503] INFO: Creating WanT2V pipeline. | [2026-11-14 03:44:17,542] INFO: loading /tmp/audit/weights/Wan2.1-T2V-1.3B/models_t5_umt5-xxl-enc-bf16.pth | [2026-11-14 03:44:57,635] INFO: loading /tmp/audit/weights/Wan2.1-T2V-1.3B/Wan2.1_VAE.pth | [2026-11-14 03:44:59,762] INFO: Creating WanModel from /tmp/audit/weights/Wan2.1-T2V-1.3B | [2026-11-14 03:45:22,214] INFO: Generating video ... | [2026-11-14 03:51:01,040] INFO: Saving generated video to /kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828_raw16.mp4 | [2026-11-14 03:51:02,260] INFO: Finished. | \n"}
+,{"stream_name":"stdout","time":1654.210339894,"data":"2026-11-14T03:51:05Z stderr tail:  |   0%|          | 0/6 [00:00\u003c?, ?it/s] |  17%|█▋        | 1/6 [00:13\u003c01:05, 13.01s/it] |  33%|███▎      | 2/6 [00:25\u003c00:50, 12.53s/it] |  50%|█████     | 3/6 [00:37\u003c00:37, 12.57s/it] |  67%|██████▋   | 4/6 [00:49\u003c00:24, 12.42s/it] |  83%|████████▎ | 5/6 [01:01\u003c00:12, 12.25s/it] | 100%|██████████| 6/6 [01:13\u003c00:00, 12.11s/it] | 100%|██████████| 6/6 [01:13\u003c00:00, 12.30s/it] | \n"}
+,{"stream_name":"stdout","time":1655.488044056,"data":"2026-11-14T03:51:07Z $ ffmpeg -y -loglevel error -i /kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828_raw16.mp4 -r 24 -c:v libx264 -crf 18 -pix_fmt yuv420p /kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4 -\u003e rc=0 1.277s\n"}
+,{"stream_name":"stdout","time":1655.832320846,"data":"CLIP {\"model\": \"Wan2.1-T2V-1.3B\", \"slug\": \"enceladus_plumes\", \"prompt\": \"A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark.\", \"seed\": 271828, \"dtype\": \"float16 (patched from bf16 config; T5 stays bf16 on CPU)\", \"scheduler\": \"unipc\", \"steps\": 6, \"guidance_scale\": 6.0, \"sample_shift\": 8, \"width\": 832, \"height\": 480, \"num_frames\": 33, \"fps\": 24, \"native_sample_fps\": 16, \"gen_s\": 501.509, \"gen_rc\": 0, \"encode_rc\": 0, \"file\": \"/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4\", \"bytes\": 338864, \"ffprobe\": {\"width\": 832, \"height\": 480, \"fps\": \"24/1\", \"frames\": \"50\", \"codec\": \"h264\", \"pix_fmt\": \"yuv420p\", \"duration_s\": 2.083333}, \"checks\": {\"black_segments\": 0, \"freeze_segments\": 0, \"blackdetect\": false, \"freezedetect\": false, \"stderr_tail\": \" : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 1301 kb/s\\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 1295 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 libx264\\nStream mapping:\\n  Stream #0:0 -\u003e #0:0 (h264 (native) -\u003e wrapped_avframe (native))\\nPress [q] to stop, [?] for help\\nOutput #0, null, to 'pipe:':\\n  Metadata:\\n    major_brand     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 wrapped_avframe\\n[out#0/null @ 0x58a780a6a2c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=18.1x    \\n\"}}\n"}
+,{"stream_name":"stdout","time":1655.858516522,"data":"2026-11-14T03:51:07Z FINAL {\"status\": \"FAIL\", \"blocker\": \"wan vq run failed\"}\n"}
+,{"stream_name":"stdout","time":1655.858821868,"data":"{\n"}
+,{"stream_name":"stdout","time":1655.858834455,"data":"  \"component\": \"vq-wan\",\n"}
+,{"stream_name":"stdout","time":1655.858838905,"data":"  \"priority\": \"VQ\",\n"}
+,{"stream_name":"stdout","time":1655.858842839,"data":"  \"kernel\": \"openmontage-vq-wan\",\n"}
+,{"stream_name":"stdout","time":1655.858847043,"data":"  \"utc_start\": \"2026-11-14T03:23:32Z\",\n"}
+,{"stream_name":"stdout","time":1655.858851227,"data":"  \"utc_end\": \"2026-11-14T03:51:07Z\",\n"}
+,{"stream_name":"stdout","time":1655.858854677,"data":"  \"status\": \"FAIL\",\n"}
+,{"stream_name":"stdout","time":1655.858857897,"data":"  \"steps\": {\n"}
+,{"stream_name":"stdout","time":1655.858861451,"data":"    \"helper\": {\n"}
+,{"stream_name":"stdout","time":1655.858865441,"data":"      \"path\": \"/kaggle/working/audit/scripts/kaggle_environment_snapshot.py\",\n"}
+,{"stream_name":"stdout","time":1655.858870139,"data":"      \"expected_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":1655.858874303,"data":"      \"actual_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":1655.858878411,"data":"      \"match\": true\n"}
+,{"stream_name":"stdout","time":1655.858892453,"data":"    },\n"}
+,{"stream_name":"stdout","time":1655.858896801,"data":"    \"download_model\": {\n"}
+,{"stream_name":"stdout","time":1655.858900729,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.858905271,"data":"      \"stderr\": \"etching 22 files:  14%|\\u2588\\u258e        | 3/22 [00:02\u003c00:18,  1.02it/s]\\nFetching 22 files:  18%|\\u2588\\u258a        | 4/22 [00:03\u003c00:15,  1.17it/s]\\nFetching 22 files:  41%|\\u2588\\u2588\\u2588\\u2588      | 9/22 [00:03\u003c00:03,  3.84it/s]\\nFetching 22 files:  55%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u258d    | 12/22 [00:03\u003c00:01,  5.41it/s]\\nFetching 22 files:  64%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u258e   | 14/22 [00:04\u003c00:02,  3.88it/s]\\nFetching 22 files:  73%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u258e  | 16/22 [00:04\u003c00:01,  4.72it/s]\\nFetching 22 files:  82%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u258f | 18/22 [00:04\u003c00:00,  5.99it/s]\\nFetching 22 files:  91%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588 | 20/22 [00:05\u003c00:00,  5.60it/s]\\nFetching 22 files:  91%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588 | 20/22 [00:20\u003c00:00,  5.60it/s]\\nFetching 22 files:  95%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u258c| 21/22 [00:39\u003c00:05,  5.97s/it]\\nFetching 22 files: 100%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588| 22/22 [01:19\u003c00:00, 12.67s/it]\\nFetching 22 files: 100%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588| 22/22 [01:19\u003c00:00,  3.62s/it]\\n\"\n"}
+,{"stream_name":"stdout","time":1655.858917516,"data":"    },\n"}
+,{"stream_name":"stdout","time":1655.858922037,"data":"    \"attention_patch\": {\n"}
+,{"stream_name":"stdout","time":1655.858925985,"data":"      \"file\": \"/tmp/audit/repos/wan21/wan/modules/attention.py\",\n"}
+,{"stream_name":"stdout","time":1655.858930251,"data":"      \"fallback\": \"torch_sdpa\"\n"}
+,{"stream_name":"stdout","time":1655.858933865,"data":"    },\n"}
+,{"stream_name":"stdout","time":1655.858937141,"data":"    \"wan_europa_flyby\": {\n"}
+,{"stream_name":"stdout","time":1655.85894112,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.858944842,"data":"      \"gen_s\": 517.105,\n"}
+,{"stream_name":"stdout","time":1655.858949169,"data":"      \"stderr\": \"\\n  0%|          | 0/6 [00:00\u003c?, ?it/s]\\n 17%|\\u2588\\u258b        | 1/6 [00:12\u003c01:04, 12.87s/it]\\n 33%|\\u2588\\u2588\\u2588\\u258e      | 2/6 [00:24\u003c00:49, 12.41s/it]\\n 50%|\\u2588\\u2588\\u2588\\u2588\\u2588     | 3/6 [00:37\u003c00:37, 12.47s/it]\\n 67%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u258b   | 4/6 [00:49\u003c00:24, 12.41s/it]\\n 83%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u258e | 5/6 [01:01\u003c00:12, 12.31s/it]\\n100%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588| 6/6 [01:13\u003c00:00, 12.17s/it]\\n100%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588| 6/6 [01:13\u003c00:00, 12.31s/it]\\n\"\n"}
+,{"stream_name":"stdout","time":1655.858956822,"data":"    },\n"}
+,{"stream_name":"stdout","time":1655.858960523,"data":"    \"wan_saturn_solar\": {\n"}
+,{"stream_name":"stdout","time":1655.85896406,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.858967443,"data":"      \"gen_s\": 492.9,\n"}
+,{"stream_name":"stdout","time":1655.858971363,"data":"      \"stderr\": \"\\n  0%|          | 0/6 [00:00\u003c?, ?it/s]\\n 17%|\\u2588\\u258b        | 1/6 [00:13\u003c01:05, 13.01s/it]\\n 33%|\\u2588\\u2588\\u2588\\u258e      | 2/6 [00:25\u003c00:50, 12.57s/it]\\n 50%|\\u2588\\u2588\\u2588\\u2588\\u2588     | 3/6 [00:37\u003c00:37, 12.58s/it]\\n 67%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u258b   | 4/6 [00:50\u003c00:24, 12.42s/it]\\n 83%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u258e | 5/6 [01:02\u003c00:12, 12.26s/it]\\n100%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588| 6/6 [01:13\u003c00:00, 12.11s/it]\\n100%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588| 6/6 [01:13\u003c00:00, 12.31s/it]\\n\"\n"}
+,{"stream_name":"stdout","time":1655.858982199,"data":"    },\n"}
+,{"stream_name":"stdout","time":1655.858985791,"data":"    \"wan_enceladus_plumes\": {\n"}
+,{"stream_name":"stdout","time":1655.858989733,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.858993165,"data":"      \"gen_s\": 501.509,\n"}
+,{"stream_name":"stdout","time":1655.858996747,"data":"      \"stderr\": \"\\n  0%|          | 0/6 [00:00\u003c?, ?it/s]\\n 17%|\\u2588\\u258b        | 1/6 [00:13\u003c01:05, 13.01s/it]\\n 33%|\\u2588\\u2588\\u2588\\u258e      | 2/6 [00:25\u003c00:50, 12.53s/it]\\n 50%|\\u2588\\u2588\\u2588\\u2588\\u2588     | 3/6 [00:37\u003c00:37, 12.57s/it]\\n 67%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u258b   | 4/6 [00:49\u003c00:24, 12.42s/it]\\n 83%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u258e | 5/6 [01:01\u003c00:12, 12.25s/it]\\n100%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588| 6/6 [01:13\u003c00:00, 12.11s/it]\\n100%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588| 6/6 [01:13\u003c00:00, 12.30s/it]\\n\"\n"}
+,{"stream_name":"stdout","time":1655.85900342,"data":"    },\n"}
+,{"stream_name":"stdout","time":1655.859006582,"data":"    \"metrics\": {\n"}
+,{"stream_name":"stdout","time":1655.859010941,"data":"      \"clips\": [\n"}
+,{"stream_name":"stdout","time":1655.859014408,"data":"        {\n"}
+,{"stream_name":"stdout","time":1655.859018631,"data":"          \"model\": \"Wan2.1-T2V-1.3B\",\n"}
+,{"stream_name":"stdout","time":1655.859022319,"data":"          \"slug\": \"europa_flyby\",\n"}
+,{"stream_name":"stdout","time":1655.859026025,"data":"          \"prompt\": \"A slow cinematic flyby of Jupiter's moon Europa, showing its icy cracked surface, subsurface ocean implied beneath, realistic space lighting, documentary style, no text, no watermark.\",\n"}
+,{"stream_name":"stdout","time":1655.859030523,"data":"          \"seed\": 424242,\n"}
+,{"stream_name":"stdout","time":1655.859034087,"data":"          \"dtype\": \"float16 (patched from bf16 config; T5 stays bf16 on CPU)\",\n"}
+,{"stream_name":"stdout","time":1655.859038254,"data":"          \"scheduler\": \"unipc\",\n"}
+,{"stream_name":"stdout","time":1655.859041837,"data":"          \"steps\": 6,\n"}
+,{"stream_name":"stdout","time":1655.859045465,"data":"          \"guidance_scale\": 6.0,\n"}
+,{"stream_name":"stdout","time":1655.859049323,"data":"          \"sample_shift\": 8,\n"}
+,{"stream_name":"stdout","time":1655.859052705,"data":"          \"width\": 832,\n"}
+,{"stream_name":"stdout","time":1655.859056423,"data":"          \"height\": 480,\n"}
+,{"stream_name":"stdout","time":1655.85905992,"data":"          \"num_frames\": 33,\n"}
+,{"stream_name":"stdout","time":1655.859063647,"data":"          \"fps\": 24,\n"}
+,{"stream_name":"stdout","time":1655.859067514,"data":"          \"native_sample_fps\": 16,\n"}
+,{"stream_name":"stdout","time":1655.859071201,"data":"          \"gen_s\": 517.105,\n"}
+,{"stream_name":"stdout","time":1655.859075021,"data":"          \"gen_rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859078754,"data":"          \"encode_rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859082596,"data":"          \"file\": \"/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4\",\n"}
+,{"stream_name":"stdout","time":1655.859086875,"data":"          \"bytes\": 682294,\n"}
+,{"stream_name":"stdout","time":1655.859093607,"data":"          \"ffprobe\": {\n"}
+,{"stream_name":"stdout","time":1655.8590975,"data":"            \"width\": 832,\n"}
+,{"stream_name":"stdout","time":1655.859101645,"data":"            \"height\": 480,\n"}
+,{"stream_name":"stdout","time":1655.859105413,"data":"            \"fps\": \"24/1\",\n"}
+,{"stream_name":"stdout","time":1655.859108883,"data":"            \"frames\": \"50\",\n"}
+,{"stream_name":"stdout","time":1655.859112464,"data":"            \"codec\": \"h264\",\n"}
+,{"stream_name":"stdout","time":1655.859116977,"data":"            \"pix_fmt\": \"yuv420p\",\n"}
+,{"stream_name":"stdout","time":1655.859120307,"data":"            \"duration_s\": 2.083333\n"}
+,{"stream_name":"stdout","time":1655.859124039,"data":"          },\n"}
+,{"stream_name":"stdout","time":1655.859137265,"data":"          \"checks\": {\n"}
+,{"stream_name":"stdout","time":1655.85914163,"data":"            \"black_segments\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859145836,"data":"            \"freeze_segments\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859149953,"data":"            \"blackdetect\": false,\n"}
+,{"stream_name":"stdout","time":1655.859153815,"data":"            \"freezedetect\": false,\n"}
+,{"stream_name":"stdout","time":1655.859159469,"data":"            \"stderr_tail\": \" : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 2620 kb/s\\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 2614 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 libx264\\nStream mapping:\\n  Stream #0:0 -\u003e #0:0 (h264 (native) -\u003e wrapped_avframe (native))\\nPress [q] to stop, [?] for help\\nOutput #0, null, to 'pipe:':\\n  Metadata:\\n    major_brand     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 wrapped_avframe\\n[out#0/null @ 0x5951ee5c80c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=14.3x    \\n\"\n"}
+,{"stream_name":"stdout","time":1655.859168857,"data":"          }\n"}
+,{"stream_name":"stdout","time":1655.859172836,"data":"        },\n"}
+,{"stream_name":"stdout","time":1655.859176852,"data":"        {\n"}
+,{"stream_name":"stdout","time":1655.859180662,"data":"          \"model\": \"Wan2.1-T2V-1.3B\",\n"}
+,{"stream_name":"stdout","time":1655.859184803,"data":"          \"slug\": \"saturn_solar\",\n"}
+,{"stream_name":"stdout","time":1655.859188792,"data":"          \"prompt\": \"A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark.\",\n"}
+,{"stream_name":"stdout","time":1655.85919295,"data":"          \"seed\": 202607,\n"}
+,{"stream_name":"stdout","time":1655.859198278,"data":"          \"dtype\": \"float16 (patched from bf16 config; T5 stays bf16 on CPU)\",\n"}
+,{"stream_name":"stdout","time":1655.859206352,"data":"          \"scheduler\": \"unipc\",\n"}
+,{"stream_name":"stdout","time":1655.859209651,"data":"          \"steps\": 6,\n"}
+,{"stream_name":"stdout","time":1655.859212121,"data":"          \"guidance_scale\": 6.0,\n"}
+,{"stream_name":"stdout","time":1655.859218316,"data":"          \"sample_shift\": 8,\n"}
+,{"stream_name":"stdout","time":1655.859220854,"data":"          \"width\": 832,\n"}
+,{"stream_name":"stdout","time":1655.859223197,"data":"          \"height\": 480,\n"}
+,{"stream_name":"stdout","time":1655.859225548,"data":"          \"num_frames\": 33,\n"}
+,{"stream_name":"stdout","time":1655.859227894,"data":"          \"fps\": 24,\n"}
+,{"stream_name":"stdout","time":1655.859230331,"data":"          \"native_sample_fps\": 16,\n"}
+,{"stream_name":"stdout","time":1655.85923272,"data":"          \"gen_s\": 492.9,\n"}
+,{"stream_name":"stdout","time":1655.85923508,"data":"          \"gen_rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859237446,"data":"          \"encode_rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859240096,"data":"          \"file\": \"/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4\",\n"}
+,{"stream_name":"stdout","time":1655.85924261,"data":"          \"bytes\": 370514,\n"}
+,{"stream_name":"stdout","time":1655.859244959,"data":"          \"ffprobe\": {\n"}
+,{"stream_name":"stdout","time":1655.859247266,"data":"            \"width\": 832,\n"}
+,{"stream_name":"stdout","time":1655.859249678,"data":"            \"height\": 480,\n"}
+,{"stream_name":"stdout","time":1655.859252006,"data":"            \"fps\": \"24/1\",\n"}
+,{"stream_name":"stdout","time":1655.859254394,"data":"            \"frames\": \"50\",\n"}
+,{"stream_name":"stdout","time":1655.859256773,"data":"            \"codec\": \"h264\",\n"}
+,{"stream_name":"stdout","time":1655.85925947,"data":"            \"pix_fmt\": \"yuv420p\",\n"}
+,{"stream_name":"stdout","time":1655.859261933,"data":"            \"duration_s\": 2.083333\n"}
+,{"stream_name":"stdout","time":1655.859264292,"data":"          },\n"}
+,{"stream_name":"stdout","time":1655.859266549,"data":"          \"checks\": {\n"}
+,{"stream_name":"stdout","time":1655.859268884,"data":"            \"black_segments\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859271264,"data":"            \"freeze_segments\": 0,\n"}
+,{"stream_name":"stdout","time":1655.85927361,"data":"            \"blackdetect\": false,\n"}
+,{"stream_name":"stdout","time":1655.859275963,"data":"            \"freezedetect\": false,\n"}
+,{"stream_name":"stdout","time":1655.85927882,"data":"            \"stderr_tail\": \" : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 1422 kb/s\\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 1417 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 libx264\\nStream mapping:\\n  Stream #0:0 -\u003e #0:0 (h264 (native) -\u003e wrapped_avframe (native))\\nPress [q] to stop, [?] for help\\nOutput #0, null, to 'pipe:':\\n  Metadata:\\n    major_brand     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 wrapped_avframe\\n[out#0/null @ 0x5b757bcb42c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=16.1x    \\n\"\n"}
+,{"stream_name":"stdout","time":1655.859284286,"data":"          }\n"}
+,{"stream_name":"stdout","time":1655.859286577,"data":"        },\n"}
+,{"stream_name":"stdout","time":1655.859290937,"data":"        {\n"}
+,{"stream_name":"stdout","time":1655.859293265,"data":"          \"model\": \"Wan2.1-T2V-1.3B\",\n"}
+,{"stream_name":"stdout","time":1655.859295705,"data":"          \"slug\": \"enceladus_plumes\",\n"}
+,{"stream_name":"stdout","time":1655.859298182,"data":"          \"prompt\": \"A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark.\",\n"}
+,{"stream_name":"stdout","time":1655.859300988,"data":"          \"seed\": 271828,\n"}
+,{"stream_name":"stdout","time":1655.859303358,"data":"          \"dtype\": \"float16 (patched from bf16 config; T5 stays bf16 on CPU)\",\n"}
+,{"stream_name":"stdout","time":1655.85930589,"data":"          \"scheduler\": \"unipc\",\n"}
+,{"stream_name":"stdout","time":1655.859308328,"data":"          \"steps\": 6,\n"}
+,{"stream_name":"stdout","time":1655.859310705,"data":"          \"guidance_scale\": 6.0,\n"}
+,{"stream_name":"stdout","time":1655.85931311,"data":"          \"sample_shift\": 8,\n"}
+,{"stream_name":"stdout","time":1655.859315458,"data":"          \"width\": 832,\n"}
+,{"stream_name":"stdout","time":1655.859317788,"data":"          \"height\": 480,\n"}
+,{"stream_name":"stdout","time":1655.85932011,"data":"          \"num_frames\": 33,\n"}
+,{"stream_name":"stdout","time":1655.859322604,"data":"          \"fps\": 24,\n"}
+,{"stream_name":"stdout","time":1655.859324962,"data":"          \"native_sample_fps\": 16,\n"}
+,{"stream_name":"stdout","time":1655.859327336,"data":"          \"gen_s\": 501.509,\n"}
+,{"stream_name":"stdout","time":1655.859329686,"data":"          \"gen_rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859332012,"data":"          \"encode_rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859334372,"data":"          \"file\": \"/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4\",\n"}
+,{"stream_name":"stdout","time":1655.859336876,"data":"          \"bytes\": 338864,\n"}
+,{"stream_name":"stdout","time":1655.859339212,"data":"          \"ffprobe\": {\n"}
+,{"stream_name":"stdout","time":1655.859341548,"data":"            \"width\": 832,\n"}
+,{"stream_name":"stdout","time":1655.859346638,"data":"            \"height\": 480,\n"}
+,{"stream_name":"stdout","time":1655.859349134,"data":"            \"fps\": \"24/1\",\n"}
+,{"stream_name":"stdout","time":1655.859351595,"data":"            \"frames\": \"50\",\n"}
+,{"stream_name":"stdout","time":1655.859354012,"data":"            \"codec\": \"h264\",\n"}
+,{"stream_name":"stdout","time":1655.85935647,"data":"            \"pix_fmt\": \"yuv420p\",\n"}
+,{"stream_name":"stdout","time":1655.859358892,"data":"            \"duration_s\": 2.083333\n"}
+,{"stream_name":"stdout","time":1655.859361262,"data":"          },\n"}
+,{"stream_name":"stdout","time":1655.859363562,"data":"          \"checks\": {\n"}
+,{"stream_name":"stdout","time":1655.85936614,"data":"            \"black_segments\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859368598,"data":"            \"freeze_segments\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859371009,"data":"            \"blackdetect\": false,\n"}
+,{"stream_name":"stdout","time":1655.859373414,"data":"            \"freezedetect\": false,\n"}
+,{"stream_name":"stdout","time":1655.85937592,"data":"            \"stderr_tail\": \" : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 1301 kb/s\\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 1295 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 libx264\\nStream mapping:\\n  Stream #0:0 -\u003e #0:0 (h264 (native) -\u003e wrapped_avframe (native))\\nPress [q] to stop, [?] for help\\nOutput #0, null, to 'pipe:':\\n  Metadata:\\n    major_brand     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 wrapped_avframe\\n[out#0/null @ 0x58a780a6a2c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=18.1x    \\n\"\n"}
+,{"stream_name":"stdout","time":1655.859383329,"data":"          }\n"}
+,{"stream_name":"stdout","time":1655.859385707,"data":"        }\n"}
+,{"stream_name":"stdout","time":1655.859388005,"data":"      ]\n"}
+,{"stream_name":"stdout","time":1655.859390304,"data":"    },\n"}
+,{"stream_name":"stdout","time":1655.859392567,"data":"    \"outputs\": [\n"}
+,{"stream_name":"stdout","time":1655.859394926,"data":"      {\n"}
+,{"stream_name":"stdout","time":1655.859397227,"data":"        \"path\": \"/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4\",\n"}
+,{"stream_name":"stdout","time":1655.859399987,"data":"        \"bytes\": 338864,\n"}
+,{"stream_name":"stdout","time":1655.859402547,"data":"        \"sha256\": \"bcd06c128980eb96b4da8832018be92504816e7a5feca5c4c42cf2bbfee5810e\"\n"}
+,{"stream_name":"stdout","time":1655.859405169,"data":"      },\n"}
+,{"stream_name":"stdout","time":1655.859467352,"data":"      {\n"}
+,{"stream_name":"stdout","time":1655.859476398,"data":"        \"path\": \"/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4\",\n"}
+,{"stream_name":"stdout","time":1655.859480012,"data":"        \"bytes\": 682294,\n"}
+,{"stream_name":"stdout","time":1655.85948261,"data":"        \"sha256\": \"95ea54d8e1f97682e85a419b0798bbf44a23077997c968d3b585ce0e2491f384\"\n"}
+,{"stream_name":"stdout","time":1655.859485186,"data":"      },\n"}
+,{"stream_name":"stdout","time":1655.859487533,"data":"      {\n"}
+,{"stream_name":"stdout","time":1655.859489823,"data":"        \"path\": \"/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4\",\n"}
+,{"stream_name":"stdout","time":1655.859492366,"data":"        \"bytes\": 370514,\n"}
+,{"stream_name":"stdout","time":1655.859494739,"data":"        \"sha256\": \"de2e34b64de34daee0039e889ce5ea1f6841cf7f2c29887c69dabe415580d54d\"\n"}
+,{"stream_name":"stdout","time":1655.859497634,"data":"      }\n"}
+,{"stream_name":"stdout","time":1655.859499942,"data":"    ],\n"}
+,{"stream_name":"stdout","time":1655.859502622,"data":"    \"clips\": [\n"}
+,{"stream_name":"stdout","time":1655.859504958,"data":"      {\n"}
+,{"stream_name":"stdout","time":1655.859507246,"data":"        \"model\": \"Wan2.1-T2V-1.3B\",\n"}
+,{"stream_name":"stdout","time":1655.85950965,"data":"        \"slug\": \"europa_flyby\",\n"}
+,{"stream_name":"stdout","time":1655.859512132,"data":"        \"prompt\": \"A slow cinematic flyby of Jupiter's moon Europa, showing its icy cracked surface, subsurface ocean implied beneath, realistic space lighting, documentary style, no text, no watermark.\",\n"}
+,{"stream_name":"stdout","time":1655.859514848,"data":"        \"seed\": 424242,\n"}
+,{"stream_name":"stdout","time":1655.859517215,"data":"        \"dtype\": \"float16 (patched from bf16 config; T5 stays bf16 on CPU)\",\n"}
+,{"stream_name":"stdout","time":1655.859519711,"data":"        \"scheduler\": \"unipc\",\n"}
+,{"stream_name":"stdout","time":1655.859524943,"data":"        \"steps\": 6,\n"}
+,{"stream_name":"stdout","time":1655.85952734,"data":"        \"guidance_scale\": 6.0,\n"}
+,{"stream_name":"stdout","time":1655.859529725,"data":"        \"sample_shift\": 8,\n"}
+,{"stream_name":"stdout","time":1655.859532086,"data":"        \"width\": 832,\n"}
+,{"stream_name":"stdout","time":1655.859534514,"data":"        \"height\": 480,\n"}
+,{"stream_name":"stdout","time":1655.859536855,"data":"        \"num_frames\": 33,\n"}
+,{"stream_name":"stdout","time":1655.859539207,"data":"        \"fps\": 24,\n"}
+,{"stream_name":"stdout","time":1655.859541631,"data":"        \"native_sample_fps\": 16,\n"}
+,{"stream_name":"stdout","time":1655.859544013,"data":"        \"gen_s\": 517.105,\n"}
+,{"stream_name":"stdout","time":1655.85954637,"data":"        \"gen_rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859548805,"data":"        \"encode_rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.85955119,"data":"        \"file\": \"/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4\",\n"}
+,{"stream_name":"stdout","time":1655.85955378,"data":"        \"bytes\": 682294,\n"}
+,{"stream_name":"stdout","time":1655.859556136,"data":"        \"ffprobe\": {\n"}
+,{"stream_name":"stdout","time":1655.85955857,"data":"          \"width\": 832,\n"}
+,{"stream_name":"stdout","time":1655.85956099,"data":"          \"height\": 480,\n"}
+,{"stream_name":"stdout","time":1655.859563447,"data":"          \"fps\": \"24/1\",\n"}
+,{"stream_name":"stdout","time":1655.859565836,"data":"          \"frames\": \"50\",\n"}
+,{"stream_name":"stdout","time":1655.859568299,"data":"          \"codec\": \"h264\",\n"}
+,{"stream_name":"stdout","time":1655.85957067,"data":"          \"pix_fmt\": \"yuv420p\",\n"}
+,{"stream_name":"stdout","time":1655.859573124,"data":"          \"duration_s\": 2.083333\n"}
+,{"stream_name":"stdout","time":1655.859575505,"data":"        },\n"}
+,{"stream_name":"stdout","time":1655.859577809,"data":"        \"checks\": {\n"}
+,{"stream_name":"stdout","time":1655.859580158,"data":"          \"black_segments\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859582529,"data":"          \"freeze_segments\": 0,\n"}
+,{"stream_name":"stdout","time":1655.8595849,"data":"          \"blackdetect\": false,\n"}
+,{"stream_name":"stdout","time":1655.859587316,"data":"          \"freezedetect\": false,\n"}
+,{"stream_name":"stdout","time":1655.859590473,"data":"          \"stderr_tail\": \" : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 2620 kb/s\\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 2614 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 libx264\\nStream mapping:\\n  Stream #0:0 -\u003e #0:0 (h264 (native) -\u003e wrapped_avframe (native))\\nPress [q] to stop, [?] for help\\nOutput #0, null, to 'pipe:':\\n  Metadata:\\n    major_brand     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 wrapped_avframe\\n[out#0/null @ 0x5951ee5c80c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=14.3x    \\n\"\n"}
+,{"stream_name":"stdout","time":1655.85959801,"data":"        }\n"}
+,{"stream_name":"stdout","time":1655.859600366,"data":"      },\n"}
+,{"stream_name":"stdout","time":1655.859602665,"data":"      {\n"}
+,{"stream_name":"stdout","time":1655.85960495,"data":"        \"model\": \"Wan2.1-T2V-1.3B\",\n"}
+,{"stream_name":"stdout","time":1655.859607378,"data":"        \"slug\": \"saturn_solar\",\n"}
+,{"stream_name":"stdout","time":1655.859609851,"data":"        \"prompt\": \"A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark.\",\n"}
+,{"stream_name":"stdout","time":1655.85961258,"data":"        \"seed\": 202607,\n"}
+,{"stream_name":"stdout","time":1655.859614951,"data":"        \"dtype\": \"float16 (patched from bf16 config; T5 stays bf16 on CPU)\",\n"}
+,{"stream_name":"stdout","time":1655.859617448,"data":"        \"scheduler\": \"unipc\",\n"}
+,{"stream_name":"stdout","time":1655.859619836,"data":"        \"steps\": 6,\n"}
+,{"stream_name":"stdout","time":1655.859622154,"data":"        \"guidance_scale\": 6.0,\n"}
+,{"stream_name":"stdout","time":1655.859624522,"data":"        \"sample_shift\": 8,\n"}
+,{"stream_name":"stdout","time":1655.859627016,"data":"        \"width\": 832,\n"}
+,{"stream_name":"stdout","time":1655.859630399,"data":"        \"height\": 480,\n"}
+,{"stream_name":"stdout","time":1655.859635484,"data":"        \"num_frames\": 33,\n"}
+,{"stream_name":"stdout","time":1655.859638071,"data":"        \"fps\": 24,\n"}
+,{"stream_name":"stdout","time":1655.859640755,"data":"        \"native_sample_fps\": 16,\n"}
+,{"stream_name":"stdout","time":1655.859643284,"data":"        \"gen_s\": 492.9,\n"}
+,{"stream_name":"stdout","time":1655.859645724,"data":"        \"gen_rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859648051,"data":"        \"encode_rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859650501,"data":"        \"file\": \"/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4\",\n"}
+,{"stream_name":"stdout","time":1655.85965318,"data":"        \"bytes\": 370514,\n"}
+,{"stream_name":"stdout","time":1655.85965561,"data":"        \"ffprobe\": {\n"}
+,{"stream_name":"stdout","time":1655.85965803,"data":"          \"width\": 832,\n"}
+,{"stream_name":"stdout","time":1655.859660504,"data":"          \"height\": 480,\n"}
+,{"stream_name":"stdout","time":1655.859662853,"data":"          \"fps\": \"24/1\",\n"}
+,{"stream_name":"stdout","time":1655.859665335,"data":"          \"frames\": \"50\",\n"}
+,{"stream_name":"stdout","time":1655.85966856,"data":"          \"codec\": \"h264\",\n"}
+,{"stream_name":"stdout","time":1655.859671114,"data":"          \"pix_fmt\": \"yuv420p\",\n"}
+,{"stream_name":"stdout","time":1655.859673762,"data":"          \"duration_s\": 2.083333\n"}
+,{"stream_name":"stdout","time":1655.859676275,"data":"        },\n"}
+,{"stream_name":"stdout","time":1655.859678572,"data":"        \"checks\": {\n"}
+,{"stream_name":"stdout","time":1655.85968101,"data":"          \"black_segments\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859683403,"data":"          \"freeze_segments\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859685779,"data":"          \"blackdetect\": false,\n"}
+,{"stream_name":"stdout","time":1655.859688256,"data":"          \"freezedetect\": false,\n"}
+,{"stream_name":"stdout","time":1655.859691152,"data":"          \"stderr_tail\": \" : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 1422 kb/s\\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 1417 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 libx264\\nStream mapping:\\n  Stream #0:0 -\u003e #0:0 (h264 (native) -\u003e wrapped_avframe (native))\\nPress [q] to stop, [?] for help\\nOutput #0, null, to 'pipe:':\\n  Metadata:\\n    major_brand     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 wrapped_avframe\\n[out#0/null @ 0x5b757bcb42c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=16.1x    \\n\"\n"}
+,{"stream_name":"stdout","time":1655.85969867,"data":"        }\n"}
+,{"stream_name":"stdout","time":1655.859701162,"data":"      },\n"}
+,{"stream_name":"stdout","time":1655.859703517,"data":"      {\n"}
+,{"stream_name":"stdout","time":1655.859705816,"data":"        \"model\": \"Wan2.1-T2V-1.3B\",\n"}
+,{"stream_name":"stdout","time":1655.859708247,"data":"        \"slug\": \"enceladus_plumes\",\n"}
+,{"stream_name":"stdout","time":1655.85971173,"data":"        \"prompt\": \"A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark.\",\n"}
+,{"stream_name":"stdout","time":1655.859714563,"data":"        \"seed\": 271828,\n"}
+,{"stream_name":"stdout","time":1655.859717025,"data":"        \"dtype\": \"float16 (patched from bf16 config; T5 stays bf16 on CPU)\",\n"}
+,{"stream_name":"stdout","time":1655.859719981,"data":"        \"scheduler\": \"unipc\",\n"}
+,{"stream_name":"stdout","time":1655.859722444,"data":"        \"steps\": 6,\n"}
+,{"stream_name":"stdout","time":1655.85972479,"data":"        \"guidance_scale\": 6.0,\n"}
+,{"stream_name":"stdout","time":1655.859727227,"data":"        \"sample_shift\": 8,\n"}
+,{"stream_name":"stdout","time":1655.859729662,"data":"        \"width\": 832,\n"}
+,{"stream_name":"stdout","time":1655.859732009,"data":"        \"height\": 480,\n"}
+,{"stream_name":"stdout","time":1655.85973438,"data":"        \"num_frames\": 33,\n"}
+,{"stream_name":"stdout","time":1655.859736748,"data":"        \"fps\": 24,\n"}
+,{"stream_name":"stdout","time":1655.859739116,"data":"        \"native_sample_fps\": 16,\n"}
+,{"stream_name":"stdout","time":1655.859741498,"data":"        \"gen_s\": 501.509,\n"}
+,{"stream_name":"stdout","time":1655.859743874,"data":"        \"gen_rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859746214,"data":"        \"encode_rc\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859748601,"data":"        \"file\": \"/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4\",\n"}
+,{"stream_name":"stdout","time":1655.859751165,"data":"        \"bytes\": 338864,\n"}
+,{"stream_name":"stdout","time":1655.859753524,"data":"        \"ffprobe\": {\n"}
+,{"stream_name":"stdout","time":1655.85975587,"data":"          \"width\": 832,\n"}
+,{"stream_name":"stdout","time":1655.859758256,"data":"          \"height\": 480,\n"}
+,{"stream_name":"stdout","time":1655.859760614,"data":"          \"fps\": \"24/1\",\n"}
+,{"stream_name":"stdout","time":1655.859763026,"data":"          \"frames\": \"50\",\n"}
+,{"stream_name":"stdout","time":1655.85976592,"data":"          \"codec\": \"h264\",\n"}
+,{"stream_name":"stdout","time":1655.859770313,"data":"          \"pix_fmt\": \"yuv420p\",\n"}
+,{"stream_name":"stdout","time":1655.859772816,"data":"          \"duration_s\": 2.083333\n"}
+,{"stream_name":"stdout","time":1655.859775182,"data":"        },\n"}
+,{"stream_name":"stdout","time":1655.859777464,"data":"        \"checks\": {\n"}
+,{"stream_name":"stdout","time":1655.859779813,"data":"          \"black_segments\": 0,\n"}
+,{"stream_name":"stdout","time":1655.85978218,"data":"          \"freeze_segments\": 0,\n"}
+,{"stream_name":"stdout","time":1655.859784573,"data":"          \"blackdetect\": false,\n"}
+,{"stream_name":"stdout","time":1655.859786976,"data":"          \"freezedetect\": false,\n"}
+,{"stream_name":"stdout","time":1655.859789902,"data":"          \"stderr_tail\": \" : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 1301 kb/s\\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 1295 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 libx264\\nStream mapping:\\n  Stream #0:0 -\u003e #0:0 (h264 (native) -\u003e wrapped_avframe (native))\\nPress [q] to stop, [?] for help\\nOutput #0, null, to 'pipe:':\\n  Metadata:\\n    major_brand     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 wrapped_avframe\\n[out#0/null @ 0x58a780a6a2c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=18.1x    \\n\"\n"}
+,{"stream_name":"stdout","time":1655.859795084,"data":"        }\n"}
+,{"stream_name":"stdout","time":1655.859797558,"data":"      }\n"}
+,{"stream_name":"stdout","time":1655.85979991,"data":"    ]\n"}
+,{"stream_name":"stdout","time":1655.859802189,"data":"  },\n"}
+,{"stream_name":"stdout","time":1655.859804486,"data":"  \"errors\": [],\n"}
+,{"stream_name":"stdout","time":1655.859806883,"data":"  \"blocker\": \"wan vq run failed\"\n"}
+,{"stream_name":"stdout","time":1655.859809346,"data":"}\n"}
+,{"stream_name":"stderr","time":1663.004536244,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1663.004585702,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1663.381165421,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1663.381196077,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1665.165587861,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1666.351356453,"data":"[NbConvertApp] Writing 380055 bytes to __results__.html\n"}
+]

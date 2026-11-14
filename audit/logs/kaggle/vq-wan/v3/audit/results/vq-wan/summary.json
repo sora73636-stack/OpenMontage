@@ -1,0 +1,286 @@
+{
+  "component": "vq-wan",
+  "priority": "VQ",
+  "kernel": "openmontage-vq-wan",
+  "utc_start": "2026-11-14T03:23:32Z",
+  "utc_end": "2026-11-14T03:51:07Z",
+  "status": "FAIL",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "download_model": {
+      "rc": 0,
+      "stderr": "etching 22 files:  14%|\u2588\u258e        | 3/22 [00:02<00:18,  1.02it/s]\nFetching 22 files:  18%|\u2588\u258a        | 4/22 [00:03<00:15,  1.17it/s]\nFetching 22 files:  41%|\u2588\u2588\u2588\u2588      | 9/22 [00:03<00:03,  3.84it/s]\nFetching 22 files:  55%|\u2588\u2588\u2588\u2588\u2588\u258d    | 12/22 [00:03<00:01,  5.41it/s]\nFetching 22 files:  64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 14/22 [00:04<00:02,  3.88it/s]\nFetching 22 files:  73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 16/22 [00:04<00:01,  4.72it/s]\nFetching 22 files:  82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 18/22 [00:04<00:00,  5.99it/s]\nFetching 22 files:  91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 20/22 [00:05<00:00,  5.60it/s]\nFetching 22 files:  91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 20/22 [00:20<00:00,  5.60it/s]\nFetching 22 files:  95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 21/22 [00:39<00:05,  5.97s/it]\nFetching 22 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 22/22 [01:19<00:00, 12.67s/it]\nFetching 22 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 22/22 [01:19<00:00,  3.62s/it]\n"
+    },
+    "attention_patch": {
+      "file": "/tmp/audit/repos/wan21/wan/modules/attention.py",
+      "fallback": "torch_sdpa"
+    },
+    "wan_europa_flyby": {
+      "rc": 0,
+      "gen_s": 517.105,
+      "stderr": "\n  0%|          | 0/6 [00:00<?, ?it/s]\n 17%|\u2588\u258b        | 1/6 [00:12<01:04, 12.87s/it]\n 33%|\u2588\u2588\u2588\u258e      | 2/6 [00:24<00:49, 12.41s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 3/6 [00:37<00:37, 12.47s/it]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 4/6 [00:49<00:24, 12.41s/it]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 5/6 [01:01<00:12, 12.31s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 6/6 [01:13<00:00, 12.17s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 6/6 [01:13<00:00, 12.31s/it]\n"
+    },
+    "wan_saturn_solar": {
+      "rc": 0,
+      "gen_s": 492.9,
+      "stderr": "\n  0%|          | 0/6 [00:00<?, ?it/s]\n 17%|\u2588\u258b        | 1/6 [00:13<01:05, 13.01s/it]\n 33%|\u2588\u2588\u2588\u258e      | 2/6 [00:25<00:50, 12.57s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 3/6 [00:37<00:37, 12.58s/it]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 4/6 [00:50<00:24, 12.42s/it]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 5/6 [01:02<00:12, 12.26s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 6/6 [01:13<00:00, 12.11s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 6/6 [01:13<00:00, 12.31s/it]\n"
+    },
+    "wan_enceladus_plumes": {
+      "rc": 0,
+      "gen_s": 501.509,
+      "stderr": "\n  0%|          | 0/6 [00:00<?, ?it/s]\n 17%|\u2588\u258b        | 1/6 [00:13<01:05, 13.01s/it]\n 33%|\u2588\u2588\u2588\u258e      | 2/6 [00:25<00:50, 12.53s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 3/6 [00:37<00:37, 12.57s/it]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 4/6 [00:49<00:24, 12.42s/it]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 5/6 [01:01<00:12, 12.25s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 6/6 [01:13<00:00, 12.11s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 6/6 [01:13<00:00, 12.30s/it]\n"
+    },
+    "metrics": {
+      "clips": [
+        {
+          "model": "Wan2.1-T2V-1.3B",
+          "slug": "europa_flyby",
+          "prompt": "A slow cinematic flyby of Jupiter's moon Europa, showing its icy cracked surface, subsurface ocean implied beneath, realistic space lighting, documentary style, no text, no watermark.",
+          "seed": 424242,
+          "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+          "scheduler": "unipc",
+          "steps": 6,
+          "guidance_scale": 6.0,
+          "sample_shift": 8,
+          "width": 832,
+          "height": 480,
+          "num_frames": 33,
+          "fps": 24,
+          "native_sample_fps": 16,
+          "gen_s": 517.105,
+          "gen_rc": 0,
+          "encode_rc": 0,
+          "file": "/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4",
+          "bytes": 682294,
+          "ffprobe": {
+            "width": 832,
+            "height": 480,
+            "fps": "24/1",
+            "frames": "50",
+            "codec": "h264",
+            "pix_fmt": "yuv420p",
+            "duration_s": 2.083333
+          },
+          "checks": {
+            "black_segments": 0,
+            "freeze_segments": 0,
+            "blackdetect": false,
+            "freezedetect": false,
+            "stderr_tail": " : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 2620 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 2614 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 wrapped_avframe\n[out#0/null @ 0x5951ee5c80c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=14.3x    \n"
+          }
+        },
+        {
+          "model": "Wan2.1-T2V-1.3B",
+          "slug": "saturn_solar",
+          "prompt": "A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark.",
+          "seed": 202607,
+          "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+          "scheduler": "unipc",
+          "steps": 6,
+          "guidance_scale": 6.0,
+          "sample_shift": 8,
+          "width": 832,
+          "height": 480,
+          "num_frames": 33,
+          "fps": 24,
+          "native_sample_fps": 16,
+          "gen_s": 492.9,
+          "gen_rc": 0,
+          "encode_rc": 0,
+          "file": "/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4",
+          "bytes": 370514,
+          "ffprobe": {
+            "width": 832,
+            "height": 480,
+            "fps": "24/1",
+            "frames": "50",
+            "codec": "h264",
+            "pix_fmt": "yuv420p",
+            "duration_s": 2.083333
+          },
+          "checks": {
+            "black_segments": 0,
+            "freeze_segments": 0,
+            "blackdetect": false,
+            "freezedetect": false,
+            "stderr_tail": " : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 1422 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 1417 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 wrapped_avframe\n[out#0/null @ 0x5b757bcb42c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=16.1x    \n"
+          }
+        },
+        {
+          "model": "Wan2.1-T2V-1.3B",
+          "slug": "enceladus_plumes",
+          "prompt": "A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark.",
+          "seed": 271828,
+          "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+          "scheduler": "unipc",
+          "steps": 6,
+          "guidance_scale": 6.0,
+          "sample_shift": 8,
+          "width": 832,
+          "height": 480,
+          "num_frames": 33,
+          "fps": 24,
+          "native_sample_fps": 16,
+          "gen_s": 501.509,
+          "gen_rc": 0,
+          "encode_rc": 0,
+          "file": "/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4",
+          "bytes": 338864,
+          "ffprobe": {
+            "width": 832,
+            "height": 480,
+            "fps": "24/1",
+            "frames": "50",
+            "codec": "h264",
+            "pix_fmt": "yuv420p",
+            "duration_s": 2.083333
+          },
+          "checks": {
+            "black_segments": 0,
+            "freeze_segments": 0,
+            "blackdetect": false,
+            "freezedetect": false,
+            "stderr_tail": " : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 1301 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 1295 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 wrapped_avframe\n[out#0/null @ 0x58a780a6a2c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=18.1x    \n"
+          }
+        }
+      ]
+    },
+    "outputs": [
+      {
+        "path": "/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4",
+        "bytes": 338864,
+        "sha256": "bcd06c128980eb96b4da8832018be92504816e7a5feca5c4c42cf2bbfee5810e"
+      },
+      {
+        "path": "/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4",
+        "bytes": 682294,
+        "sha256": "95ea54d8e1f97682e85a419b0798bbf44a23077997c968d3b585ce0e2491f384"
+      },
+      {
+        "path": "/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4",
+        "bytes": 370514,
+        "sha256": "de2e34b64de34daee0039e889ce5ea1f6841cf7f2c29887c69dabe415580d54d"
+      }
+    ],
+    "clips": [
+      {
+        "model": "Wan2.1-T2V-1.3B",
+        "slug": "europa_flyby",
+        "prompt": "A slow cinematic flyby of Jupiter's moon Europa, showing its icy cracked surface, subsurface ocean implied beneath, realistic space lighting, documentary style, no text, no watermark.",
+        "seed": 424242,
+        "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+        "scheduler": "unipc",
+        "steps": 6,
+        "guidance_scale": 6.0,
+        "sample_shift": 8,
+        "width": 832,
+        "height": 480,
+        "num_frames": 33,
+        "fps": 24,
+        "native_sample_fps": 16,
+        "gen_s": 517.105,
+        "gen_rc": 0,
+        "encode_rc": 0,
+        "file": "/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4",
+        "bytes": 682294,
+        "ffprobe": {
+          "width": 832,
+          "height": 480,
+          "fps": "24/1",
+          "frames": "50",
+          "codec": "h264",
+          "pix_fmt": "yuv420p",
+          "duration_s": 2.083333
+        },
+        "checks": {
+          "black_segments": 0,
+          "freeze_segments": 0,
+          "blackdetect": false,
+          "freezedetect": false,
+          "stderr_tail": " : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 2620 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 2614 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 wrapped_avframe\n[out#0/null @ 0x5951ee5c80c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=14.3x    \n"
+        }
+      },
+      {
+        "model": "Wan2.1-T2V-1.3B",
+        "slug": "saturn_solar",
+        "prompt": "A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark.",
+        "seed": 202607,
+        "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+        "scheduler": "unipc",
+        "steps": 6,
+        "guidance_scale": 6.0,
+        "sample_shift": 8,
+        "width": 832,
+        "height": 480,
+        "num_frames": 33,
+        "fps": 24,
+        "native_sample_fps": 16,
+        "gen_s": 492.9,
+        "gen_rc": 0,
+        "encode_rc": 0,
+        "file": "/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4",
+        "bytes": 370514,
+        "ffprobe": {
+          "width": 832,
+          "height": 480,
+          "fps": "24/1",
+          "frames": "50",
+          "codec": "h264",
+          "pix_fmt": "yuv420p",
+          "duration_s": 2.083333
+        },
+        "checks": {
+          "black_segments": 0,
+          "freeze_segments": 0,
+          "blackdetect": false,
+          "freezedetect": false,
+          "stderr_tail": " : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 1422 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 1417 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 wrapped_avframe\n[out#0/null @ 0x5b757bcb42c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=16.1x    \n"
+        }
+      },
+      {
+        "model": "Wan2.1-T2V-1.3B",
+        "slug": "enceladus_plumes",
+        "prompt": "A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark.",
+        "seed": 271828,
+        "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+        "scheduler": "unipc",
+        "steps": 6,
+        "guidance_scale": 6.0,
+        "sample_shift": 8,
+        "width": 832,
+        "height": 480,
+        "num_frames": 33,
+        "fps": 24,
+        "native_sample_fps": 16,
+        "gen_s": 501.509,
+        "gen_rc": 0,
+        "encode_rc": 0,
+        "file": "/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4",
+        "bytes": 338864,
+        "ffprobe": {
+          "width": 832,
+          "height": 480,
+          "fps": "24/1",
+          "frames": "50",
+          "codec": "h264",
+          "pix_fmt": "yuv420p",
+          "duration_s": 2.083333
+        },
+        "checks": {
+          "black_segments": 0,
+          "freeze_segments": 0,
+          "blackdetect": false,
+          "freezedetect": false,
+          "stderr_tail": " : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:02.08, start: 0.000000, bitrate: 1301 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 1295 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 wrapped_avframe\n[out#0/null @ 0x58a780a6a2c0] video:23kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\nframe=   50 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed=18.1x    \n"
+        }
+      }
+    ]
+  },
+  "errors": [],
+  "blocker": "wan vq run failed"
+}

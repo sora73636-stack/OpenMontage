@@ -1,0 +1,236 @@
+{
+  "component": "vq-wan",
+  "priority": "VQ",
+  "kernel": "openmontage-vq-wan",
+  "utc_start": "2026-11-14T02:59:07Z",
+  "utc_end": "2026-11-14T03:21:34Z",
+  "status": "FAIL",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "download_model": {
+      "rc": 0,
+      "stderr": "set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nFetching 22 files:   5%|\u258d         | 1/22 [00:00<00:02,  8.97it/s]\nFetching 22 files:   9%|\u2589         | 2/22 [00:00<00:02,  8.36it/s]\nFetching 22 files:  18%|\u2588\u258a        | 4/22 [00:00<00:02,  7.42it/s]\nFetching 22 files:  36%|\u2588\u2588\u2588\u258b      | 8/22 [00:00<00:00, 15.47it/s]\nFetching 22 files:  55%|\u2588\u2588\u2588\u2588\u2588\u258d    | 12/22 [00:00<00:00, 17.72it/s]\nFetching 22 files:  68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 15/22 [00:01<00:00,  8.21it/s]\nFetching 22 files:  86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 19/22 [00:02<00:00,  4.91it/s]\nFetching 22 files:  91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 20/22 [00:20<00:00,  4.91it/s]\nFetching 22 files:  95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 21/22 [00:30<00:03,  3.20s/it]\nFetching 22 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 22/22 [01:13<00:00,  8.53s/it]\nFetching 22 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 22/22 [01:13<00:00,  3.33s/it]\n"
+    },
+    "wan_europa_flyby": {
+      "rc": 1,
+      "gen_s": 418.585,
+      "stderr": " File \"/tmp/audit/repos/wan21/wan/text2video.py\", line 240, in generate\n    noise_pred_cond = self.model(\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1739, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1750, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/tmp/audit/repos/wan21/wan/modules/model.py\", line 575, in forward\n    x = block(x, **kwargs)\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1739, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1750, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/tmp/audit/repos/wan21/wan/modules/model.py\", line 302, in forward\n    y = self.self_attn(\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1739, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1750, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/tmp/audit/repos/wan21/wan/modules/model.py\", line 149, in forward\n    x = flash_attention(\n  File \"/tmp/audit/repos/wan21/wan/modules/attention.py\", line 112, in flash_attention\n    assert FLASH_ATTN_2_AVAILABLE\nAssertionError\n"
+    },
+    "wan_saturn_solar": {
+      "rc": 1,
+      "gen_s": 398.437,
+      "stderr": " File \"/tmp/audit/repos/wan21/wan/text2video.py\", line 240, in generate\n    noise_pred_cond = self.model(\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1739, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1750, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/tmp/audit/repos/wan21/wan/modules/model.py\", line 575, in forward\n    x = block(x, **kwargs)\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1739, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1750, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/tmp/audit/repos/wan21/wan/modules/model.py\", line 302, in forward\n    y = self.self_attn(\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1739, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1750, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/tmp/audit/repos/wan21/wan/modules/model.py\", line 149, in forward\n    x = flash_attention(\n  File \"/tmp/audit/repos/wan21/wan/modules/attention.py\", line 112, in flash_attention\n    assert FLASH_ATTN_2_AVAILABLE\nAssertionError\n"
+    },
+    "wan_enceladus_plumes": {
+      "rc": 1,
+      "gen_s": 393.575,
+      "stderr": " File \"/tmp/audit/repos/wan21/wan/text2video.py\", line 240, in generate\n    noise_pred_cond = self.model(\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1739, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1750, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/tmp/audit/repos/wan21/wan/modules/model.py\", line 575, in forward\n    x = block(x, **kwargs)\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1739, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1750, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/tmp/audit/repos/wan21/wan/modules/model.py\", line 302, in forward\n    y = self.self_attn(\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1739, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/tmp/audit/envs/vqwan/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1750, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/tmp/audit/repos/wan21/wan/modules/model.py\", line 149, in forward\n    x = flash_attention(\n  File \"/tmp/audit/repos/wan21/wan/modules/attention.py\", line 112, in flash_attention\n    assert FLASH_ATTN_2_AVAILABLE\nAssertionError\n"
+    },
+    "metrics": {
+      "clips": [
+        {
+          "model": "Wan2.1-T2V-1.3B",
+          "slug": "europa_flyby",
+          "prompt": "A slow cinematic flyby of Jupiter's moon Europa, showing its icy cracked surface, subsurface ocean implied beneath, realistic space lighting, documentary style, no text, no watermark.",
+          "seed": 424242,
+          "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+          "scheduler": "unipc",
+          "steps": 30,
+          "guidance_scale": 6.0,
+          "sample_shift": 8,
+          "width": 832,
+          "height": 480,
+          "num_frames": 193,
+          "fps": 24,
+          "native_sample_fps": 16,
+          "gen_s": 418.585,
+          "gen_rc": 1,
+          "encode_rc": 254,
+          "file": "/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4",
+          "bytes": 0,
+          "ffprobe": {
+            "error": "no video stream",
+            "stderr": "/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4: No such file or directory\n"
+          },
+          "checks": {
+            "black_segments": 0,
+            "freeze_segments": 0,
+            "blackdetect": false,
+            "freezedetect": false,
+            "stderr_tail": "[in#0 @ 0x5c60233601c0] Error opening input: No such file or directory\nError opening input file /kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4.\nError opening input files: No such file or directory\n"
+          }
+        },
+        {
+          "model": "Wan2.1-T2V-1.3B",
+          "slug": "saturn_solar",
+          "prompt": "A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark.",
+          "seed": 202607,
+          "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+          "scheduler": "unipc",
+          "steps": 30,
+          "guidance_scale": 6.0,
+          "sample_shift": 8,
+          "width": 832,
+          "height": 480,
+          "num_frames": 193,
+          "fps": 24,
+          "native_sample_fps": 16,
+          "gen_s": 398.437,
+          "gen_rc": 1,
+          "encode_rc": 254,
+          "file": "/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4",
+          "bytes": 0,
+          "ffprobe": {
+            "error": "no video stream",
+            "stderr": "/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4: No such file or directory\n"
+          },
+          "checks": {
+            "black_segments": 0,
+            "freeze_segments": 0,
+            "blackdetect": false,
+            "freezedetect": false,
+            "stderr_tail": "[in#0 @ 0x5957d769b1c0] Error opening input: No such file or directory\nError opening input file /kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4.\nError opening input files: No such file or directory\n"
+          }
+        },
+        {
+          "model": "Wan2.1-T2V-1.3B",
+          "slug": "enceladus_plumes",
+          "prompt": "A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark.",
+          "seed": 271828,
+          "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+          "scheduler": "unipc",
+          "steps": 30,
+          "guidance_scale": 6.0,
+          "sample_shift": 8,
+          "width": 832,
+          "height": 480,
+          "num_frames": 193,
+          "fps": 24,
+          "native_sample_fps": 16,
+          "gen_s": 393.575,
+          "gen_rc": 1,
+          "encode_rc": 254,
+          "file": "/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4",
+          "bytes": 0,
+          "ffprobe": {
+            "error": "no video stream",
+            "stderr": "/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4: No such file or directory\n"
+          },
+          "checks": {
+            "black_segments": 0,
+            "freeze_segments": 0,
+            "blackdetect": false,
+            "freezedetect": false,
+            "stderr_tail": "[in#0 @ 0x574e2a5f51c0] Error opening input: No such file or directory\nError opening input file /kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4.\nError opening input files: No such file or directory\n"
+          }
+        }
+      ]
+    },
+    "outputs": [],
+    "clips": [
+      {
+        "model": "Wan2.1-T2V-1.3B",
+        "slug": "europa_flyby",
+        "prompt": "A slow cinematic flyby of Jupiter's moon Europa, showing its icy cracked surface, subsurface ocean implied beneath, realistic space lighting, documentary style, no text, no watermark.",
+        "seed": 424242,
+        "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+        "scheduler": "unipc",
+        "steps": 30,
+        "guidance_scale": 6.0,
+        "sample_shift": 8,
+        "width": 832,
+        "height": 480,
+        "num_frames": 193,
+        "fps": 24,
+        "native_sample_fps": 16,
+        "gen_s": 418.585,
+        "gen_rc": 1,
+        "encode_rc": 254,
+        "file": "/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4",
+        "bytes": 0,
+        "ffprobe": {
+          "error": "no video stream",
+          "stderr": "/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4: No such file or directory\n"
+        },
+        "checks": {
+          "black_segments": 0,
+          "freeze_segments": 0,
+          "blackdetect": false,
+          "freezedetect": false,
+          "stderr_tail": "[in#0 @ 0x5c60233601c0] Error opening input: No such file or directory\nError opening input file /kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4.\nError opening input files: No such file or directory\n"
+        }
+      },
+      {
+        "model": "Wan2.1-T2V-1.3B",
+        "slug": "saturn_solar",
+        "prompt": "A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark.",
+        "seed": 202607,
+        "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+        "scheduler": "unipc",
+        "steps": 30,
+        "guidance_scale": 6.0,
+        "sample_shift": 8,
+        "width": 832,
+        "height": 480,
+        "num_frames": 193,
+        "fps": 24,
+        "native_sample_fps": 16,
+        "gen_s": 398.437,
+        "gen_rc": 1,
+        "encode_rc": 254,
+        "file": "/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4",
+        "bytes": 0,
+        "ffprobe": {
+          "error": "no video stream",
+          "stderr": "/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4: No such file or directory\n"
+        },
+        "checks": {
+          "black_segments": 0,
+          "freeze_segments": 0,
+          "blackdetect": false,
+          "freezedetect": false,
+          "stderr_tail": "[in#0 @ 0x5957d769b1c0] Error opening input: No such file or directory\nError opening input file /kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4.\nError opening input files: No such file or directory\n"
+        }
+      },
+      {
+        "model": "Wan2.1-T2V-1.3B",
+        "slug": "enceladus_plumes",
+        "prompt": "A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark.",
+        "seed": 271828,
+        "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+        "scheduler": "unipc",
+        "steps": 30,
+        "guidance_scale": 6.0,
+        "sample_shift": 8,
+        "width": 832,
+        "height": 480,
+        "num_frames": 193,
+        "fps": 24,
+        "native_sample_fps": 16,
+        "gen_s": 393.575,
+        "gen_rc": 1,
+        "encode_rc": 254,
+        "file": "/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4",
+        "bytes": 0,
+        "ffprobe": {
+          "error": "no video stream",
+          "stderr": "/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4: No such file or directory\n"
+        },
+        "checks": {
+          "black_segments": 0,
+          "freeze_segments": 0,
+          "blackdetect": false,
+          "freezedetect": false,
+          "stderr_tail": "[in#0 @ 0x574e2a5f51c0] Error opening input: No such file or directory\nError opening input file /kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4.\nError opening input files: No such file or directory\n"
+        }
+      }
+    ]
+  },
+  "errors": [],
+  "blocker": "wan vq run failed"
+}

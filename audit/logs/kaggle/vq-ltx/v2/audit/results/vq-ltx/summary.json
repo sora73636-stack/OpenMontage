@@ -1,0 +1,276 @@
+{
+  "component": "vq-ltx",
+  "priority": "VQ",
+  "kernel": "openmontage-vq-ltx",
+  "utc_start": "2026-11-14T03:05:49Z",
+  "utc_end": "2026-11-14T03:25:12Z",
+  "status": "PASS",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "inference": {
+      "rc": 0,
+      "duration_s": 1113.034,
+      "stdout": "r\", \"steps\": 30, \"guidance_scale\": 3.0, \"width\": 832, \"height\": 480, \"num_frames\": 193, \"fps\": 24, \"gen_s\": 307.615, \"peak_alloc_mb\": 11033.6, \"peak_reserved_mb\": 13182.0, \"file\": \"/kaggle/working/audit/results/vq/ltx/ltx_europa_flyby_424242.mp4\", \"bytes\": 179792, \"ffprobe\": {\"width\": 832, \"height\": 480, \"fps\": \"24/1\", \"frames\": \"193\", \"codec\": \"h264\", \"pix_fmt\": \"yuv420p\", \"duration_s\": 8.041667}, \"checks\": {\"black_segments\": 0, \"freeze_segments\": 0, \"blackdetect\": false, \"freezedetect\": false, \"stderr_tail\": \"     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf63.1.102\\n  Duration: 00:00:08.04, start: 0.000000, bitrate: 178 kb/s\\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 175 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc63.1.102 libx264\\nStream mapping:\\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\\nPress [q] to stop, [?] for help\\nOutput #0, null, to 'pipe:':\\n  Metadata:\\n    major_brand     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 wrapped_avframe\\n[out#0/null @ 0x5603c00b1880] video:90kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\\nframe=  193 fps=0.0 q=-0.0 Lsize=N/A time=00:00:08.00 bitrate=N/A speed=39.1x    \\n\"}}, {\"model\": \"LTX-Video-2B-0.9.5\", \"slug\": \"saturn_solar\", \"prompt\": \"A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark.\", \"seed\": 202607, \"dtype\": \"torch.float16\", \"attn\": \"unknown\", \"scheduler\": \"FlowMatchEulerDiscreteScheduler\", \"steps\": 30, \"guidance_scale\": 3.0, \"width\": 832, \"height\": 480, \"num_frames\": 193, \"fps\": 24, \"gen_s\": 296.174, \"peak_alloc_mb\": 11033.6, \"peak_reserved_mb\": 13182.0, \"file\": \"/kaggle/working/audit/results/vq/ltx/ltx_saturn_solar_202607.mp4\", \"bytes\": 332746, \"ffprobe\": {\"width\": 832, \"height\": 480, \"fps\": \"24/1\", \"frames\": \"193\", \"codec\": \"h264\", \"pix_fmt\": \"yuv420p\", \"duration_s\": 8.041667}, \"checks\": {\"black_segments\": 0, \"freeze_segments\": 0, \"blackdetect\": false, \"freezedetect\": false, \"stderr_tail\": \"     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf63.1.102\\n  Duration: 00:00:08.04, start: 0.000000, bitrate: 331 kb/s\\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 327 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc63.1.102 libx264\\nStream mapping:\\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\\nPress [q] to stop, [?] for help\\nOutput #0, null, to 'pipe:':\\n  Metadata:\\n    major_brand     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 wrapped_avframe\\n[out#0/null @ 0x5a57fdad1740] video:90kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\\nframe=  193 fps=0.0 q=-0.0 Lsize=N/A time=00:00:08.00 bitrate=N/A speed=38.6x    \\n\"}}, {\"model\": \"LTX-Video-2B-0.9.5\", \"slug\": \"enceladus_plumes\", \"prompt\": \"A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark.\", \"seed\": 271828, \"dtype\": \"torch.float16\", \"attn\": \"unknown\", \"scheduler\": \"FlowMatchEulerDiscreteScheduler\", \"steps\": 30, \"guidance_scale\": 3.0, \"width\": 832, \"height\": 480, \"num_frames\": 193, \"fps\": 24, \"gen_s\": 296.245, \"peak_alloc_mb\": 11033.6, \"peak_reserved_mb\": 13182.0, \"file\": \"/kaggle/working/audit/results/vq/ltx/ltx_enceladus_plumes_271828.mp4\", \"bytes\": 246906, \"ffprobe\": {\"width\": 832, \"height\": 480, \"fps\": \"24/1\", \"frames\": \"193\", \"codec\": \"h264\", \"pix_fmt\": \"yuv420p\", \"duration_s\": 8.041667}, \"checks\": {\"black_segments\": 0, \"freeze_segments\": 0, \"blackdetect\": false, \"freezedetect\": false, \"stderr_tail\": \"     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf63.1.102\\n  Duration: 00:00:08.04, start: 0.000000, bitrate: 245 kb/s\\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 242 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc63.1.102 libx264\\nStream mapping:\\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\\nPress [q] to stop, [?] for help\\nOutput #0, null, to 'pipe:':\\n  Metadata:\\n    major_brand     : isom\\n    minor_version   : 512\\n    compatible_brands: isomiso2avc1mp41\\n    encoder         : Lavf60.16.100\\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\\n    Metadata:\\n      handler_name    : VideoHandler\\n      vendor_id       : [0][0][0][0]\\n      encoder         : Lavc60.31.102 wrapped_avframe\\n[out#0/null @ 0x59288e6e4880] video:90kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\\nframe=  193 fps=0.0 q=-0.0 Lsize=N/A time=00:00:08.00 bitrate=N/A speed=41.6x    \\n\"}}]}\n",
+      "stderr": "]\n 40%|\u2588\u2588\u2588\u2588      | 12/30 [01:50<02:37,  8.77s/it]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 13/30 [01:58<02:27,  8.70s/it]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 14/30 [02:07<02:18,  8.65s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 15/30 [02:16<02:09,  8.63s/it]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 16/30 [02:24<02:00,  8.64s/it]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 17/30 [02:33<01:52,  8.67s/it]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 18/30 [02:42<01:44,  8.70s/it]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 19/30 [02:51<01:36,  8.73s/it]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 20/30 [02:59<01:27,  8.75s/it]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 21/30 [03:08<01:18,  8.75s/it]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 22/30 [03:17<01:09,  8.73s/it]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 23/30 [03:25<01:00,  8.71s/it]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 24/30 [03:34<00:52,  8.68s/it]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 25/30 [03:43<00:43,  8.66s/it]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 26/30 [03:51<00:34,  8.66s/it]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 27/30 [04:00<00:25,  8.66s/it]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 28/30 [04:09<00:17,  8.67s/it]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 29/30 [04:17<00:08,  8.68s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:26<00:00,  8.69s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:26<00:00,  8.89s/it]\n\n  0%|          | 0/30 [00:00<?, ?it/s]\n  3%|\u258e         | 1/30 [00:19<09:28, 19.62s/it]\n  7%|\u258b         | 2/30 [00:24<05:13, 11.21s/it]\n 10%|\u2588         | 3/30 [00:34<04:37, 10.27s/it]\n 13%|\u2588\u258e        | 4/30 [00:43<04:16,  9.88s/it]\n 17%|\u2588\u258b        | 5/30 [00:52<03:59,  9.58s/it]\n 20%|\u2588\u2588        | 6/30 [01:01<03:43,  9.31s/it]\n 23%|\u2588\u2588\u258e       | 7/30 [01:09<03:28,  9.07s/it]\n 27%|\u2588\u2588\u258b       | 8/30 [01:18<03:15,  8.90s/it]\n 30%|\u2588\u2588\u2588       | 9/30 [01:26<03:04,  8.78s/it]\n 33%|\u2588\u2588\u2588\u258e      | 10/30 [01:35<02:53,  8.70s/it]\n 37%|\u2588\u2588\u2588\u258b      | 11/30 [01:43<02:44,  8.66s/it]\n 40%|\u2588\u2588\u2588\u2588      | 12/30 [01:52<02:35,  8.67s/it]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 13/30 [02:01<02:28,  8.71s/it]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 14/30 [02:10<02:19,  8.74s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 15/30 [02:19<02:11,  8.76s/it]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 16/30 [02:27<02:02,  8.77s/it]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 17/30 [02:36<01:53,  8.76s/it]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 18/30 [02:45<01:44,  8.74s/it]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 19/30 [02:53<01:35,  8.71s/it]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 20/30 [03:02<01:26,  8.69s/it]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 21/30 [03:11<01:18,  8.68s/it]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 22/30 [03:19<01:09,  8.67s/it]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 23/30 [03:28<01:00,  8.67s/it]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 24/30 [03:37<00:51,  8.66s/it]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 25/30 [03:45<00:43,  8.67s/it]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 26/30 [03:54<00:34,  8.67s/it]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 27/30 [04:03<00:26,  8.67s/it]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 28/30 [04:11<00:17,  8.67s/it]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 29/30 [04:20<00:08,  8.67s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:29<00:00,  8.67s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:29<00:00,  8.97s/it]\n\n  0%|          | 0/30 [00:00<?, ?it/s]\n  3%|\u258e         | 1/30 [00:19<09:29, 19.65s/it]\n  7%|\u258b         | 2/30 [00:24<05:13, 11.21s/it]\n 10%|\u2588         | 3/30 [00:34<04:36, 10.22s/it]\n 13%|\u2588\u258e        | 4/30 [00:43<04:15,  9.83s/it]\n 17%|\u2588\u258b        | 5/30 [00:52<03:59,  9.57s/it]\n 20%|\u2588\u2588        | 6/30 [01:01<03:43,  9.33s/it]\n 23%|\u2588\u2588\u258e       | 7/30 [01:09<03:29,  9.11s/it]\n 27%|\u2588\u2588\u258b       | 8/30 [01:18<03:16,  8.93s/it]\n 30%|\u2588\u2588\u2588       | 9/30 [01:26<03:04,  8.80s/it]\n 33%|\u2588\u2588\u2588\u258e      | 10/30 [01:35<02:54,  8.71s/it]\n 37%|\u2588\u2588\u2588\u258b      | 11/30 [01:43<02:44,  8.66s/it]\n 40%|\u2588\u2588\u2588\u2588      | 12/30 [01:52<02:35,  8.65s/it]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 13/30 [02:01<02:27,  8.68s/it]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 14/30 [02:10<02:19,  8.72s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 15/30 [02:18<02:11,  8.75s/it]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 16/30 [02:27<02:02,  8.76s/it]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 17/30 [02:36<01:53,  8.76s/it]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 18/30 [02:45<01:44,  8.75s/it]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 19/30 [02:53<01:35,  8.72s/it]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 20/30 [03:02<01:27,  8.71s/it]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 21/30 [03:11<01:18,  8.69s/it]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 22/30 [03:19<01:09,  8.68s/it]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 23/30 [03:28<01:00,  8.67s/it]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 24/30 [03:37<00:51,  8.66s/it]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 25/30 [03:45<00:43,  8.66s/it]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 26/30 [03:54<00:34,  8.67s/it]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 27/30 [04:03<00:26,  8.68s/it]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 28/30 [04:11<00:17,  8.68s/it]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 29/30 [04:20<00:08,  8.68s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:29<00:00,  8.69s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:29<00:00,  8.98s/it]\n"
+    },
+    "metrics": {
+      "wall_s": 1113.0,
+      "rc": 0,
+      "stderr": "]\n 40%|\u2588\u2588\u2588\u2588      | 12/30 [01:50<02:37,  8.77s/it]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 13/30 [01:58<02:27,  8.70s/it]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 14/30 [02:07<02:18,  8.65s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 15/30 [02:16<02:09,  8.63s/it]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 16/30 [02:24<02:00,  8.64s/it]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 17/30 [02:33<01:52,  8.67s/it]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 18/30 [02:42<01:44,  8.70s/it]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 19/30 [02:51<01:36,  8.73s/it]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 20/30 [02:59<01:27,  8.75s/it]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 21/30 [03:08<01:18,  8.75s/it]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 22/30 [03:17<01:09,  8.73s/it]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 23/30 [03:25<01:00,  8.71s/it]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 24/30 [03:34<00:52,  8.68s/it]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 25/30 [03:43<00:43,  8.66s/it]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 26/30 [03:51<00:34,  8.66s/it]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 27/30 [04:00<00:25,  8.66s/it]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 28/30 [04:09<00:17,  8.67s/it]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 29/30 [04:17<00:08,  8.68s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:26<00:00,  8.69s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:26<00:00,  8.89s/it]\n\n  0%|          | 0/30 [00:00<?, ?it/s]\n  3%|\u258e         | 1/30 [00:19<09:28, 19.62s/it]\n  7%|\u258b         | 2/30 [00:24<05:13, 11.21s/it]\n 10%|\u2588         | 3/30 [00:34<04:37, 10.27s/it]\n 13%|\u2588\u258e        | 4/30 [00:43<04:16,  9.88s/it]\n 17%|\u2588\u258b        | 5/30 [00:52<03:59,  9.58s/it]\n 20%|\u2588\u2588        | 6/30 [01:01<03:43,  9.31s/it]\n 23%|\u2588\u2588\u258e       | 7/30 [01:09<03:28,  9.07s/it]\n 27%|\u2588\u2588\u258b       | 8/30 [01:18<03:15,  8.90s/it]\n 30%|\u2588\u2588\u2588       | 9/30 [01:26<03:04,  8.78s/it]\n 33%|\u2588\u2588\u2588\u258e      | 10/30 [01:35<02:53,  8.70s/it]\n 37%|\u2588\u2588\u2588\u258b      | 11/30 [01:43<02:44,  8.66s/it]\n 40%|\u2588\u2588\u2588\u2588      | 12/30 [01:52<02:35,  8.67s/it]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 13/30 [02:01<02:28,  8.71s/it]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 14/30 [02:10<02:19,  8.74s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 15/30 [02:19<02:11,  8.76s/it]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 16/30 [02:27<02:02,  8.77s/it]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 17/30 [02:36<01:53,  8.76s/it]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 18/30 [02:45<01:44,  8.74s/it]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 19/30 [02:53<01:35,  8.71s/it]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 20/30 [03:02<01:26,  8.69s/it]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 21/30 [03:11<01:18,  8.68s/it]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 22/30 [03:19<01:09,  8.67s/it]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 23/30 [03:28<01:00,  8.67s/it]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 24/30 [03:37<00:51,  8.66s/it]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 25/30 [03:45<00:43,  8.67s/it]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 26/30 [03:54<00:34,  8.67s/it]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 27/30 [04:03<00:26,  8.67s/it]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 28/30 [04:11<00:17,  8.67s/it]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 29/30 [04:20<00:08,  8.67s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:29<00:00,  8.67s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:29<00:00,  8.97s/it]\n\n  0%|          | 0/30 [00:00<?, ?it/s]\n  3%|\u258e         | 1/30 [00:19<09:29, 19.65s/it]\n  7%|\u258b         | 2/30 [00:24<05:13, 11.21s/it]\n 10%|\u2588         | 3/30 [00:34<04:36, 10.22s/it]\n 13%|\u2588\u258e        | 4/30 [00:43<04:15,  9.83s/it]\n 17%|\u2588\u258b        | 5/30 [00:52<03:59,  9.57s/it]\n 20%|\u2588\u2588        | 6/30 [01:01<03:43,  9.33s/it]\n 23%|\u2588\u2588\u258e       | 7/30 [01:09<03:29,  9.11s/it]\n 27%|\u2588\u2588\u258b       | 8/30 [01:18<03:16,  8.93s/it]\n 30%|\u2588\u2588\u2588       | 9/30 [01:26<03:04,  8.80s/it]\n 33%|\u2588\u2588\u2588\u258e      | 10/30 [01:35<02:54,  8.71s/it]\n 37%|\u2588\u2588\u2588\u258b      | 11/30 [01:43<02:44,  8.66s/it]\n 40%|\u2588\u2588\u2588\u2588      | 12/30 [01:52<02:35,  8.65s/it]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 13/30 [02:01<02:27,  8.68s/it]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 14/30 [02:10<02:19,  8.72s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 15/30 [02:18<02:11,  8.75s/it]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 16/30 [02:27<02:02,  8.76s/it]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 17/30 [02:36<01:53,  8.76s/it]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 18/30 [02:45<01:44,  8.75s/it]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 19/30 [02:53<01:35,  8.72s/it]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 20/30 [03:02<01:27,  8.71s/it]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 21/30 [03:11<01:18,  8.69s/it]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 22/30 [03:19<01:09,  8.68s/it]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 23/30 [03:28<01:00,  8.67s/it]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 24/30 [03:37<00:51,  8.66s/it]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 25/30 [03:45<00:43,  8.66s/it]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 26/30 [03:54<00:34,  8.67s/it]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 27/30 [04:03<00:26,  8.68s/it]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 28/30 [04:11<00:17,  8.68s/it]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 29/30 [04:20<00:08,  8.68s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:29<00:00,  8.69s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:29<00:00,  8.98s/it]\n",
+      "dtype": "torch.float16",
+      "attn": "unknown",
+      "scheduler": "FlowMatchEulerDiscreteScheduler",
+      "load_s": 187.378,
+      "clips": [
+        {
+          "model": "LTX-Video-2B-0.9.5",
+          "slug": "europa_flyby",
+          "prompt": "A slow cinematic flyby of Jupiter's moon Europa, showing its icy cracked surface, subsurface ocean implied beneath, realistic space lighting, documentary style, no text, no watermark.",
+          "seed": 424242,
+          "dtype": "torch.float16",
+          "attn": "unknown",
+          "scheduler": "FlowMatchEulerDiscreteScheduler",
+          "steps": 30,
+          "guidance_scale": 3.0,
+          "width": 832,
+          "height": 480,
+          "num_frames": 193,
+          "fps": 24,
+          "gen_s": 307.615,
+          "peak_alloc_mb": 11033.6,
+          "peak_reserved_mb": 13182.0,
+          "file": "/kaggle/working/audit/results/vq/ltx/ltx_europa_flyby_424242.mp4",
+          "bytes": 179792,
+          "ffprobe": {
+            "width": 832,
+            "height": 480,
+            "fps": "24/1",
+            "frames": "193",
+            "codec": "h264",
+            "pix_fmt": "yuv420p",
+            "duration_s": 8.041667
+          },
+          "checks": {
+            "black_segments": 0,
+            "freeze_segments": 0,
+            "blackdetect": false,
+            "freezedetect": false,
+            "stderr_tail": "     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf63.1.102\n  Duration: 00:00:08.04, start: 0.000000, bitrate: 178 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 175 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc63.1.102 libx264\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 wrapped_avframe\n[out#0/null @ 0x5603c00b1880] video:90kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\nframe=  193 fps=0.0 q=-0.0 Lsize=N/A time=00:00:08.00 bitrate=N/A speed=39.1x    \n"
+          }
+        },
+        {
+          "model": "LTX-Video-2B-0.9.5",
+          "slug": "saturn_solar",
+          "prompt": "A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark.",
+          "seed": 202607,
+          "dtype": "torch.float16",
+          "attn": "unknown",
+          "scheduler": "FlowMatchEulerDiscreteScheduler",
+          "steps": 30,
+          "guidance_scale": 3.0,
+          "width": 832,
+          "height": 480,
+          "num_frames": 193,
+          "fps": 24,
+          "gen_s": 296.174,
+          "peak_alloc_mb": 11033.6,
+          "peak_reserved_mb": 13182.0,
+          "file": "/kaggle/working/audit/results/vq/ltx/ltx_saturn_solar_202607.mp4",
+          "bytes": 332746,
+          "ffprobe": {
+            "width": 832,
+            "height": 480,
+            "fps": "24/1",
+            "frames": "193",
+            "codec": "h264",
+            "pix_fmt": "yuv420p",
+            "duration_s": 8.041667
+          },
+          "checks": {
+            "black_segments": 0,
+            "freeze_segments": 0,
+            "blackdetect": false,
+            "freezedetect": false,
+            "stderr_tail": "     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf63.1.102\n  Duration: 00:00:08.04, start: 0.000000, bitrate: 331 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 327 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc63.1.102 libx264\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 wrapped_avframe\n[out#0/null @ 0x5a57fdad1740] video:90kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\nframe=  193 fps=0.0 q=-0.0 Lsize=N/A time=00:00:08.00 bitrate=N/A speed=38.6x    \n"
+          }
+        },
+        {
+          "model": "LTX-Video-2B-0.9.5",
+          "slug": "enceladus_plumes",
+          "prompt": "A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark.",
+          "seed": 271828,
+          "dtype": "torch.float16",
+          "attn": "unknown",
+          "scheduler": "FlowMatchEulerDiscreteScheduler",
+          "steps": 30,
+          "guidance_scale": 3.0,
+          "width": 832,
+          "height": 480,
+          "num_frames": 193,
+          "fps": 24,
+          "gen_s": 296.245,
+          "peak_alloc_mb": 11033.6,
+          "peak_reserved_mb": 13182.0,
+          "file": "/kaggle/working/audit/results/vq/ltx/ltx_enceladus_plumes_271828.mp4",
+          "bytes": 246906,
+          "ffprobe": {
+            "width": 832,
+            "height": 480,
+            "fps": "24/1",
+            "frames": "193",
+            "codec": "h264",
+            "pix_fmt": "yuv420p",
+            "duration_s": 8.041667
+          },
+          "checks": {
+            "black_segments": 0,
+            "freeze_segments": 0,
+            "blackdetect": false,
+            "freezedetect": false,
+            "stderr_tail": "     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf63.1.102\n  Duration: 00:00:08.04, start: 0.000000, bitrate: 245 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 242 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc63.1.102 libx264\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 wrapped_avframe\n[out#0/null @ 0x59288e6e4880] video:90kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\nframe=  193 fps=0.0 q=-0.0 Lsize=N/A time=00:00:08.00 bitrate=N/A speed=41.6x    \n"
+          }
+        }
+      ]
+    },
+    "outputs": [
+      {
+        "path": "/kaggle/working/audit/results/vq/ltx/ltx_enceladus_plumes_271828.mp4",
+        "bytes": 246906,
+        "sha256": "28ef9135c0e6fdb29d81abe224a77bcde8119c442119483c659b61d3745338ad"
+      },
+      {
+        "path": "/kaggle/working/audit/results/vq/ltx/ltx_europa_flyby_424242.mp4",
+        "bytes": 179792,
+        "sha256": "f95345dcfc42e51e92a83e30d4f204642c1ca359b3f565f90494cfcd91bed467"
+      },
+      {
+        "path": "/kaggle/working/audit/results/vq/ltx/ltx_saturn_solar_202607.mp4",
+        "bytes": 332746,
+        "sha256": "9108db34f0e142b6f42f0bdd09e2f088cbe52d028f46b4edab0e1ef517d05bce"
+      }
+    ],
+    "wall_s": 1113.0,
+    "rc": 0,
+    "stderr": "]\n 40%|\u2588\u2588\u2588\u2588      | 12/30 [01:50<02:37,  8.77s/it]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 13/30 [01:58<02:27,  8.70s/it]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 14/30 [02:07<02:18,  8.65s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 15/30 [02:16<02:09,  8.63s/it]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 16/30 [02:24<02:00,  8.64s/it]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 17/30 [02:33<01:52,  8.67s/it]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 18/30 [02:42<01:44,  8.70s/it]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 19/30 [02:51<01:36,  8.73s/it]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 20/30 [02:59<01:27,  8.75s/it]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 21/30 [03:08<01:18,  8.75s/it]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 22/30 [03:17<01:09,  8.73s/it]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 23/30 [03:25<01:00,  8.71s/it]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 24/30 [03:34<00:52,  8.68s/it]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 25/30 [03:43<00:43,  8.66s/it]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 26/30 [03:51<00:34,  8.66s/it]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 27/30 [04:00<00:25,  8.66s/it]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 28/30 [04:09<00:17,  8.67s/it]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 29/30 [04:17<00:08,  8.68s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:26<00:00,  8.69s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:26<00:00,  8.89s/it]\n\n  0%|          | 0/30 [00:00<?, ?it/s]\n  3%|\u258e         | 1/30 [00:19<09:28, 19.62s/it]\n  7%|\u258b         | 2/30 [00:24<05:13, 11.21s/it]\n 10%|\u2588         | 3/30 [00:34<04:37, 10.27s/it]\n 13%|\u2588\u258e        | 4/30 [00:43<04:16,  9.88s/it]\n 17%|\u2588\u258b        | 5/30 [00:52<03:59,  9.58s/it]\n 20%|\u2588\u2588        | 6/30 [01:01<03:43,  9.31s/it]\n 23%|\u2588\u2588\u258e       | 7/30 [01:09<03:28,  9.07s/it]\n 27%|\u2588\u2588\u258b       | 8/30 [01:18<03:15,  8.90s/it]\n 30%|\u2588\u2588\u2588       | 9/30 [01:26<03:04,  8.78s/it]\n 33%|\u2588\u2588\u2588\u258e      | 10/30 [01:35<02:53,  8.70s/it]\n 37%|\u2588\u2588\u2588\u258b      | 11/30 [01:43<02:44,  8.66s/it]\n 40%|\u2588\u2588\u2588\u2588      | 12/30 [01:52<02:35,  8.67s/it]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 13/30 [02:01<02:28,  8.71s/it]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 14/30 [02:10<02:19,  8.74s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 15/30 [02:19<02:11,  8.76s/it]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 16/30 [02:27<02:02,  8.77s/it]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 17/30 [02:36<01:53,  8.76s/it]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 18/30 [02:45<01:44,  8.74s/it]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 19/30 [02:53<01:35,  8.71s/it]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 20/30 [03:02<01:26,  8.69s/it]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 21/30 [03:11<01:18,  8.68s/it]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 22/30 [03:19<01:09,  8.67s/it]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 23/30 [03:28<01:00,  8.67s/it]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 24/30 [03:37<00:51,  8.66s/it]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 25/30 [03:45<00:43,  8.67s/it]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 26/30 [03:54<00:34,  8.67s/it]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 27/30 [04:03<00:26,  8.67s/it]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 28/30 [04:11<00:17,  8.67s/it]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 29/30 [04:20<00:08,  8.67s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:29<00:00,  8.67s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:29<00:00,  8.97s/it]\n\n  0%|          | 0/30 [00:00<?, ?it/s]\n  3%|\u258e         | 1/30 [00:19<09:29, 19.65s/it]\n  7%|\u258b         | 2/30 [00:24<05:13, 11.21s/it]\n 10%|\u2588         | 3/30 [00:34<04:36, 10.22s/it]\n 13%|\u2588\u258e        | 4/30 [00:43<04:15,  9.83s/it]\n 17%|\u2588\u258b        | 5/30 [00:52<03:59,  9.57s/it]\n 20%|\u2588\u2588        | 6/30 [01:01<03:43,  9.33s/it]\n 23%|\u2588\u2588\u258e       | 7/30 [01:09<03:29,  9.11s/it]\n 27%|\u2588\u2588\u258b       | 8/30 [01:18<03:16,  8.93s/it]\n 30%|\u2588\u2588\u2588       | 9/30 [01:26<03:04,  8.80s/it]\n 33%|\u2588\u2588\u2588\u258e      | 10/30 [01:35<02:54,  8.71s/it]\n 37%|\u2588\u2588\u2588\u258b      | 11/30 [01:43<02:44,  8.66s/it]\n 40%|\u2588\u2588\u2588\u2588      | 12/30 [01:52<02:35,  8.65s/it]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 13/30 [02:01<02:27,  8.68s/it]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 14/30 [02:10<02:19,  8.72s/it]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 15/30 [02:18<02:11,  8.75s/it]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 16/30 [02:27<02:02,  8.76s/it]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 17/30 [02:36<01:53,  8.76s/it]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 18/30 [02:45<01:44,  8.75s/it]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 19/30 [02:53<01:35,  8.72s/it]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 20/30 [03:02<01:27,  8.71s/it]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 21/30 [03:11<01:18,  8.69s/it]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 22/30 [03:19<01:09,  8.68s/it]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 23/30 [03:28<01:00,  8.67s/it]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 24/30 [03:37<00:51,  8.66s/it]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 25/30 [03:45<00:43,  8.66s/it]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 26/30 [03:54<00:34,  8.67s/it]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 27/30 [04:03<00:26,  8.68s/it]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 28/30 [04:11<00:17,  8.68s/it]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 29/30 [04:20<00:08,  8.68s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:29<00:00,  8.69s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [04:29<00:00,  8.98s/it]\n",
+    "dtype": "torch.float16",
+    "attn": "unknown",
+    "scheduler": "FlowMatchEulerDiscreteScheduler",
+    "load_s": 187.378,
+    "clips": [
+      {
+        "model": "LTX-Video-2B-0.9.5",
+        "slug": "europa_flyby",
+        "prompt": "A slow cinematic flyby of Jupiter's moon Europa, showing its icy cracked surface, subsurface ocean implied beneath, realistic space lighting, documentary style, no text, no watermark.",
+        "seed": 424242,
+        "dtype": "torch.float16",
+        "attn": "unknown",
+        "scheduler": "FlowMatchEulerDiscreteScheduler",
+        "steps": 30,
+        "guidance_scale": 3.0,
+        "width": 832,
+        "height": 480,
+        "num_frames": 193,
+        "fps": 24,
+        "gen_s": 307.615,
+        "peak_alloc_mb": 11033.6,
+        "peak_reserved_mb": 13182.0,
+        "file": "/kaggle/working/audit/results/vq/ltx/ltx_europa_flyby_424242.mp4",
+        "bytes": 179792,
+        "ffprobe": {
+          "width": 832,
+          "height": 480,
+          "fps": "24/1",
+          "frames": "193",
+          "codec": "h264",
+          "pix_fmt": "yuv420p",
+          "duration_s": 8.041667
+        },
+        "checks": {
+          "black_segments": 0,
+          "freeze_segments": 0,
+          "blackdetect": false,
+          "freezedetect": false,
+          "stderr_tail": "     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf63.1.102\n  Duration: 00:00:08.04, start: 0.000000, bitrate: 178 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 175 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc63.1.102 libx264\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 wrapped_avframe\n[out#0/null @ 0x5603c00b1880] video:90kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\nframe=  193 fps=0.0 q=-0.0 Lsize=N/A time=00:00:08.00 bitrate=N/A speed=39.1x    \n"
+        }
+      },
+      {
+        "model": "LTX-Video-2B-0.9.5",
+        "slug": "saturn_solar",
+        "prompt": "A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark.",
+        "seed": 202607,
+        "dtype": "torch.float16",
+        "attn": "unknown",
+        "scheduler": "FlowMatchEulerDiscreteScheduler",
+        "steps": 30,
+        "guidance_scale": 3.0,
+        "width": 832,
+        "height": 480,
+        "num_frames": 193,
+        "fps": 24,
+        "gen_s": 296.174,
+        "peak_alloc_mb": 11033.6,
+        "peak_reserved_mb": 13182.0,
+        "file": "/kaggle/working/audit/results/vq/ltx/ltx_saturn_solar_202607.mp4",
+        "bytes": 332746,
+        "ffprobe": {
+          "width": 832,
+          "height": 480,
+          "fps": "24/1",
+          "frames": "193",
+          "codec": "h264",
+          "pix_fmt": "yuv420p",
+          "duration_s": 8.041667
+        },
+        "checks": {
+          "black_segments": 0,
+          "freeze_segments": 0,
+          "blackdetect": false,
+          "freezedetect": false,
+          "stderr_tail": "     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf63.1.102\n  Duration: 00:00:08.04, start: 0.000000, bitrate: 331 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 327 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc63.1.102 libx264\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 wrapped_avframe\n[out#0/null @ 0x5a57fdad1740] video:90kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\nframe=  193 fps=0.0 q=-0.0 Lsize=N/A time=00:00:08.00 bitrate=N/A speed=38.6x    \n"
+        }
+      },
+      {
+        "model": "LTX-Video-2B-0.9.5",
+        "slug": "enceladus_plumes",
+        "prompt": "A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark.",
+        "seed": 271828,
+        "dtype": "torch.float16",
+        "attn": "unknown",
+        "scheduler": "FlowMatchEulerDiscreteScheduler",
+        "steps": 30,
+        "guidance_scale": 3.0,
+        "width": 832,
+        "height": 480,
+        "num_frames": 193,
+        "fps": 24,
+        "gen_s": 296.245,
+        "peak_alloc_mb": 11033.6,
+        "peak_reserved_mb": 13182.0,
+        "file": "/kaggle/working/audit/results/vq/ltx/ltx_enceladus_plumes_271828.mp4",
+        "bytes": 246906,
+        "ffprobe": {
+          "width": 832,
+          "height": 480,
+          "fps": "24/1",
+          "frames": "193",
+          "codec": "h264",
+          "pix_fmt": "yuv420p",
+          "duration_s": 8.041667
+        },
+        "checks": {
+          "black_segments": 0,
+          "freeze_segments": 0,
+          "blackdetect": false,
+          "freezedetect": false,
+          "stderr_tail": "     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf63.1.102\n  Duration: 00:00:08.04, start: 0.000000, bitrate: 245 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 832x480, 242 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc63.1.102 libx264\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 832x480, q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 wrapped_avframe\n[out#0/null @ 0x59288e6e4880] video:90kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\nframe=  193 fps=0.0 q=-0.0 Lsize=N/A time=00:00:08.00 bitrate=N/A speed=41.6x    \n"
+        }
+      }
+    ]
+  },
+  "errors": []
+}

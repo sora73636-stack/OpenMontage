@@ -1,0 +1,236 @@
+{
+  "component": "vq-wan",
+  "priority": "VQ",
+  "kernel": "openmontage-vq-wan",
+  "utc_start": "2026-11-14T02:55:25Z",
+  "utc_end": "2026-11-14T02:57:49Z",
+  "status": "FAIL",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "download_model": {
+      "rc": 0,
+      "stderr": "V-1.3B/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)\n\nFetching 22 files:   5%|\u258d         | 1/22 [00:00<00:02,  7.30it/s]\nFetching 22 files:  14%|\u2588\u258e        | 3/22 [00:00<00:01, 13.78it/s]\nFetching 22 files:  23%|\u2588\u2588\u258e       | 5/22 [00:00<00:01,  9.92it/s]\nFetching 22 files:  55%|\u2588\u2588\u2588\u2588\u2588\u258d    | 12/22 [00:00<00:00, 21.38it/s]\nFetching 22 files:  68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 15/22 [00:01<00:00, 10.22it/s]\nFetching 22 files:  77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 17/22 [00:01<00:00, 11.14it/s]\nFetching 22 files:  86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 19/22 [00:01<00:00, 11.21it/s]\nFetching 22 files:  91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 20/22 [00:20<00:00, 11.21it/s]\nFetching 22 files:  95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 21/22 [00:48<00:06,  6.14s/it]\nFetching 22 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 22/22 [01:15<00:00,  9.44s/it]\nFetching 22 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 22/22 [01:15<00:00,  3.45s/it]\n"
+    },
+    "wan_europa_flyby": {
+      "rc": 1,
+      "gen_s": 7.288,
+      "stderr": "  File \"/tmp/audit/repos/wan21/vq_generate.py\", line 250\n    _validate_args(args)\nIndentationError: unexpected indent\n"
+    },
+    "wan_saturn_solar": {
+      "rc": 1,
+      "gen_s": 0.02,
+      "stderr": "  File \"/tmp/audit/repos/wan21/vq_generate.py\", line 250\n    _validate_args(args)\nIndentationError: unexpected indent\n"
+    },
+    "wan_enceladus_plumes": {
+      "rc": 1,
+      "gen_s": 0.023,
+      "stderr": "  File \"/tmp/audit/repos/wan21/vq_generate.py\", line 250\n    _validate_args(args)\nIndentationError: unexpected indent\n"
+    },
+    "metrics": {
+      "clips": [
+        {
+          "model": "Wan2.1-T2V-1.3B",
+          "slug": "europa_flyby",
+          "prompt": "A slow cinematic flyby of Jupiter's moon Europa, showing its icy cracked surface, subsurface ocean implied beneath, realistic space lighting, documentary style, no text, no watermark.",
+          "seed": 424242,
+          "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+          "scheduler": "unipc",
+          "steps": 30,
+          "guidance_scale": 6.0,
+          "sample_shift": 8,
+          "width": 832,
+          "height": 480,
+          "num_frames": 193,
+          "fps": 24,
+          "native_sample_fps": 16,
+          "gen_s": 7.288,
+          "gen_rc": 1,
+          "encode_rc": 254,
+          "file": "/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4",
+          "bytes": 0,
+          "ffprobe": {
+            "error": "no video stream",
+            "stderr": "/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4: No such file or directory\n"
+          },
+          "checks": {
+            "black_segments": 0,
+            "freeze_segments": 0,
+            "blackdetect": false,
+            "freezedetect": false,
+            "stderr_tail": "[in#0 @ 0x5cf613fe21c0] Error opening input: No such file or directory\nError opening input file /kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4.\nError opening input files: No such file or directory\n"
+          }
+        },
+        {
+          "model": "Wan2.1-T2V-1.3B",
+          "slug": "saturn_solar",
+          "prompt": "A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark.",
+          "seed": 202607,
+          "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+          "scheduler": "unipc",
+          "steps": 30,
+          "guidance_scale": 6.0,
+          "sample_shift": 8,
+          "width": 832,
+          "height": 480,
+          "num_frames": 193,
+          "fps": 24,
+          "native_sample_fps": 16,
+          "gen_s": 0.02,
+          "gen_rc": 1,
+          "encode_rc": 254,
+          "file": "/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4",
+          "bytes": 0,
+          "ffprobe": {
+            "error": "no video stream",
+            "stderr": "/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4: No such file or directory\n"
+          },
+          "checks": {
+            "black_segments": 0,
+            "freeze_segments": 0,
+            "blackdetect": false,
+            "freezedetect": false,
+            "stderr_tail": "[in#0 @ 0x5bb89b52b1c0] Error opening input: No such file or directory\nError opening input file /kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4.\nError opening input files: No such file or directory\n"
+          }
+        },
+        {
+          "model": "Wan2.1-T2V-1.3B",
+          "slug": "enceladus_plumes",
+          "prompt": "A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark.",
+          "seed": 271828,
+          "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+          "scheduler": "unipc",
+          "steps": 30,
+          "guidance_scale": 6.0,
+          "sample_shift": 8,
+          "width": 832,
+          "height": 480,
+          "num_frames": 193,
+          "fps": 24,
+          "native_sample_fps": 16,
+          "gen_s": 0.023,
+          "gen_rc": 1,
+          "encode_rc": 254,
+          "file": "/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4",
+          "bytes": 0,
+          "ffprobe": {
+            "error": "no video stream",
+            "stderr": "/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4: No such file or directory\n"
+          },
+          "checks": {
+            "black_segments": 0,
+            "freeze_segments": 0,
+            "blackdetect": false,
+            "freezedetect": false,
+            "stderr_tail": "[in#0 @ 0x5cbdbd6911c0] Error opening input: No such file or directory\nError opening input file /kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4.\nError opening input files: No such file or directory\n"
+          }
+        }
+      ]
+    },
+    "outputs": [],
+    "clips": [
+      {
+        "model": "Wan2.1-T2V-1.3B",
+        "slug": "europa_flyby",
+        "prompt": "A slow cinematic flyby of Jupiter's moon Europa, showing its icy cracked surface, subsurface ocean implied beneath, realistic space lighting, documentary style, no text, no watermark.",
+        "seed": 424242,
+        "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+        "scheduler": "unipc",
+        "steps": 30,
+        "guidance_scale": 6.0,
+        "sample_shift": 8,
+        "width": 832,
+        "height": 480,
+        "num_frames": 193,
+        "fps": 24,
+        "native_sample_fps": 16,
+        "gen_s": 7.288,
+        "gen_rc": 1,
+        "encode_rc": 254,
+        "file": "/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4",
+        "bytes": 0,
+        "ffprobe": {
+          "error": "no video stream",
+          "stderr": "/kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4: No such file or directory\n"
+        },
+        "checks": {
+          "black_segments": 0,
+          "freeze_segments": 0,
+          "blackdetect": false,
+          "freezedetect": false,
+          "stderr_tail": "[in#0 @ 0x5cf613fe21c0] Error opening input: No such file or directory\nError opening input file /kaggle/working/audit/results/vq/wan/wan_europa_flyby_424242.mp4.\nError opening input files: No such file or directory\n"
+        }
+      },
+      {
+        "model": "Wan2.1-T2V-1.3B",
+        "slug": "saturn_solar",
+        "prompt": "A scientifically accurate visualization of a spacecraft deploying solar panels in orbit around Saturn, with Saturn's rings visible in the background, realistic engineering detail, no text, no watermark.",
+        "seed": 202607,
+        "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+        "scheduler": "unipc",
+        "steps": 30,
+        "guidance_scale": 6.0,
+        "sample_shift": 8,
+        "width": 832,
+        "height": 480,
+        "num_frames": 193,
+        "fps": 24,
+        "native_sample_fps": 16,
+        "gen_s": 0.02,
+        "gen_rc": 1,
+        "encode_rc": 254,
+        "file": "/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4",
+        "bytes": 0,
+        "ffprobe": {
+          "error": "no video stream",
+          "stderr": "/kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4: No such file or directory\n"
+        },
+        "checks": {
+          "black_segments": 0,
+          "freeze_segments": 0,
+          "blackdetect": false,
+          "freezedetect": false,
+          "stderr_tail": "[in#0 @ 0x5bb89b52b1c0] Error opening input: No such file or directory\nError opening input file /kaggle/working/audit/results/vq/wan/wan_saturn_solar_202607.mp4.\nError opening input files: No such file or directory\n"
+        }
+      },
+      {
+        "model": "Wan2.1-T2V-1.3B",
+        "slug": "enceladus_plumes",
+        "prompt": "A slow zoom into a cross-section diagram style view of Enceladus showing water plumes erupting from its south pole into space, realistic lighting, documentary visual style, no text, no watermark.",
+        "seed": 271828,
+        "dtype": "float16 (patched from bf16 config; T5 stays bf16 on CPU)",
+        "scheduler": "unipc",
+        "steps": 30,
+        "guidance_scale": 6.0,
+        "sample_shift": 8,
+        "width": 832,
+        "height": 480,
+        "num_frames": 193,
+        "fps": 24,
+        "native_sample_fps": 16,
+        "gen_s": 0.023,
+        "gen_rc": 1,
+        "encode_rc": 254,
+        "file": "/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4",
+        "bytes": 0,
+        "ffprobe": {
+          "error": "no video stream",
+          "stderr": "/kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4: No such file or directory\n"
+        },
+        "checks": {
+          "black_segments": 0,
+          "freeze_segments": 0,
+          "blackdetect": false,
+          "freezedetect": false,
+          "stderr_tail": "[in#0 @ 0x5cbdbd6911c0] Error opening input: No such file or directory\nError opening input file /kaggle/working/audit/results/vq/wan/wan_enceladus_plumes_271828.mp4.\nError opening input files: No such file or directory\n"
+        }
+      }
+    ]
+  },
+  "errors": [],
+  "blocker": "wan vq run failed"
+}
