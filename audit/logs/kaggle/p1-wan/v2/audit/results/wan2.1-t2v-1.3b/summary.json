@@ -1,0 +1,35 @@
+{
+  "component": "wan2.1-t2v-1.3b",
+  "priority": "P1",
+  "kernel": "openmontage-p1-wan2-1-t2v-1-3b",
+  "utc_start": "2026-11-14T02:30:54Z",
+  "utc_end": "2026-11-14T02:33:33Z",
+  "status": "FAIL",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "requirements_filtered": {
+      "dropped": [
+        "flash_attn"
+      ]
+    },
+    "download_model": {
+      "rc": 0,
+      "stderr": "1.33.0.\u001b[0m\n\u001b[90mHint: The `hf-cli` skill is not installed. Run `hf skills add -g` to teach your AI agents how to use the `hf` CLI.\u001b[0m\n\nFetching 22 files:   0%|          | 0/22 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nFetching 22 files:   5%|\u258d         | 1/22 [00:00<00:05,  3.71it/s]\nFetching 22 files:  18%|\u2588\u258a        | 4/22 [00:03<00:17,  1.02it/s]\nFetching 22 files:  41%|\u2588\u2588\u2588\u2588      | 9/22 [00:03<00:04,  2.87it/s]\nFetching 22 files:  55%|\u2588\u2588\u2588\u2588\u2588\u258d    | 12/22 [00:04<00:02,  3.89it/s]\nFetching 22 files:  64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 14/22 [00:05<00:02,  3.10it/s]\nFetching 22 files:  82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 18/22 [00:05<00:00,  4.22it/s]\nFetching 22 files:  91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 20/22 [00:10<00:01,  1.26it/s]\nFetching 22 files:  95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 21/22 [00:42<00:05,  5.19s/it]\nFetching 22 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 22/22 [01:21<00:00, 10.83s/it]\nFetching 22 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 22/22 [01:21<00:00,  3.69s/it]\n"
+    },
+    "inference": {
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/audit/repos/wan21/generate.py\", line 17, in <module>\n    import wan\n  File \"/tmp/audit/repos/wan21/wan/__init__.py\", line 1, in <module>\n    from . import configs, distributed, modules\n  File \"/tmp/audit/repos/wan21/wan/modules/__init__.py\", line 6, in <module>\n    from .vae import WanVAE\n  File \"/tmp/audit/repos/wan21/wan/modules/vae.py\", line 8, in <module>\n    from einops import rearrange\nModuleNotFoundError: No module named 'einops'\n"
+    },
+    "outputs": [],
+    "dtype": "FP16",
+    "runtime_seconds": 21.957,
+    "cpu_offload": true
+  },
+  "errors": [],
+  "blocker": "wan generation failed"
+}

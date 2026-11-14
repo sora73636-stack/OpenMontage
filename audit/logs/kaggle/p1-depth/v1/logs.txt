@@ -1,0 +1,46 @@
+2026-11-13T16:35:18Z helper sha256 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match=True
+2026-11-13T16:35:18Z fixture science_voice_script.txt 9555 bytes sha=cbb5b7ee8f13e8d60c5b25f9502d4c7a6ab682f5dbce75dcae6d169f3bf358e9
+2026-11-13T16:35:18Z fixture science_terms.json 4890 bytes sha=877f430837d8059b47a3671da1679d2637a9ed9077c9239b24b828a042e32862
+2026-11-13T16:35:18Z fixture image_video_prompts.json 1586 bytes sha=5f1cf0117327fb0801023549c6186105deaaf2323c1dc23becaec3428848678b
+2026-11-13T16:35:32Z $ /usr/local/bin/uv venv --python 3.10 /tmp/audit/envs/depthv2 -> rc=0 1.713s
+2026-11-13T16:35:32Z stderr tail: warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`? | Downloading cpython-3.10.22-linux-x86_64-gnu (download) (28.0MiB) |  Downloaded cpython-3.10.22-linux-x86_64-gnu (download) | Using CPython 3.10.22 | Creating virtual environment at: /tmp/audit/envs/depthv2 | Activate with: source /tmp/audit/envs/depthv2/bin/activate | 
+2026-11-13T16:36:05Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/depthv2/bin/python torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126 -> rc=0 32.84s
+2026-11-13T16:36:05Z stderr tail: 12 (22.6MiB) | Downloading nvidia-cusparse-cu12 (206.5MiB) | Downloading torch (729.1MiB) | Downloading nvidia-cuda-cupti-cu12 (8.5MiB) | Downloading nvidia-cufft-cu12 (190.9MiB) | Downloading nvidia-curand-cu12 (53.7MiB) | Downloading nvidia-cusparselt-cu12 (149.5MiB) |  Downloaded networkx |  Downloaded torchvision |  Downloaded sympy |  Downloaded pillow |  Downloaded numpy |  Downloaded nvidia-cuda-cupti-cu12 |  Downloaded nvidia-nvjitlink-cu12 |  Downloaded nvidia-cuda-nvrtc-cu12 |  Downloaded nvidia-curand-cu12 |  Downloaded triton |  Downloaded nvidia-nccl-cu12 |  Downloaded nvidia-cusolver-cu12 |  Downloaded nvidia-cusparselt-cu12 |  Downloaded nvidia-cusparse-cu12 |  Downloaded nvidia-cufft-cu12 |  Downloaded nvidia-cublas-cu12 |  Downloaded nvidia-cudnn-cu12 |  Downloaded torch | Prepared 26 packages in 31.55s | Installed 26 packages in 407ms |  + filelock==4.1.0 |  + fsspec==2026.9.0 |  + jinja2==3.1.6 |  + markupsafe==3.0.3 |  + mpmath==1.3.0 |  + networkx==3.4.2 |  + numpy==2.2.6 |  + nvidia-cublas-cu12==12.6.4.1 |  + nvidia-cuda-cupti-cu12==12.6.80 |  + nvidia-cuda-nvrtc-cu12==12.6.77 |  + nvidia-cuda-runtime-cu12==12.6.77 |  + nvidia-cudnn-cu12==9.5.1.17 |  + nvidia-cufft-cu12==11.3.0.4 |  + nvidia-curand-cu12==10.3.7.77 |  + nvidia-cusolver-cu12==11.7.1.2 |  + nvidia-cusparse-cu12==12.5.4.2 |  + nvidia-cusparselt-cu12==0.6.3 |  + nvidia-nccl-cu12==2.21.5 |  + nvidia-nvjitlink-cu12==12.6.85 |  + nvidia-nvtx-cu12==12.6.77 |  + pillow==12.3.0 |  + sympy==1.13.1 |  + torch==2.6.0+cu126 |  + torchvision==0.21.0+cu126 |  + triton==3.2.0 |  + typing-extensions==4.16.0 | 
+2026-11-13T16:36:08Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/depthv2/bin/python transformers accelerate pillow numpy -> rc=0 3.263s
+2026-11-13T16:36:08Z stderr tail: Using Python 3.10.22 environment at: /tmp/audit/envs/depthv2 | Resolved 56 packages in 2.65s | Downloading pygments (1.2MiB) | Downloading hf-xet (4.1MiB) | Downloading pydantic-core (2.2MiB) | Downloading tokenizers (3.2MiB) | Downloading transformers (12.2MiB) |  Downloaded pygments |  Downloaded pydantic-core |  Downloaded tokenizers |  Downloaded hf-xet |  Downloaded transformers | Prepared 31 packages in 497ms | Installed 31 packages in 84ms |  + accelerate==1.15.0 |  + annotated-doc==0.0.6 |  + annotated-types==0.8.0 |  + anyio==4.16.0 |  + click==8.5.1 |  + exceptiongroup==1.3.1 |  + h11==0.16.0 |  + hf-xet==1.8.0 |  + httpcore2==2.14.0 |  + httpx2==2.14.0 |  + huggingface-hub==2.4.0 |  + idna==3.20 |  + markdown-it-py==4.3.0 |  + mdurl==0.1.2 |  + packaging==26.3 |  + psutil==7.2.2 |  + pydantic==2.14.3 |  + pydantic-core==2.50.4 |  + pygments==2.21.0 |  + pyyaml==6.0.3 |  + regex==2026.9.29 |  + rich==15.0.0 |  + safetensors==0.8.0 |  + shellingham==1.5.4 |  + tokenizers==0.23.3 |  + tomli==2.5.0 |  + tqdm==4.70.1 |  + transformers==5.20.2 |  + truststore==0.10.5 |  + typer==0.29.1 |  + typing-inspection==0.4.5 | 
+2026-11-13T16:36:23Z $ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True /tmp/audit/envs/depthv2/bin/python /kaggle/working/audit/scripts/depthv2_run.py -> rc=1 14.945s
+2026-11-13T16:36:23Z stderr tail: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads. | Traceback (most recent call last): |   File "/kaggle/working/audit/scripts/depthv2_run.py", line 6, in <module> |     pipe=pipeline('depth-estimation', model='depth-anything/Depth-Anything-V2-Small', device=0) |   File "/tmp/audit/envs/depthv2/lib/python3.10/site-packages/transformers/pipelines/__init__.py", line 966, in pipeline |     config = AutoConfig.from_pretrained( |   File "/tmp/audit/envs/depthv2/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py", line 442, in from_pretrained |     raise ValueError( | ValueError: Unrecognized model in depth-anything/Depth-Anything-V2-Small. Should have a `model_type` key in its config.json. | 
+2026-11-13T16:36:23Z FINAL {"status": "FAIL", "blocker": "depth v2 run failed"}
+{
+  "component": "depth-anything-v2-small",
+  "priority": "P1",
+  "kernel": "openmontage-p1-depth-anything-v2-small",
+  "utc_start": "2026-11-13T16:35:18Z",
+  "utc_end": "2026-11-13T16:36:23Z",
+  "status": "FAIL",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "inference": {
+      "rc": 1,
+      "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\nTraceback (most recent call last):\n  File \"/kaggle/working/audit/scripts/depthv2_run.py\", line 6, in <module>\n    pipe=pipeline('depth-estimation', model='depth-anything/Depth-Anything-V2-Small', device=0)\n  File \"/tmp/audit/envs/depthv2/lib/python3.10/site-packages/transformers/pipelines/__init__.py\", line 966, in pipeline\n    config = AutoConfig.from_pretrained(\n  File \"/tmp/audit/envs/depthv2/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py\", line 442, in from_pretrained\n    raise ValueError(\nValueError: Unrecognized model in depth-anything/Depth-Anything-V2-Small. Should have a `model_type` key in its config.json.\n"
+    },
+    "metrics": {},
+    "outputs": [],
+    "dtype": null,
+    "runtime_seconds": 0,
+    "peak_vram_allocated_mb": null
+  },
+  "errors": [],
+  "blocker": "depth v2 run failed"
+}
+/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 354846 bytes to __results__.html

@@ -1,0 +1,66 @@
+[{"stream_name":"stdout","time":0.65041492,"data":"2026-11-14T02:28:23Z helper sha256 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match=True\n"}
+,{"stream_name":"stdout","time":0.658799293,"data":"2026-11-14T02:28:23Z fixture science_voice_script.txt 9555 bytes sha=cbb5b7ee8f13e8d60c5b25f9502d4c7a6ab682f5dbce75dcae6d169f3bf358e9\n"}
+,{"stream_name":"stdout","time":0.659121194,"data":"2026-11-14T02:28:23Z fixture science_terms.json 4890 bytes sha=877f430837d8059b47a3671da1679d2637a9ed9077c9239b24b828a042e32862\n"}
+,{"stream_name":"stdout","time":0.659409215,"data":"2026-11-14T02:28:23Z fixture image_video_prompts.json 1586 bytes sha=5f1cf0117327fb0801023549c6186105deaaf2323c1dc23becaec3428848678b\n"}
+,{"stream_name":"stdout","time":11.206599709,"data":"2026-11-14T02:28:34Z $ /usr/local/bin/uv venv --python 3.10 /tmp/audit/envs/videodepth -\u003e rc=0 1.539s\n"}
+,{"stream_name":"stdout","time":11.206775107,"data":"2026-11-14T02:28:34Z stderr tail: warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`? | Downloading cpython-3.10.22-linux-x86_64-gnu (download) (28.0MiB) |  Downloaded cpython-3.10.22-linux-x86_64-gnu (download) | Using CPython 3.10.22 | Creating virtual environment at: /tmp/audit/envs/videodepth | Activate with: source /tmp/audit/envs/videodepth/bin/activate | \n"}
+,{"stream_name":"stdout","time":48.761909351,"data":"2026-11-14T02:29:12Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/videodepth/bin/python torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126 -\u003e rc=0 37.555s\n"}
+,{"stream_name":"stdout","time":48.762031656,"data":"2026-11-14T02:29:12Z stderr tail: wnloading nvidia-cufft-cu12 (190.9MiB) | Downloading numpy (16.0MiB) | Downloading sympy (5.9MiB) | Downloading networkx (1.6MiB) | Downloading pillow (6.6MiB) | Downloading torchvision (6.9MiB) | Downloading torch (729.1MiB) |  Downloaded networkx |  Downloaded sympy |  Downloaded pillow |  Downloaded torchvision |  Downloaded numpy | Downloading nvidia-cuda-cupti-cu12 (8.5MiB) |  Downloaded triton |  Downloaded nvidia-nvjitlink-cu12 |  Downloaded nvidia-cuda-cupti-cu12 |  Downloaded nvidia-cuda-nvrtc-cu12 |  Downloaded nvidia-curand-cu12 |  Downloaded nvidia-nccl-cu12 |  Downloaded nvidia-cudnn-cu12 |  Downloaded nvidia-cusolver-cu12 |  Downloaded nvidia-cusparse-cu12 |  Downloaded nvidia-cusparselt-cu12 |  Downloaded nvidia-cublas-cu12 |  Downloaded nvidia-cufft-cu12 |  Downloaded torch | Prepared 26 packages in 34.68s | Installed 26 packages in 261ms |  + filelock==4.1.0 |  + fsspec==2026.9.0 |  + jinja2==3.1.6 |  + markupsafe==3.0.3 |  + mpmath==1.3.0 |  + networkx==3.4.2 |  + numpy==2.2.6 |  + nvidia-cublas-cu12==12.6.4.1 |  + nvidia-cuda-cupti-cu12==12.6.80 |  + nvidia-cuda-nvrtc-cu12==12.6.77 |  + nvidia-cuda-runtime-cu12==12.6.77 |  + nvidia-cudnn-cu12==9.5.1.17 |  + nvidia-cufft-cu12==11.3.0.4 |  + nvidia-curand-cu12==10.3.7.77 |  + nvidia-cusolver-cu12==11.7.1.2 |  + nvidia-cusparse-cu12==12.5.4.2 |  + nvidia-cusparselt-cu12==0.6.3 |  + nvidia-nccl-cu12==2.21.5 |  + nvidia-nvjitlink-cu12==12.6.85 |  + nvidia-nvtx-cu12==12.6.77 |  + pillow==12.3.0 |  + sympy==1.13.1 |  + torch==2.6.0+cu126 |  + torchvision==0.21.0+cu126 |  + triton==3.2.0 |  + typing-extensions==4.16.0 | \n"}
+,{"stream_name":"stdout","time":52.603013646,"data":"2026-11-14T02:29:15Z $ git clone --recursive https://github.com/DepthAnything/Video-Depth-Anything /tmp/audit/repos/videodepth -\u003e rc=0 3.841s\n"}
+,{"stream_name":"stdout","time":52.603090502,"data":"2026-11-14T02:29:15Z stderr tail: Cloning into '/tmp/audit/repos/videodepth'... | \n"}
+,{"stream_name":"stdout","time":52.638130976,"data":"2026-11-14T02:29:15Z $ git -C /tmp/audit/repos/videodepth checkout -q 4f5ae23172ba -\u003e rc=0 0.035s\n"}
+,{"stream_name":"stdout","time":52.667804044,"data":"2026-11-14T02:29:15Z $ git -C /tmp/audit/repos/videodepth submodule update --init --recursive -\u003e rc=0 0.03s\n"}
+,{"stream_name":"stdout","time":55.118332032,"data":"2026-11-14T02:29:18Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/videodepth/bin/python opencv-python-headless pillow imageio imageio-ffmpeg einops easydict tqdm matplotlib -\u003e rc=0 2.45s\n"}
+,{"stream_name":"stdout","time":55.118542111,"data":"2026-11-14T02:29:18Z stderr tail: Using Python 3.10.22 environment at: /tmp/audit/envs/videodepth | Resolved 18 packages in 650ms | Downloading kiwisolver (1.6MiB) | Downloading matplotlib (8.4MiB) | Downloading fonttools (5.0MiB) | Downloading opencv-python-headless (58.4MiB) | Downloading imageio-ffmpeg (64.8MiB) |  Downloaded kiwisolver |  Downloaded fonttools |  Downloaded matplotlib |  Downloaded opencv-python-headless |  Downloaded imageio-ffmpeg | Prepared 16 packages in 1.75s | Installed 16 packages in 25ms |  + contourpy==1.3.2 |  + cycler==0.12.1 |  + easydict==1.14 |  + einops==0.8.2 |  + fonttools==4.65.0 |  + imageio==2.38.0 |  + imageio-ffmpeg==0.8.1 |  + kiwisolver==1.5.1 |  + matplotlib==3.10.9 |  + opencv-python-headless==5.0.0.93 |  + packaging==26.3 |  + pyparsing==3.3.3 |  + python-dateutil==3.0.0 |  + six==1.17.0 |  + tqdm==4.70.1 |  + tzdata==2026.6 | \n"}
+,{"stream_name":"stdout","time":59.059194472,"data":"2026-11-14T02:29:22Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/videodepth/bin/python huggingface_hub -\u003e rc=0 3.94s\n"}
+,{"stream_name":"stdout","time":59.059220373,"data":"2026-11-14T02:29:22Z stderr tail: Using Python 3.10.22 environment at: /tmp/audit/envs/videodepth | Resolved 17 packages in 3.55s | Downloading hf-xet (4.1MiB) |  Downloaded hf-xet | Prepared 12 packages in 352ms | Installed 12 packages in 9ms |  + anyio==4.16.0 |  + click==8.5.1 |  + exceptiongroup==1.3.1 |  + h11==0.16.0 |  + hf-xet==1.8.0 |  + httpcore2==2.14.0 |  + httpx2==2.14.0 |  + huggingface-hub==2.4.0 |  + idna==3.20 |  + pyyaml==6.0.3 |  + tomli==2.5.0 |  + truststore==0.10.5 | \n"}
+,{"stream_name":"stdout","time":64.685439878,"data":"2026-11-14T02:29:27Z $ /tmp/audit/envs/videodepth/bin/hf download depth-anything/Video-Depth-Anything-Small video_depth_anything_vits.pth --local-dir /tmp/audit/weights/Video-Depth-Anything-Small -\u003e rc=0 5.626s\n"}
+,{"stream_name":"stdout","time":64.685585125,"data":"2026-11-14T02:29:27Z stdout tail: \u001b[32m✓ Downloaded\u001b[0m |   path: /tmp/audit/weights/Video-Depth-Anything-Small/video_depth_anything_vits.pth | \n"}
+,{"stream_name":"stdout","time":64.685614576,"data":"2026-11-14T02:29:27Z stderr tail: \u001b[90mHint: The `hf-cli` skill is not installed. Run `hf skills add -g` to teach your AI agents how to use the `hf` CLI.\u001b[0m | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads. | \n"}
+,{"stream_name":"stdout","time":65.41890241,"data":"2026-11-14T02:29:28Z $ /tmp/audit/envs/videodepth/bin/python /kaggle/working/audit/scripts/vd_gen.py -\u003e rc=0 0.694s\n"}
+,{"stream_name":"stdout","time":79.965515821,"data":"2026-11-14T02:29:43Z $ cd /tmp/audit/repos/videodepth \u0026\u0026 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True /tmp/audit/envs/videodepth/bin/python run.py --input_video /kaggle/working/audit/fixtures/videodepth/input.mp4 --output_dir /kaggle/working/audit/results/video-depth-anything-small --encoder vits --max_len 48 --target_fps 12 -\u003e rc=0 14.546s\n"}
+,{"stream_name":"stdout","time":79.965555039,"data":"2026-11-14T02:29:43Z stdout tail: xFormers not available | xFormers not available | \n"}
+,{"stream_name":"stdout","time":79.965625989,"data":"2026-11-14T02:29:43Z stderr tail: xFormers not available | xFormers not available |  |   0%|          | 0/2 [00:00\u003c?, ?it/s] |  50%|█████     | 1/2 [00:02\u003c00:02,  2.68s/it] | 100%|██████████| 2/2 [00:04\u003c00:00,  2.38s/it] | 100%|██████████| 2/2 [00:04\u003c00:00,  2.43s/it] | \n"}
+,{"stream_name":"stdout","time":79.967250781,"data":"2026-11-14T02:29:43Z FINAL {\"status\": \"PASS\", \"blocker\": null}\n"}
+,{"stream_name":"stdout","time":79.967283787,"data":"{\n"}
+,{"stream_name":"stdout","time":79.967288419,"data":"  \"component\": \"video-depth-anything-small\",\n"}
+,{"stream_name":"stdout","time":79.967292459,"data":"  \"priority\": \"P1\",\n"}
+,{"stream_name":"stdout","time":79.967296272,"data":"  \"kernel\": \"openmontage-p1-video-depth-anything-small\",\n"}
+,{"stream_name":"stdout","time":79.967300101,"data":"  \"utc_start\": \"2026-11-14T02:28:23Z\",\n"}
+,{"stream_name":"stdout","time":79.967303664,"data":"  \"utc_end\": \"2026-11-14T02:29:43Z\",\n"}
+,{"stream_name":"stdout","time":79.967307663,"data":"  \"status\": \"PASS\",\n"}
+,{"stream_name":"stdout","time":79.967311433,"data":"  \"steps\": {\n"}
+,{"stream_name":"stdout","time":79.967315041,"data":"    \"helper\": {\n"}
+,{"stream_name":"stdout","time":79.967318768,"data":"      \"path\": \"/kaggle/working/audit/scripts/kaggle_environment_snapshot.py\",\n"}
+,{"stream_name":"stdout","time":79.967322605,"data":"      \"expected_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":79.967326894,"data":"      \"actual_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":79.967330593,"data":"      \"match\": true\n"}
+,{"stream_name":"stdout","time":79.967334317,"data":"    },\n"}
+,{"stream_name":"stdout","time":79.967338302,"data":"    \"download_model\": {\n"}
+,{"stream_name":"stdout","time":79.96734295,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":79.967346961,"data":"      \"stderr\": \"\\u001b[90mHint: The `hf-cli` skill is not installed. Run `hf skills add -g` to teach your AI agents how to use the `hf` CLI.\\u001b[0m\\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\\n\"\n"}
+,{"stream_name":"stdout","time":79.967352139,"data":"    },\n"}
+,{"stream_name":"stdout","time":79.967356126,"data":"    \"inference\": {\n"}
+,{"stream_name":"stdout","time":79.96735959,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":79.967363132,"data":"      \"stderr\": \"xFormers not available\\nxFormers not available\\n\\n  0%|          | 0/2 [00:00\u003c?, ?it/s]\\n 50%|\\u2588\\u2588\\u2588\\u2588\\u2588     | 1/2 [00:02\u003c00:02,  2.68s/it]\\n100%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588| 2/2 [00:04\u003c00:00,  2.38s/it]\\n100%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588| 2/2 [00:04\u003c00:00,  2.43s/it]\\n\"\n"}
+,{"stream_name":"stdout","time":79.967368991,"data":"    },\n"}
+,{"stream_name":"stdout","time":79.9673725,"data":"    \"outputs\": [\n"}
+,{"stream_name":"stdout","time":79.967376096,"data":"      {\n"}
+,{"stream_name":"stdout","time":79.967379436,"data":"        \"path\": \"/kaggle/working/audit/results/video-depth-anything-small/input_vis.mp4\",\n"}
+,{"stream_name":"stdout","time":79.967383521,"data":"        \"bytes\": 53837,\n"}
+,{"stream_name":"stdout","time":79.967387011,"data":"        \"sha256\": \"558000c046296bc22018c59125c29a9ca6fd5c752822d3eeff977a810dd0950f\"\n"}
+,{"stream_name":"stdout","time":79.967390828,"data":"      }\n"}
+,{"stream_name":"stdout","time":79.967394155,"data":"    ],\n"}
+,{"stream_name":"stdout","time":79.967397817,"data":"    \"dtype\": \"FP16\",\n"}
+,{"stream_name":"stdout","time":79.967402064,"data":"    \"runtime_seconds\": 14.546,\n"}
+,{"stream_name":"stdout","time":79.967414563,"data":"    \"peak_vram_mib\": null\n"}
+,{"stream_name":"stdout","time":79.967418451,"data":"  },\n"}
+,{"stream_name":"stdout","time":79.967422039,"data":"  \"errors\": []\n"}
+,{"stream_name":"stdout","time":79.967425427,"data":"}\n"}
+,{"stream_name":"stderr","time":84.212362453,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":84.212391331,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":84.487808385,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":84.487834621,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":85.254701508,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":87.310777915,"data":"[NbConvertApp] Writing 360110 bytes to __results__.html\n"}
+]

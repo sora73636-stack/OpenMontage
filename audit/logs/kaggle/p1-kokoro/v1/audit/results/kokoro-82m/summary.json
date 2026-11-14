@@ -1,0 +1,40 @@
+{
+  "component": "kokoro-82m",
+  "priority": "P1",
+  "kernel": "openmontage-p1-kokoro-82m",
+  "utc_start": "2026-11-13T16:32:22Z",
+  "utc_end": "2026-11-13T16:34:08Z",
+  "status": "PASS",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "inference": {
+      "rc": 0,
+      "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n/tmp/audit/envs/kokoro/lib/python3.11/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1\n  warnings.warn(\n/tmp/audit/envs/kokoro/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.\n  WeightNorm.apply(module, name, dim)\n"
+    },
+    "metrics": {
+      "dtype": "float32",
+      "gen_s": 28.612964153289795,
+      "samples": 14647200,
+      "sr": 24000,
+      "peak_alloc_mb": 1165.8349609375
+    },
+    "outputs": [
+      {
+        "path": "/kaggle/working/audit/results/kokoro-82m/out.wav",
+        "bytes": 29294444,
+        "sha256": "01cb099025d6c21c56757503ded5dd3a0d058b3150742de1cbcfa7cc80bf6e85"
+      }
+    ],
+    "duration_s": 610.3,
+    "rtf": 0.046883441181861045,
+    "dtype": "float32",
+    "runtime_seconds": 28.612964153289795,
+    "peak_vram_allocated_mb": 1165.8349609375
+  },
+  "errors": []
+}

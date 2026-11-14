@@ -1,0 +1,29 @@
+Downloading image_video_prompts.json to audit/logs/kaggle/p1-sdxl/v2/audit/config
+  0%|          | 0.00/1.55k [00:00<?, ?B/s]100%|██████████| 1.55k/1.55k [00:00<00:00, 4.71MB/s]
+
+Output file downloaded to audit/logs/kaggle/p1-sdxl/v2/audit/config/image_video_prompts.json
+Downloading science_terms.json to audit/logs/kaggle/p1-sdxl/v2/audit/config
+  0%|          | 0.00/4.78k [00:00<?, ?B/s]100%|██████████| 4.78k/4.78k [00:00<00:00, 18.9MB/s]
+
+Output file downloaded to audit/logs/kaggle/p1-sdxl/v2/audit/config/science_terms.json
+Downloading environment_snapshot_before_sdxl.json to audit/logs/kaggle/p1-sdxl/v2/audit/logs/kaggle
+  0%|          | 0.00/40.0k [00:00<?, ?B/s]100%|██████████| 40.0k/40.0k [00:00<00:00, 580kB/s]
+
+Output file downloaded to audit/logs/kaggle/p1-sdxl/v2/audit/logs/kaggle/environment_snapshot_before_sdxl.json
+Downloading sdxl_1.png to audit/logs/kaggle/p1-sdxl/v2/audit/results/sdxl-base-1.0
+  0%|          | 0.00/330k [00:00<?, ?B/s]100%|██████████| 330k/330k [00:00<00:00, 931kB/s]100%|██████████| 330k/330k [00:00<00:00, 931kB/s]
+
+Output file downloaded to audit/logs/kaggle/p1-sdxl/v2/audit/results/sdxl-base-1.0/sdxl_1.png
+Downloading sdxl_2.png to audit/logs/kaggle/p1-sdxl/v2/audit/results/sdxl-base-1.0
+  0%|          | 0.00/275k [00:00<?, ?B/s]100%|██████████| 275k/275k [00:00<00:00, 817kB/s]100%|██████████| 275k/275k [00:00<00:00, 816kB/s]
+
+Output file downloaded to audit/logs/kaggle/p1-sdxl/v2/audit/results/sdxl-base-1.0/sdxl_2.png
+Downloading sdxl_3.png to audit/logs/kaggle/p1-sdxl/v2/audit/results/sdxl-base-1.0
+  0%|          | 0.00/305k [00:00<?, ?B/s]100%|██████████| 305k/305k [00:00<00:00, 902kB/s]100%|██████████| 305k/305k [00:00<00:00, 902kB/s]
+
+Output file downloaded to audit/logs/kaggle/p1-sdxl/v2/audit/results/sdxl-base-1.0/sdxl_3.png
+Downloading summary.json to audit/logs/kaggle/p1-sdxl/v2/audit/results/sdxl-base-1.0
+  0%|          | 0.00/5.97k [00:00<?, ?B/s]100%|██████████| 5.97k/5.97k [00:00<00:00, 20.8MB/s]
+
+Output file downloaded to audit/logs/kaggle/p1-sdxl/v2/audit/results/sdxl-base-1.0/summary.json
+Kernel log downloaded to audit/logs/kaggle/p1-sdxl/v2/openmontage-p1-sdxl-base-1-0.log 

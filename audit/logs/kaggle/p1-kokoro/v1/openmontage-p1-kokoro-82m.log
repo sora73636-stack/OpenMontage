@@ -1,0 +1,63 @@
+[{"stream_name":"stdout","time":1.019409759,"data":"2026-11-13T16:32:22Z helper sha256 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match=True\n"}
+,{"stream_name":"stdout","time":1.02865066,"data":"2026-11-13T16:32:22Z fixture science_voice_script.txt 9555 bytes sha=cbb5b7ee8f13e8d60c5b25f9502d4c7a6ab682f5dbce75dcae6d169f3bf358e9\n"}
+,{"stream_name":"stdout","time":1.028978132,"data":"2026-11-13T16:32:22Z fixture science_terms.json 4890 bytes sha=877f430837d8059b47a3671da1679d2637a9ed9077c9239b24b828a042e32862\n"}
+,{"stream_name":"stdout","time":1.02926665,"data":"2026-11-13T16:32:22Z fixture image_video_prompts.json 1586 bytes sha=5f1cf0117327fb0801023549c6186105deaaf2323c1dc23becaec3428848678b\n"}
+,{"stream_name":"stdout","time":16.599979217,"data":"2026-11-13T16:32:37Z $ /usr/local/bin/uv venv --python 3.11 /tmp/audit/envs/kokoro -\u003e rc=0 1.735s\n"}
+,{"stream_name":"stdout","time":16.600095717,"data":"2026-11-13T16:32:37Z stderr tail: warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`? | Downloading cpython-3.11.17-linux-x86_64-gnu (download) (29.4MiB) |  Downloaded cpython-3.11.17-linux-x86_64-gnu (download) | Using CPython 3.11.17 | Creating virtual environment at: /tmp/audit/envs/kokoro | Activate with: source /tmp/audit/envs/kokoro/bin/activate | \n"}
+,{"stream_name":"stdout","time":52.135957277,"data":"2026-11-13T16:33:13Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/kokoro/bin/python torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126 -\u003e rc=0 35.536s\n"}
+,{"stream_name":"stdout","time":52.136145042,"data":"2026-11-13T16:33:13Z stderr tail: usparselt-cu12 (149.5MiB) | Downloading nvidia-curand-cu12 (53.7MiB) | Downloading nvidia-cufft-cu12 (190.9MiB) | Downloading nvidia-cuda-cupti-cu12 (8.5MiB) | Downloading nvidia-cusparse-cu12 (206.5MiB) | Downloading torchvision (6.9MiB) |  Downloaded networkx |  Downloaded sympy | Downloading torch (729.2MiB) |  Downloaded torchvision |  Downloaded pillow |  Downloaded numpy |  Downloaded nvidia-cuda-cupti-cu12 |  Downloaded nvidia-nvjitlink-cu12 |  Downloaded nvidia-cuda-nvrtc-cu12 |  Downloaded nvidia-curand-cu12 |  Downloaded nvidia-nccl-cu12 |  Downloaded triton |  Downloaded nvidia-cusolver-cu12 |  Downloaded nvidia-cublas-cu12 |  Downloaded nvidia-cusparselt-cu12 |  Downloaded nvidia-cusparse-cu12 |  Downloaded nvidia-cudnn-cu12 |  Downloaded nvidia-cufft-cu12 |  Downloaded torch | Prepared 26 packages in 32.78s | Installed 26 packages in 652ms |  + filelock==4.2.4 |  + fsspec==2026.9.0 |  + jinja2==3.1.6 |  + markupsafe==3.0.3 |  + mpmath==1.3.0 |  + networkx==3.6.1 |  + numpy==2.4.6 |  + nvidia-cublas-cu12==12.6.4.1 |  + nvidia-cuda-cupti-cu12==12.6.80 |  + nvidia-cuda-nvrtc-cu12==12.6.77 |  + nvidia-cuda-runtime-cu12==12.6.77 |  + nvidia-cudnn-cu12==9.5.1.17 |  + nvidia-cufft-cu12==11.3.0.4 |  + nvidia-curand-cu12==10.3.7.77 |  + nvidia-cusolver-cu12==11.7.1.2 |  + nvidia-cusparse-cu12==12.5.4.2 |  + nvidia-cusparselt-cu12==0.6.3 |  + nvidia-nccl-cu12==2.21.5 |  + nvidia-nvjitlink-cu12==12.6.85 |  + nvidia-nvtx-cu12==12.6.77 |  + pillow==13.0.0 |  + sympy==1.13.1 |  + torch==2.6.0+cu126 |  + torchvision==0.21.0+cu126 |  + triton==3.2.0 |  + typing-extensions==4.16.0 | \n"}
+,{"stream_name":"stdout","time":60.763137764,"data":"2026-11-13T16:33:21Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/kokoro/bin/python kokoro soundfile -\u003e rc=0 8.627s\n"}
+,{"stream_name":"stdout","time":60.763741972,"data":"2026-11-13T16:33:21Z stderr tail: click==8.5.1 |  + cloudpathlib==0.26.0 |  + cloudpickle==3.1.2 |  + confection==1.3.4 |  + csvw==4.2.0 |  + curated-tokenizers==0.0.10 |  + curated-transformers==0.1.1 |  + cymem==2.0.16 |  + dlinfo==2.0.0 |  + docopt==0.6.2 |  + espeakng-loader==0.2.4 |  + h11==0.16.0 |  + hf-xet==1.8.0 |  + httpcore==1.0.9 |  + httpcore2==2.16.0 |  + httpx==0.28.1 |  + httpx2==2.16.0 |  + huggingface-hub==2.4.0 |  + idna==3.20 |  + isodate==0.7.2 |  + joblib==1.6.0 |  + jsonschema==4.26.0 |  + jsonschema-specifications==2025.9.1 |  + kokoro==0.9.4 |  + language-tags==1.3.2 |  + loguru==0.8.0 |  + markdown-it-py==4.3.0 |  + mdurl==0.1.2 |  + misaki==0.9.4 |  + murmurhash==1.0.16 |  + num2words==0.5.14 |  + packaging==26.3 |  + phonemizer-fork==3.3.2 |  + preshed==3.0.15 |  + pycparser==3.12 |  + pydantic==2.14.3 |  + pydantic-core==2.50.4 |  + pygments==2.21.0 |  + pyparsing==3.3.3 |  + python-dateutil==4.0.0 |  + pyyaml==6.0.3 |  + rdflib==7.6.0 |  + referencing==0.37.0 |  + regex==2026.11.9 |  + requests==2.34.2 |  + rfc3986==1.5.0 |  + rich==15.0.0 |  + rpds-py==2026.9.1 |  + safetensors==0.8.0 |  + segments==2.4.0 |  + setuptools==84.2.1 |  + shellingham==1.5.4 |  + smart-open==9.0.3 |  + soundfile==0.14.0 |  + spacy==3.8.18 |  + spacy-curated-transformers==0.3.1 |  + spacy-legacy==3.0.12 |  + spacy-loggers==1.0.5 |  + srsly==2.5.6 |  + termcolor==3.3.0 |  + thinc==8.3.14 |  + tokenizers==0.23.3 |  + tqdm==4.70.1 |  + transformers==5.23.0 |  + truststore==0.10.5 |  + typer==0.29.1 |  + typing-inspection==0.4.5 |  + tzdata==2026.6 |  + uritemplate==4.2.0 |  + urllib3==2.8.0 |  + wasabi==1.1.3 |  + weasel==1.0.1 |  + wrapt==2.5.2 | \n"}
+,{"stream_name":"stdout","time":61.079328075,"data":"2026-11-13T16:33:22Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/kokoro/bin/python https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl -\u003e rc=0 0.316s\n"}
+,{"stream_name":"stdout","time":61.07943846,"data":"2026-11-13T16:33:22Z stderr tail: Using Python 3.11.17 environment at: /tmp/audit/envs/kokoro | Resolved 1 package in 169ms | Downloading en-core-web-sm (12.2MiB) |  Downloaded en-core-web-sm | Prepared 1 package in 126ms | Installed 1 package in 2ms |  + en-core-web-sm==3.8.0 (from https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl) | \n"}
+,{"stream_name":"stdout","time":105.862494531,"data":"2026-11-13T16:34:06Z $ /tmp/audit/envs/kokoro/bin/python /kaggle/working/audit/scripts/kokoro_run.py -\u003e rc=0 44.783s\n"}
+,{"stream_name":"stdout","time":105.862622163,"data":"2026-11-13T16:34:06Z stdout tail: WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning. | {\"dtype\": \"float32\", \"gen_s\": 28.612964153289795, \"samples\": 14647200, \"sr\": 24000, \"peak_alloc_mb\": 1165.8349609375} | \n"}
+,{"stream_name":"stdout","time":105.862770384,"data":"2026-11-13T16:34:06Z stderr tail: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads. | /tmp/audit/envs/kokoro/lib/python3.11/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1 |   warnings.warn( | /tmp/audit/envs/kokoro/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`. |   WeightNorm.apply(module, name, dim) | \n"}
+,{"stream_name":"stdout","time":107.468317973,"data":"2026-11-13T16:34:08Z FINAL {\"status\": \"PASS\", \"blocker\": null}\n"}
+,{"stream_name":"stdout","time":107.468486023,"data":"{\n"}
+,{"stream_name":"stdout","time":107.468497309,"data":"  \"component\": \"kokoro-82m\",\n"}
+,{"stream_name":"stdout","time":107.468502666,"data":"  \"priority\": \"P1\",\n"}
+,{"stream_name":"stdout","time":107.468507484,"data":"  \"kernel\": \"openmontage-p1-kokoro-82m\",\n"}
+,{"stream_name":"stdout","time":107.468512219,"data":"  \"utc_start\": \"2026-11-13T16:32:22Z\",\n"}
+,{"stream_name":"stdout","time":107.468516985,"data":"  \"utc_end\": \"2026-11-13T16:34:08Z\",\n"}
+,{"stream_name":"stdout","time":107.468534953,"data":"  \"status\": \"PASS\",\n"}
+,{"stream_name":"stdout","time":107.468537983,"data":"  \"steps\": {\n"}
+,{"stream_name":"stdout","time":107.468540476,"data":"    \"helper\": {\n"}
+,{"stream_name":"stdout","time":107.46854302,"data":"      \"path\": \"/kaggle/working/audit/scripts/kaggle_environment_snapshot.py\",\n"}
+,{"stream_name":"stdout","time":107.468545764,"data":"      \"expected_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":107.468563612,"data":"      \"actual_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":107.468568264,"data":"      \"match\": true\n"}
+,{"stream_name":"stdout","time":107.468572525,"data":"    },\n"}
+,{"stream_name":"stdout","time":107.468576246,"data":"    \"inference\": {\n"}
+,{"stream_name":"stdout","time":107.468580466,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":107.468587427,"data":"      \"stderr\": \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\\n/tmp/audit/envs/kokoro/lib/python3.11/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1\\n  warnings.warn(\\n/tmp/audit/envs/kokoro/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.\\n  WeightNorm.apply(module, name, dim)\\n\"\n"}
+,{"stream_name":"stdout","time":107.468596319,"data":"    },\n"}
+,{"stream_name":"stdout","time":107.468599804,"data":"    \"metrics\": {\n"}
+,{"stream_name":"stdout","time":107.468603298,"data":"      \"dtype\": \"float32\",\n"}
+,{"stream_name":"stdout","time":107.468607096,"data":"      \"gen_s\": 28.612964153289795,\n"}
+,{"stream_name":"stdout","time":107.468610818,"data":"      \"samples\": 14647200,\n"}
+,{"stream_name":"stdout","time":107.468614367,"data":"      \"sr\": 24000,\n"}
+,{"stream_name":"stdout","time":107.468618068,"data":"      \"peak_alloc_mb\": 1165.8349609375\n"}
+,{"stream_name":"stdout","time":107.468621738,"data":"    },\n"}
+,{"stream_name":"stdout","time":107.468625293,"data":"    \"outputs\": [\n"}
+,{"stream_name":"stdout","time":107.468634257,"data":"      {\n"}
+,{"stream_name":"stdout","time":107.46863745,"data":"        \"path\": \"/kaggle/working/audit/results/kokoro-82m/out.wav\",\n"}
+,{"stream_name":"stdout","time":107.468640018,"data":"        \"bytes\": 29294444,\n"}
+,{"stream_name":"stdout","time":107.468642485,"data":"        \"sha256\": \"01cb099025d6c21c56757503ded5dd3a0d058b3150742de1cbcfa7cc80bf6e85\"\n"}
+,{"stream_name":"stdout","time":107.468645172,"data":"      }\n"}
+,{"stream_name":"stdout","time":107.468647994,"data":"    ],\n"}
+,{"stream_name":"stdout","time":107.468662998,"data":"    \"duration_s\": 610.3,\n"}
+,{"stream_name":"stdout","time":107.468667397,"data":"    \"rtf\": 0.046883441181861045,\n"}
+,{"stream_name":"stdout","time":107.468671547,"data":"    \"dtype\": \"float32\",\n"}
+,{"stream_name":"stdout","time":107.46867562,"data":"    \"runtime_seconds\": 28.612964153289795,\n"}
+,{"stream_name":"stdout","time":107.46867969,"data":"    \"peak_vram_allocated_mb\": 1165.8349609375\n"}
+,{"stream_name":"stdout","time":107.468683461,"data":"  },\n"}
+,{"stream_name":"stdout","time":107.468686845,"data":"  \"errors\": []\n"}
+,{"stream_name":"stdout","time":107.4686903,"data":"}\n"}
+,{"stream_name":"stderr","time":113.662683947,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":113.662714757,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":114.007073965,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":114.007097366,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":114.868705266,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":116.063107903,"data":"[NbConvertApp] Writing 356943 bytes to __results__.html\n"}
+]

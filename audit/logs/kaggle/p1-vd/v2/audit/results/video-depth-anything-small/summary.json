@@ -1,0 +1,35 @@
+{
+  "component": "video-depth-anything-small",
+  "priority": "P1",
+  "kernel": "openmontage-p1-video-depth-anything-small",
+  "utc_start": "2026-11-14T02:28:23Z",
+  "utc_end": "2026-11-14T02:29:43Z",
+  "status": "PASS",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "download_model": {
+      "rc": 0,
+      "stderr": "\u001b[90mHint: The `hf-cli` skill is not installed. Run `hf skills add -g` to teach your AI agents how to use the `hf` CLI.\u001b[0m\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"
+    },
+    "inference": {
+      "rc": 0,
+      "stderr": "xFormers not available\nxFormers not available\n\n  0%|          | 0/2 [00:00<?, ?it/s]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 1/2 [00:02<00:02,  2.68s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 2/2 [00:04<00:00,  2.38s/it]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 2/2 [00:04<00:00,  2.43s/it]\n"
+    },
+    "outputs": [
+      {
+        "path": "/kaggle/working/audit/results/video-depth-anything-small/input_vis.mp4",
+        "bytes": 53837,
+        "sha256": "558000c046296bc22018c59125c29a9ca6fd5c752822d3eeff977a810dd0950f"
+      }
+    ],
+    "dtype": "FP16",
+    "runtime_seconds": 14.546,
+    "peak_vram_mib": null
+  },
+  "errors": []
+}

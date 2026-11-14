@@ -1,0 +1,97 @@
+{
+  "component": "depth-anything-v2-small",
+  "priority": "P1",
+  "kernel": "openmontage-p1-depth-anything-v2-small",
+  "utc_start": "2026-11-13T17:11:22Z",
+  "utc_end": "2026-11-13T17:12:28Z",
+  "status": "PASS",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "inference": {
+      "rc": 0,
+      "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/287 [00:00<?, ?it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 287/287 [00:00<00:00, 3891.49it/s]\n"
+    },
+    "metrics": {
+      "times": [
+        0.33833742141723633,
+        0.08813738822937012,
+        0.08784914016723633,
+        0.06502628326416016,
+        0.06360721588134766,
+        0.061693429946899414,
+        0.061570167541503906,
+        0.06106400489807129,
+        0.060523033142089844,
+        0.06104779243469238
+      ],
+      "finite": true,
+      "range": [
+        0.0,
+        255.0
+      ],
+      "peak_alloc_mb": 207.794921875,
+      "dtype": "torch.float32"
+    },
+    "outputs": [
+      {
+        "path": "/kaggle/working/audit/results/depth-anything-v2-small/depth_00.png",
+        "bytes": 1097,
+        "sha256": "c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665"
+      },
+      {
+        "path": "/kaggle/working/audit/results/depth-anything-v2-small/depth_01.png",
+        "bytes": 1097,
+        "sha256": "c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665"
+      },
+      {
+        "path": "/kaggle/working/audit/results/depth-anything-v2-small/depth_02.png",
+        "bytes": 1097,
+        "sha256": "c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665"
+      },
+      {
+        "path": "/kaggle/working/audit/results/depth-anything-v2-small/depth_03.png",
+        "bytes": 1097,
+        "sha256": "c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665"
+      },
+      {
+        "path": "/kaggle/working/audit/results/depth-anything-v2-small/depth_04.png",
+        "bytes": 1097,
+        "sha256": "c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665"
+      },
+      {
+        "path": "/kaggle/working/audit/results/depth-anything-v2-small/depth_05.png",
+        "bytes": 1097,
+        "sha256": "c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665"
+      },
+      {
+        "path": "/kaggle/working/audit/results/depth-anything-v2-small/depth_06.png",
+        "bytes": 1097,
+        "sha256": "c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665"
+      },
+      {
+        "path": "/kaggle/working/audit/results/depth-anything-v2-small/depth_07.png",
+        "bytes": 1097,
+        "sha256": "c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665"
+      },
+      {
+        "path": "/kaggle/working/audit/results/depth-anything-v2-small/depth_08.png",
+        "bytes": 1097,
+        "sha256": "c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665"
+      },
+      {
+        "path": "/kaggle/working/audit/results/depth-anything-v2-small/depth_09.png",
+        "bytes": 1097,
+        "sha256": "c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665"
+      }
+    ],
+    "dtype": "torch.float32",
+    "runtime_seconds": 0.9488558769226074,
+    "peak_vram_allocated_mb": 207.794921875
+  },
+  "errors": []
+}

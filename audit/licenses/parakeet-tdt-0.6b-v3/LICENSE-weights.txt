@@ -1,0 +1,30 @@
+parakeet-tdt-0.6b-v3 — weight license evidence
+================================================
+
+license_status: CONDITIONAL PASS
+license_basis: model_card_metadata
+license: CC-BY-4.0
+
+Quote (model card, "License/Terms of Use" section):
+  "GOVERNING TERMS: Use of this model is governed by the
+   [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en)
+   license."
+
+Quote (model card, "Description" section):
+  "Released under a **permissive CC BY 4.0 license**"
+
+Source:
+  - Model card: https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3
+    Local copy: audit/licenses/parakeet-tdt-0.6b-v3/MODEL_CARD.md
+    (42888 bytes, sha256 7a4306a43f395e3a716e77f1d81c03db18a0a355d7b566bb1d6307213ba0302b,
+     HF revision 541d1f99c6b0c3cd0b11a95167540bb8edefd82b)
+  - License text: https://creativecommons.org/licenses/by/4.0/legalcode.en
+
+Why CONDITIONAL PASS and not PASS:
+  The Hugging Face model repository contains no separate LICENSE file for the
+  weight files. The license is asserted only by the `license:` metadata field
+  and the model-card text. Per audit rule, model-card metadata alone is a
+  conditional confirmation, not a full license text for the weights.
+
+Attribution required by CC-BY-4.0 if the model or outputs are redistributed:
+  "Parakeet TDT 0.6B v3, NVIDIA, licensed under CC-BY-4.0."

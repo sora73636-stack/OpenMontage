@@ -1,0 +1,19 @@
+{
+  "component": "wan2.1-t2v-1.3b",
+  "priority": "P1",
+  "kernel": "openmontage-p1-wan2-1-t2v-1-3b",
+  "utc_start": "2026-11-13T17:10:39Z",
+  "utc_end": "2026-11-13T17:11:41Z",
+  "status": "BLOCKED",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "install": "st2`\n  cause: The build backend returned an error\n  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)\n\n         [stderr]\n         /tmp/audit/cache/uv/builds-v0/.tmpeBfPb0/lib/python3.10/site-packages/setuptools/_vendor/wheel/bdist_wheel.py:4: FutureWarning: The 'wheel' package is no longer the canonical location of the 'bdist_wheel' command, and will be removed in a future release. Please update to setuptools v70.1 or later which contains an integrated version of this command.\n           warn(\n         Traceback (most recent call last):\n           File \"<string>\", line 14, in <module>\n           File \"/tmp/audit/cache/uv/builds-v0/.tmpeBfPb0/lib/python3.10/site-packages/setuptools/build_meta.py\", line 333, in get_requires_for_build_wheel\n             return self._get_build_requires(config_settings, requirements=[])\n           File \"/tmp/audit/cache/uv/builds-v0/.tmpeBfPb0/lib/python3.10/site-packages/setuptools/build_meta.py\", line 301, in _get_build_requires\n             self.run_setup()\n           File \"/tmp/audit/cache/uv/builds-v0/.tmpeBfPb0/lib/python3.10/site-packages/setuptools/build_meta.py\", line 520, in run_setup\n             super().run_setup(setup_script=setup_script)\n           File \"/tmp/audit/cache/uv/builds-v0/.tmpeBfPb0/lib/python3.10/site-packages/setuptools/build_meta.py\", line 317, in run_setup\n             exec(code, locals())  # noqa: S102 # exec is intentional here\n           File \"<string>\", line 22, in <module>\n         ModuleNotFoundError: No module named 'torch'\n\nhint: This error likely indicates that `flash-attn@2.8.3.post2` depends on `torch`, but doesn't declare it as a build dependency. If `flash-attn` is a first-party package, consider adding `torch` to its `build-system.requires`. Otherwise, either add it to your `pyproject.toml` under:\n\n[tool.uv.extra-build-dependencies]\nflash-attn = [\"torch\"]\n\nor `uv pip install torch` into the environment and re-run with `--no-build-isolation`.\n"
+  },
+  "errors": [],
+  "blocker": "wan requirements failed"
+}

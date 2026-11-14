@@ -1,0 +1,56 @@
+{
+  "component": "deepfilternet3",
+  "priority": "P1",
+  "kernel": "openmontage-p1-deepfilternet3",
+  "utc_start": "2026-11-14T02:34:28Z",
+  "utc_end": "2026-11-14T02:35:34Z",
+  "status": "PASS",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "inference": {
+      "rc": 0,
+      "stderr": "/tmp/audit/envs/deepfilternet/lib/python3.11/site-packages/df/io.py:9: UserWarning: `torchaudio.backend.common.AudioMetaData` has been moved to `torchaudio.AudioMetaData`. Please update the import path.\n  from torchaudio.backend.common import AudioMetaData\nfatal: not a git repository (or any of the parent directories): .git\n"
+    },
+    "metrics": {
+      "gen_s": 6.823,
+      "in_s": 30.0,
+      "peak_vram_mib": 569,
+      "path": "/kaggle/working/audit/results/deepfilternet3/noisy_DeepFilterNet3.wav",
+      "sr": 48000,
+      "frames": 1440000,
+      "seconds": 30.0,
+      "subtype": "PCM_16",
+      "channels": 1,
+      "drift_ms": 0.0,
+      "rtf": 0.22743333333333335
+    },
+    "outputs": [
+      {
+        "path": "/kaggle/working/audit/results/deepfilternet3/clean.wav",
+        "bytes": 2880044,
+        "sha256": "fa5ac9a54d9f4525780c913cf79669198ee77dd64d5bb4e07183bff8b9711c20"
+      },
+      {
+        "path": "/kaggle/working/audit/results/deepfilternet3/noisy.wav",
+        "bytes": 2880044,
+        "sha256": "a3a78a0581c183539ff07a87790c23926b1d1a10c64b44ae571d310ae339fd34"
+      },
+      {
+        "path": "/kaggle/working/audit/results/deepfilternet3/noisy_DeepFilterNet3.wav",
+        "bytes": 2880078,
+        "sha256": "ad9b7e9e56f23306ef2a7b0e7361e0cd6db8521f02fb4dea7097a7308da978ee"
+      }
+    ],
+    "dtype": "FP32",
+    "runtime_seconds": 6.823,
+    "drift_ms": 0.0,
+    "peak_vram_mib": 569,
+    "subtype": "PCM_16"
+  },
+  "errors": []
+}

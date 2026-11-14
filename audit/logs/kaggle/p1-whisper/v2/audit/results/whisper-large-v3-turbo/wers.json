@@ -1,0 +1,58 @@
+{
+  "files": 330,
+  "audio_s": 2413.0500625,
+  "wer": 0.030298248382515387,
+  "cer": 0.010440122824974411,
+  "samples": [
+    {
+      "file": "/tmp/audit/weights/librispeech/LibriSpeech/dev-clean/1919/142785/1919-142785-0052.flac",
+      "ref": "ILLUSTRATION PESTLE AND MORTAR",
+      "hyp": "illustration pestle and mortar"
+    },
+    {
+      "file": "/tmp/audit/weights/librispeech/LibriSpeech/dev-clean/1919/142785/1919-142785-0053.flac",
+      "ref": "WHEN THE THREE INGREDIENTS ARE PROPERLY PREPARED POUND THEM ALTOGETHER IN A MORTAR FOR SOME TIME FOR THE MORE QUENELLES ARE POUNDED THE MORE DELICATE THEY ARE",
+      "hyp": "when the three ingredients are properly prepared pound them all together in a mortar for some time for the more quenelles are pounded the more delicate they are"
+    },
+    {
+      "file": "/tmp/audit/weights/librispeech/LibriSpeech/dev-clean/1919/142785/1919-142785-0054.flac",
+      "ref": "IF THE QUENELLES ARE NOT FIRM ENOUGH ADD THE YOLK OF ANOTHER EGG BUT OMIT THE WHITE WHICH ONLY MAKES THEM HOLLOW AND PUFFY INSIDE",
+      "hyp": "if the quenelles are not firm enough add the yolk of another egg but omit the white which only makes them hollow and puffy inside"
+    },
+    {
+      "file": "/tmp/audit/weights/librispeech/LibriSpeech/dev-clean/1919/142785/1919-142785-0055.flac",
+      "ref": "ANY ONE WITH THE SLIGHTEST PRETENSIONS TO REFINED COOKERY MUST IN THIS PARTICULAR IMPLICITLY FOLLOW THE EXAMPLE OF OUR FRIENDS ACROSS THE CHANNEL",
+      "hyp": "Anyone with the slightest pretensions to refined cookery must, in this particular, implicitly follow the example of our friends across the channel."
+    },
+    {
+      "file": "/tmp/audit/weights/librispeech/LibriSpeech/dev-clean/1919/142785/1919-142785-0056.flac",
+      "ref": "FRIED BREAD CRUMBS",
+      "hyp": "Fried breadcrumbs."
+    },
+    {
+      "file": "/tmp/audit/weights/librispeech/LibriSpeech/dev-clean/1919/142785/1919-142785-0057.flac",
+      "ref": "THE FAT THEY ARE FRIED IN SHOULD BE CLEAR AND THE CRUMBS SHOULD NOT HAVE THE SLIGHTEST APPEARANCE OR TASTE OF HAVING BEEN IN THE LEAST DEGREE BURNT",
+      "hyp": "The fat they are fried in should be clear and the crumbs should not have the slightest appearance or taste of having been in the least degree burnt."
+    },
+    {
+      "file": "/tmp/audit/weights/librispeech/LibriSpeech/dev-clean/1919/142785/1919-142785-0058.flac",
+      "ref": "FRIED BREAD FOR BORDERS",
+      "hyp": "Fried bread for borders."
+    },
+    {
+      "file": "/tmp/audit/weights/librispeech/LibriSpeech/dev-clean/1919/142785/1919-142785-0059.flac",
+      "ref": "WHEN QUITE CRISP DIP ONE SIDE OF THE SIPPET INTO THE BEATEN WHITE OF AN EGG MIXED WITH A LITTLE FLOUR AND PLACE IT ON THE EDGE OF THE DISH",
+      "hyp": "When quite crisp, dip one side of the sippet into the beaten white of an egg mixed with a little flour and place it on the edge of the dish."
+    },
+    {
+      "file": "/tmp/audit/weights/librispeech/LibriSpeech/dev-clean/1919/142785/1919-142785-0060.flac",
+      "ref": "CONTINUE IN THIS MANNER TILL THE BORDER IS COMPLETED ARRANGING THE SIPPETS A PALE AND A DARK ONE ALTERNATELY",
+      "hyp": "Continue in this manner till the border is completed, arranging the sip-its of pale and a dark one alternately."
+    },
+    {
+      "file": "/tmp/audit/weights/librispeech/LibriSpeech/dev-clean/1919/142785/1919-142785-0061.flac",
+      "ref": "MODE CUT UP THE ONION AND CARROT INTO SMALL RINGS AND PUT THEM INTO A STEWPAN WITH THE HERBS MUSHROOMS BAY LEAF CLOVES AND MACE ADD THE BUTTER AND SIMMER THE WHOLE VERY GENTLY OVER A SLOW FIRE UNTIL THE ONION IS QUITE TENDER",
+      "hyp": "mode cut up the onion and carrot into small rings and put them into a stew pan with the herbs mushrooms bay leaf cloves and mace add the butter and simmer the whole very gently over a slow fire until the onion is quite tender"
+    }
+  ]
+}

@@ -149,3 +149,58 @@ No component is production-approved: human quality review is pending for all; Re
 - Checksums: `audit/previews/stage_b/SHA256SUMS.txt`; review index: `audit/previews/human_review_index.md`.
 - Practical-RIFE: no preview (kernel cancelled before inference).
 - Results JSON rebuilt from logs by `audit/scripts/rebuild_stage_b_results.py`; previews by `audit/scripts/make_stage_b_previews.py`.
+
+---
+
+# Stage C (2026-11-14) — P1 runtime
+
+Scope: Phase 5 only (Kokoro 82M, Whisper large-v3-turbo + jiwer, Parakeet TDT 0.6B v3,
+DeepFilterNet3, Wan2.1 T2V 1.3B, Depth Anything V2 Small, Video Depth Anything Small,
+SDXL Base 1.0). One notebook and one isolated uv environment per component; Python pinned
+per component (3.10 or 3.11); global torch/CUDA untouched.
+
+## C1. Per-component outcome
+
+| Component | License | Runtime | dtype | Peak VRAM | Metric | Log |
+|---|---|---|---|---|---|---|
+| Kokoro 82M | CONDITIONAL PASS | PASS | float32 | 1165.83 MiB | 28.61 s / 610.3 s audio (RTF 0.0469) | `audit/logs/kaggle/p1-kokoro/v1/kokoro_logs.txt` |
+| Whisper large-v3-turbo | CONDITIONAL PASS | PASS | float16 | 4629.20 MiB | RTF 0.0721, WER 0.030298 | `audit/logs/kaggle/p1-whisper/v2/openmontage-p1-whisper-large-v3-turbo.log` |
+| Parakeet TDT 0.6B v3 | CONDITIONAL PASS | PASS | FP32 (not measured) | 4848.45 MiB | RTF 0.0126, WER 0.020357 | `audit/logs/kaggle/p1-parakeet/v1/audit/logs/kaggle/parakeet-tdt-0.6b-v3.log` |
+| SDXL Base 1.0 | PASS | PASS | torch.float16 | 5000.71 MiB | 35.90 s / 3 images | `audit/logs/kaggle/p1-sdxl/v2/openmontage-p1-sdxl-base-1-0.log` |
+| Depth Anything V2 Small | CONDITIONAL PASS | PASS | torch.float32 | 207.79 MiB | 0.049-0.081 s / 640x640 frame | `audit/logs/kaggle/p1-depth/v7/openmontage-p1-depth-anything-v2-small.log` |
+| Video Depth Anything Small | CONDITIONAL PASS | PASS | FP16 | not captured | 14.55 s / 48 frames | `audit/logs/kaggle/p1-vd/v2/audit/logs/kaggle/video-depth-anything-small.log` |
+| DeepFilterNet3 | PASS | PASS | FP32 | 569 MiB | 6.82 s wall / 30 s audio, drift 0 ms | `audit/logs/kaggle/p1-dfn/v2/audit/logs/kaggle/deepfilternet3.log` |
+| Wan2.1 T2V 1.3B | PASS | BLOCKED | - | - | no inference | `audit/logs/kaggle/p1-wan/v2/audit/logs/kaggle/wan2.1-t2v-1.3b.log` |
+
+## C2. Blockers
+
+- Wan2.1: v1 BLOCKED on `flash_attn` sdist build; v2 (the single recovery attempt) FAIL on
+  `ModuleNotFoundError: No module named 'einops'` — Wan's requirements.txt omits a module
+  that `wan/modules/vae.py` imports. No v3 (one recovery attempt per component).
+- Video Depth Anything peak VRAM missing (nvidia-smi sampler queried one column, parser
+  expected three). Builder fixed; run not repeated.
+- Parakeet dtype not measured (hard-coded in the notebook).
+
+## C3. Whisper vs Parakeet (identical test set and normalisation)
+
+Same 330 LibriSpeech dev-clean files (2413.0500625 s), same selection rule, same jiwer
+normalisation. Whisper 3.0298 % WER / 1.0440 % CER / RTF 0.0721 vs Parakeet 2.0357 % WER /
+0.5937 % CER / RTF 0.0126 on the same T4.
+
+## C4. GPU budget
+
+Measured wall time across the 12 preserved Stage C kernels: 1445 s = 0.400 GPU-h
+(upper bound, 1 T4 each); ~0.08 GPU-h more for the 2026-11-13 runs without a preserved
+summary. Stage C total ~0.48 GPU-h of the 24 GPU-h cap. Cumulative all stages: 1.407 GPU-h.
+
+## C5. Human-review previews
+
+`audit/previews/stage_c/`: Kokoro mp3 (same script as CosyVoice), 3 SDXL jpgs (same seeds
+and prompts as FLUX), Depth Anything V2 depth map jpg, Video Depth Anything mp4 + frame,
+DeepFilterNet3 noisy/enhanced 10 s snippets. Index: `audit/previews/human_review_index.md`.
+
+## C6. Production gate
+
+No P1 component is production-approved. Seven of eight ran successfully, but every media
+output is PENDING HUMAN REVIEW and four weight licences rest on model-card metadata only
+(CONDITIONAL PASS).

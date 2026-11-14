@@ -1,0 +1,222 @@
+{
+  "version": "1.0",
+  "note": "Exact token spans for term-specific ASR scoring. Do not normalize away term errors.",
+  "terms": [
+    {
+      "canonical": "James Webb Space Telescope",
+      "variants": [
+        "JWST",
+        "James Webb telescope",
+        "Webb Space Telescope"
+      ],
+      "match_rule": "exact phrase, case-insensitive; JWST counts as a variant"
+    },
+    {
+      "canonical": "spectroscopy",
+      "variants": [
+        "spectroscopic",
+        "spectroscopist"
+      ],
+      "match_rule": "exact word, case-insensitive; do not normalize away"
+    },
+    {
+      "canonical": "exoplanet",
+      "variants": [
+        "exoplanets",
+        "exo-planetary"
+      ],
+      "match_rule": "exact word or plural"
+    },
+    {
+      "canonical": "gravitational waves",
+      "variants": [
+        "gravitational wave",
+        "gravitational-wave"
+      ],
+      "match_rule": "exact phrase, hyphen variant allowed"
+    },
+    {
+      "canonical": "mitochondrion",
+      "variants": [
+        "mitochondria",
+        "mitochondrial"
+      ],
+      "match_rule": "exact word; plural mitochondria accepted"
+    },
+    {
+      "canonical": "Homo sapiens",
+      "variants": [
+        "homo sapiens"
+      ],
+      "match_rule": "exact Latin binomial, case-insensitive"
+    },
+    {
+      "canonical": "Escherichia coli",
+      "variants": [
+        "E. coli",
+        "escherichia coli"
+      ],
+      "match_rule": "exact Latin binomial; E. coli accepted"
+    },
+    {
+      "canonical": "photosynthesis",
+      "variants": [
+        "photosynthetic",
+        "photosynthesise",
+        "photosynthesize"
+      ],
+      "match_rule": "exact word or derived form"
+    },
+    {
+      "canonical": "9.81 meters per second squared",
+      "variants": [
+        "9.81 m/s^2",
+        "9.81 m s^-2",
+        "9.81 meters per second per second"
+      ],
+      "match_rule": "numeric span with unit variants; record exact token span"
+    },
+    {
+      "canonical": "37 degrees Celsius",
+      "variants": [
+        "37 °C",
+        "37 C",
+        "37 degrees C"
+      ],
+      "match_rule": "numeric span with unit variants"
+    },
+    {
+      "canonical": "1.5 × 10^8 kilometers",
+      "variants": [
+        "1.5e8 kilometers",
+        "150 million kilometers",
+        "1.5 * 10^8 km"
+      ],
+      "match_rule": "numeric span; multiplication sign variants"
+    },
+    {
+      "canonical": "3.0 × 10^8 meters per second",
+      "variants": [
+        "3.0e8 meters per second",
+        "300 million meters per second",
+        "3.0 * 10^8 m/s"
+      ],
+      "match_rule": "numeric span; speed of light context"
+    },
+    {
+      "canonical": "mitochondria",
+      "variants": [
+        "mitochondrion"
+      ],
+      "match_rule": "plural"
+    },
+    {
+      "canonical": "chloroplast",
+      "variants": [
+        "chloroplasts"
+      ],
+      "match_rule": "exact word"
+    },
+    {
+      "canonical": "chlorophyll",
+      "variants": [
+        "chlorophylls"
+      ],
+      "match_rule": "exact word"
+    },
+    {
+      "canonical": "adenosine triphosphate",
+      "variants": [
+        "ATP"
+      ],
+      "match_rule": "exact phrase or abbreviation"
+    },
+    {
+      "canonical": "deoxyribonucleic acid",
+      "variants": [
+        "DNA"
+      ],
+      "match_rule": "exact phrase or abbreviation"
+    },
+    {
+      "canonical": "ribonucleic acid",
+      "variants": [
+        "RNA"
+      ],
+      "match_rule": "exact phrase or abbreviation"
+    },
+    {
+      "canonical": "proton",
+      "variants": [
+        "protons"
+      ],
+      "match_rule": "exact word"
+    },
+    {
+      "canonical": "neutron",
+      "variants": [
+        "neutrons"
+      ],
+      "match_rule": "exact word"
+    },
+    {
+      "canonical": "electron",
+      "variants": [
+        "electrons"
+      ],
+      "match_rule": "exact word"
+    },
+    {
+      "canonical": "enzyme",
+      "variants": [
+        "enzymes"
+      ],
+      "match_rule": "exact word"
+    },
+    {
+      "canonical": "protein",
+      "variants": [
+        "proteins"
+      ],
+      "match_rule": "exact word"
+    },
+    {
+      "canonical": "activation energy",
+      "variants": [
+        "activation-energy"
+      ],
+      "match_rule": "exact phrase"
+    },
+    {
+      "canonical": "Laser Interferometer Gravitational-Wave Observatory",
+      "variants": [
+        "LIGO"
+      ],
+      "match_rule": "exact phrase or abbreviation"
+    },
+    {
+      "canonical": "Orion Nebula",
+      "variants": [
+        "Orion nebula"
+      ],
+      "match_rule": "exact proper name"
+    },
+    {
+      "canonical": "light-year",
+      "variants": [
+        "lightyears",
+        "light year",
+        "light-years"
+      ],
+      "match_rule": "unit"
+    },
+    {
+      "canonical": "absolute zero",
+      "variants": [
+        "0 kelvin",
+        "0 K"
+      ],
+      "match_rule": "concept/number"
+    }
+  ]
+}

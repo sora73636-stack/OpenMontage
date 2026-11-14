@@ -1,0 +1,85 @@
+[{"stream_name":"stdout","time":0.782911583,"data":"2026-11-14T02:34:28Z helper sha256 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match=True\n"}
+,{"stream_name":"stdout","time":0.791920133,"data":"2026-11-14T02:34:28Z fixture science_voice_script.txt 9555 bytes sha=cbb5b7ee8f13e8d60c5b25f9502d4c7a6ab682f5dbce75dcae6d169f3bf358e9\n"}
+,{"stream_name":"stdout","time":0.792273554,"data":"2026-11-14T02:34:28Z fixture science_terms.json 4890 bytes sha=877f430837d8059b47a3671da1679d2637a9ed9077c9239b24b828a042e32862\n"}
+,{"stream_name":"stdout","time":0.792578497,"data":"2026-11-14T02:34:28Z fixture image_video_prompts.json 1586 bytes sha=5f1cf0117327fb0801023549c6186105deaaf2323c1dc23becaec3428848678b\n"}
+,{"stream_name":"stdout","time":13.326644175,"data":"2026-11-14T02:34:41Z $ /usr/local/bin/uv venv --python 3.11 /tmp/audit/envs/deepfilternet -\u003e rc=0 1.773s\n"}
+,{"stream_name":"stdout","time":13.326676374,"data":"2026-11-14T02:34:41Z stderr tail: warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`? | Downloading cpython-3.11.17-linux-x86_64-gnu (download) (29.4MiB) |  Downloaded cpython-3.11.17-linux-x86_64-gnu (download) | Using CPython 3.11.17 | Creating virtual environment at: /tmp/audit/envs/deepfilternet | Activate with: source /tmp/audit/envs/deepfilternet/bin/activate | \n"}
+,{"stream_name":"stdout","time":47.539567865,"data":"2026-11-14T02:35:15Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/deepfilternet/bin/python torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu126 -\u003e rc=0 34.213s\n"}
+,{"stream_name":"stdout","time":47.539714242,"data":"2026-11-14T02:35:15Z stderr tail: 150.9MiB) | Downloading nvidia-cuda-nvrtc-cu12 (22.6MiB) | Downloading torch (729.2MiB) | Downloading torchaudio (3.3MiB) | Downloading nvidia-cusparse-cu12 (206.5MiB) | Downloading nvidia-cusparselt-cu12 (149.5MiB) | Downloading nvidia-curand-cu12 (53.7MiB) | Downloading nvidia-cufft-cu12 (190.9MiB) | Downloading nvidia-cuda-cupti-cu12 (8.5MiB) |  Downloaded networkx |  Downloaded sympy |  Downloaded torchaudio |  Downloaded nvidia-cuda-cupti-cu12 |  Downloaded nvidia-nvjitlink-cu12 |  Downloaded nvidia-cuda-nvrtc-cu12 |  Downloaded triton |  Downloaded nvidia-nccl-cu12 |  Downloaded nvidia-curand-cu12 |  Downloaded nvidia-cusolver-cu12 |  Downloaded nvidia-cusparselt-cu12 |  Downloaded nvidia-cublas-cu12 |  Downloaded nvidia-cusparse-cu12 |  Downloaded nvidia-cufft-cu12 |  Downloaded nvidia-cudnn-cu12 |  Downloaded torch | Prepared 24 packages in 32.61s | Installed 24 packages in 284ms |  + filelock==4.2.4 |  + fsspec==2026.9.0 |  + jinja2==3.1.6 |  + markupsafe==3.0.3 |  + mpmath==1.3.0 |  + networkx==3.6.1 |  + nvidia-cublas-cu12==12.6.4.1 |  + nvidia-cuda-cupti-cu12==12.6.80 |  + nvidia-cuda-nvrtc-cu12==12.6.77 |  + nvidia-cuda-runtime-cu12==12.6.77 |  + nvidia-cudnn-cu12==9.5.1.17 |  + nvidia-cufft-cu12==11.3.0.4 |  + nvidia-curand-cu12==10.3.7.77 |  + nvidia-cusolver-cu12==11.7.1.2 |  + nvidia-cusparse-cu12==12.5.4.2 |  + nvidia-cusparselt-cu12==0.6.3 |  + nvidia-nccl-cu12==2.21.5 |  + nvidia-nvjitlink-cu12==12.6.85 |  + nvidia-nvtx-cu12==12.6.77 |  + sympy==1.13.1 |  + torch==2.6.0+cu126 |  + torchaudio==2.6.0+cu126 |  + triton==3.2.0 |  + typing-extensions==4.16.0 | \n"}
+,{"stream_name":"stdout","time":51.447371768,"data":"2026-11-14T02:35:19Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/deepfilternet/bin/python deepfilternet numpy soundfile -\u003e rc=0 3.907s\n"}
+,{"stream_name":"stdout","time":51.448035589,"data":"2026-11-14T02:35:19Z stderr tail: Using Python 3.11.17 environment at: /tmp/audit/envs/deepfilternet | Resolved 17 packages in 3.49s | Downloading numpy (17.4MiB) | Downloading soundfile (1.3MiB) |  Downloaded soundfile |  Downloaded numpy | Prepared 14 packages in 360ms | Installed 14 packages in 28ms |  + appdirs==1.4.4 |  + certifi==2026.10.23 |  + cffi==2.1.1 |  + charset-normalizer==3.5.2 |  + deepfilterlib==0.5.6 |  + deepfilternet==0.5.6 |  + idna==3.20 |  + loguru==0.8.0 |  + numpy==1.26.4 |  + packaging==23.2 |  + pycparser==3.12 |  + requests==2.34.2 |  + soundfile==0.14.0 |  + urllib3==2.8.0 | \n"}
+,{"stream_name":"stdout","time":57.785304526,"data":"2026-11-14T02:35:25Z $ git clone --recursive https://github.com/Rikorose/DeepFilterNet /tmp/audit/repos/deepfilternet -\u003e rc=0 6.337s\n"}
+,{"stream_name":"stdout","time":57.785397841,"data":"2026-11-14T02:35:25Z stderr tail: Cloning into '/tmp/audit/repos/deepfilternet'... | \n"}
+,{"stream_name":"stdout","time":58.249487068,"data":"2026-11-14T02:35:26Z $ git -C /tmp/audit/repos/deepfilternet checkout -q 7b14b895fe7fc42cab72b4a4c1e49c982bd6404b -\u003e rc=0 0.464s\n"}
+,{"stream_name":"stdout","time":58.284086035,"data":"2026-11-14T02:35:26Z $ git -C /tmp/audit/repos/deepfilternet submodule update --init --recursive -\u003e rc=0 0.034s\n"}
+,{"stream_name":"stdout","time":59.237849532,"data":"2026-11-14T02:35:27Z $ /tmp/audit/envs/deepfilternet/bin/python /kaggle/working/audit/scripts/dfn_prep.py -\u003e rc=0 0.953s\n"}
+,{"stream_name":"stdout","time":59.238221502,"data":"2026-11-14T02:35:27Z stdout tail: prep ok | \n"}
+,{"stream_name":"stdout","time":66.06082482,"data":"2026-11-14T02:35:34Z $ /tmp/audit/envs/deepfilternet/bin/deepFilter --output-dir /kaggle/working/audit/results/deepfilternet3 /kaggle/working/audit/results/deepfilternet3/noisy.wav -\u003e rc=0 6.822s\n"}
+,{"stream_name":"stdout","time":66.060923618,"data":"2026-11-14T02:35:34Z stdout tail: 2026-11-14 02:35:32 | INFO     | DF | Running on torch 2.6.0+cu126 | 2026-11-14 02:35:32 | INFO     | DF | Running on host 2e44e85e77f9 | 2026-11-14 02:35:32 | INFO     | DF | Loading model settings of DeepFilterNet3 | 2026-11-14 02:35:32 | INFO     | DF | Using DeepFilterNet3 model at /tmp/audit/cache/DeepFilterNet/DeepFilterNet3 | 2026-11-14 02:35:32 | INFO     | DF | Initializing model `deepfilternet3` | 2026-11-14 02:35:32 | INFO     | DF | Found checkpoint /tmp/audit/cache/DeepFilterNet/DeepFilterNet3/checkpoints/model_120.ckpt.best with epoch 120 | 2026-11-14 02:35:32 | INFO     | DF | Running on device cuda:0 | 2026-11-14 02:35:32 | INFO     | DF | Model loaded | 2026-11-14 02:35:33 | INFO     | DF | Enhanced noisy audio file 'noisy.wav' in 0.56s (RT factor: 0.019) | \n"}
+,{"stream_name":"stdout","time":66.061048829,"data":"2026-11-14T02:35:34Z stderr tail: /tmp/audit/envs/deepfilternet/lib/python3.11/site-packages/df/io.py:9: UserWarning: `torchaudio.backend.common.AudioMetaData` has been moved to `torchaudio.AudioMetaData`. Please update the import path. |   from torchaudio.backend.common import AudioMetaData | fatal: not a git repository (or any of the parent directories): .git | \n"}
+,{"stream_name":"stdout","time":66.28860002,"data":"2026-11-14T02:35:34Z $ /tmp/audit/envs/deepfilternet/bin/python /kaggle/working/audit/scripts/dfn_check.py /kaggle/working/audit/results/deepfilternet3/noisy_DeepFilterNet3.wav -\u003e rc=0 0.226s\n"}
+,{"stream_name":"stdout","time":66.28863687,"data":"2026-11-14T02:35:34Z stdout tail: {\"path\": \"/kaggle/working/audit/results/deepfilternet3/noisy_DeepFilterNet3.wav\", \"sr\": 48000, \"frames\": 1440000, \"seconds\": 30.0, \"subtype\": \"PCM_16\", \"channels\": 1} | \n"}
+,{"stream_name":"stdout","time":66.317932555,"data":"2026-11-14T02:35:34Z FINAL {\"status\": \"PASS\", \"blocker\": null}\n"}
+,{"stream_name":"stdout","time":66.31795729,"data":"{\n"}
+,{"stream_name":"stdout","time":66.317961463,"data":"  \"component\": \"deepfilternet3\",\n"}
+,{"stream_name":"stdout","time":66.317965703,"data":"  \"priority\": \"P1\",\n"}
+,{"stream_name":"stdout","time":66.317969864,"data":"  \"kernel\": \"openmontage-p1-deepfilternet3\",\n"}
+,{"stream_name":"stdout","time":66.317973957,"data":"  \"utc_start\": \"2026-11-14T02:34:28Z\",\n"}
+,{"stream_name":"stdout","time":66.31798907,"data":"  \"utc_end\": \"2026-11-14T02:35:34Z\",\n"}
+,{"stream_name":"stdout","time":66.317993084,"data":"  \"status\": \"PASS\",\n"}
+,{"stream_name":"stdout","time":66.317997014,"data":"  \"steps\": {\n"}
+,{"stream_name":"stdout","time":66.318000493,"data":"    \"helper\": {\n"}
+,{"stream_name":"stdout","time":66.31800461,"data":"      \"path\": \"/kaggle/working/audit/scripts/kaggle_environment_snapshot.py\",\n"}
+,{"stream_name":"stdout","time":66.318008358,"data":"      \"expected_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":66.31801285,"data":"      \"actual_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":66.318016768,"data":"      \"match\": true\n"}
+,{"stream_name":"stdout","time":66.31802123,"data":"    },\n"}
+,{"stream_name":"stdout","time":66.318024825,"data":"    \"inference\": {\n"}
+,{"stream_name":"stdout","time":66.318028371,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":66.318032533,"data":"      \"stderr\": \"/tmp/audit/envs/deepfilternet/lib/python3.11/site-packages/df/io.py:9: UserWarning: `torchaudio.backend.common.AudioMetaData` has been moved to `torchaudio.AudioMetaData`. Please update the import path.\\n  from torchaudio.backend.common import AudioMetaData\\nfatal: not a git repository (or any of the parent directories): .git\\n\"\n"}
+,{"stream_name":"stdout","time":66.318037688,"data":"    },\n"}
+,{"stream_name":"stdout","time":66.318041105,"data":"    \"metrics\": {\n"}
+,{"stream_name":"stdout","time":66.31804501,"data":"      \"gen_s\": 6.823,\n"}
+,{"stream_name":"stdout","time":66.318049019,"data":"      \"in_s\": 30.0,\n"}
+,{"stream_name":"stdout","time":66.318052765,"data":"      \"peak_vram_mib\": 569,\n"}
+,{"stream_name":"stdout","time":66.31805641,"data":"      \"path\": \"/kaggle/working/audit/results/deepfilternet3/noisy_DeepFilterNet3.wav\",\n"}
+,{"stream_name":"stdout","time":66.318060284,"data":"      \"sr\": 48000,\n"}
+,{"stream_name":"stdout","time":66.318063983,"data":"      \"frames\": 1440000,\n"}
+,{"stream_name":"stdout","time":66.318067832,"data":"      \"seconds\": 30.0,\n"}
+,{"stream_name":"stdout","time":66.318071517,"data":"      \"subtype\": \"PCM_16\",\n"}
+,{"stream_name":"stdout","time":66.318075198,"data":"      \"channels\": 1,\n"}
+,{"stream_name":"stdout","time":66.318079108,"data":"      \"drift_ms\": 0.0,\n"}
+,{"stream_name":"stdout","time":66.318082853,"data":"      \"rtf\": 0.22743333333333335\n"}
+,{"stream_name":"stdout","time":66.318086465,"data":"    },\n"}
+,{"stream_name":"stdout","time":66.318089843,"data":"    \"outputs\": [\n"}
+,{"stream_name":"stdout","time":66.31809347,"data":"      {\n"}
+,{"stream_name":"stdout","time":66.318097137,"data":"        \"path\": \"/kaggle/working/audit/results/deepfilternet3/clean.wav\",\n"}
+,{"stream_name":"stdout","time":66.318100817,"data":"        \"bytes\": 2880044,\n"}
+,{"stream_name":"stdout","time":66.31810454,"data":"        \"sha256\": \"fa5ac9a54d9f4525780c913cf79669198ee77dd64d5bb4e07183bff8b9711c20\"\n"}
+,{"stream_name":"stdout","time":66.318108185,"data":"      },\n"}
+,{"stream_name":"stdout","time":66.318111823,"data":"      {\n"}
+,{"stream_name":"stdout","time":66.318115688,"data":"        \"path\": \"/kaggle/working/audit/results/deepfilternet3/noisy.wav\",\n"}
+,{"stream_name":"stdout","time":66.318119467,"data":"        \"bytes\": 2880044,\n"}
+,{"stream_name":"stdout","time":66.318131469,"data":"        \"sha256\": \"a3a78a0581c183539ff07a87790c23926b1d1a10c64b44ae571d310ae339fd34\"\n"}
+,{"stream_name":"stdout","time":66.318140956,"data":"      },\n"}
+,{"stream_name":"stdout","time":66.318144672,"data":"      {\n"}
+,{"stream_name":"stdout","time":66.318148161,"data":"        \"path\": \"/kaggle/working/audit/results/deepfilternet3/noisy_DeepFilterNet3.wav\",\n"}
+,{"stream_name":"stdout","time":66.318151959,"data":"        \"bytes\": 2880078,\n"}
+,{"stream_name":"stdout","time":66.318155849,"data":"        \"sha256\": \"ad9b7e9e56f23306ef2a7b0e7361e0cd6db8521f02fb4dea7097a7308da978ee\"\n"}
+,{"stream_name":"stdout","time":66.318159593,"data":"      }\n"}
+,{"stream_name":"stdout","time":66.318163068,"data":"    ],\n"}
+,{"stream_name":"stdout","time":66.318166916,"data":"    \"dtype\": \"FP32\",\n"}
+,{"stream_name":"stdout","time":66.318170867,"data":"    \"runtime_seconds\": 6.823,\n"}
+,{"stream_name":"stdout","time":66.318174758,"data":"    \"drift_ms\": 0.0,\n"}
+,{"stream_name":"stdout","time":66.318180144,"data":"    \"peak_vram_mib\": 569,\n"}
+,{"stream_name":"stdout","time":66.318183898,"data":"    \"subtype\": \"PCM_16\"\n"}
+,{"stream_name":"stdout","time":66.318187513,"data":"  },\n"}
+,{"stream_name":"stdout","time":66.318191035,"data":"  \"errors\": []\n"}
+,{"stream_name":"stdout","time":66.318195107,"data":"}\n"}
+,{"stream_name":"stderr","time":71.167302245,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":71.167342158,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":71.464077131,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":71.464119467,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":72.343809494,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":75.253408488,"data":"[NbConvertApp] Writing 361914 bytes to __results__.html\n"}
+]

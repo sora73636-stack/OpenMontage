@@ -1,0 +1,118 @@
+[{"stream_name":"stdout","time":0.894774048,"data":"2026-11-13T17:11:22Z helper sha256 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match=True\n"}
+,{"stream_name":"stdout","time":0.903432338,"data":"2026-11-13T17:11:22Z fixture science_voice_script.txt 9555 bytes sha=cbb5b7ee8f13e8d60c5b25f9502d4c7a6ab682f5dbce75dcae6d169f3bf358e9\n"}
+,{"stream_name":"stdout","time":0.903751306,"data":"2026-11-13T17:11:22Z fixture science_terms.json 4890 bytes sha=877f430837d8059b47a3671da1679d2637a9ed9077c9239b24b828a042e32862\n"}
+,{"stream_name":"stdout","time":0.903989133,"data":"2026-11-13T17:11:22Z fixture image_video_prompts.json 1586 bytes sha=5f1cf0117327fb0801023549c6186105deaaf2323c1dc23becaec3428848678b\n"}
+,{"stream_name":"stdout","time":16.779777657,"data":"2026-11-13T17:11:38Z $ /usr/local/bin/uv venv --python 3.10 /tmp/audit/envs/depthv2 -\u003e rc=0 2.89s\n"}
+,{"stream_name":"stdout","time":16.779828823,"data":"2026-11-13T17:11:38Z stderr tail: warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`? | Downloading cpython-3.10.22-linux-x86_64-gnu (download) (28.0MiB) |  Downloaded cpython-3.10.22-linux-x86_64-gnu (download) | Using CPython 3.10.22 | Creating virtual environment at: /tmp/audit/envs/depthv2 | Activate with: source /tmp/audit/envs/depthv2/bin/activate | \n"}
+,{"stream_name":"stdout","time":47.166732098,"data":"2026-11-13T17:12:08Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/depthv2/bin/python torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126 -\u003e rc=0 30.386s\n"}
+,{"stream_name":"stdout","time":47.166805482,"data":"2026-11-13T17:12:08Z stderr tail: ion (6.9MiB) | Downloading nvidia-cusparse-cu12 (206.5MiB) | Downloading nvidia-cusparselt-cu12 (149.5MiB) | Downloading nvidia-curand-cu12 (53.7MiB) | Downloading torch (729.1MiB) | Downloading nvidia-cufft-cu12 (190.9MiB) | Downloading nvidia-cuda-cupti-cu12 (8.5MiB) |  Downloaded networkx |  Downloaded torchvision |  Downloaded sympy |  Downloaded pillow |  Downloaded numpy |  Downloaded nvidia-cuda-cupti-cu12 |  Downloaded nvidia-nvjitlink-cu12 |  Downloaded nvidia-cuda-nvrtc-cu12 |  Downloaded triton |  Downloaded nvidia-curand-cu12 |  Downloaded nvidia-cusolver-cu12 |  Downloaded nvidia-nccl-cu12 |  Downloaded nvidia-cusparselt-cu12 |  Downloaded nvidia-cusparse-cu12 |  Downloaded nvidia-cublas-cu12 |  Downloaded nvidia-cufft-cu12 |  Downloaded torch |  Downloaded nvidia-cudnn-cu12 | Prepared 26 packages in 29.37s | Installed 26 packages in 244ms |  + filelock==4.1.0 |  + fsspec==2026.9.0 |  + jinja2==3.1.6 |  + markupsafe==3.0.3 |  + mpmath==1.3.0 |  + networkx==3.4.2 |  + numpy==2.2.6 |  + nvidia-cublas-cu12==12.6.4.1 |  + nvidia-cuda-cupti-cu12==12.6.80 |  + nvidia-cuda-nvrtc-cu12==12.6.77 |  + nvidia-cuda-runtime-cu12==12.6.77 |  + nvidia-cudnn-cu12==9.5.1.17 |  + nvidia-cufft-cu12==11.3.0.4 |  + nvidia-curand-cu12==10.3.7.77 |  + nvidia-cusolver-cu12==11.7.1.2 |  + nvidia-cusparse-cu12==12.5.4.2 |  + nvidia-cusparselt-cu12==0.6.3 |  + nvidia-nccl-cu12==2.21.5 |  + nvidia-nvjitlink-cu12==12.6.85 |  + nvidia-nvtx-cu12==12.6.77 |  + pillow==12.3.0 |  + sympy==1.13.1 |  + torch==2.6.0+cu126 |  + torchvision==0.21.0+cu126 |  + triton==3.2.0 |  + typing-extensions==4.16.0 | \n"}
+,{"stream_name":"stdout","time":50.600797705,"data":"2026-11-13T17:12:11Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/depthv2/bin/python transformers accelerate pillow numpy -\u003e rc=0 3.434s\n"}
+,{"stream_name":"stdout","time":50.600862512,"data":"2026-11-13T17:12:11Z stderr tail: Using Python 3.10.22 environment at: /tmp/audit/envs/depthv2 | Resolved 56 packages in 604ms | Downloading tokenizers (3.2MiB) | Downloading pydantic-core (2.2MiB) | Downloading hf-xet (4.1MiB) | Downloading pygments (1.2MiB) | Downloading transformers (12.2MiB) |  Downloaded pygments |  Downloaded pydantic-core |  Downloaded hf-xet |  Downloaded tokenizers |  Downloaded transformers | Prepared 31 packages in 2.66s | Installed 31 packages in 132ms |  + accelerate==1.15.0 |  + annotated-doc==0.0.6 |  + annotated-types==0.8.0 |  + anyio==4.16.0 |  + click==8.5.1 |  + exceptiongroup==1.3.1 |  + h11==0.16.0 |  + hf-xet==1.8.0 |  + httpcore2==2.14.0 |  + httpx2==2.14.0 |  + huggingface-hub==2.4.0 |  + idna==3.20 |  + markdown-it-py==4.3.0 |  + mdurl==0.1.2 |  + packaging==26.3 |  + psutil==7.2.2 |  + pydantic==2.14.3 |  + pydantic-core==2.50.4 |  + pygments==2.21.0 |  + pyyaml==6.0.3 |  + regex==2026.9.29 |  + rich==15.0.0 |  + safetensors==0.8.0 |  + shellingham==1.5.4 |  + tokenizers==0.23.3 |  + tomli==2.5.0 |  + tqdm==4.70.1 |  + transformers==5.20.2 |  + truststore==0.10.5 |  + typer==0.29.1 |  + typing-inspection==0.4.5 | \n"}
+,{"stream_name":"stdout","time":66.794944211,"data":"2026-11-13T17:12:28Z $ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True /tmp/audit/envs/depthv2/bin/python /kaggle/working/audit/scripts/depthv2_run.py -\u003e rc=0 16.194s\n"}
+,{"stream_name":"stdout","time":66.79510469,"data":"2026-11-13T17:12:28Z stdout tail: {\"times\": [0.33833742141723633, 0.08813738822937012, 0.08784914016723633, 0.06502628326416016, 0.06360721588134766, 0.061693429946899414, 0.061570167541503906, 0.06106400489807129, 0.060523033142089844, 0.06104779243469238], \"finite\": true, \"range\": [0.0, 255.0], \"peak_alloc_mb\": 207.794921875, \"dtype\": \"torch.float32\"} | \n"}
+,{"stream_name":"stdout","time":66.795183383,"data":"2026-11-13T17:12:28Z stderr tail: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads. |  | Loading weights:   0%|          | 0/287 [00:00\u003c?, ?it/s] | Loading weights: 100%|██████████| 287/287 [00:00\u003c00:00, 3891.49it/s] | \n"}
+,{"stream_name":"stdout","time":66.79672103,"data":"2026-11-13T17:12:28Z FINAL {\"status\": \"PASS\", \"blocker\": null}\n"}
+,{"stream_name":"stdout","time":66.797189052,"data":"{\n"}
+,{"stream_name":"stdout","time":66.797218029,"data":"  \"component\": \"depth-anything-v2-small\",\n"}
+,{"stream_name":"stdout","time":66.797224169,"data":"  \"priority\": \"P1\",\n"}
+,{"stream_name":"stdout","time":66.797230651,"data":"  \"kernel\": \"openmontage-p1-depth-anything-v2-small\",\n"}
+,{"stream_name":"stdout","time":66.797235692,"data":"  \"utc_start\": \"2026-11-13T17:11:22Z\",\n"}
+,{"stream_name":"stdout","time":66.797240047,"data":"  \"utc_end\": \"2026-11-13T17:12:28Z\",\n"}
+,{"stream_name":"stdout","time":66.797244252,"data":"  \"status\": \"PASS\",\n"}
+,{"stream_name":"stdout","time":66.797248517,"data":"  \"steps\": {\n"}
+,{"stream_name":"stdout","time":66.797252666,"data":"    \"helper\": {\n"}
+,{"stream_name":"stdout","time":66.797256867,"data":"      \"path\": \"/kaggle/working/audit/scripts/kaggle_environment_snapshot.py\",\n"}
+,{"stream_name":"stdout","time":66.797261143,"data":"      \"expected_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":66.797265501,"data":"      \"actual_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":66.797269838,"data":"      \"match\": true\n"}
+,{"stream_name":"stdout","time":66.797273996,"data":"    },\n"}
+,{"stream_name":"stdout","time":66.797277906,"data":"    \"inference\": {\n"}
+,{"stream_name":"stdout","time":66.797282001,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":66.797286334,"data":"      \"stderr\": \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\\n\\nLoading weights:   0%|          | 0/287 [00:00\u003c?, ?it/s]\\nLoading weights: 100%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588| 287/287 [00:00\u003c00:00, 3891.49it/s]\\n\"\n"}
+,{"stream_name":"stdout","time":66.797306699,"data":"    },\n"}
+,{"stream_name":"stdout","time":66.797325187,"data":"    \"metrics\": {\n"}
+,{"stream_name":"stdout","time":66.797329211,"data":"      \"times\": [\n"}
+,{"stream_name":"stdout","time":66.797332649,"data":"        0.33833742141723633,\n"}
+,{"stream_name":"stdout","time":66.797336401,"data":"        0.08813738822937012,\n"}
+,{"stream_name":"stdout","time":66.797340241,"data":"        0.08784914016723633,\n"}
+,{"stream_name":"stdout","time":66.797343425,"data":"        0.06502628326416016,\n"}
+,{"stream_name":"stdout","time":66.797346569,"data":"        0.06360721588134766,\n"}
+,{"stream_name":"stdout","time":66.797349761,"data":"        0.061693429946899414,\n"}
+,{"stream_name":"stdout","time":66.797352937,"data":"        0.061570167541503906,\n"}
+,{"stream_name":"stdout","time":66.797356187,"data":"        0.06106400489807129,\n"}
+,{"stream_name":"stdout","time":66.797359304,"data":"        0.060523033142089844,\n"}
+,{"stream_name":"stdout","time":66.797362449,"data":"        0.06104779243469238\n"}
+,{"stream_name":"stdout","time":66.797365661,"data":"      ],\n"}
+,{"stream_name":"stdout","time":66.797368847,"data":"      \"finite\": true,\n"}
+,{"stream_name":"stdout","time":66.797372104,"data":"      \"range\": [\n"}
+,{"stream_name":"stdout","time":66.797375334,"data":"        0.0,\n"}
+,{"stream_name":"stdout","time":66.797378532,"data":"        255.0\n"}
+,{"stream_name":"stdout","time":66.797381734,"data":"      ],\n"}
+,{"stream_name":"stdout","time":66.797385444,"data":"      \"peak_alloc_mb\": 207.794921875,\n"}
+,{"stream_name":"stdout","time":66.797389119,"data":"      \"dtype\": \"torch.float32\"\n"}
+,{"stream_name":"stdout","time":66.797392532,"data":"    },\n"}
+,{"stream_name":"stdout","time":66.797395922,"data":"    \"outputs\": [\n"}
+,{"stream_name":"stdout","time":66.797404758,"data":"      {\n"}
+,{"stream_name":"stdout","time":66.79740736,"data":"        \"path\": \"/kaggle/working/audit/results/depth-anything-v2-small/depth_00.png\",\n"}
+,{"stream_name":"stdout","time":66.797409839,"data":"        \"bytes\": 1097,\n"}
+,{"stream_name":"stdout","time":66.797412076,"data":"        \"sha256\": \"c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665\"\n"}
+,{"stream_name":"stdout","time":66.797414562,"data":"      },\n"}
+,{"stream_name":"stdout","time":66.797416804,"data":"      {\n"}
+,{"stream_name":"stdout","time":66.797418954,"data":"        \"path\": \"/kaggle/working/audit/results/depth-anything-v2-small/depth_01.png\",\n"}
+,{"stream_name":"stdout","time":66.797421291,"data":"        \"bytes\": 1097,\n"}
+,{"stream_name":"stdout","time":66.797423576,"data":"        \"sha256\": \"c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665\"\n"}
+,{"stream_name":"stdout","time":66.797426047,"data":"      },\n"}
+,{"stream_name":"stdout","time":66.797428169,"data":"      {\n"}
+,{"stream_name":"stdout","time":66.797430276,"data":"        \"path\": \"/kaggle/working/audit/results/depth-anything-v2-small/depth_02.png\",\n"}
+,{"stream_name":"stdout","time":66.797432629,"data":"        \"bytes\": 1097,\n"}
+,{"stream_name":"stdout","time":66.797434926,"data":"        \"sha256\": \"c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665\"\n"}
+,{"stream_name":"stdout","time":66.797437262,"data":"      },\n"}
+,{"stream_name":"stdout","time":66.797440272,"data":"      {\n"}
+,{"stream_name":"stdout","time":66.797442502,"data":"        \"path\": \"/kaggle/working/audit/results/depth-anything-v2-small/depth_03.png\",\n"}
+,{"stream_name":"stdout","time":66.797447882,"data":"        \"bytes\": 1097,\n"}
+,{"stream_name":"stdout","time":66.797450143,"data":"        \"sha256\": \"c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665\"\n"}
+,{"stream_name":"stdout","time":66.797452451,"data":"      },\n"}
+,{"stream_name":"stdout","time":66.797454559,"data":"      {\n"}
+,{"stream_name":"stdout","time":66.797456681,"data":"        \"path\": \"/kaggle/working/audit/results/depth-anything-v2-small/depth_04.png\",\n"}
+,{"stream_name":"stdout","time":66.797459026,"data":"        \"bytes\": 1097,\n"}
+,{"stream_name":"stdout","time":66.797461232,"data":"        \"sha256\": \"c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665\"\n"}
+,{"stream_name":"stdout","time":66.797463532,"data":"      },\n"}
+,{"stream_name":"stdout","time":66.797465652,"data":"      {\n"}
+,{"stream_name":"stdout","time":66.797467767,"data":"        \"path\": \"/kaggle/working/audit/results/depth-anything-v2-small/depth_05.png\",\n"}
+,{"stream_name":"stdout","time":66.797470139,"data":"        \"bytes\": 1097,\n"}
+,{"stream_name":"stdout","time":66.79747233,"data":"        \"sha256\": \"c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665\"\n"}
+,{"stream_name":"stdout","time":66.797474632,"data":"      },\n"}
+,{"stream_name":"stdout","time":66.797476743,"data":"      {\n"}
+,{"stream_name":"stdout","time":66.797478927,"data":"        \"path\": \"/kaggle/working/audit/results/depth-anything-v2-small/depth_06.png\",\n"}
+,{"stream_name":"stdout","time":66.797481228,"data":"        \"bytes\": 1097,\n"}
+,{"stream_name":"stdout","time":66.797483435,"data":"        \"sha256\": \"c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665\"\n"}
+,{"stream_name":"stdout","time":66.797485742,"data":"      },\n"}
+,{"stream_name":"stdout","time":66.797487925,"data":"      {\n"}
+,{"stream_name":"stdout","time":66.797490043,"data":"        \"path\": \"/kaggle/working/audit/results/depth-anything-v2-small/depth_07.png\",\n"}
+,{"stream_name":"stdout","time":66.797492394,"data":"        \"bytes\": 1097,\n"}
+,{"stream_name":"stdout","time":66.797494734,"data":"        \"sha256\": \"c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665\"\n"}
+,{"stream_name":"stdout","time":66.797497107,"data":"      },\n"}
+,{"stream_name":"stdout","time":66.797499217,"data":"      {\n"}
+,{"stream_name":"stdout","time":66.797501342,"data":"        \"path\": \"/kaggle/working/audit/results/depth-anything-v2-small/depth_08.png\",\n"}
+,{"stream_name":"stdout","time":66.797503636,"data":"        \"bytes\": 1097,\n"}
+,{"stream_name":"stdout","time":66.797505912,"data":"        \"sha256\": \"c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665\"\n"}
+,{"stream_name":"stdout","time":66.797508214,"data":"      },\n"}
+,{"stream_name":"stdout","time":66.797510314,"data":"      {\n"}
+,{"stream_name":"stdout","time":66.797512414,"data":"        \"path\": \"/kaggle/working/audit/results/depth-anything-v2-small/depth_09.png\",\n"}
+,{"stream_name":"stdout","time":66.797514732,"data":"        \"bytes\": 1097,\n"}
+,{"stream_name":"stdout","time":66.797516926,"data":"        \"sha256\": \"c8b6bb3e837f846489438b47ae42f3960b820a17095ea66df3c5fa00fcd60665\"\n"}
+,{"stream_name":"stdout","time":66.797519217,"data":"      }\n"}
+,{"stream_name":"stdout","time":66.797521318,"data":"    ],\n"}
+,{"stream_name":"stdout","time":66.797523421,"data":"    \"dtype\": \"torch.float32\",\n"}
+,{"stream_name":"stdout","time":66.797525756,"data":"    \"runtime_seconds\": 0.9488558769226074,\n"}
+,{"stream_name":"stdout","time":66.797530246,"data":"    \"peak_vram_allocated_mb\": 207.794921875\n"}
+,{"stream_name":"stdout","time":66.797532596,"data":"  },\n"}
+,{"stream_name":"stdout","time":66.797534716,"data":"  \"errors\": []\n"}
+,{"stream_name":"stdout","time":66.797536906,"data":"}\n"}
+,{"stream_name":"stderr","time":72.305542185,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":72.305571475,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":72.608470491,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":72.60849468,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":73.412882006,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":74.494769781,"data":"[NbConvertApp] Writing 354996 bytes to __results__.html\n"}
+]

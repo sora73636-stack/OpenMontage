@@ -1,0 +1,62 @@
+{
+  "component": "depth-anything-v2-small",
+  "priority": "P1",
+  "kernel": "openmontage-p1-depth-anything-v2-small",
+  "utc_start": "2026-11-14T02:20:42Z",
+  "utc_end": "2026-11-14T02:21:49Z",
+  "status": "PASS",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "inference": {
+      "rc": 0,
+      "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/287 [00:00<?, ?it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 287/287 [00:00<00:00, 3891.34it/s]\n"
+    },
+    "metrics": {
+      "times": [
+        0.34932827949523926,
+        0.08176970481872559,
+        0.07280492782592773,
+        0.07355260848999023,
+        0.05167508125305176,
+        0.04972696304321289,
+        0.052290916442871094,
+        0.055357933044433594,
+        0.054103851318359375,
+        0.04929375648498535
+      ],
+      "finite": true,
+      "range": [
+        0.0,
+        255.0
+      ],
+      "peak_alloc_mb": 207.794921875,
+      "dtype": "torch.float32"
+    },
+    "outputs": [
+      {
+        "path": "/kaggle/working/audit/results/depth-anything-v2-small/depth_00.png",
+        "bytes": 13989,
+        "sha256": "f6a4630513f7aa677dbd28e5da278edeb90f45cf2014868059c63a0db87adebc"
+      },
+      {
+        "path": "/kaggle/working/audit/results/depth-anything-v2-small/depth_01.png",
+        "bytes": 14251,
+        "sha256": "f85639764fc34840d9709f73dee23406e9512f5aa7d4af0879ac95244975ee1e"
+      },
+      {
+        "path": "/kaggle/working/audit/results/depth-anything-v2-small/depth_02.png",
+        "bytes": 13861,
+        "sha256": "aae4f216c1bf05cc1e9466dc594bc30207bc30fbbfaa65f77e0f5c8dd0f1de04"
+      }
+    ],
+    "dtype": "torch.float32",
+    "runtime_seconds": 0.8899040222167969,
+    "peak_vram_allocated_mb": 207.794921875
+  },
+  "errors": []
+}

@@ -1,0 +1,79 @@
+2026-11-13T16:45:25Z helper sha256 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match=True
+2026-11-13T16:45:25Z fixture science_voice_script.txt 9555 bytes sha=cbb5b7ee8f13e8d60c5b25f9502d4c7a6ab682f5dbce75dcae6d169f3bf358e9
+2026-11-13T16:45:25Z fixture science_terms.json 4890 bytes sha=877f430837d8059b47a3671da1679d2637a9ed9077c9239b24b828a042e32862
+2026-11-13T16:45:25Z fixture image_video_prompts.json 1586 bytes sha=5f1cf0117327fb0801023549c6186105deaaf2323c1dc23becaec3428848678b
+2026-11-13T16:45:37Z $ /usr/local/bin/uv venv --python 3.10 /tmp/audit/envs/sdxl -> rc=0 1.741s
+2026-11-13T16:45:37Z stderr tail: warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`? | Downloading cpython-3.10.22-linux-x86_64-gnu (download) (28.0MiB) |  Downloaded cpython-3.10.22-linux-x86_64-gnu (download) | Using CPython 3.10.22 | Creating virtual environment at: /tmp/audit/envs/sdxl | Activate with: source /tmp/audit/envs/sdxl/bin/activate | 
+2026-11-13T16:46:06Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/sdxl/bin/python torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126 -> rc=0 29.924s
+2026-11-13T16:46:06Z stderr tail:  (53.7MiB) | Downloading nvidia-cuda-cupti-cu12 (8.5MiB) | Downloading torchvision (6.9MiB) | Downloading nvidia-nccl-cu12 (179.9MiB) | Downloading nvidia-cublas-cu12 (374.9MiB) | Downloading nvidia-nvjitlink-cu12 (18.8MiB) | Downloading nvidia-cusolver-cu12 (150.9MiB) |  Downloaded pillow |  Downloaded networkx |  Downloaded sympy |  Downloaded numpy |  Downloaded torchvision |  Downloaded nvidia-cuda-cupti-cu12 |  Downloaded nvidia-nvjitlink-cu12 |  Downloaded nvidia-cuda-nvrtc-cu12 |  Downloaded triton |  Downloaded nvidia-cufft-cu12 |  Downloaded nvidia-curand-cu12 |  Downloaded nvidia-cusparse-cu12 |  Downloaded nvidia-nccl-cu12 |  Downloaded nvidia-cusolver-cu12 |  Downloaded nvidia-cusparselt-cu12 |  Downloaded nvidia-cublas-cu12 |  Downloaded torch |  Downloaded nvidia-cudnn-cu12 | Prepared 26 packages in 28.41s | Installed 26 packages in 736ms |  + filelock==4.1.0 |  + fsspec==2026.9.0 |  + jinja2==3.1.6 |  + markupsafe==3.0.3 |  + mpmath==1.3.0 |  + networkx==3.4.2 |  + numpy==2.2.6 |  + nvidia-cublas-cu12==12.6.4.1 |  + nvidia-cuda-cupti-cu12==12.6.80 |  + nvidia-cuda-nvrtc-cu12==12.6.77 |  + nvidia-cuda-runtime-cu12==12.6.77 |  + nvidia-cudnn-cu12==9.5.1.17 |  + nvidia-cufft-cu12==11.3.0.4 |  + nvidia-curand-cu12==10.3.7.77 |  + nvidia-cusolver-cu12==11.7.1.2 |  + nvidia-cusparse-cu12==12.5.4.2 |  + nvidia-cusparselt-cu12==0.6.3 |  + nvidia-nccl-cu12==2.21.5 |  + nvidia-nvjitlink-cu12==12.6.85 |  + nvidia-nvtx-cu12==12.6.77 |  + pillow==12.3.0 |  + sympy==1.13.1 |  + torch==2.6.0+cu126 |  + torchvision==0.21.0+cu126 |  + triton==3.2.0 |  + typing-extensions==4.16.0 | 
+2026-11-13T16:46:12Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/sdxl/bin/python diffusers transformers accelerate safetensors -> rc=0 5.865s
+2026-11-13T16:46:12Z stderr tail: Using Python 3.10.22 environment at: /tmp/audit/envs/sdxl | Resolved 62 packages in 5.06s | Downloading hf-xet (4.1MiB) | Downloading diffusers (5.8MiB) | Downloading tokenizers (3.2MiB) | Downloading pydantic-core (2.2MiB) | Downloading pygments (1.2MiB) | Downloading transformers (12.2MiB) |  Downloaded pygments |  Downloaded pydantic-core |  Downloaded tokenizers |  Downloaded hf-xet |  Downloaded diffusers |  Downloaded transformers | Prepared 37 packages in 664ms | Installed 37 packages in 109ms |  + accelerate==1.15.0 |  + annotated-doc==0.0.6 |  + annotated-types==0.8.0 |  + anyio==4.16.0 |  + certifi==2026.10.23 |  + charset-normalizer==3.5.2 |  + click==8.5.1 |  + diffusers==0.41.0 |  + exceptiongroup==1.3.1 |  + h11==0.16.0 |  + hf-xet==1.8.0 |  + httpcore==1.0.9 |  + httpx==0.28.1 |  + huggingface-hub==1.33.0 |  + idna==3.20 |  + importlib-metadata==9.0.1 |  + markdown-it-py==4.3.0 |  + mdurl==0.1.2 |  + packaging==26.3 |  + psutil==7.2.2 |  + pydantic==2.14.3 |  + pydantic-core==2.50.4 |  + pygments==2.21.0 |  + pyyaml==6.0.3 |  + regex==2026.9.29 |  + requests==2.34.2 |  + rich==15.0.0 |  + safetensors==0.8.0 |  + shellingham==1.5.4 |  + tokenizers==0.23.3 |  + tomli==2.5.0 |  + tqdm==4.70.1 |  + transformers==5.20.2 |  + typer==0.29.1 |  + typing-inspection==0.4.5 |  + urllib3==2.8.0 |  + zipp==4.1.2 | 
+2026-11-13T16:47:41Z $ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True /tmp/audit/envs/sdxl/bin/python /kaggle/working/audit/scripts/sdxl_run.py -> rc=0 88.39s
+2026-11-13T16:47:41Z stdout tail: {"images": [{"id": 1, "s": 15.496155738830566}, {"id": 2, "s": 10.621849060058594}, {"id": 3, "s": 9.784386157989502}], "peak_alloc_mb": 5000.712890625, "dtype": "torch.float16"} | 
+2026-11-13T16:47:41Z stderr tail: 09,  2.32it/s] |  20%|██        | 5/25 [00:02<00:06,  2.86it/s] |  24%|██▍       | 6/25 [00:02<00:05,  3.34it/s] |  28%|██▊       | 7/25 [00:03<00:04,  3.74it/s] |  32%|███▏      | 8/25 [00:03<00:04,  4.05it/s] |  36%|███▌      | 9/25 [00:03<00:03,  4.30it/s] |  40%|████      | 10/25 [00:03<00:03,  4.48it/s] |  44%|████▍     | 11/25 [00:03<00:03,  4.62it/s] |  48%|████▊     | 12/25 [00:04<00:02,  4.70it/s] |  52%|█████▏    | 13/25 [00:04<00:02,  4.77it/s] |  56%|█████▌    | 14/25 [00:04<00:02,  4.82it/s] |  60%|██████    | 15/25 [00:04<00:02,  4.86it/s] |  64%|██████▍   | 16/25 [00:04<00:01,  4.87it/s] |  68%|██████▊   | 17/25 [00:05<00:01,  4.89it/s] |  72%|███████▏  | 18/25 [00:05<00:01,  4.90it/s] |  76%|███████▌  | 19/25 [00:05<00:01,  4.91it/s] |  80%|████████  | 20/25 [00:05<00:01,  4.90it/s] |  84%|████████▍ | 21/25 [00:05<00:00,  4.91it/s] |  88%|████████▊ | 22/25 [00:06<00:00,  4.89it/s] |  92%|█████████▏| 23/25 [00:06<00:00,  4.89it/s] |  96%|█████████▌| 24/25 [00:06<00:00,  4.89it/s] | 100%|██████████| 25/25 [00:06<00:00,  4.89it/s] | 100%|██████████| 25/25 [00:06<00:00,  3.70it/s] | There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32. | There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32. | 
+2026-11-13T16:47:41Z FINAL {"status": "PASS", "blocker": null}
+{
+  "component": "sdxl-base-1.0",
+  "priority": "P1",
+  "kernel": "openmontage-p1-sdxl-base-1-0",
+  "utc_start": "2026-11-13T16:45:25Z",
+  "utc_end": "2026-11-13T16:47:41Z",
+  "status": "PASS",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "inference": {
+      "rc": 0,
+      "stderr": "     | 9/25 [00:04<00:03,  4.13it/s]\n 40%|\u2588\u2588\u2588\u2588      | 10/25 [00:04<00:03,  4.35it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 11/25 [00:04<00:03,  4.51it/s]\n 48%|\u2588\u2588\u2588\u2588\u258a     | 12/25 [00:04<00:02,  4.64it/s]\n 52%|\u2588\u2588\u2588\u2588\u2588\u258f    | 13/25 [00:04<00:02,  4.73it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 14/25 [00:05<00:02,  4.79it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 15/25 [00:05<00:02,  4.83it/s]\n 64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 16/25 [00:05<00:01,  4.86it/s]\n 68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 17/25 [00:05<00:01,  4.88it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 18/25 [00:05<00:01,  4.90it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 19/25 [00:06<00:01,  4.92it/s]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 20/25 [00:06<00:01,  4.91it/s]\n 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 21/25 [00:06<00:00,  4.91it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 22/25 [00:06<00:00,  4.91it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 23/25 [00:06<00:00,  4.91it/s]\n 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 24/25 [00:07<00:00,  4.91it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 25/25 [00:07<00:00,  4.91it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 25/25 [00:07<00:00,  3.42it/s]\nThere are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.\nThere are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.\n\n  0%|          | 0/25 [00:00<?, ?it/s]\n  4%|\u258d         | 1/25 [00:01<00:44,  1.87s/it]\n  8%|\u258a         | 2/25 [00:02<00:20,  1.13it/s]\n 12%|\u2588\u258f        | 3/25 [00:02<00:12,  1.73it/s]\n 16%|\u2588\u258c        | 4/25 [00:02<00:09,  2.32it/s]\n 20%|\u2588\u2588        | 5/25 [00:02<00:06,  2.86it/s]\n 24%|\u2588\u2588\u258d       | 6/25 [00:02<00:05,  3.34it/s]\n 28%|\u2588\u2588\u258a       | 7/25 [00:03<00:04,  3.74it/s]\n 32%|\u2588\u2588\u2588\u258f      | 8/25 [00:03<00:04,  4.05it/s]\n 36%|\u2588\u2588\u2588\u258c      | 9/25 [00:03<00:03,  4.30it/s]\n 40%|\u2588\u2588\u2588\u2588      | 10/25 [00:03<00:03,  4.48it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 11/25 [00:03<00:03,  4.62it/s]\n 48%|\u2588\u2588\u2588\u2588\u258a     | 12/25 [00:04<00:02,  4.70it/s]\n 52%|\u2588\u2588\u2588\u2588\u2588\u258f    | 13/25 [00:04<00:02,  4.77it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 14/25 [00:04<00:02,  4.82it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 15/25 [00:04<00:02,  4.86it/s]\n 64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 16/25 [00:04<00:01,  4.87it/s]\n 68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 17/25 [00:05<00:01,  4.89it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 18/25 [00:05<00:01,  4.90it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 19/25 [00:05<00:01,  4.91it/s]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 20/25 [00:05<00:01,  4.90it/s]\n 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 21/25 [00:05<00:00,  4.91it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 22/25 [00:06<00:00,  4.89it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 23/25 [00:06<00:00,  4.89it/s]\n 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 24/25 [00:06<00:00,  4.89it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 25/25 [00:06<00:00,  4.89it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 25/25 [00:06<00:00,  3.70it/s]\nThere are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.\nThere are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.\n"
+    },
+    "metrics": {
+      "images": [
+        {
+          "id": 1,
+          "s": 15.496155738830566
+        },
+        {
+          "id": 2,
+          "s": 10.621849060058594
+        },
+        {
+          "id": 3,
+          "s": 9.784386157989502
+        }
+      ],
+      "peak_alloc_mb": 5000.712890625,
+      "dtype": "torch.float16"
+    },
+    "outputs": [
+      {
+        "path": "/kaggle/working/audit/results/sdxl-base-1.0/sdxl_1.png",
+        "bytes": 337911,
+        "sha256": "19a201d13faa9289a1afc37f6a48bedc9e329a73b500c83e1b3be014dbe35d36"
+      },
+      {
+        "path": "/kaggle/working/audit/results/sdxl-base-1.0/sdxl_2.png",
+        "bytes": 281370,
+        "sha256": "9275333b717ecdfb6e4274ad3692133fd1897596269dfc9956ea6fb42dda2616"
+      },
+      {
+        "path": "/kaggle/working/audit/results/sdxl-base-1.0/sdxl_3.png",
+        "bytes": 312160,
+        "sha256": "34b1c3917a96eb5cf6f47e1ac3ffe8e0946ce944fa6d4045203da07a387b8187"
+      }
+    ],
+    "dtype": "torch.float16",
+    "runtime_seconds": 35.90239095687866,
+    "peak_vram_allocated_mb": 5000.712890625
+  },
+  "errors": []
+}
+/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 355245 bytes to __results__.html

@@ -1,0 +1,30 @@
+deepfilternet3 — weight license evidence
+========================================
+
+license_status: PASS
+license_basis: license_text
+license: MIT OR Apache-2.0 (dual, at your option)
+
+Quote (official README, "License" section, commit 7b14b895fe7fc42cab72b4a4c1e49c982bd6404b):
+  "DeepFilterNet is free and open source! All code and model weights in this
+   repository are dual-licensed under either:
+
+   * MIT License (LICENSE-MIT or http://opensource.org/licenses/MIT)
+   * Apache License, Version 2.0 (LICENSE-APACHE or
+     http://www.apache.org/licenses/LICENSE-2.0)
+
+   at your option. This means you can select the license you prefer!"
+
+The README at the pinned commit explicitly names "model weights" (the wording
+was added in commit 7b14b89 "Update license section to include model weights";
+see COMMIT-7b14b89.json), and issue #697 confirms the intent for the released
+checkpoints (see ISSUE-697.json).
+
+Source:
+  - https://github.com/Rikorose/DeepFilterNet/blob/7b14b895fe7fc42cab72b4a4c1e49c982bd6404b/README.md
+  - Local copy: audit/licenses/deepfilternet3/MODEL_CARD.md
+    (13050 bytes, sha256 f69b5cf0b747a0b805655a17275039455c1f041011a12ae6aa8126b11dcb80d0)
+  - License texts: audit/licenses/deepfilternet3/LICENSE-MIT, LICENSE-APACHE
+
+Attribution (Apache-2.0 option):
+  "DeepFilterNet, Rikorose, licensed under Apache-2.0 OR MIT."

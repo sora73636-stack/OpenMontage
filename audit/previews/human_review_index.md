@@ -1,4 +1,4 @@
-# HUMAN REVIEW INDEX — Stage B (P0 runtime)
+# HUMAN REVIEW INDEX — Stage B (P0 runtime) + Stage C (P1 runtime)
 
 Stage B produced real model outputs for LTX, FLUX, CosyVoice and Real-ESRGAN.
 Practical-RIFE produced no output (kernel cancelled twice at ~90 s). All model
@@ -33,6 +33,25 @@ The CosyVoice MP3 is the full 602.28 s narration at mono 96 kbps (7.2 MB).
 | ESRGAN outputs (1024x1024 PNG) | `audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/outputs/frame_00_out.png` … `frame_09_out.png` |
 | ESRGAN inputs (256x256 PNG) | `audit/logs/kaggle/p0-esrgan/v2/audit/fixtures/esrgan/inputs/frame_00.png` … `frame_09.png` |
 | RIFE | no output — `CANCEL_ACKNOWLEDGED` at ~90 s (v1, v2) |
+
+## Stage C previews (P1 runtime)
+
+| Preview | What to evaluate | Model/version | Prompt/seed | Status |
+|---|---|---|---|---|
+| `audit/previews/stage_c/kokoro82m_af_heart.mp3` | voice naturalness/pronunciation vs CosyVoice (same text) | Kokoro 82M, `af_heart`, FP32, 24 kHz | `audit/config/science_voice_script.txt`, 610.3 s | PENDING HUMAN REVIEW |
+| `audit/previews/stage_c/sdxl_1.jpg` | scientific accuracy, anatomy, artifacts vs FLUX | SDXL Base 1.0 (FP16) | mitochondrion cutaway, seed 424242, 512x512 | PENDING HUMAN REVIEW |
+| `audit/previews/stage_c/sdxl_2.jpg` | telescope proportions vs FLUX | SDXL Base 1.0 (FP16) | JWST observing exoplanet, seed 202607 | PENDING HUMAN REVIEW |
+| `audit/previews/stage_c/sdxl_3.jpg` | interferometer geometry vs FLUX | SDXL Base 1.0 (FP16) | gravitational-wave observatory, seed 271828 | PENDING HUMAN REVIEW |
+| `audit/previews/stage_c/depth_anything_v2_small_depth_00.jpg` | depth map sanity (near/far ordering) | Depth Anything V2 Small (FP32) | structured 640x640 test scene | PENDING HUMAN REVIEW |
+| `audit/previews/stage_c/video_depth_anything_small_depth.mp4` | temporal depth consistency, flicker | Video Depth Anything Small (FP16), 12 fps | 48-frame 640x480 synthetic scene | PENDING HUMAN REVIEW |
+| `audit/previews/stage_c/video_depth_anything_small_depth_frame.jpg` | single-frame depth detail | same | frame 12 | PENDING HUMAN REVIEW |
+| `audit/previews/stage_c/deepfilternet3_noisy_10s.mp3` | input noise floor (first 10 s) | DeepFilterNet3 (FP32, 48 kHz) | 440 Hz + 220 Hz tone in white noise | reference only |
+| `audit/previews/stage_c/deepfilternet3_enhanced_10s.mp3` | noise suppression, speech/music artefacts | DeepFilterNet3 (FP32, 48 kHz) | same input | PENDING HUMAN REVIEW |
+
+Preview sizes and SHA256: `audit/previews/stage_c/SHA256SUMS.txt`.
+
+No preview exists for Wan2.1-T2V-1.3B: inference never started (see Stage C summary).
+No preview exists for Whisper/Parakeet: both emit text only (`wers.json` per model).
 
 ## Stage A (still valid)
 

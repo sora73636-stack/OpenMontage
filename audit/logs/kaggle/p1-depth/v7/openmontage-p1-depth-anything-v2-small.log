@@ -1,0 +1,83 @@
+[{"stream_name":"stdout","time":1.061204122,"data":"2026-11-14T02:20:42Z helper sha256 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match=True\n"}
+,{"stream_name":"stdout","time":1.070068987,"data":"2026-11-14T02:20:42Z fixture science_voice_script.txt 9555 bytes sha=cbb5b7ee8f13e8d60c5b25f9502d4c7a6ab682f5dbce75dcae6d169f3bf358e9\n"}
+,{"stream_name":"stdout","time":1.070378858,"data":"2026-11-14T02:20:42Z fixture science_terms.json 4890 bytes sha=877f430837d8059b47a3671da1679d2637a9ed9077c9239b24b828a042e32862\n"}
+,{"stream_name":"stdout","time":1.070650115,"data":"2026-11-14T02:20:42Z fixture image_video_prompts.json 1586 bytes sha=5f1cf0117327fb0801023549c6186105deaaf2323c1dc23becaec3428848678b\n"}
+,{"stream_name":"stdout","time":15.422763924,"data":"2026-11-14T02:20:56Z $ /usr/local/bin/uv venv --python 3.10 /tmp/audit/envs/depthv2 -\u003e rc=0 1.802s\n"}
+,{"stream_name":"stdout","time":15.422821496,"data":"2026-11-14T02:20:56Z stderr tail: warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`? | Downloading cpython-3.10.22-linux-x86_64-gnu (download) (28.0MiB) |  Downloaded cpython-3.10.22-linux-x86_64-gnu (download) | Using CPython 3.10.22 | Creating virtual environment at: /tmp/audit/envs/depthv2 | Activate with: source /tmp/audit/envs/depthv2/bin/activate | \n"}
+,{"stream_name":"stdout","time":47.470610696,"data":"2026-11-14T02:21:28Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/depthv2/bin/python torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126 -\u003e rc=0 32.047s\n"}
+,{"stream_name":"stdout","time":47.470775847,"data":"2026-11-14T02:21:28Z stderr tail: nloading nvidia-cuda-nvrtc-cu12 (22.6MiB) | Downloading nvidia-cusparse-cu12 (206.5MiB) | Downloading nvidia-cusparselt-cu12 (149.5MiB) | Downloading nvidia-curand-cu12 (53.7MiB) | Downloading nvidia-cufft-cu12 (190.9MiB) | Downloading nvidia-cuda-cupti-cu12 (8.5MiB) |  Downloaded networkx |  Downloaded sympy |  Downloaded pillow |  Downloaded torchvision |  Downloaded numpy |  Downloaded nvidia-cuda-cupti-cu12 |  Downloaded nvidia-nvjitlink-cu12 |  Downloaded nvidia-cuda-nvrtc-cu12 |  Downloaded triton |  Downloaded nvidia-curand-cu12 |  Downloaded nvidia-nccl-cu12 |  Downloaded nvidia-cusolver-cu12 |  Downloaded nvidia-cusparselt-cu12 |  Downloaded nvidia-cublas-cu12 |  Downloaded nvidia-cusparse-cu12 |  Downloaded nvidia-cufft-cu12 |  Downloaded nvidia-cudnn-cu12 |  Downloaded torch | Prepared 26 packages in 30.99s | Installed 26 packages in 240ms |  + filelock==4.1.0 |  + fsspec==2026.9.0 |  + jinja2==3.1.6 |  + markupsafe==3.0.3 |  + mpmath==1.3.0 |  + networkx==3.4.2 |  + numpy==2.2.6 |  + nvidia-cublas-cu12==12.6.4.1 |  + nvidia-cuda-cupti-cu12==12.6.80 |  + nvidia-cuda-nvrtc-cu12==12.6.77 |  + nvidia-cuda-runtime-cu12==12.6.77 |  + nvidia-cudnn-cu12==9.5.1.17 |  + nvidia-cufft-cu12==11.3.0.4 |  + nvidia-curand-cu12==10.3.7.77 |  + nvidia-cusolver-cu12==11.7.1.2 |  + nvidia-cusparse-cu12==12.5.4.2 |  + nvidia-cusparselt-cu12==0.6.3 |  + nvidia-nccl-cu12==2.21.5 |  + nvidia-nvjitlink-cu12==12.6.85 |  + nvidia-nvtx-cu12==12.6.77 |  + pillow==12.3.0 |  + sympy==1.13.1 |  + torch==2.6.0+cu126 |  + torchvision==0.21.0+cu126 |  + triton==3.2.0 |  + typing-extensions==4.16.0 | \n"}
+,{"stream_name":"stdout","time":53.016481812,"data":"2026-11-14T02:21:33Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/depthv2/bin/python transformers accelerate pillow numpy -\u003e rc=0 5.545s\n"}
+,{"stream_name":"stdout","time":53.016580211,"data":"2026-11-14T02:21:33Z stderr tail: Using Python 3.10.22 environment at: /tmp/audit/envs/depthv2 | Resolved 56 packages in 4.16s | Downloading pydantic-core (2.2MiB) | Downloading pygments (1.2MiB) | Downloading tokenizers (3.2MiB) | Downloading hf-xet (4.1MiB) | Downloading transformers (12.2MiB) |  Downloaded pygments |  Downloaded tokenizers |  Downloaded pydantic-core |  Downloaded hf-xet |  Downloaded transformers | Prepared 31 packages in 1.26s | Installed 31 packages in 84ms |  + accelerate==1.15.0 |  + annotated-doc==0.0.6 |  + annotated-types==0.8.0 |  + anyio==4.16.0 |  + click==8.5.1 |  + exceptiongroup==1.3.1 |  + h11==0.16.0 |  + hf-xet==1.8.0 |  + httpcore2==2.14.0 |  + httpx2==2.14.0 |  + huggingface-hub==2.4.0 |  + idna==3.20 |  + markdown-it-py==4.3.0 |  + mdurl==0.1.2 |  + packaging==26.3 |  + psutil==7.2.2 |  + pydantic==2.14.3 |  + pydantic-core==2.50.4 |  + pygments==2.21.0 |  + pyyaml==6.0.3 |  + regex==2026.9.29 |  + rich==15.0.0 |  + safetensors==0.8.0 |  + shellingham==1.5.4 |  + tokenizers==0.23.3 |  + tomli==2.5.0 |  + tqdm==4.70.1 |  + transformers==5.20.2 |  + truststore==0.10.5 |  + typer==0.29.1 |  + typing-inspection==0.4.5 | \n"}
+,{"stream_name":"stdout","time":68.468248849,"data":"2026-11-14T02:21:49Z $ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True /tmp/audit/envs/depthv2/bin/python /kaggle/working/audit/scripts/depthv2_run.py -\u003e rc=0 15.451s\n"}
+,{"stream_name":"stdout","time":68.468382553,"data":"2026-11-14T02:21:49Z stdout tail: {\"times\": [0.34932827949523926, 0.08176970481872559, 0.07280492782592773, 0.07355260848999023, 0.05167508125305176, 0.04972696304321289, 0.052290916442871094, 0.055357933044433594, 0.054103851318359375, 0.04929375648498535], \"finite\": true, \"range\": [0.0, 255.0], \"peak_alloc_mb\": 207.794921875, \"dtype\": \"torch.float32\"} | \n"}
+,{"stream_name":"stdout","time":68.468479125,"data":"2026-11-14T02:21:49Z stderr tail: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads. |  | Loading weights:   0%|          | 0/287 [00:00\u003c?, ?it/s] | Loading weights: 100%|██████████| 287/287 [00:00\u003c00:00, 3891.34it/s] | \n"}
+,{"stream_name":"stdout","time":68.469830743,"data":"2026-11-14T02:21:49Z FINAL {\"status\": \"PASS\", \"blocker\": null}\n"}
+,{"stream_name":"stdout","time":68.470010092,"data":"{\n"}
+,{"stream_name":"stdout","time":68.47001953,"data":"  \"component\": \"depth-anything-v2-small\",\n"}
+,{"stream_name":"stdout","time":68.470024094,"data":"  \"priority\": \"P1\",\n"}
+,{"stream_name":"stdout","time":68.470028749,"data":"  \"kernel\": \"openmontage-p1-depth-anything-v2-small\",\n"}
+,{"stream_name":"stdout","time":68.470033175,"data":"  \"utc_start\": \"2026-11-14T02:20:42Z\",\n"}
+,{"stream_name":"stdout","time":68.470036893,"data":"  \"utc_end\": \"2026-11-14T02:21:49Z\",\n"}
+,{"stream_name":"stdout","time":68.470040691,"data":"  \"status\": \"PASS\",\n"}
+,{"stream_name":"stdout","time":68.470044278,"data":"  \"steps\": {\n"}
+,{"stream_name":"stdout","time":68.470051637,"data":"    \"helper\": {\n"}
+,{"stream_name":"stdout","time":68.470055567,"data":"      \"path\": \"/kaggle/working/audit/scripts/kaggle_environment_snapshot.py\",\n"}
+,{"stream_name":"stdout","time":68.470059868,"data":"      \"expected_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":68.470064329,"data":"      \"actual_sha256\": \"1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a\",\n"}
+,{"stream_name":"stdout","time":68.470069058,"data":"      \"match\": true\n"}
+,{"stream_name":"stdout","time":68.4700731,"data":"    },\n"}
+,{"stream_name":"stdout","time":68.470076426,"data":"    \"inference\": {\n"}
+,{"stream_name":"stdout","time":68.470080021,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":68.470083789,"data":"      \"stderr\": \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\\n\\nLoading weights:   0%|          | 0/287 [00:00\u003c?, ?it/s]\\nLoading weights: 100%|\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588| 287/287 [00:00\u003c00:00, 3891.34it/s]\\n\"\n"}
+,{"stream_name":"stdout","time":68.470106141,"data":"    },\n"}
+,{"stream_name":"stdout","time":68.470108985,"data":"    \"metrics\": {\n"}
+,{"stream_name":"stdout","time":68.470111391,"data":"      \"times\": [\n"}
+,{"stream_name":"stdout","time":68.470113752,"data":"        0.34932827949523926,\n"}
+,{"stream_name":"stdout","time":68.470116191,"data":"        0.08176970481872559,\n"}
+,{"stream_name":"stdout","time":68.470118531,"data":"        0.07280492782592773,\n"}
+,{"stream_name":"stdout","time":68.470120914,"data":"        0.07355260848999023,\n"}
+,{"stream_name":"stdout","time":68.470123219,"data":"        0.05167508125305176,\n"}
+,{"stream_name":"stdout","time":68.470125534,"data":"        0.04972696304321289,\n"}
+,{"stream_name":"stdout","time":68.470128093,"data":"        0.052290916442871094,\n"}
+,{"stream_name":"stdout","time":68.470130437,"data":"        0.055357933044433594,\n"}
+,{"stream_name":"stdout","time":68.470132883,"data":"        0.054103851318359375,\n"}
+,{"stream_name":"stdout","time":68.470135184,"data":"        0.04929375648498535\n"}
+,{"stream_name":"stdout","time":68.470138668,"data":"      ],\n"}
+,{"stream_name":"stdout","time":68.470154607,"data":"      \"finite\": true,\n"}
+,{"stream_name":"stdout","time":68.470158823,"data":"      \"range\": [\n"}
+,{"stream_name":"stdout","time":68.470162837,"data":"        0.0,\n"}
+,{"stream_name":"stdout","time":68.470166435,"data":"        255.0\n"}
+,{"stream_name":"stdout","time":68.47017046,"data":"      ],\n"}
+,{"stream_name":"stdout","time":68.470174335,"data":"      \"peak_alloc_mb\": 207.794921875,\n"}
+,{"stream_name":"stdout","time":68.470177882,"data":"      \"dtype\": \"torch.float32\"\n"}
+,{"stream_name":"stdout","time":68.470181508,"data":"    },\n"}
+,{"stream_name":"stdout","time":68.470184942,"data":"    \"outputs\": [\n"}
+,{"stream_name":"stdout","time":68.47018839,"data":"      {\n"}
+,{"stream_name":"stdout","time":68.470191826,"data":"        \"path\": \"/kaggle/working/audit/results/depth-anything-v2-small/depth_00.png\",\n"}
+,{"stream_name":"stdout","time":68.470195726,"data":"        \"bytes\": 13989,\n"}
+,{"stream_name":"stdout","time":68.470199307,"data":"        \"sha256\": \"f6a4630513f7aa677dbd28e5da278edeb90f45cf2014868059c63a0db87adebc\"\n"}
+,{"stream_name":"stdout","time":68.470203123,"data":"      },\n"}
+,{"stream_name":"stdout","time":68.470206414,"data":"      {\n"}
+,{"stream_name":"stdout","time":68.470209747,"data":"        \"path\": \"/kaggle/working/audit/results/depth-anything-v2-small/depth_01.png\",\n"}
+,{"stream_name":"stdout","time":68.470213483,"data":"        \"bytes\": 14251,\n"}
+,{"stream_name":"stdout","time":68.470218859,"data":"        \"sha256\": \"f85639764fc34840d9709f73dee23406e9512f5aa7d4af0879ac95244975ee1e\"\n"}
+,{"stream_name":"stdout","time":68.470225855,"data":"      },\n"}
+,{"stream_name":"stdout","time":68.470228284,"data":"      {\n"}
+,{"stream_name":"stdout","time":68.470230714,"data":"        \"path\": \"/kaggle/working/audit/results/depth-anything-v2-small/depth_02.png\",\n"}
+,{"stream_name":"stdout","time":68.47023327,"data":"        \"bytes\": 13861,\n"}
+,{"stream_name":"stdout","time":68.470235661,"data":"        \"sha256\": \"aae4f216c1bf05cc1e9466dc594bc30207bc30fbbfaa65f77e0f5c8dd0f1de04\"\n"}
+,{"stream_name":"stdout","time":68.470251701,"data":"      }\n"}
+,{"stream_name":"stdout","time":68.470255737,"data":"    ],\n"}
+,{"stream_name":"stdout","time":68.470259746,"data":"    \"dtype\": \"torch.float32\",\n"}
+,{"stream_name":"stdout","time":68.470268819,"data":"    \"runtime_seconds\": 0.8899040222167969,\n"}
+,{"stream_name":"stdout","time":68.470273023,"data":"    \"peak_vram_allocated_mb\": 207.794921875\n"}
+,{"stream_name":"stdout","time":68.470276693,"data":"  },\n"}
+,{"stream_name":"stdout","time":68.470280117,"data":"  \"errors\": []\n"}
+,{"stream_name":"stdout","time":68.47028358,"data":"}\n"}
+,{"stream_name":"stderr","time":74.268971949,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":74.269007549,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":74.587577843,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":74.587602047,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":76.918087142,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":78.012916444,"data":"[NbConvertApp] Writing 355435 bytes to __results__.html\n"}
+]

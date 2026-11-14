@@ -1,0 +1,72 @@
+2026-11-13T16:48:51Z helper sha256 1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a match=True
+2026-11-13T16:48:51Z fixture science_voice_script.txt 9555 bytes sha=cbb5b7ee8f13e8d60c5b25f9502d4c7a6ab682f5dbce75dcae6d169f3bf358e9
+2026-11-13T16:48:51Z fixture science_terms.json 4890 bytes sha=877f430837d8059b47a3671da1679d2637a9ed9077c9239b24b828a042e32862
+2026-11-13T16:48:51Z fixture image_video_prompts.json 1586 bytes sha=5f1cf0117327fb0801023549c6186105deaaf2323c1dc23becaec3428848678b
+2026-11-13T16:49:02Z $ /usr/local/bin/uv venv --python 3.11 /tmp/audit/envs/whisper -> rc=0 1.689s
+2026-11-13T16:49:02Z stderr tail: warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`? | Downloading cpython-3.11.17-linux-x86_64-gnu (download) (29.4MiB) |  Downloaded cpython-3.11.17-linux-x86_64-gnu (download) | Using CPython 3.11.17 | Creating virtual environment at: /tmp/audit/envs/whisper | Activate with: source /tmp/audit/envs/whisper/bin/activate | 
+2026-11-13T16:49:34Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/whisper/bin/python torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu126 -> rc=0 32.014s
+2026-11-13T16:49:34Z stderr tail: iB) | Downloading nvidia-cusparselt-cu12 (149.5MiB) | Downloading torchaudio (3.3MiB) | Downloading nvidia-cufft-cu12 (190.9MiB) | Downloading nvidia-cuda-cupti-cu12 (8.5MiB) | Downloading nvidia-curand-cu12 (53.7MiB) |  Downloaded networkx |  Downloaded pillow |  Downloaded sympy |  Downloaded nvidia-cuda-cupti-cu12 |  Downloaded numpy |  Downloaded torchvision |  Downloaded torchaudio |  Downloaded nvidia-nvjitlink-cu12 |  Downloaded nvidia-cuda-nvrtc-cu12 |  Downloaded nvidia-nccl-cu12 |  Downloaded nvidia-curand-cu12 |  Downloaded triton |  Downloaded nvidia-cusolver-cu12 |  Downloaded nvidia-cudnn-cu12 |  Downloaded nvidia-cublas-cu12 |  Downloaded nvidia-cusparselt-cu12 |  Downloaded nvidia-cusparse-cu12 |  Downloaded nvidia-cufft-cu12 |  Downloaded torch | Prepared 27 packages in 31.24s | Installed 27 packages in 261ms |  + filelock==4.2.4 |  + fsspec==2026.9.0 |  + jinja2==3.1.6 |  + markupsafe==3.0.3 |  + mpmath==1.3.0 |  + networkx==3.6.1 |  + numpy==2.4.6 |  + nvidia-cublas-cu12==12.6.4.1 |  + nvidia-cuda-cupti-cu12==12.6.80 |  + nvidia-cuda-nvrtc-cu12==12.6.77 |  + nvidia-cuda-runtime-cu12==12.6.77 |  + nvidia-cudnn-cu12==9.5.1.17 |  + nvidia-cufft-cu12==11.3.0.4 |  + nvidia-curand-cu12==10.3.7.77 |  + nvidia-cusolver-cu12==11.7.1.2 |  + nvidia-cusparse-cu12==12.5.4.2 |  + nvidia-cusparselt-cu12==0.6.3 |  + nvidia-nccl-cu12==2.21.5 |  + nvidia-nvjitlink-cu12==12.6.85 |  + nvidia-nvtx-cu12==12.6.77 |  + pillow==13.0.0 |  + sympy==1.13.1 |  + torch==2.6.0+cu126 |  + torchaudio==2.6.0+cu126 |  + torchvision==0.21.0+cu126 |  + triton==3.2.0 |  + typing-extensions==4.16.0 | 
+2026-11-13T16:49:38Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/whisper/bin/python "setuptools<81" wheel -> rc=0 3.544s
+2026-11-13T16:49:38Z stderr tail: Using Python 3.11.17 environment at: /tmp/audit/envs/whisper | Resolved 3 packages in 183ms | Downloading setuptools (1.0MiB) |  Downloaded setuptools | Prepared 3 packages in 67ms | Installed 3 packages in 3.27s |  + packaging==26.3 |  + setuptools==80.10.2 |  + wheel==0.48.0 | 
+2026-11-13T16:49:41Z $ /usr/local/bin/uv pip install --python /tmp/audit/envs/whisper/bin/python --no-build-isolation-package openai-whisper openai-whisper jiwer soundfile -> rc=0 3.673s
+2026-11-13T16:49:41Z stderr tail: Using Python 3.11.17 environment at: /tmp/audit/envs/whisper | Resolved 42 packages in 581ms | Downloading rapidfuzz (3.0MiB) | Downloading soundfile (1.3MiB) | Downloading llvmlite (56.9MiB) | Downloading numba (3.7MiB) | Downloading tiktoken (1.2MiB) |  Downloaded soundfile |  Downloaded tiktoken |  Downloaded rapidfuzz |  Downloaded numba |  Downloaded llvmlite | Prepared 17 packages in 1.85s | Installed 17 packages in 27ms |    Building openai-whisper==20250625 |       Built openai-whisper==20250625 | Prepared 1 package without build isolation in 1.18s | Installed 1 package in 1ms |  + certifi==2026.10.23 |  + cffi==2.1.1 |  + charset-normalizer==3.5.2 |  + click==8.5.1 |  + idna==3.20 |  + jiwer==4.0.0 |  + llvmlite==0.50.0 |  + more-itertools==11.2.1 |  + numba==0.68.1 |  + openai-whisper==20250625 |  + pycparser==3.12 |  + rapidfuzz==3.14.6 |  + regex==2026.11.9 |  + requests==2.34.2 |  + soundfile==0.14.0 |  + tiktoken==0.14.0 |  + tqdm==4.70.1 |  + urllib3==2.8.0 | 
+2026-11-13T16:50:40Z $ wget -q -O /tmp/audit/weights/librispeech/dev-clean.tar.gz https://www.openslr.org/resources/12/dev-clean.tar.gz -> rc=0 59.0s
+2026-11-13T16:50:43Z $ tar xzf /tmp/audit/weights/librispeech/dev-clean.tar.gz -C /tmp/audit/weights/librispeech -> rc=0 2.829s
+2026-11-13T16:54:04Z $ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True /tmp/audit/envs/whisper/bin/python /kaggle/working/audit/scripts/whisper_run.py -> rc=0 200.911s
+2026-11-13T16:54:04Z stdout tail: {"files": 330, "audio_s": 2413.0500625, "gen_s": 170.19386553764343, "rtf": 0.07053059867366239, "wer": 6302, "cer": 34058, "dtype": "float16", "peak_alloc_mb": 4629.2041015625} | 
+2026-11-13T16:54:04Z stderr tail: <00:00, 1234.18frames/s] | 100%|██████████| 310/310 [00:00<00:00, 1233.16frames/s] |  |   0%|          | 0/1106 [00:00<?, ?frames/s] | 100%|██████████| 1106/1106 [00:00<00:00, 2446.58frames/s] | 100%|██████████| 1106/1106 [00:00<00:00, 2445.42frames/s] |  |   0%|          | 0/772 [00:00<?, ?frames/s] | 100%|██████████| 772/772 [00:00<00:00, 1788.32frames/s] | 100%|██████████| 772/772 [00:00<00:00, 1787.27frames/s] |  |   0%|          | 0/951 [00:00<?, ?frames/s] | 100%|██████████| 951/951 [00:00<00:00, 2163.82frames/s] | 100%|██████████| 951/951 [00:00<00:00, 2162.66frames/s] |  |   0%|          | 0/210 [00:00<?, ?frames/s] | 100%|██████████| 210/210 [00:00<00:00, 810.54frames/s] | 100%|██████████| 210/210 [00:00<00:00, 809.84frames/s] |  |   0%|          | 0/831 [00:00<?, ?frames/s] | 100%|██████████| 831/831 [00:00<00:00, 1914.06frames/s] | 100%|██████████| 831/831 [00:00<00:00, 1913.09frames/s] |  |   0%|          | 0/236 [00:00<?, ?frames/s] | 100%|██████████| 236/236 [00:00<00:00, 939.40frames/s] | 100%|██████████| 236/236 [00:00<00:00, 938.04frames/s] |  |   0%|          | 0/874 [00:00<?, ?frames/s] | 100%|██████████| 874/874 [00:00<00:00, 1858.98frames/s] | 100%|██████████| 874/874 [00:00<00:00, 1858.28frames/s] |  |   0%|          | 0/740 [00:00<?, ?frames/s] | 100%|██████████| 740/740 [00:00<00:00, 1825.35frames/s] | 100%|██████████| 740/740 [00:00<00:00, 1824.58frames/s] |  |   0%|          | 0/1743 [00:00<?, ?frames/s] | 100%|██████████| 1743/1743 [00:00<00:00, 3031.13frames/s] | 100%|██████████| 1743/1743 [00:00<00:00, 3030.18frames/s] | 
+2026-11-13T16:54:04Z FINAL {"status": "PASS", "blocker": null}
+{
+  "component": "whisper-large-v3-turbo",
+  "priority": "P1",
+  "kernel": "openmontage-p1-whisper-large-v3-turbo",
+  "utc_start": "2026-11-13T16:48:51Z",
+  "utc_end": "2026-11-13T16:54:04Z",
+  "status": "PASS",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "download_librispeech": {
+      "rc": 0,
+      "bytes": 337926286
+    },
+    "inference": {
+      "rc": 0,
+      "stderr": "s]\n\n  0%|          | 0/708 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 708/708 [00:00<00:00, 1794.40frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 708/708 [00:00<00:00, 1793.43frames/s]\n\n  0%|          | 0/577 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 577/577 [00:00<00:00, 1602.63frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 577/577 [00:00<00:00, 1601.78frames/s]\n\n  0%|          | 0/611 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 611/611 [00:00<00:00, 1673.06frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 611/611 [00:00<00:00, 1672.04frames/s]\n\n  0%|          | 0/263 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 263/263 [00:00<00:00, 1102.49frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 263/263 [00:00<00:00, 1101.49frames/s]\n\n  0%|          | 0/1766 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1766/1766 [00:00<00:00, 2575.37frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1766/1766 [00:00<00:00, 2574.56frames/s]\n\n  0%|          | 0/184 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 184/184 [00:00<00:00, 762.79frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 184/184 [00:00<00:00, 762.04frames/s]\n\n  0%|          | 0/1583 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1583/1583 [00:00<00:00, 2985.18frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1583/1583 [00:00<00:00, 2984.15frames/s]\n\n  0%|          | 0/879 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 879/879 [00:00<00:00, 2261.19frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 879/879 [00:00<00:00, 2260.08frames/s]\n\n  0%|          | 0/929 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 929/929 [00:00<00:00, 2222.12frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 929/929 [00:00<00:00, 2220.93frames/s]\n\n  0%|          | 0/310 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 310/310 [00:00<00:00, 1234.18frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 310/310 [00:00<00:00, 1233.16frames/s]\n\n  0%|          | 0/1106 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1106/1106 [00:00<00:00, 2446.58frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1106/1106 [00:00<00:00, 2445.42frames/s]\n\n  0%|          | 0/772 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 772/772 [00:00<00:00, 1788.32frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 772/772 [00:00<00:00, 1787.27frames/s]\n\n  0%|          | 0/951 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 951/951 [00:00<00:00, 2163.82frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 951/951 [00:00<00:00, 2162.66frames/s]\n\n  0%|          | 0/210 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 210/210 [00:00<00:00, 810.54frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 210/210 [00:00<00:00, 809.84frames/s]\n\n  0%|          | 0/831 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 831/831 [00:00<00:00, 1914.06frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 831/831 [00:00<00:00, 1913.09frames/s]\n\n  0%|          | 0/236 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 236/236 [00:00<00:00, 939.40frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 236/236 [00:00<00:00, 938.04frames/s]\n\n  0%|          | 0/874 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 874/874 [00:00<00:00, 1858.98frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 874/874 [00:00<00:00, 1858.28frames/s]\n\n  0%|          | 0/740 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 740/740 [00:00<00:00, 1825.35frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 740/740 [00:00<00:00, 1824.58frames/s]\n\n  0%|          | 0/1743 [00:00<?, ?frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1743/1743 [00:00<00:00, 3031.13frames/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1743/1743 [00:00<00:00, 3030.18frames/s]\n"
+    },
+    "metrics": {
+      "files": 330,
+      "audio_s": 2413.0500625,
+      "gen_s": 170.19386553764343,
+      "rtf": 0.07053059867366239,
+      "wer": 6302,
+      "cer": 34058,
+      "dtype": "float16",
+      "peak_alloc_mb": 4629.2041015625
+    },
+    "outputs": [
+      {
+        "path": "/kaggle/working/audit/results/whisper-large-v3-turbo/wers.json",
+        "bytes": 2727,
+        "sha256": "f7f1c5fa77579cf799645a4c7e4531329160582055e348d2ede29c66c5d82026"
+      }
+    ],
+    "dtype": "float16",
+    "runtime_seconds": 170.19386553764343,
+    "rtf": 0.07053059867366239,
+    "wer": 6302,
+    "cer": 34058,
+    "peak_vram_allocated_mb": 4629.2041015625
+  },
+  "errors": []
+}
+/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 359547 bytes to __results__.html

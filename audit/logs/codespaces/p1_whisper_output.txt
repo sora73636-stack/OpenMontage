@@ -1,0 +1,21 @@
+Downloading image_video_prompts.json to audit/logs/kaggle/p1-whisper/v2/audit/config
+  0%|          | 0.00/1.55k [00:00<?, ?B/s]100%|██████████| 1.55k/1.55k [00:00<00:00, 3.93MB/s]
+
+Output file downloaded to audit/logs/kaggle/p1-whisper/v2/audit/config/image_video_prompts.json
+Downloading science_terms.json to audit/logs/kaggle/p1-whisper/v2/audit/config
+  0%|          | 0.00/4.78k [00:00<?, ?B/s]100%|██████████| 4.78k/4.78k [00:00<00:00, 14.2MB/s]
+
+Output file downloaded to audit/logs/kaggle/p1-whisper/v2/audit/config/science_terms.json
+Downloading environment_snapshot_before_whisper.json to audit/logs/kaggle/p1-whisper/v2/audit/logs/kaggle
+  0%|          | 0.00/40.0k [00:00<?, ?B/s]100%|██████████| 40.0k/40.0k [00:00<00:00, 610kB/s]
+
+Output file downloaded to audit/logs/kaggle/p1-whisper/v2/audit/logs/kaggle/environment_snapshot_before_whisper.json
+Downloading summary.json to audit/logs/kaggle/p1-whisper/v2/audit/results/whisper-large-v3-turbo
+  0%|          | 0.00/6.23k [00:00<?, ?B/s]100%|██████████| 6.23k/6.23k [00:00<00:00, 23.7MB/s]
+
+Output file downloaded to audit/logs/kaggle/p1-whisper/v2/audit/results/whisper-large-v3-turbo/summary.json
+Downloading wers.json to audit/logs/kaggle/p1-whisper/v2/audit/results/whisper-large-v3-turbo
+  0%|          | 0.00/3.79k [00:00<?, ?B/s]100%|██████████| 3.79k/3.79k [00:00<00:00, 14.7MB/s]
+
+Output file downloaded to audit/logs/kaggle/p1-whisper/v2/audit/results/whisper-large-v3-turbo/wers.json
+Kernel log downloaded to audit/logs/kaggle/p1-whisper/v2/openmontage-p1-whisper-large-v3-turbo.log 

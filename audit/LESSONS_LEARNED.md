@@ -78,3 +78,45 @@
 - Последствие: 5 лишних Kaggle-рана (~20 минут GPU и ожидания).
 - Правило на будущее: перед тяжёлым прогоном (а) прочитать официальный inference-пример и скопировать формат промпта/токены, (б) проверить импорты, (в) проверить regex на одном абзаце локально, (г) для sdist ставить `setuptools<81 wheel` и `--no-build-isolation-package`.
 - Как проверять: в логе `chunking.chunks > 1` и `max_chars <= 300`; prompt содержит `<|endofprompt|>`; установка requirements завершилась rc=0.
+
+### L10 — `huggingface-cli` больше нет: в huggingface_hub 1.x/2.x команда называется `hf` (2026-11-14)
+- Что произошло: в ноутбуках P1 скачивание весов шло как `{env}/bin/huggingface-cli download ...`. Установка `huggingface_hub[cli]` прошла с предупреждением «does not have an extra named cli», после чего ноутбук упал: `/bin/sh: 1: .../huggingface-cli: not found` (rc=127), статус BLOCKED.
+- Причина: в новых huggingface_hub CLI переименован в `hf`, а extra `cli` удалён; старый бинарь не создаётся.
+- Последствие: потерян один прогон Video Depth Anything (v1), потрачено ~1 мин GPU.
+- Правило на будущее: не писать `huggingface-cli` и не ставить `huggingface_hub[cli]`. Ставить `huggingface_hub`, затем выбирать бинарь: `hf` если `{env}/bin/hf` существует, иначе `huggingface-cli`. Проверять `rc` и наличие файла после скачивания.
+- Как проверять: в логе `.../bin/hf download ... -> rc=0` и скачанный файл существует (в v2 vd: `download_model rc=0`, чекпоинт на месте).
+
+### L11 — Неполный requirements у Wan2.1: einops не объявлен, flash_attn не собирается (2026-11-14)
+- Что произошло: v1 — `uv pip install -r requirements.txt` падает на `flash_attn` (нет колеса под torch 2.6/py310, sdist вызывает `setup.py`, который импортирует torch в build isolation: `ModuleNotFoundError: No module named 'torch'`). v2 — после фильтрации `flash_attn` установка прошла, модель скачалась (22 файла, 83 с), но `generate.py` упал: `ModuleNotFoundError: No module named 'einops'` в `wan/modules/vae.py:8`.
+- Причина: `flash_attn` в requirements опционален (есть fallback на SDPA), а `einops` вообще отсутствует в requirements, хотя код его импортирует. Официальный requirements неполон.
+- Последствие: два GPU-рана (~1.8 мин) без результата; компонент BLOCKED (лимит в одну попытку восстановления).
+- Правило на будущее: перед тяжёлым прогоном проверять не только формальную установку requirements, но и фактические импорты пакета (`grep -r "^import \|^from " <pkg> | sort -u`) и добавлять недостающие зависимости в venv. Для `flash_attn` использовать `--no-build-isolation-package flash-attn` + `ninja` + `setuptools<81 wheel` **или** фильтровать строку, если пакет опционален (проверить `try/except ImportError` в коде).
+- Как проверять: в логе `python -c "import wan"` проходит (rc=0) до запуска `generate.py`.
+
+### L12 — Depth Anything V2: неверный вызов pipeline и вырожденный вход (2026-11-14)
+- Что произошло: v1–v5 падали `TypeError: DepthEstimationPipeline.__call__() missing 1 required positional argument: 'inputs'` (вызов `pipe(images=im)`). После исправления на `pipe(inputs=im)` (v6) прогон PASS, но все 10 сохранённых карт глубины были идентичны и полностью чёрные: синтетический вход (горизонтальный градиент + шахматка + равномерный шум) давал постоянную глубину, а нормировка `(d - d.min())/(d.max() - d.min() + 1e-8)` при `d.max()==d.min()` даёт нули.
+- Причина: (1) скопирован не тот именованный аргумент; (2) вход не имел смысла для модели, а проверка PASS смотрела только на `np.isfinite`, но не на `std` карты.
+- Последствие: 6 бесполезных прогонов, превью-заглушка.
+- Правило на будущее: сигнатуру вызова брать из официального примера модели, а не из памяти; в проверку качества добавлять `std(depth) > eps` и `len(unique(vis)) > 10`, иначе PASS фиктивен.
+- Как проверять: `summary.json` содержит `range` и ненулевой `std`; PNG открывается и имеет >10 уникальных значений.
+
+### L13 — Парсер nvidia-smi ожидал три колонки, а запрос был на одну (2026-11-14)
+- Что произошло: для замера VRAM запускалось `nvidia-smi --query-gpu=memory.used --format=csv,noheader -l 1`, а `max_gpu_mib()` парсит `split(",")` и требует `len(parts) >= 3` (`parts[2].endswith("MiB")`). Файл собирался, но возвращался `None` — поле `peak_vram_mib` в summary оказалось `null` (Video Depth Anything v2).
+- Причина: несоответствие формата запроса и парсера; helper проверялся только на логах Stage A/B, где запрос был трёхколоночным.
+- Последствие: у одного компонента нет измерения VRAM; повторный прогон не делался (лимит попыток).
+- Правило на будущее: использовать тот же запрос, что и парсер: `nvidia-smi --query-gpu=timestamp,utilization.gpu,memory.used --format=csv,noheader -l 1`. Перед вызовом проверять парсер на одном примере строки.
+- Как проверять: в `summary.json` `peak_vram_mib` — число, а не `null`.
+
+### L14 — Захардкоженный dtype вместо измеренного (2026-11-14)
+- Что произошло: в Parakeet-ноутбуке поле `dtype` задавалось строкой `"FP16"` в `finish()` независимо от фактического режима. В логе нет ни `float32`, ни `autocast`, так что заявленный dtype не подтверждён (скорее FP32: веса 0.6B и пик 4.85 ГБ).
+- Причина: значение-заглушка попало в отчёт как факт.
+- Последствие: в таблице dtype Parakeet помечен как «не измерено».
+- Правило на будущее: dtype измерять, а не объявлять: `str(next(model.parameters()).dtype)` после загрузки (как сделано в Depth Anything V2 и SDXL). Если измерить нельзя — писать `null` + «not measured».
+- Как проверять: в `summary.json` `metrics.dtype` — реальный `torch.float32`/`torch.float16`, полученный из модели.
+
+### L15 — Для DeepFilterNet3 официальный путь — CLI `deepFilter`, а не ручной ONNX (2026-11-14)
+- Что произошло: первая версия ноутбука скачивала `DeepFilterNet3_onnx.tar.gz` и пыталась подать сырой звук в `onnxruntime`. Модель ожидает вход `emb` формы `[1, 'S', 512]` (эмбеддинги, а не waveform), скрипт упал `ValueError: negative dimensions are not allowed`. Официальный README предлагает `pip install deepfilternet` и `deepFilter noisy.wav --output-dir <dir>`.
+- Причина: dогадка о формате входа вместо чтения официального примера; ONNX-экспорт не включает STFT/ERM-фичи.
+- Последствие: один потерянный ран, затем PASS за 6.8 с (RT 0.019) с официальным CLI.
+- Правило на будущее: если в репозитории есть pip-пакет и CLI-пример — использовать его; ручной ONNX только если это единственный путь и формат входа подтверждён `sess.get_inputs()`.
+- Как проверять: в логе `INFO | DF | Using DeepFilterNet3 model ...` и `Enhanced noisy audio file ... (RT factor: 0.019)`.

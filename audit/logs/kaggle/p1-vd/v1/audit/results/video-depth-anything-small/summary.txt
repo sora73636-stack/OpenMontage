@@ -1,0 +1,22 @@
+{
+  "component": "video-depth-anything-small",
+  "priority": "P1",
+  "kernel": "openmontage-p1-video-depth-anything-small",
+  "utc_start": "2026-11-14T02:26:11Z",
+  "utc_end": "2026-11-14T02:27:02Z",
+  "status": "BLOCKED",
+  "steps": {
+    "helper": {
+      "path": "/kaggle/working/audit/scripts/kaggle_environment_snapshot.py",
+      "expected_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "actual_sha256": "1edc961ebd671ba9f628cc78f136e56ebdcbb83d3943a7d012c16e663253d56a",
+      "match": true
+    },
+    "download_model": {
+      "rc": 127,
+      "stderr": "/bin/sh: 1: /tmp/audit/envs/videodepth/bin/huggingface-cli: not found\n"
+    }
+  },
+  "errors": [],
+  "blocker": "vits checkpoint missing"
+}

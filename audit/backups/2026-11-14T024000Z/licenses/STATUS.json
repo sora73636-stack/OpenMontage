@@ -1,0 +1,457 @@
+{
+  "cosyvoice3": {
+    "code_license": "Apache-2.0",
+    "code_revision": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+    "evidence_files": [
+      {
+        "bytes": 11357,
+        "path": "audit/licenses/cosyvoice3/LICENSE-code.txt",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "bytes": 11982,
+        "path": "audit/licenses/cosyvoice3/MODEL_CARD.md",
+        "sha256": "d4ec0fe1342b60a424ce1cd8971c670d26be38068a96148bcb6a1b8a334c3088"
+      }
+    ],
+    "license_basis": "model_card_metadata",
+    "license_status": "CONDITIONAL PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "Code Apache-2.0 (LICENSE-code.txt). Model card license field = apache-2.0. No separate weight LICENSE file in the model repo; weight license rests on the model-card metadata. Weight license is known only from the model-card license field; no separate weight license file exists in the model repo.",
+    "weight_license_file": "audit/licenses/cosyvoice3/LICENSE-weights.txt",
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": "29e01c4e8d000f4bcd70751be16fa94bf3d85a18"
+  },
+  "cosyvoice3-reference-voice": {
+    "code_license": null,
+    "code_revision": null,
+    "evidence_files": [],
+    "license_basis": "license_text",
+    "license_status": "BLOCKED",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "No cleared reference recording exists. Phase 6.5 requires a user recording, CC0/CC-BY recording, or approved synthetic voice; cloning test cannot run until then.",
+    "weight_license_file": null,
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": null
+  },
+  "deepfilternet3": {
+    "code_license": null,
+    "code_revision": "7b14b895fe7fc42cab72b4a4c1e49c982bd6404b",
+    "evidence_files": [
+      {
+        "bytes": 6333,
+        "path": "audit/licenses/deepfilternet3/COMMIT-7b14b89.json",
+        "sha256": "256d3ef4d61faaf5045d71051212ea45d6f20948ed37aa6ed9f911fe98f07a73"
+      },
+      {
+        "bytes": 3809,
+        "path": "audit/licenses/deepfilternet3/ISSUE-697.json",
+        "sha256": "c717148e295fc26a9457a2f9bee517af2ae7eafa967a9f11333cf764b70d6609"
+      },
+      {
+        "bytes": 10837,
+        "path": "audit/licenses/deepfilternet3/LICENSE-APACHE",
+        "sha256": "1eaee808c5fb6b4e895ba30425285a5cdc5dd25bba2cd230f264c2200c331aec"
+      },
+      {
+        "bytes": 1083,
+        "path": "audit/licenses/deepfilternet3/LICENSE-MIT",
+        "sha256": "24e6bb09c928af8d8e56268082f87413247ce36b39dd5d33add2f9893968065e"
+      },
+      {
+        "bytes": 495,
+        "path": "audit/licenses/deepfilternet3/LICENSE-code.txt",
+        "sha256": "f7ef673bf046d823dcd775bdd0768432bd8855f81d0e5e1290a0a48c42e2dca3"
+      },
+      {
+        "bytes": 13050,
+        "path": "audit/licenses/deepfilternet3/MODEL_CARD.md",
+        "sha256": "f69b5cf0b747a0b805655a17275039455c1f041011a12ae6aa8126b11dcb80d0"
+      }
+    ],
+    "license_basis": "license_text",
+    "license_status": "PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "README: 'All code and model weights in this repository are dual-licensed under either MIT or Apache-2.0'; issue #697 asks about weights; commit 7b14b89 'Update license section to include model weights'.",
+    "weight_license_file": null,
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": null
+  },
+  "depth-anything-v2-small": {
+    "code_license": "Apache-2.0",
+    "code_revision": "1d03336771fe09c5398ffdd211441e33941a97dc",
+    "evidence_files": [
+      {
+        "bytes": 11357,
+        "path": "audit/licenses/depth-anything-v2-small/LICENSE-code.txt",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "bytes": 1958,
+        "path": "audit/licenses/depth-anything-v2-small/MODEL_CARD.md",
+        "sha256": "d96b19c959007126110b199a7c2e9c24530b61796a26f1af035420625a10f916"
+      }
+    ],
+    "license_basis": "model_card_metadata",
+    "license_status": "CONDITIONAL PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "Model card license field = apache-2.0; code repo LICENSE Apache-2.0. No separate weight LICENSE file. Weight license is known only from the model-card license field; no separate weight license file exists in the model repo.",
+    "weight_license_file": "audit/licenses/depth-anything-v2-small/LICENSE-weights.txt",
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": "03876f8651c73a60fe4c2c48294e09fcb6838fcf"
+  },
+  "depthflow": {
+    "code_license": null,
+    "code_revision": "4d002b49f0ee2172d38fac93dcbc50c487e12301",
+    "evidence_files": [
+      {
+        "bytes": 34523,
+        "path": "audit/licenses/depthflow/LICENSE-code.txt",
+        "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+      }
+    ],
+    "license_basis": "license_text",
+    "license_status": "BLOCKED",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "license.txt is AGPL-3.0 (confirmed). AGPL obligations for a hosted/produced pipeline are not cleared for this commercial use; legal review required before any P2.1 runtime test.",
+    "weight_license_file": null,
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": null
+  },
+  "ffmpeg-6.1.1": {
+    "code_license": null,
+    "code_revision": "6f4048827982a8f48f71f551a6e1ed2362816eec",
+    "evidence_files": [
+      {
+        "bytes": 18092,
+        "path": "audit/licenses/ffmpeg-6.1.1/LICENSE-code.txt",
+        "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+      }
+    ],
+    "license_basis": "license_text",
+    "license_status": "PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "Kaggle build 6.1.1-3ubuntu5 is configured --enable-gpl; COPYING.GPLv2 saved at tag n6.1.1. Tool license only; no distribution of the binary is planned.",
+    "weight_license_file": null,
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": null
+  },
+  "flux2-klein-4b": {
+    "code_license": null,
+    "code_revision": "50fe5162777813d869182b139e83b10743caef15",
+    "evidence_files": [
+      {
+        "bytes": 11357,
+        "path": "audit/licenses/flux2-klein-4b/LICENSE-code.txt",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "bytes": 9584,
+        "path": "audit/licenses/flux2-klein-4b/LICENSE-weights.txt",
+        "sha256": "ca02bc51900ab07789d1b70283329e7137f5af98f5161c23a1c81fc38a4af1fe"
+      },
+      {
+        "bytes": 9991,
+        "path": "audit/licenses/flux2-klein-4b/MODEL_CARD.md",
+        "sha256": "bd447051cf2db4bf67b992e563d89c35ebf1123f009c063361a222ab14e1c4f7"
+      }
+    ],
+    "license_basis": "license_text",
+    "license_status": "PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "Model card states Apache-2.0 for the 4B open weights; LICENSE.md saved (LICENSE-weights.txt).",
+    "weight_license_file": "audit/licenses/flux2-klein-4b/LICENSE-weights.txt",
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294"
+  },
+  "kokoro-82m": {
+    "code_license": "Apache-2.0",
+    "code_revision": "dfb907a02bba8152ca444717ca5d78747ccb4bec",
+    "evidence_files": [
+      {
+        "bytes": 11357,
+        "path": "audit/licenses/kokoro-82m/LICENSE-code.txt",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "bytes": 6348,
+        "path": "audit/licenses/kokoro-82m/MODEL_CARD.md",
+        "sha256": "91dcabced89db6f109b8786642f50402d3ee87450e8189589b6f85520e7f4d78"
+      }
+    ],
+    "license_basis": "model_card_metadata",
+    "license_status": "CONDITIONAL PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "Model card: 'With Apache-licensed weights' / 'This is an Apache-licensed model'; code repo LICENSE Apache-2.0. Weight license is known only from the model-card license field; no separate weight license file exists in the model repo.",
+    "weight_license_file": "audit/licenses/kokoro-82m/LICENSE-weights.txt",
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987"
+  },
+  "ltx-video-2b-0.9.5": {
+    "code_license": null,
+    "code_revision": "50f0aef1297574a4b29acbdb874e3a363a6d5f2e",
+    "evidence_files": [
+      {
+        "bytes": 11357,
+        "path": "audit/licenses/ltx-video-2b-0.9.5/LICENSE-code.txt",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "bytes": 16159,
+        "path": "audit/licenses/ltx-video-2b-0.9.5/LICENSE-weights.txt",
+        "sha256": "b30c536c9c9024b32ac05c88e68a25ce8057b9c24c0c231ac5f2bdf62aba7e51"
+      },
+      {
+        "bytes": 21993,
+        "path": "audit/licenses/ltx-video-2b-0.9.5/MODEL_CARD.md",
+        "sha256": "f5200749d5e876770eb9779bd33992ba8966cc5627533db92954e8446b509cf4"
+      }
+    ],
+    "license_basis": "license_text",
+    "license_status": "PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "Exact checkpoint license saved: Open RAIL-M (LICENSE-weights.txt) explicitly allows commercial use with use restrictions (Section III); attribution and notice retention required.",
+    "weight_license_file": "audit/licenses/ltx-video-2b-0.9.5/LICENSE-weights.txt",
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": "e58e28c39631af4d1468ee57a853764e11c1d37e"
+  },
+  "manim-ce-0.22.1": {
+    "code_license": null,
+    "code_revision": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "evidence_files": [
+      {
+        "bytes": 1072,
+        "path": "audit/licenses/manim-ce-0.22.1/LICENSE-code.txt",
+        "sha256": "c6a922fc1cfaed7ac0f87aa1dc77ebf5a3c8d1ccc5ab01da33153f0d013bf019"
+      },
+      {
+        "bytes": 8378,
+        "path": "audit/licenses/manim-ce-0.22.1/MODEL_CARD.md",
+        "sha256": "41cac8aeb33a726c1b0a70d10233ee06d9cd73c6df0bace8145637d75c5fc283"
+      }
+    ],
+    "license_basis": "license_text",
+    "license_status": "PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "MIT license text saved at tag v0.22.1.",
+    "weight_license_file": null,
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": null
+  },
+  "music-sfx": {
+    "code_license": null,
+    "code_revision": null,
+    "evidence_files": [],
+    "license_basis": "license_text",
+    "license_status": "NOT TESTED",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "No asset selected in Stage A. Phase 8 (Stage D) requires cleared YouTube Audio Library / Sonniss GDC assets with saved terms.",
+    "weight_license_file": null,
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": null
+  },
+  "parakeet-tdt-0.6b-v3": {
+    "code_license": "Apache-2.0",
+    "code_revision": "079e48770098a4cffcf542a4bc974cafc84502a3",
+    "evidence_files": [
+      {
+        "bytes": 11357,
+        "path": "audit/licenses/parakeet-tdt-0.6b-v3/LICENSE-code.txt",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "bytes": 42888,
+        "path": "audit/licenses/parakeet-tdt-0.6b-v3/MODEL_CARD.md",
+        "sha256": "7a4306a43f395e3a716e77f1d81c03db18a0a355d7b566bb1d6307213ba0302b"
+      }
+    ],
+    "license_basis": "license_text",
+    "license_status": "PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "Model card: 'ready for commercial/non-commercial use', CC-BY-4.0; attribution required.",
+    "weight_license_file": null,
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b"
+  },
+  "practical-rife-4.25": {
+    "code_license": null,
+    "code_revision": "bbfd2ea90910789a860ea3e2b32a240cd577b75e",
+    "evidence_files": [
+      {
+        "bytes": 1062,
+        "path": "audit/licenses/practical-rife-4.25/LICENSE-code.txt",
+        "sha256": "7932fb49341512b959b1744a6d9cbb39e5a1ec89da438a34d0454d5d8df9fecd"
+      },
+      {
+        "bytes": 9583,
+        "path": "audit/licenses/practical-rife-4.25/MODEL_CARD.md",
+        "sha256": "b695ac5d4a69c2f551512678883f8234d784c286d805ca546f4873cb465959b4"
+      },
+      {
+        "bytes": 33,
+        "path": "audit/licenses/practical-rife-4.25/RELEASE_ASSETS.json",
+        "sha256": "0166b7fe2cb94aeb3672c39c677e8c6fa4b74b0a977ace922e014b3239518467"
+      }
+    ],
+    "license_basis": "license_text",
+    "license_status": "PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "Repo LICENSE is MIT; README states: 'The content of these links is under the same MIT license as this project.' 4.25 archive link recorded; archive SHA256 to be taken at download (Stage B).",
+    "weight_license_file": null,
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": null
+  },
+  "real-esrgan-x4plus": {
+    "code_license": null,
+    "code_revision": "a4abfb2979a7bbff3f69f58f58ae324608821e27",
+    "evidence_files": [
+      {
+        "bytes": 1519,
+        "path": "audit/licenses/real-esrgan-x4plus/LICENSE-code.txt",
+        "sha256": "4a699ec4863d96a91fc265948a0c90033f7e8735d515524dcf3444736406e0c2"
+      },
+      {
+        "bytes": 16548,
+        "path": "audit/licenses/real-esrgan-x4plus/MODEL_CARD.md",
+        "sha256": "d0a13607913ea94e65a91ac864b969683a41a45b0aec16e0ae64271649d0364d"
+      },
+      {
+        "bytes": 6237,
+        "path": "audit/licenses/real-esrgan-x4plus/RELEASE_ASSETS.json",
+        "sha256": "4d064a92fb9cb54598902f95ce180d76a3915b7d93aa7d67dd9df4dc2e9d0d4b"
+      }
+    ],
+    "license_basis": "license_text",
+    "license_status": "FAIL",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "Code LICENSE is BSD-3-Clause, but no explicit license statement for the exact RealESRGAN_x4plus.pth weight file was found in README, release notes or issues. Weight license FAIL for monetization per Phase 3 rule D.",
+    "weight_license_file": null,
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": null
+  },
+  "sdxl-base-1.0": {
+    "code_license": null,
+    "code_revision": "e8cd657656fa5d61688191730d0e03242bf4ed44",
+    "evidence_files": [
+      {
+        "bytes": 1068,
+        "path": "audit/licenses/sdxl-base-1.0/LICENSE-code.txt",
+        "sha256": "512253f7b27e32cfdd3fc3088fb2ba1fa3f07f1df00b94d503fb3959a11af52d"
+      },
+      {
+        "bytes": 14109,
+        "path": "audit/licenses/sdxl-base-1.0/LICENSE-weights.txt",
+        "sha256": "19b6998b569b53ac1fc2158a8a3202c8699a9a4605b47075715d9c96be7fb6d0"
+      },
+      {
+        "bytes": 8668,
+        "path": "audit/licenses/sdxl-base-1.0/MODEL_CARD.md",
+        "sha256": "40d263065b8a3e9a41996c257e11463fd97ae956ebf4e3f8b9625e0d78183893"
+      }
+    ],
+    "license_basis": "license_text",
+    "license_status": "PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "CreativeML Open RAIL++-M License saved (LICENSE.md / LICENSE-weights.txt). Commercial use allowed with use restrictions and attribution/notice obligations.",
+    "weight_license_file": "audit/licenses/sdxl-base-1.0/LICENSE-weights.txt",
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": "462165984030d82259a11f4367a4eed129e94a7b"
+  },
+  "video-depth-anything-small": {
+    "code_license": "Apache-2.0",
+    "code_revision": "4f5ae23172ba60fd7bc11ef671cca678842c7072",
+    "evidence_files": [
+      {
+        "bytes": 11356,
+        "path": "audit/licenses/video-depth-anything-small/LICENSE-code.txt",
+        "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1"
+      },
+      {
+        "bytes": 1111,
+        "path": "audit/licenses/video-depth-anything-small/MODEL_CARD.md",
+        "sha256": "dea5a98977eae58de809fa3ca589090ab56f0ae326069ddb86fdcca1c5f8d8f0"
+      }
+    ],
+    "license_basis": "model_card_metadata",
+    "license_status": "CONDITIONAL PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "Model card license field = apache-2.0; code repo LICENSE Apache-2.0. No separate weight LICENSE file. Weight license is known only from the model-card license field; no separate weight license file exists in the model repo.",
+    "weight_license_file": "audit/licenses/video-depth-anything-small/LICENSE-weights.txt",
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": "256875362cff76724b920335dfb4b29dd611f66e"
+  },
+  "wan2.1-t2v-1.3b": {
+    "code_license": "Apache-2.0",
+    "code_revision": "9737cba9c1c3c4d04b33fcad41c111989865d315",
+    "evidence_files": [
+      {
+        "bytes": 11357,
+        "path": "audit/licenses/wan2.1-t2v-1.3b/LICENSE-code.txt",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "bytes": 11357,
+        "path": "audit/licenses/wan2.1-t2v-1.3b/LICENSE-weights.txt",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "bytes": 11357,
+        "path": "audit/licenses/wan2.1-t2v-1.3b/LICENSE.txt",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "bytes": 16913,
+        "path": "audit/licenses/wan2.1-t2v-1.3b/MODEL_CARD.md",
+        "sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119"
+      }
+    ],
+    "license_basis": "license_text",
+    "license_status": "PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "Repo LICENSE Apache-2.0; model repo LICENSE.txt saved (LICENSE-weights.txt).",
+    "weight_license_file": "audit/licenses/wan2.1-t2v-1.3b/LICENSE-weights.txt",
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": "37ec512624d61f7aa208f7ea8140a131f93afc9a"
+  },
+  "whisper-large-v3-turbo": {
+    "code_license": null,
+    "code_revision": "86098128c0b4f24f0e2aa2994de830614b474227",
+    "evidence_files": [
+      {
+        "bytes": 1063,
+        "path": "audit/licenses/whisper-large-v3-turbo/LICENSE-code.txt",
+        "sha256": "b5d65a59060e68c4ff940e1eddfa6f94b2d68fdf58ed7f4dd57721c997e35e9d"
+      },
+      {
+        "bytes": 21196,
+        "path": "audit/licenses/whisper-large-v3-turbo/MODEL_CARD.md",
+        "sha256": "aaef74a740faca90fa1899c4233ebe17f2093b9846d0acf16d9131bf650e9585"
+      }
+    ],
+    "license_basis": "model_card_metadata",
+    "license_status": "CONDITIONAL PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "Model card license field = mit; code repo LICENSE MIT. No separate weight LICENSE file. Weight license is known only from the model-card license field; no separate weight license file exists in the model repo.",
+    "weight_license_file": "audit/licenses/whisper-large-v3-turbo/LICENSE-weights.txt",
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
+    "weights_revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9"
+  }
+}
