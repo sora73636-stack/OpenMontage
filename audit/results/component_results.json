@@ -916,5 +916,50 @@
     "dtype_mixed": true,
     "disk_usage_mb": 18162.4,
     "notes": "Stage F single-model test. 3 clips, 49 frames, 832x480, 20 steps, ~6 min/clip, peak VRAM 13863.3 MiB. dtype_mixed=true: VAE fp32 (stability); text_encoder forced to fp16 (OK); transformer is GGUF Q4_K_M (storage uint8, compute fp16). No component stuck in bf16. gen_s: europa 369.0, saturn 362.7, enceladus 361.8."
+  },
+  {
+    "name": "wan22-ti2v-5b-vs-kenburns-asteroid-919191",
+    "priority": "VQ",
+    "version": "Stage G comparison (Wan2.2 TI2V-5B GGUF Q4_K_M vs ffmpeg zoompan)",
+    "source_url": "https://huggingface.co/QuantStack/Wan2.2-TI2V-5B-GGUF",
+    "revision": "f30d1793a3949fcc3840d3ad9ebf6e2cb1e4ad70",
+    "checkpoint_files": [],
+    "checkpoint_sha256": [],
+    "code_license": "Apache-2.0",
+    "weight_license": "Apache-2.0 (QuantStack GGUF)",
+    "license_evidence": [
+      "audit/licenses/wan22-ti2v-5b-gguf/STATUS.json"
+    ],
+    "license_status": "CONDITIONAL PASS",
+    "dtype": "mixed (transformer GGUF uint8 compute fp16; vae fp32; text_encoder fp16) for MOTION; n/a for Ken Burns",
+    "attention_backend": "PyTorch SDPA (MOTION); not applicable (Ken Burns)",
+    "gpu_index": "0 (MOTION); none (Ken Burns)",
+    "gpu_name": "Tesla T4 (MOTION); CPU (Ken Burns)",
+    "peak_vram_allocated_mb": 13863.3,
+    "peak_vram_reserved_mb": null,
+    "peak_ram_mb": null,
+    "runtime_seconds": 365.0,
+    "kenburns_runtime_seconds": 1.1,
+    "gpu_used": false,
+    "rtf": 0.0056,
+    "fps": 24,
+    "automatic_quality_status": "PASS (blackdetect 0, freezedetect 0 on both)",
+    "human_review_status": "PENDING_HUMAN_REVIEW",
+    "runtime_status": "PASS",
+    "production_status": "BLOCKED (pending human review)",
+    "input_artifacts": [],
+    "output_artifacts": [
+      "audit/previews/video_quality_comparison/wan22_asteroid_collision_919191_MOTION.mp4",
+      "audit/previews/video_quality_comparison/wan22_asteroid_collision_919191_KENBURNS.mp4"
+    ],
+    "log_path": "audit/logs/kaggle/wan2.2-ti2v-5b-asteroid-collision.log",
+    "kaggle_kernel_url": "https://www.kaggle.com/code/forts845/openmontage-vq-wan2-2-asteroid-collision",
+    "errors": null,
+    "dtype_mixed": true,
+    "disk_usage_mb": 18162.4,
+    "notes": "Stage G. Scene: two asteroids colliding. MOTION: real model-generated motion/destruction, 49 frames, 832x480, 20 steps, 365.0s, peak VRAM 13863.3 MiB. KENBURNS: ffmpeg zoompan on frame 0, 1.1s, CPU only, no GPU. Both blackdetect 0, freezedetect 0. Quality verdict pending human review.",
+    "motion_peak_vram_allocated_mb": 13863.3,
+    "motion_runtime_seconds": 365.0,
+    "motion_gen_time_s": 365.0
   }
 ]
