@@ -444,6 +444,37 @@
     "weight_sha256_status": "NOT COLLECTED (Stage B/C downloads weights)",
     "weights_revision": "37ec512624d61f7aa208f7ea8140a131f93afc9a"
   },
+  "wan2.2-ti2v-5b-gguf-q4km": {
+    "code_license": "Apache-2.0 (diffusers/transformers; QuantStack GGUF conversion adds no terms)",
+    "code_revision": "57437632ddd08bdcbd1508c866aa22e126ed51d2",
+    "evidence_files": [
+      {
+        "bytes": 1310,
+        "path": "audit/licenses/wan22-ti2v-5b-gguf/LICENSE.txt",
+        "sha256": "707744940671b8ec5b44094cba5e930b6348dc287f5953c3467fe970c6456b54"
+      },
+      {
+        "bytes": 2454,
+        "path": "audit/licenses/wan22-ti2v-5b-gguf/MODEL_CARD.md",
+        "sha256": "52a54b7918206463a8981412ab04d114e32b5d97a5254434cab98ac2a224e516"
+      },
+      {
+        "bytes": 1018,
+        "path": "audit/licenses/wan22-ti2v-5b-gguf/STATUS.json",
+        "sha256": "b3dd8a309c380557821a65941b2bf024eb544640ac3a8ca32bc7727685cc8ec9"
+      }
+    ],
+    "license_basis": "model_card_metadata",
+    "license_status": "CONDITIONAL PASS",
+    "note": "License status is independent from runtime and human quality status.",
+    "rationale": "QuantStack GGUF repo has no separate LICENSE file; license known only from cardData.license = apache-2.0 (base model Wan-AI/Wan2.2-TI2V-5B also apache-2.0). Card states 'all original licensing terms remain in effect' and adds no new terms. Conditional PASS per audit convention L6.",
+    "runtime_ran_at_stage": "F",
+    "runtime_status": "PASS",
+    "weight_license_file": "audit/licenses/wan22-ti2v-5b-gguf/LICENSE.txt",
+    "weight_sha256": null,
+    "weight_sha256_status": "NOT COLLECTED (Stage F downloads weights but SHA not recorded)",
+    "weights_revision": "57437632ddd08bdcbd1508c866aa22e126ed51d2"
+  },
   "whisper-large-v3-turbo": {
     "code_license": null,
     "code_revision": "86098128c0b4f24f0e2aa2994de830614b474227",

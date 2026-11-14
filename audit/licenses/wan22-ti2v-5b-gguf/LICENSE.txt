@@ -1,0 +1,27 @@
+No separate LICENSE file exists in the QuantStack/Wan2.2-TI2V-5B-GGUF repository
+(verified via Hugging Face API siblings list on 2026-11-14; only README.md + GGUF
+files + VAE/Wan2.2_VAE.safetensors are present).
+
+License is declared only via the model card metadata:
+
+  cardData.license = "apache-2.0"
+  base_model = Wan-AI/Wan2.2-TI2V-5B (also license: apache-2.0)
+
+The rendered model page badge reads "License: apache-2.0".
+
+Card text (verbatim quote from README.md):
+
+  "This GGUF file is a direct conversion of Wan-AI/Wan2.2-TI2V-5B"
+  "Since this is a quantized model, all original licensing terms and usage
+   restrictions remain in effect."
+
+No additional terms or restrictions are added by the GGUF conversion. The
+authoritative license text is the Apache License, Version 2.0 as published by
+the Apache Software Foundation (https://www.apache.org/licenses/LICENSE-2.0).
+
+Because no verbatim LICENSE file is shipped in this repo, the audit records
+license_basis = "model_card_metadata" and license_status = "CONDITIONAL PASS"
+per audit convention L6 (license from model card, not from a license file).
+This is NOT an unconditional PASS; it is a conditional pass pending a
+verbatim Apache 2.0 text, which is the same convention applied to
+cosyvoice3 / kokoro-82m / whisper-large-v3-turbo in this audit.

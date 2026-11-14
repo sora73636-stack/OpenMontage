@@ -32,3 +32,25 @@ All clips are `PENDING HUMAN REVIEW` — automated checks below do **not** repla
 ## Review decision
 
 Both models' clips are `PENDING HUMAN REVIEW`. Automated checks (ffprobe, blackdetect, freezedetect) are sanity checks only: they confirm decodability, resolution, frame rate and the absence of fully black / fully frozen frames. They do **not** assess subject consistency, deformation, flicker, or semantic correctness, and they do not decide which model to use. Watch the clips.
+---
+
+## Wan2.2 TI2V-5B GGUF (Q4_K_M) — Stage F probe (2026-11-14)
+
+Same three prompts/seeds, 832×480, 49 frames, 24 fps, 20 inference steps, guidance scale 5.0,
+FP16 pipeline (transformer is GGUF Q4_K_M with fp16 compute dtype; VAE stays fp32 for
+numerical stability; text encoder UMT5 forced to fp16), attention backend = PyTorch SDPA
+(flash_attn not installed/available on T4 sm_75; SDPA is the default).
+
+| Clip file | Model | Seed | Gen time (s) | Peak VRAM | Resolution | Frames | Duration | blackdetect | freezedetect |
+|---|---|---|---|---|---|---|---|---|---|
+| `wan22_ti2v5b_europa_flyby_424242.mp4` | Wan2.2 TI2V-5B GGUF Q4_K_M | 424242 | 369.0 | 13863.3 MiB | 832×480 | 49 | 2.04 s | 0 | 0 |
+| `wan22_ti2v5b_saturn_solar_202607.mp4` | Wan2.2 TI2V-5B GGUF Q4_K_M | 202607 | 362.7 | 13863.3 MiB | 832×480 | 49 | 2.04 s | 0 | 0 |
+| `wan22_ti2v5b_enceladus_plumes_271828.mp4` | Wan2.2 TI2V-5B GGUF Q4_K_M | 271828 | 361.8 | 13863.3 MiB | 832×480 | 49 | 2.04 s | 0 | 0 |
+
+### Stage F notes
+- Disk usage (GGUF 3.43 GB + VAE 1.41 GB + diffusers subset incl. UMT5 text encoder ~11.36 GB + tokenizer) = 18.16 GiB, under the 20 GiB Kaggle limit.
+- Runtime: ~6.0 min per clip (≈ 7.4 s/step at 49 frames), 3 clips ≈ 18.2 min total on one T4.
+- dtype_mixed: true — VAE stays fp32 (numerical stability); text encoder successfully forced to fp16; transformer is GGUF-quantized (storage uint8, compute dtype fp16 via GGUFQuantizationConfig). No component stuck in bf16.
+- Attention backend: PyTorch SDPA (flash_attn not installed/available on T4 sm_75; default path is SDPA).
+- All three clips: blackdetect 0, freezedetect 0 (sanity only).
+- human_review_status: PENDING_HUMAN_REVIEW (quality assessment by human).

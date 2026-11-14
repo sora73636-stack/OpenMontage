@@ -1,0 +1,21 @@
+{
+  "component": "wan2.2-ti2v-5b-gguf-q4km",
+  "source_repo": "QuantStack/Wan2.2-TI2V-5B-GGUF",
+  "source_url": "https://huggingface.co/QuantStack/Wan2.2-TI2V-5B-GGUF",
+  "base_model": "Wan-AI/Wan2.2-TI2V-5B",
+  "base_model_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B",
+  "revision": "57437632ddd08bdcbd1508c866aa22e126ed51d2",
+  "retrieved_utc": "2026-11-14T00:00:00Z",
+  "license_basis": "model_card_metadata",
+  "license_status": "CONDITIONAL PASS",
+  "license_field": "apache-2.0",
+  "gated": false,
+  "extra_terms_added_by_conversion": false,
+  "license_notes": "No separate LICENSE file in the repo; license known only from cardData.license = apache-2.0 and the base model (also apache-2.0). Card states 'all original licensing terms and usage restrictions remain in effect' and adds no new terms. Conditional PASS per audit convention L6.",
+  "files_checked": [
+    "README.md",
+    "Wan2.2-TI2V-5B-Q4_K_M.gguf",
+    "VAE/Wan2.2_VAE.safetensors"
+  ],
+  "checked_by": "audit agent (webfetch + HF API)"
+}

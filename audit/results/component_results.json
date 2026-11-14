@@ -864,5 +864,57 @@
     "kaggle_kernel_url": "https://www.kaggle.com/code/forts845/openmontage-p1-whisper-large-v3-turbo",
     "errors": null,
     "notes": "LibriSpeech dev-clean, 330 files / 2413.05 s. WER 0.030298, CER 0.010440."
+  },
+  {
+    "name": "wan2.2-ti2v-5b-gguf-q4km",
+    "priority": "VQ",
+    "version": "QuantStack/Wan2.2-TI2V-5B-GGUF (Q4_K_M) via diffusers 0.35.2",
+    "source_url": "https://huggingface.co/QuantStack/Wan2.2-TI2V-5B-GGUF",
+    "revision": "57437632ddd08bdcbd1508c866aa22e126ed51d2 (GGUF); Wan-AI/Wan2.2-TI2V-5B-Diffusers (config/vae/text_encoder)",
+    "checkpoint_files": [
+      "Wan2.2-TI2V-5B-Q4_K_M.gguf",
+      "VAE/Wan2.2_VAE.safetensors",
+      "text_encoder/*",
+      "tokenizer/*",
+      "vae/*",
+      "scheduler/*"
+    ],
+    "checkpoint_sha256": [],
+    "code_license": "Apache-2.0 (diffusers/transformers)",
+    "weight_license": "Apache-2.0 (QuantStack GGUF + base Wan2.2-TI2V-5B; see audit/licenses/wan22-ti2v-5b-gguf/)",
+    "license_evidence": [
+      "audit/licenses/wan22-ti2v-5b-gguf/LICENSE.txt",
+      "audit/licenses/wan22-ti2v-5b-gguf/MODEL_CARD.md",
+      "audit/licenses/wan22-ti2v-5b-gguf/STATUS.json"
+    ],
+    "license_status": "CONDITIONAL PASS",
+    "dtype": "mixed (transformer GGUF uint8 compute fp16; vae fp32; text_encoder fp16)",
+    "attention_backend": "PyTorch SDPA (flash_attn not available on T4 sm_75; default path is SDPA)",
+    "gpu_index": "0",
+    "gpu_name": "Tesla T4",
+    "peak_vram_allocated_mb": 13863.3,
+    "peak_vram_reserved_mb": null,
+    "peak_ram_mb": null,
+    "runtime_seconds": 364.5,
+    "rtf": 0.00564,
+    "fps": 24,
+    "automatic_quality_status": "PASS (blackdetect 0, freezedetect 0 on all 3 clips)",
+    "human_review_status": "PENDING_HUMAN_REVIEW",
+    "runtime_status": "PASS",
+    "production_status": "BLOCKED (pending human review; dtype_mixed=true; 2.04s clips only)",
+    "input_artifacts": [
+      "audit/config/image_video_prompts.json"
+    ],
+    "output_artifacts": [
+      "audit/previews/video_quality_comparison/wan22_ti2v5b_europa_flyby_424242.mp4",
+      "audit/previews/video_quality_comparison/wan22_ti2v5b_saturn_solar_202607.mp4",
+      "audit/previews/video_quality_comparison/wan22_ti2v5b_enceladus_plumes_271828.mp4"
+    ],
+    "log_path": "audit/logs/kaggle/wan2.2-ti2v-5b-gguf-q4km.log",
+    "kaggle_kernel_url": "https://www.kaggle.com/code/forts845/openmontage-vq-wan2-2-ti2v-5b-gguf",
+    "errors": null,
+    "dtype_mixed": true,
+    "disk_usage_mb": 18162.4,
+    "notes": "Stage F single-model test. 3 clips, 49 frames, 832x480, 20 steps, ~6 min/clip, peak VRAM 13863.3 MiB. dtype_mixed=true: VAE fp32 (stability); text_encoder forced to fp16 (OK); transformer is GGUF Q4_K_M (storage uint8, compute fp16). No component stuck in bf16. gen_s: europa 369.0, saturn 362.7, enceladus 361.8."
   }
 ]

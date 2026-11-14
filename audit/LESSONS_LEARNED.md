@@ -120,3 +120,10 @@
 - Последствие: один потерянный ран, затем PASS за 6.8 с (RT 0.019) с официальным CLI.
 - Правило на будущее: если в репозитории есть pip-пакет и CLI-пример — использовать его; ручной ONNX только если это единственный путь и формат входа подтверждён `sess.get_inputs()`.
 - Как проверять: в логе `INFO | DF | Using DeepFilterNet3 model ...` и `Enhanced noisy audio file ... (RT factor: 0.019)`.
+
+### L16 — pip install torch==X не заменяет системный torch на Kaggle; transformers 5.x несовместим с torch 2.11 (2026-11-14)
+- Что произошло: в Wan2.2 TI2V-5B GGUF ноутбуке выполнялось `pip install torch==2.6.0 ... --index-url .../cu126` (rc=0), но `import torch` всё равно возвращал 2.11.0+cu130 (Kaggle pre-installed). Затем `pip install git+diffusers` подтянул transformers 5.20.2, который при импорте требует `torch._C._dynamo.eval_frame.skip_code` — символа, отсутствующего в torch 2.11, и падал `ImportError`/`RuntimeError`. Первый прогон (v1) заблокирован.
+- Причина: pip не перезаписал системный torch (вероятно, Kaggle держит его в системном пути); версии transformers/diffusers не были закреплены и уехали в несовместимые.
+- Последствие: потерянный прогон + ~16 ГБ повторной загрузки; исправление — не трогать torch, закрепить `diffusers==0.35.2` и `transformers==4.51.3` (v2).
+- Правило на будущее: на Kaggle не переустанавливать torch; использовать предустановленный и подбирать diffusers/transformers под него. Фиксировать версии явно (`==`), проверять `import` после установки одной строкой `python -c "import torch,diffusers,transformers; print(...)"` до скачивания весов. Для T4 (sm_75) flash_attn не ставить — SDPA по умолчанию.
+- Как проверять: в `summary.json` `versions.torch` == предустановленная (2.11.0+cu130), `versions.transformers` == 4.51.3, импорт diffusers успешен до шага загрузки весов.
